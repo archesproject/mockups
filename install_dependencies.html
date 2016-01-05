@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arches v4.0 | Installation</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font [ OPTIONAL ] -->
+     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="css/nifty.min.css" rel="stylesheet">
+
+    
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+
+    <!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+
+	
+
+    <!--SCRIPT-->
+    <!--=================================================-->
+
+    <!--Page Load Progress Bar [ OPTIONAL ]-->
+    <link href="plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="plugins/pace/pace.min.js"></script>
+
+
+    
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+
+
+	<!-- Theme CSS 
+	<link id="theme" href="css/themes/type-a/theme-mint.min.css" rel="stylesheet">
+	-->
+
+
+	<!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+
+	<!-- Arches CSS -->
+	<link href="css/arches/app/install.css" rel="stylesheet">
+	
+
+</head>
+
+
+<body class="" style="background: #f9f9f9;">
+	<div id="" class="effect mainnav-sm" style="">
+		
+		<div class="boxed" style="">
+
+			<!--CONTENT CONTAINER-->
+			<!--===================================================-->
+			<div id="" class="" style="height: 100vh; padding: 0 0 100px 0">
+
+				<div class="row" style="">
+
+					<!-- Menu -->
+					<div class="col-xs-4 col-sm-3" style="height: 100vh; background: #fff; padding: 0 0 0 12px; border-right: 1px solid #ddd;">
+	
+						<div class="nano-content">
+							
+							<!--Nav tabs (keeping tabs hook to support future expansion)-->
+							<!--================================-->
+							<ul class="nav nav-tabs nav-justified arches-install-menu" style="border-bottom: 1px solid #eee;">
+								<li class="pad-lft" style="">
+									
+									<h3 class="" style=""> Step 1: Dependencies </h3>
+
+
+								</li>
+							</ul>
+							<!--================================-->
+							<!--End nav tabs-->
+
+
+							<!-- Tabs Content -->
+							<!--================================-->
+							<div class="tab-content">
+
+								<!--First tab (Contact list)-->
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<div class="tab-pane fade in active" id="demo-asd-tab-1">
+									
+									<!--Menu Items-->
+									<div class="list-group bg-trans">
+										<a id="db" href="install_dependencies.html" class="list-group-item active">
+											<div class="media-left">
+												<span class="icon-wrap icon-wrap-sm bg-primary icon-circle"><i class="fa fa-database"></i></span>
+											</div>
+											<div class="media-body">
+												<div class="text-lg text-semibold">Database</div>
+												<span class="text-muted">Arches requires PostgreSQL 9.x and PostGIS 2.x</span>
+											</div>
+										</a>
+										<a id="geos" href="#" class="list-group-item">
+											<div class="media-left">
+												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-globe"></i></span>
+											</div>
+											<div class="media-body">
+												<div class="text-lg">GEOS</div>
+												<span class="text-muted">Geometry engine</span>
+											</div>
+										</a>
+										<a id="python" href="#" class="list-group-item">
+											<div class="media-left">
+												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-code"></i></span>
+											</div>
+											<div class="media-body">
+												<div class="text-lg">Python</div>
+												<span class="text-muted">Install/confirm your Python environment</span>
+											</div>
+										</a>
+										<a id="jdk" href="#" class="list-group-item">
+											<div class="media-left">
+												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-coffee"></i></span>
+											</div>
+											<div class="media-body">
+												<div class="text-lg">Java Development Kit (JDK)</div>
+												<span class="text-muted">JDK supports advanced search</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								
+							</div>
+						</div>
+					</div>
+
+					
+					<!-- Form -->
+					<div class="col-xs-8 col-sm-9" style="padding: 80px 0 100px 0;">	
+
+						<!-- Title -->
+						<div class="" style="text-align: -webkit-center;">
+
+							<h1>Install PostgreSQL and PostGIS </h1>
+							
+						</div>
+
+						<!-- Instructions -->
+						<div class="row" style="">
+
+							<div  class="col-xs-12">
+								<p class="text-2x text-center" style="padding: 0 80px 0 80px;">
+									Step 1: Download and install <a class="text-primary" href="http://www.postgresql.org/download/" target="_blank">PostgreSQL 9.4</a> and <a class="text-primary" href="http://postgis.net/install/" target="_blank">PostGIS 2.0</a>  
+								</p>
+
+							</div>
+
+						</div>
+
+						<!-- Data Entry -->
+						<div class="row" style="padding: 50px 80px 80px 80px;">
+
+							<div  class="col-xs-12">
+								
+								<div class="panel" style="padding: 0 0 30px 0; border: 1px solid #ddd;">
+									<div class="panel-heading">
+										<h3 class="panel-title">Enter your <strong>connection information</strong></h3>
+									</div>
+						
+									<!--Horizontal Form-->
+									<!--===================================================-->
+									<form class="form-horizontal pad-top">
+										<div class="panel-body">
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-semibold" for="">User</label>
+												<div class="col-sm-9 col-md-6 col-lg-4">
+													<input type="" placeholder="Database Admin" id="" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-semibold" for="">Password</label>
+												<div class="col-sm-9 col-md-6 col-lg-4">
+													<input type="password" placeholder="password" id="" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-semibold" for="">Port</label>
+												<div class="col-sm-9 col-md-6 col-lg-4">
+													<input type="" placeholder="5432" id="" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label text-semibold" for="">PostGIS Template</label>
+												<div class="col-sm-9 col-md-6 col-lg-4">
+													<input type="" placeholder="template_postgis_20" id="" class="form-control">
+												</div>
+											</div>
+											
+										</div>
+										
+									</form>
+									<!--===================================================-->
+									<!--End Horizontal Form-->
+						
+								</div>
+
+								<!-- Continue -->
+								<div class="" style="position: relative; top: -45px; left: 80%;">
+
+									<button id="install-database" class="btn btn-dark btn-icon btn-circle icon-2x fa fa-plus" style="box-shadow: 5px 8px 17px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);"></button>
+
+								</div>
+
+
+
+							</div>
+
+						</div>
+
+
+
+
+
+						
+
+					</div>
+				
+				</div>
+
+			</div>
+			<!--===================================================-->
+			<!--END CONTENT CONTAINER-->
+
+
+		</div>
+
+		
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+        <!--===================================================-->
+
+
+
+	</div>
+	<!--===================================================-->
+	<!-- END OF CONTAINER -->
+
+
+	<!--JAVASCRIPT-->
+	<!--=================================================-->
+
+	<!--jQuery [ REQUIRED ]-->
+	<script src="js/jquery-2.1.1.min.js"></script>
+
+
+	<!--BootstrapJS [ RECOMMENDED ]-->
+	<script src="js/bootstrap.min.js"></script>
+
+
+	<!--Fast Click [ OPTIONAL ]-->
+	<script src="plugins/fast-click/fastclick.min.js"></script>
+
+	
+	<!--Nifty Admin [ RECOMMENDED ]-->
+	<script src="js/nifty.min.js"></script>
+
+
+	<!--Switchery [ OPTIONAL ]-->
+	<script src="plugins/switchery/switchery.min.js"></script>
+
+
+	<!--Bootstrap Select [ OPTIONAL ]-->
+	<script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+
+
+	<!--Chosen [ OPTIONAL ]-->
+	<script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+
+
+	<script src="js/arches/install/install.js"></script>
+
+		
+
+</body>
+</html>

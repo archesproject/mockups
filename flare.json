@@ -1,0 +1,151 @@
+{
+ "name": "Heritage Resource",
+ "children": [
+  {
+   "name": "Name",
+   "children": [
+    {
+     "name": "Name Type"
+    }
+   ]
+  },
+  {
+   "name": "Right",
+   "children": [
+    {
+     "name": "Protection Event"
+    }
+   ]
+  },
+  {
+   "name": "Modification Event",
+   "children": [
+    {
+     "name": "interpolate",
+     "children": [
+      {"name": "ArrayInterpolator", "size": 1983},
+      {"name": "ColorInterpolator", "size": 2047},
+      {"name": "RectangleInterpolator", "size": 2042}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Production",
+   "children": [
+    {
+     "name": "Phase type assignment",
+     "children": [
+      {"name": "Style", "size": 721},
+      {"name": "Resource Type", "size": 1314},
+      {"name": "Cultural Period", "size": 1314},
+      {"name": "Use Type", "size": 1314},
+      {"name": "Time Spane", "size": 1314},
+      {"name": "Ancillary Feature Type", "size": 2220}
+     ]
+    },
+    {"name": "Component", "size": 1759}
+   ]
+  },
+  {
+   "name": "Beginning of Existence",
+   "children": [
+    {"name": "Time span",
+     "children": [
+      {"name": "End Date", "size": 8833}
+     ] 
+    },
+    {"name": "Type", "size": 1732}
+   ]
+  },
+  {
+   "name": "End of Existence",
+   "children": [
+    {"name": "Time span",
+     "children": [
+      {"name": "End Date", "size": 8833}
+     ] 
+    },
+    {"name": "Type", "size": 1732}
+   ]
+  },
+  {
+   "name": "Classification",
+   "children": [
+    {"name": "FlareVis", "size": 4116}
+   ]
+  },
+  {
+   "name": "Keyword", "size": 4116
+  },
+  {
+   "name": "Condition Assessment",
+   "children": [
+    {"name": "AggregateExpression", "size": 1616},
+    {"name": "Maximum", "size": 843},
+    {
+     "name": "methods",
+     "children": [
+      {"name": "add", "size": 593},
+      {"name": "and", "size": 330}
+     ]
+    },
+    {"name": "Minimum", "size": 843},
+    {"name": "Xor", "size": 1101}
+   ]
+  },
+  {
+   "name": "Evaluation Criteria",
+   "children": [
+    {"name": "IScaleMap", "size": 2105},
+    {"name": "Scale", "size": 4268},
+    {"name": "ScaleType", "size": 1821},
+    {"name": "TimeScale", "size": 5833}
+   ]
+  },
+  {
+   "name": "Place",
+   "children": [
+    {
+     "name": "Place Site Location",
+     "children": [
+      {"name": "Location Description", 
+       "children": [
+        {"name": "Description of place", "size": 6367},
+        {"name": "Setting", "size": 6367}
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Administrative subdivision",
+     "children": [
+      {"name": "Subdivision type", "size": 20859}
+     ]
+    },
+    {
+     "name": "Address",
+     "children": [
+      {"name": "Address type", "size": 20859}
+     ]
+    },
+    {
+     "name": "Spatial Coordinates",
+     "children": [
+      {"name": "Geometry qualifier", "size": 20859}
+     ]
+    },
+    {
+     "name": "Cadastral Reference",
+     "children": [
+      {"name": "Land parcel",
+        "children": [
+        {"name": "Cadastral Reference", "size": 20859}
+       ] 
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

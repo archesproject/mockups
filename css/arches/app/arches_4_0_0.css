@@ -341,6 +341,16 @@ div.jqtree-element.jqtree_common {
 /* =============================================== */
 /* Helpers                                         */
 /* =============================================== */
+
+/* nifty dropdown menu override */
+.bg-primary:hover {
+	background-color: #3b8dd5;
+}
+
+div.dropdown-menu.open {
+	min-height: 250px;
+}
+
 .rotated-text {
     display: inline-block;
     overflow: hidden;

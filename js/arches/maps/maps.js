@@ -24,7 +24,7 @@ $(document).ready(function() {
 	// =================================================================
 	var markerMap = new GMaps({
 		el: '#demo-marker-map',
-		zoom: 1,
+		zoom: 11,
 		lat: 37.336095,
 		lng: -121.8885431
 	});

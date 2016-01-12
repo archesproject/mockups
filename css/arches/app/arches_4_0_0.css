@@ -42,6 +42,66 @@ a.aside-title.arches-aside-title {
 }
 
 
+
+/* =============================================== */
+/* Arches v4 Layout Classes                        */
+
+.v-menu {
+	height: 100vh; 
+	width: 300px; 
+	background: #fff; 
+	padding: 0 0 0 12px; 
+	border-right: 1px solid #ddd;
+}
+
+.v-menu-title {
+	height: 60px; 
+	border-bottom: 1px solid #eee;
+}
+
+.v-menu-items {
+	width: 286px;
+}
+
+.arches-form-container {
+	position: absolute;
+    top: 40px;
+    left: 335px;
+    right: 0px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.form-page {
+	padding: 20px 20px 100px 5px;
+	background-color: #e7ebee; 
+	width: 100%;
+}
+
+
+.arches-help-container {
+	position: absolute;
+    top: 40px;
+    left: 100%;
+    right: 0px;
+    padding-bottom: 50px;
+    padding-left: 0px;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
 .widget-design {
 	border: 2px dashed #ddd; 
 	padding: 20px; 
@@ -232,15 +292,9 @@ a.aside-title.arches-aside-title {
 	height: 100vh;
 }
 
-.gf-page {
-	background-color: #e7ebee; 
-	padding: 25px 20px 0 25px; 
-	width: 100%;
-}
 
-.gf-design {
-	margin-bottom: 30px;
-}
+
+
 
 
 
@@ -318,7 +372,7 @@ div.jqtree-element.jqtree_common {
 
 /* Summernote Overrides */
 .note-editor {
-	margin-top: 10px;
+	
 }
 
 .note-editable {
@@ -415,11 +469,7 @@ div.dropdown-menu.open {
 	color: #fff;
 }
 
-.rp-tile {
-	background: #23BA90;
-	color: #fff;
-	/*border: 1px solid #05815F;*/
-}
+
 
 .rp-tile-menu {
 	width: 60px; 
@@ -429,10 +479,7 @@ div.dropdown-menu.open {
 }
 
 .rp-tile-menu-btn {
-	float: left; 
-	padding: 6px 0 6px 6px; 
-	margin-top: 0px; 
-	font-size: 15px;
+	
 }
 
 .rp-results-icon-bg {
@@ -456,9 +503,9 @@ div.dropdown-menu.open {
 
 .og-grid li {
 	display: inline-block;
-	margin: 10px 5px 20px 5px;
+	margin: 10px 5px 5px 5px;
 	vertical-align: top;
-	height: 225px;
+	height: 200px;
 	min-width: 180px;
 }
 

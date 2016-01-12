@@ -2,25 +2,13 @@
 /* Arches v4 Installation CSS                      */
 /* =============================================== */
 
-.app-configuration-container {
-	position: absolute;
-    top: 40px;
-    left: 390px;
-    padding-bottom: 50px;
-    padding-left: 0px;
-    overflow-y: scroll;
-    height: 100vh;
-    overflow-x: hidden;
-}
+
 
 
 
 
 /* Menu Classes                                    */
-.arches-install-menu {
-	height: 60px; 
-	border-bottom: 1px solid #eee;
-}
+
 
 .list-group.bg-trans .list-group-item:not(.active):not(.disabled) {
 	border-bottom: 1px solid #eee;

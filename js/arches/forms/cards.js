@@ -52,8 +52,9 @@
 		ev.preventDefault();
 
 		// Show wizard forms
+		$('#condition-forms').fadeIn(450);
+		$('#condition-forms').removeClass('hidden');
 		$('#condition-forms').addClass('in');
-		$('#condition-forms').removeClass('hidden').delay(1000);
 		
 	});
 
@@ -61,8 +62,9 @@
 		ev.preventDefault();
 
 		// Show results tiles
-		$('#condition-results').addClass('in');
+		//$('#condition-results').fadeIn(450);
 		$('#condition-results').removeClass('hidden');
+		$('#condition-results').addClass('in');
 
 	});
 

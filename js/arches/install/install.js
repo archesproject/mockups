@@ -13,10 +13,39 @@ jQuery(document).ready(function() {
     });
 
 
+	$('#dependencies').on('click', function (ev) {
+		ev.preventDefault();
+
+		// Card Alert (Uncomment to show alert panel and notification text)
+		$.niftyNoty({
+		    type: 'mint',
+		    container : '#python-alert',
+		    html : '<span class="icon-wrap icon-circle icon-bg-success"><i class="fa fa-check"></i></span><div class="dependency-message"><p><strong>Python 2.7.6</strong> Confirmed!</p></div>',
+		    closeBtn : false
+		});
+
+		$.niftyNoty({
+		    type: 'mint',
+		    container : '#geos-alert',
+		    html : '<span class="icon-wrap icon-circle icon-bg-success"><i class="fa fa-check"></i></span><div class="dependency-message"><p><strong>GEOS</strong> Confirmed!</p></div>',
+		    closeBtn : false
+		});
+
+		$.niftyNoty({
+		    type: 'danger',
+		    container : '#jdk-alert',
+		    html : '<span class="icon-wrap icon-circle icon-bg-fail"><i class="fa fa-times"></i></span><div class="dependency-message"><p><strong>Java (JDK)</strong> Could not verify your JDK.  <button class="btn btn-danger btn-dependency">Suggested fixes</button></p></div>',
+		    closeBtn : false
+		});
+
+		
+	});
+
+
 
 
         
-
+	//Delete from here down
 
 	// MAIN FORM WIZARD
 	// =================================================================

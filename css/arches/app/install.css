@@ -33,14 +33,90 @@ a.list-group-item:not(.active):hover {
 	color: #5f5f5f;
 }
 
+.list-group-item {
+	border-right-width: 0px;
+}
+
 
 
 /* Form Classes                                    */
+.alert {
+	height: 60px;
+}
+
+.install-item-disabled {
+	background: #f9f9f9;
+	pointer-events: none;
+	cursor: default;
+}
+
 .install-instructions {
-	font-size: 15px;
-
+	font-size: 13px;
+	color: #8d8d8d;
+	margin-top: -20px;
+	line-height: 1.25;
+	margin-bottom: 5px;
 }
 
-.bordered-top {
-
+.install-footer-message {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-weight: 400;
 }
+
+.install-help {
+	float: right;
+	margin-right: 20px;
+	margin-top: -17px;
+}
+
+.install-buttons {
+	margin-top: 10px;
+}
+
+.install-card-alert {
+	margin-bottom: 5px;
+}
+
+.icon-bg-success {
+	background: #32BC96;
+}
+
+.icon-bg-fail {
+	background: #E14E33;
+}
+
+.alert-dependeny {
+	height: 60px;
+	margin-bottom: 5px;
+}
+
+.dependency-title {
+	font-size: 17px;
+}
+
+.dependency-message {
+	position: relative;
+	left: 40px;
+	top: -30px;
+	font-size: 13px;
+	height: 40px;
+}
+
+.dependency-footer {
+	height: 60px;
+}
+
+.btn-dependency {
+	margin-top: -5px;
+	float: right;
+	margin-right: 45px;
+}
+
+.btn-install-footer {
+	float: right; 
+	margin-top: -28px;
+}
+
+

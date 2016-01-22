@@ -79,6 +79,28 @@ a.list-group-item:not(.active):hover {
 	margin-bottom: 5px;
 }
 
+.install-progress-window {
+	margin-top: 20px; 
+	box-shadow: none; 
+	background: #f9f9f9; 
+	margin-bottom: 0px;
+}
+
+.install-tab-title {
+	font-size: 14px;
+	margin-top: -3px;
+}
+
+.install-tab-disabled {
+	pointer-events: none;
+	cursor: default;
+}
+
+.install-switch {
+	font-size: 13px;
+	padding-left: 10px;
+}
+
 .icon-bg-success {
 	background: #32BC96;
 }
@@ -119,4 +141,23 @@ a.list-group-item:not(.active):hover {
 	margin-top: -28px;
 }
 
+.no-border {
+	margin-top: 15px; 
+	margin-bottom: 5px; 
+	border-top-width: 0px;
+}
 
+.tab-base .nav-tabs>li:not(.active)>a:hover {
+	border-color: #fff;
+	opacity: .95;
+    background-color: rgba(255,255,255,0.99);
+    border-bottom-color: transparent;
+    -webkit-transition: opacity, 0.3s;
+    transition: opacity, 0.3s;
+}
+
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -4px;
+    margin-top: 3px;
+}

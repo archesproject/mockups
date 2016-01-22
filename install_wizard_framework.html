@@ -123,7 +123,7 @@
 									
 									<!--Menu Items-->
 									<div class="list-group">
-										<a id="depend" href="#" class="list-group-item active">
+										<a id="depend" href="http://127.0.0.1/arches41_mockups/install_wizard_dependencies.html" class="list-group-item">
 											<div class="media-left">
 												<span class="icon-wrap icon-wrap-sm bg-primary icon-circle"><i class="fa fa-binoculars"></i></span>
 											</div>
@@ -132,27 +132,27 @@
 												<span class="text-muted">Confirm required technologies</span>
 											</div>
 										</a>
-										<a id="db" href="http://127.0.0.1/arches41_mockups/install_wizard_db.html" class="list-group-item install-item-disabled">
+										<a id="db" href="http://127.0.0.1/arches41_mockups/install_wizard_db.html" class="list-group-item">
 											<div class="media-left">
-												<span id="db-icon" class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-database"></i></span>
+												<span id="db-icon" class="icon-wrap icon-wrap-sm bg-primary icon-circle"><i class="fa fa-database"></i></span>
 											</div>
 											<div class="media-body">
 												<div class="text-lg">Connect to Database</div>
 												<span class="text-muted">Log on to your PostgreSQL database</span>
 											</div>
 										</a>
-										<a id="geos" href="#" class="list-group-item install-item-disabled">
+										<a id="arches-framework" href="http://127.0.0.1/arches41_mockups/install_wizard_framework.html" class="list-group-item">
 											<div class="media-left">
-												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-globe"></i></span>
+												<span id="arches-framework-icon" class="icon-wrap icon-wrap-sm bg-primary icon-circle"><i class="fa fa-globe"></i></span>
 											</div>
 											<div class="media-body">
 												<div class="text-lg">Install Arches Framework</div>
 												<span class="text-muted">Install core Arches components</span>
 											</div>
 										</a>
-										<a id="python" href="#" class="list-group-item install-item-disabled">
+										<a id="arches-app" href="http://127.0.0.1/arches41_mockups/install_wizard_apps.html" class="list-group-item install-item-disabled">
 											<div class="media-left">
-												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-code"></i></span>
+												<span id="arches-app-icon" class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-code"></i></span>
 											</div>
 											<div class="media-body">
 												<div class="text-lg">Install Arches Applications</div>
@@ -179,24 +179,51 @@
 						<div class="panel" style="border: 1px solid #ddd;">
 							<div class="panel-heading">
 								<h3 class="panel-title dependency-title">
-									Dependency Checks
+									Install Arches Framework
 								</h3>
 							</div>
 							<div class="panel-body" style="">
-								<p id="install-instructions" class="install-instructions">Arches expects that your computer is loaded with a core set of technologies including python, GEOS, and a Java Development Kit (JDK)</p>
+								<p id="install-instructions" class="install-instructions">The Arches Framework includes core technologies and provides for key services such as data management, search/indexing, and thesaurus management.</p>
 
-								<div id="python-alert" class="panel install-card-alert" style=""></div>
-								<div id="geos-alert" class="panel install-card-alert" style=""></div>
-								<div id="jdk-alert" class="panel install-card-alert" style=""></div>
+								<div id="db-arches-framework-alert" class="panel install-card-alert" style=""></div>
+
+								<form class="form-horizontal">
+									<div class="panel-body">
+
+										<div class="input-group">
+											<span class="input-group-btn" style="z-index: 500;">
+												<span class="btn btn-default btn-file">
+													Browse... <input type="file">
+												</span>
+											</span>
+											<input type="" placeholder="Installation folder for Arches..." class="form-control" style="margin-left: -78px; height: 40px; padding-left: 85px;">
+										</div>
+
+									</div>
+								</form>
 
 								<div class="install-buttons">
-									<button id="dependencies" class="btn btn-primary btn-labeled btn-lg fa fa-binoculars">Start Dependency Check</button>
-									<button id="dependency-next" class="btn btn-mint disabled btn-labeled btn-lg fa fa-arrow-right" style="">Next</button>
+									<button id="framework-install" class="btn btn-primary btn-labeled btn-lg fa fa-check">Install Arches Framework</button>
+									<button id="framework-next" class="btn btn-mint disabled btn-labeled btn-lg fa fa-arrow-right" style="">Next</button>
+								</div>
+
+								<div id="framework-install-window" class="panel install-progress-window hidden" style="">
+									<div id="" class="panel-body" style="padding: 10px 10px 20px 10px;">
+										<dl>
+											<dt>Installing Arches Framework</dt>
+											<dd><i class="fa fa-check"></i> Installing django</dd>
+											<dd><i class="fa fa-check"></i> Installing ElasticSearch</dd>
+											<dd><i class="fa fa-check"></i> Another installation step completed</dd>
+											<dd><i class="fa fa-times"></i> And another step completed, this time unsuccessfully</dd>
+											<hr class="no-border" style="">
+											<dt>Installation completed with no errors</dt>
+										</dl>
+									</div>
 								</div>
 							</div>
 							<div class="panel-footer dependency-footer">
 								<div class="">
-									<p class="install-footer-message">Dependency checks: 3</p>
+									<p class="install-footer-message">Install Arches Framework</p>
 									<a href="#" class="install-help">
 										<i class="fa fa-question-circle fa-fw fa-lg"></i>Help
 									</a>

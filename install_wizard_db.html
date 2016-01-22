@@ -132,25 +132,25 @@
 												<span class="text-muted">Confirm required technologies</span>
 											</div>
 										</a>
-										<a id="db" href="http://127.0.0.1/arches41_mockups/install_wizard_db.html" class="list-group-item install-item-disabled">
+										<a id="db" href="http://127.0.0.1/arches41_mockups/install_wizard_db.html" class="list-group-item">
 											<div class="media-left">
-												<span id="db-icon" class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-database"></i></span>
+												<span id="db-icon" class="icon-wrap icon-wrap-sm bg-primary icon-circle"><i class="fa fa-database"></i></span>
 											</div>
 											<div class="media-body">
 												<div class="text-lg">Connect to Database</div>
 												<span class="text-muted">Log on to your PostgreSQL database</span>
 											</div>
 										</a>
-										<a id="geos" href="#" class="list-group-item install-item-disabled">
+										<a id="arches-framework" href="http://127.0.0.1/arches41_mockups/install_wizard_framework.html" class="list-group-item install-item-disabled">
 											<div class="media-left">
-												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-globe"></i></span>
+												<span id="arches-framework-icon" class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-globe"></i></span>
 											</div>
 											<div class="media-body">
 												<div class="text-lg">Install Arches Framework</div>
 												<span class="text-muted">Install core Arches components</span>
 											</div>
 										</a>
-										<a id="python" href="#" class="list-group-item install-item-disabled">
+										<a id="arches-app" href="#" class="list-group-item install-item-disabled">
 											<div class="media-left">
 												<span class="icon-wrap icon-wrap-sm bg-gray-dark icon-circle"><i class="fa fa-code"></i></span>
 											</div>
@@ -179,24 +179,51 @@
 						<div class="panel" style="border: 1px solid #ddd;">
 							<div class="panel-heading">
 								<h3 class="panel-title dependency-title">
-									Dependency Checks
+									Database Connection
 								</h3>
 							</div>
 							<div class="panel-body" style="">
-								<p id="install-instructions" class="install-instructions">Arches expects that your computer is loaded with a core set of technologies including python, GEOS, and a Java Development Kit (JDK)</p>
+								<p id="install-instructions" class="install-instructions">Arches requires <a class="text-primary" href="http://www.postgresql.org/download/" target="_blank">PostgreSQL 9.4</a> and <a class="text-primary" href="http://postgis.net/install/" target="_blank">PostGIS 2.0</a>.  Please install the database and provide your connection parameters</p>
 
-								<div id="python-alert" class="panel install-card-alert" style=""></div>
-								<div id="geos-alert" class="panel install-card-alert" style=""></div>
-								<div id="jdk-alert" class="panel install-card-alert" style=""></div>
+								<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+								<form class="form-horizontal">
+									<div class="panel-body">
+										<div class="form-group">
+											<label class="col-sm-3 control-label text-semibold" for="">User</label>
+											<div class="col-sm-9 col-md-6 col-lg-4">
+												<input type="" placeholder="Database Admin" id="" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label text-semibold" for="">Password</label>
+											<div class="col-sm-9 col-md-6 col-lg-4">
+												<input type="password" placeholder="password" id="" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label text-semibold" for="">Port</label>
+											<div class="col-sm-9 col-md-6 col-lg-4">
+												<input type="" placeholder="5432" id="" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label text-semibold" for="">PostGIS Template</label>
+											<div class="col-sm-9 col-md-6 col-lg-4">
+												<input type="" placeholder="template_postgis_20" id="" class="form-control">
+											</div>
+										</div>
+									</div>
+								</form>
 
 								<div class="install-buttons">
-									<button id="dependencies" class="btn btn-primary btn-labeled btn-lg fa fa-binoculars">Start Dependency Check</button>
-									<button id="dependency-next" class="btn btn-mint disabled btn-labeled btn-lg fa fa-arrow-right" style="">Next</button>
+									<button id="db-test-connection" class="btn btn-primary btn-labeled btn-lg fa fa-check">Test Connection</button>
+									<button id="db-next" class="btn btn-mint disabled btn-labeled btn-lg fa fa-arrow-right" style="">Next</button>
 								</div>
 							</div>
 							<div class="panel-footer dependency-footer">
 								<div class="">
-									<p class="install-footer-message">Dependency checks: 3</p>
+									<p class="install-footer-message">Confirm PostgreSQL and PostGIS connection</p>
 									<a href="#" class="install-help">
 										<i class="fa fa-question-circle fa-fw fa-lg"></i>Help
 									</a>

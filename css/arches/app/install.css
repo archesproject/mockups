@@ -101,6 +101,13 @@ a.list-group-item:not(.active):hover {
 	padding-left: 10px;
 }
 
+.install-link {
+	font-size: 13px;
+	color: steelblue;
+	padding-bottom: 3px;
+	padding-left: 5px;
+}
+
 .icon-bg-success {
 	background: #32BC96;
 }

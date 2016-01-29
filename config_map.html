@@ -1,0 +1,829 @@
+<!-- 	Map Configuration Cards 
+		This file contains the set of data entry cards used to define Arches' mapping configuration
+-->
+
+
+<!-- Geospatial Extent Card -->
+<div class="panel card-panel" style="">
+	<div class="panel-heading">
+		<h3 class="panel-title card-main-title">
+			Map Settings
+		</h3>
+	</div>
+	
+	<div class="panel-body card-body" style="">
+		<div class="tab-base card-content-container" style="">
+
+			<!--Nav Tabs-->
+			<ul class="nav nav-tabs card-nav-container" style="">
+				<li id="map-menu-li" class="active">
+					<a id="map-menu" data-toggle="tab" href="#map-tab" class="card-tab-title">Map Extent</a>
+				</li>
+				<li id="map-config-menu-li" class="">
+					<a id="map-config-menu" data-toggle="tab" href="#map-config-tab" class="card-tab-title">Map Configuration</a>
+				</li>
+			</ul>
+
+			<div id="db-arches-app-alert" class="panel data-card-alert" style=""></div>
+
+			<!--Tabs Content-->
+			<div class="tab-content card-content-tab" style="">
+
+				<!-- Map Extent Settings -->
+				<div id="map-tab" class="tab-pane fade active in">	
+					<div class="panel-body card-panel-body" style="">
+						<div id="map-settings" class="card-content" style="">
+
+							<!-- Map Tools -->
+							<div class="" style="background: transparent; position: absolute; top: 10px; position: absolute; top: 30px; z-index: 400; width: 150px; height: 40px; right: 10px;">
+								<button id="" class="btn btn-primary btn-labeled btn-lg btn-block fa fa-check">Draw Extent</button>
+
+							</div>
+						
+							<!-- Map Widget -->
+							<div class="col-xs-12" style="margin: 0px; padding: 0px;">
+								<div id="demo-marker-map" style="height:500px; margin-bottom: 0px; position: relative; background: #eee;"></div>
+							</div>
+							<!-- End Widget -->
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Db Checks -->
+				<div id="map-config-tab" class="tab-pane fade">	
+					<div class="panel-body card-panel-body" style="">
+						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
+
+						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+						<form class="form-horizontal">
+							<div class="widget-input-group">
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">User</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="" placeholder="postgres" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">Password</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="password" placeholder="password" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">Port</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="" placeholder="5432" id="" class="form-control input-lg widget-input widget-input-disabled" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">PostGIS Template</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="" placeholder="template_postgis_20" id="" class="form-control input-lg widget-input" disabled>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="install-buttons">
+							<button id="db-test-connection" class="btn btn-primary btn-labeled btn-lg fa fa-check">Test Connection</button>
+							<button id="" class="btn btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save New Credentials</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="panel-footer card-footer" style="">
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="" style="padding-right: 15px;">
+					<strong>Map Extent:</strong> global  &nbsp; &nbsp; <strong>Zoom levels:</strong> 1 - 19
+				</p>
+			</div>
+
+			<div class="col-sm-6">
+				<!-- Help link -->
+				<a id="address-help" href="" class="pull-right card-help" style="">Help <i class="fa fa-question-circle"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Geospatial Extent Card -->
+
+
+<!-- Basemaps Card -->
+<div class="panel card-panel" style="">
+	<div class="panel-heading">
+		<h3 class="panel-title card-main-title">
+			Base Maps
+		</h3>
+	</div>
+
+	<div class="tile-grid-container">
+		<!-- Add New Button and Wizard Record Display Grid -->
+		<ul id="" class="og-grid card-wz-grid" style="">
+
+			<!-- Add New Record -->
+			<li class="" style="">
+				<div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record" style="">
+					
+					<a id="add-basemap" href="" class="" style="">
+						<h3 class="text-thin" style="margin-top: 10px;"> New Basemap</h3>
+
+						<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+							<i class="fa fa-plus fa-2x" style="color: #fff;"></i>
+						</span>
+
+						<h5 class="" style="font-weight: 200;"> Add basemaps to support enhanced mapping</h5>
+					</a>
+
+				</div>
+			</li>
+
+			<!-- Record -->
+			<li id="add-basemp-1" class="fade in effect" style="">		
+
+				<!-- Record Summary Container -->
+				<div id="tile-test" class="panel tile-panel" style="">
+					
+					<!-- Edit Menu -->
+					<div class="tile-menu" style="">
+						<!-- Edit/Delete Buttons -->
+						<div class="" style="">
+							<!-- Edit Button -->
+							<button class="btn btn-icon fa fa-pencil tile-menu-btn" title="edit" style=""></button>
+							
+							<!-- Delete Button -->
+							<button class="btn btn-icon fa fa-trash tile-menu-btn" title="delete" style=""></button>
+						</div>
+					</div>
+				
+					<!-- Data -->
+					<div class="panel-body tile-basemap" style="">
+						
+						<img alt="Google Streets Basemap" class="tile-img-lg" src="img/arches/basemaps/google_streets.png">
+
+						<!-- Basemap Summary -->
+						<div class="tile-basemap-title" style="">
+							<dl class="" style="">
+								<dt class="card-category">Google Streets</dt>
+								<dd class="card-value truncate-tile" style="">anonymous, editors, admins, rdm-admins</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+				
+			</li>
+
+		</ul>
+		<!-- End New Button and Record Display Grid -->
+	</div>
+
+	<div id="add-basemap-wizard" class="panel-body card-body fade hidden" style="">
+		<div class="tab-base card-content-container outline" style="margin-bottom: 20px;">
+
+			<!--Nav Tabs-->
+			<ul class="nav nav-tabs card-nav-container" style="">
+				<li id="provider-menu-li" class="active">
+					<a id="provider-menu" data-toggle="tab" href="#provider-tab" class="card-tab-title">Map Provider</a>
+				</li>
+				<li id="basemap-perm-menu-li" class="">
+					<a id="basemap-perm-menu" data-toggle="tab" href="#basemap-perm-tab" class="card-tab-title">Permissions</a>
+				</li>
+			</ul>
+
+			<div id="db-arches-app-alert" class="panel data-card-alert" style=""></div>
+
+			<!--Tabs Content-->
+			<div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+				<!-- Basemap Providers -->
+				<div id="provider-tab" class="tab-pane fade active in">	
+					<div class="panel-body card-panel-body" style="">
+						<div id="" class="card-content" style="">
+
+							Yo! BAsemap Provider
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Basemap Permissions -->
+				<div id="basemap-perm-tab" class="tab-pane fade">	
+					<div class="panel-body card-panel-body" style="">
+						<div id="" class="card-content" style="">
+
+							Yo! BAsemap Permissions
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="panel-footer card-footer" style="">
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="" style="padding-right: 15px;">
+					<strong>Registered basemaps:</strong> 1
+				</p>
+			</div>
+
+			<div class="col-sm-6">
+				<!-- Help link -->
+				<a id="address-help" href="" class="pull-right card-help" style="">Help <i class="fa fa-question-circle"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Basemaps Card -->
+
+
+
+
+<!-- Tabbed Wizard Card -->
+<div class="panel card-bg" style="">
+
+	<!-- Main Grid and Form Container -->
+	<div class="card" style="">
+		<div class="tile-grid-container">
+			
+			<!-- Add New Button and Wizard Record Display Grid -->
+			<ul id="" class="og-grid card-wz-grid" style="">
+
+				<!-- Add New Record -->
+				<li class="" style="">
+					<div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record" style="">
+						
+						<a id="condition-start" href="" class="" style="">
+							<h3 class="text-thin" style="margin-top: 10px;"> New Condition Assessment</h3>
+
+							<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+								<i class="fa fa-plus fa-2x" style="color: #fff;"></i>
+							</span>
+
+							<h5 class="" style="font-weight: 200;">Document current conditions</h5>
+						</a>
+
+					</div>
+				</li>
+
+				<!-- Record -->
+				<li id="condition-results" class="fade effect hidden" style="">				
+					<!-- Record Summary Container -->
+					<div class="panel tile-panel" style="">
+						<!-- Menu -->
+						<div class="panel-heading tile-heading" style="">
+							<!-- Edit/Delete Buttons -->
+							<div class="" style="">
+								<!-- Edit Button -->
+								<button class="btn btn-icon fa fa-pencil tile-menu-btn" title="edit" style=""></button>
+								
+								<!-- Delete Button -->
+								<button class="btn btn-icon fa fa-trash tile-menu-btn" title="delete" style=""></button>
+							</div>
+						</div>
+					
+						<!-- Data -->
+						<div class="panel-body tile" style="">
+							<!-- First Card Summary -->
+							<h5 class="tile-card-title" style="">Condition Summary</h5>
+							<div class="" style="margin-bottom: 10px;">
+								<dl class="tile-card-section" style="">
+									<dt class="card-category">Condition</dt>
+									<dd class="card-value" style="">Very Bad</dd>
+									<dt class="card-category">Date Assessed</dt>
+									<dd class="card-value" style="">02/18/2015</dd>
+									<dt class="card-category">Description</dt>
+									<dd class="card-value" style="">A very distressed building with water damage</dd>
+								</dl>
+							</div>
+
+							<!-- Second Card Summary -->
+							<h5 class="tile-card-title" style="">Images</h5>
+							<div class="" style="margin-bottom: 10px;">
+								<dl class="tile-card-section" style="">
+									<dt class="card-category"></dt>
+									<dd class="card-value" style="">
+										<a href="#" class=""><img class="" style="height: 180px; width: 180px; margin-left: -5px; margin-top: 5px;" src="img/thumbs/archaeologist.jpg" alt="Sample Image"></a>
+									</dd>
+								</dl>
+							</div>
+
+							<!-- Third Card Summary -->
+							<h5 class="tile-card-title" style="">Disturbances</h5>
+							<div class="" style="margin-bottom: 10px;">
+								<dl class="tile-card-section" style="">
+									<dt class="card-category">Disturbances</dt>
+									<dd class="card-value" style="">Water damage</dd>
+									<dd class="card-value" style="">Mold</dd>
+									<dd class="card-value" style="">Insect infestation</dd>
+								</dl>
+							</div>
+
+							<!-- Fourth Card Summary -->
+							<h5 class="tile-card-title" style="">Threats</h5>
+							<div class="" style="margin-bottom: 10px;">
+								<dl class="tile-card-section" style="">
+									<dt class="card-category">Threats</dt>
+									<dd class="card-value" style="">Looting</dd>
+									<dd class="card-value" style="">Urban development</dd>
+								</dl>
+							</div>
+
+							<!-- Fifth Card Summary -->
+							<h5 class="tile-card-title" style="">Recomendations</h5>
+							<div class="" style="margin-bottom: 10px;">
+								<dl class="tile-card-section" style="">
+									<dt class="card-category">Management Recomendations</dt>
+									<dd class="card-value" style="">Detailed excavation</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<!-- End Record Summary Container -->
+				</li>
+
+			</ul>
+			<!-- End New Button and Record Display Grid -->
+
+			<!-- Wizard Forms Container -->
+			<div id="condition-forms" class="form-horizontal card-form fade hidden" style="">
+				
+				<!-- Main Form Wizard -->
+				<div class="tab-base card-tabs" style="">
+
+					<!--Nav tabs-->
+					<ul class="nav nav-tabs card-tabs-bg" style="b">
+						<li class="active">
+							<a class="wz-card-tab" data-toggle="tab" href="#condition-tab-1"><i class="fa fa-dashboard"></i>
+								Condition Summary
+							</a>
+						</li>
+						<li>
+							<a class="wz-card-tab" data-toggle="tab" href="#condition-tab-2"><i class="fa fa-picture-o"></i>
+								Images
+							</a>
+						</li>
+						<li>
+							<a class="wz-card-tab" data-toggle="tab" href="#condition-tab-3"><i class="fa fa-wrench"></i>
+								Disturbances
+							</a>
+						</li>
+						<li>
+							<a class="wz-card-tab" data-toggle="tab" href="#condition-tab-4"><i class="fa fa-warning"></i>
+								Threats
+							</a>
+						</li>
+						<li>
+							<a class="wz-card-tab" data-toggle="tab" href="#condition-tab-5"><i class="fa fa-comment"></i>
+								Recommendations
+							</a>
+						</li>
+						<li class="pull-right">
+							<button id="condition-add" class="btn btn-primary btn-labeled wz-btn fa fa-check">Save</button>
+						</li>
+					</ul>
+		
+		
+					<!--Wizard Cards-->
+					<div class="tab-content" style="min-height: 200px;">
+						<!-- Card 1 -->
+						<div id="condition-tab-1" class="tab-pane card-pane fade active in">
+																					
+							<div class="panel card-panel" style="">
+								<div class="panel-body card-panel-body" style="">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="form-group">
+												<label class="control-label">Condition</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+										
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="form-group">
+												<label class="control-label">
+													Date Assessed
+												</label>
+												<div id="condition-dp">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label class="control-label">	Description
+												</label>
+												<div id="condition-summernote"></div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+
+								<div class="hidden">
+									<button type="button" id="" class="next btn btn-info btn-labeled fa fa-chevron-right">Next</button>
+								</div>
+							</div>
+
+						</div>
+						<!-- End Card 1 -->
+
+						<!-- Card 2 -->
+						<div id="condition-tab-2" class="tab-pane card-pane fade">
+							<h4 class="text-thin"></h4>
+
+							<!-- Form for nodes related to File -->
+							<div id="file-related-nodes" class="panel-alert alert-wrap" style="overflow-y: scroll; height: 330px; position: absolute; right: 36px; left: 26px; margin-top: -15px;z-index: 300; opacity: .95;">
+								<div id="" class="">
+									<div class="alert alert-primary" role="alert">
+										<div class="media" >
+											
+											<h4 class="alert-title" style="font-size: 1.15em">Related Information</h4>
+											<p class="alert-message" style="font-size: 1em;">
+												In addition to uploading files, you may also enter related information:
+											</p>
+
+											<!-- Widget -->
+											<div class="data-card-widget-container" style="padding-bottom: 10px; padding-top: 10px; padding-left: 10px;">
+													
+												<div class="bg-info" style="height: 200px; padding: 10px 0 20px 10px; border-radius: 2px; position: relative;">
+													<img class="" style="height: 180px; width: 180px;" src="img/thumbs/archaeologist.jpg" alt="Sample Image">
+												
+													<div class="form-group" style="position: absolute; left: 215px; top: 0px; right: 25px;">
+														<label class="control-label">File Name</label>
+														<input type="text" class="form-control">
+														
+														<label class="control-label">Description</label>
+														<textarea placeholder="Message" rows="5" class="form-control"></textarea>
+
+													</div>
+												</div>
+											</div>
+											<!-- End Widget -->
+
+											<!-- Close Form -->
+											<div class="mar-top">
+												<button id="" class="btn btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+												
+												<button id="close-file-form" class="btn btn-primary btn-labeled btn-lg fa fa-check">Done</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--Dropzonejs-->
+							<form id="demo-dropzone" action="#" class="dropzone">
+								<div class="dz-default dz-message">
+									<div class="dz-icon icon-wrap icon-circle icon-wrap-md">
+										<i class="fa fa-cloud-upload fa-3x"></i>
+									</div>
+									<div>
+										<p class="dz-text">Drop files to upload</p>
+										<p class="text-muted">or click to pick manually</p>
+									</div>
+								</div>
+								<div class="fallback">
+									<input name="file" type="file" multiple />
+								</div>
+							</form>
+							<!-- End Dropzonejs -->
+						</div>
+						<!-- End Card 2 -->
+
+						<!-- Card 3 -->
+						<div id="condition-tab-3" class="tab-pane card-pane fade">
+							
+							<div class="panel card-panel" style="">
+								<div class="panel-body card-panel-body" style="">
+									<div class="row" style="">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label class="control-label"> Disturbances
+												</label>
+
+												<div>
+													<select id="disturbance-multiselect" data-placeholder="disturbances..." multiple tabindex="4">
+														<option value="United States">United States</option>
+														<option value="United Kingdom">United Kingdom</option>
+														<option value="Afghanistan">Afghanistan</option>
+														<option value="Aland Islands">Aland Islands</option>
+														<option value="Albania">Albania</option>
+														<option value="Algeria">Algeria</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card 3 -->
+
+						<!-- Card 4 -->
+						<div id="condition-tab-4" class="tab-pane card-pane fade">
+							
+							<div class="panel card-panel" style="">
+								<div class="panel-body card-panel-body" style="">
+									<div class="row" style="">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label class="control-label"> threats
+												</label>
+
+												<div>
+													<select id="threat-multiselect" data-placeholder="Threats..." multiple tabindex="4">
+														<option value="United States">United States</option>
+														<option value="United Kingdom">United Kingdom</option>
+														<option value="Afghanistan">Afghanistan</option>
+														<option value="Aland Islands">Aland Islands</option>
+														<option value="Albania">Albania</option>
+														<option value="Algeria">Algeria</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card 4 -->
+
+						<!-- Card 5 -->
+						<div id="condition-tab-5" class="tab-pane card-pane fade">
+							
+							<div class="panel card-panel" style="">
+								<div class="panel-body card-panel-body" style="">
+									<div class="row" style="">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label class="control-label"> recomendations
+												</label>
+
+												<div>
+													<select id="recomend-multiselect" data-placeholder="Recommendations..." multiple tabindex="4">
+														<option value="United States">United States</option>
+														<option value="United Kingdom">United Kingdom</option>
+														<option value="Afghanistan">Afghanistan</option>
+														<option value="Aland Islands">Aland Islands</option>
+														<option value="Albania">Albania</option>
+														<option value="Algeria">Algeria</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Card 5 -->
+					</div>
+				</div>
+			</div>
+			<!-- End Wizard Forms Container -->
+		</div>
+	</div>
+	<!-- End Main Grid and Form Container -->
+
+	<!-- Footer Message -->
+	<div class="panel-footer card-footer" style="">
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="" style="padding-right: 15px;">
+					Condition Assessements: 1 &nbsp; &nbsp; Last edit: 11/16/16
+				</p>
+			</div>
+
+			<div class="col-sm-6">
+				<!-- Help link -->
+				<a id="condition-help" href="" class="pull-right card-help" style="">Help <i class="fa fa-question-circle"></i></a>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Message -->
+</div>
+<!-- End Wizard Card -->
+
+
+<!-- Mapping Card -->
+<div class="panel card-bg hidden" style="">
+
+	<!-- Main Grid and Form Container -->
+	<div class="card" style="">
+		<div class="rp-results">
+			
+			<!-- Wizard Forms Container -->
+			<div class="form-horizontal card-form" style="">
+				
+				<!-- Main Form Wizard -->
+				<div class="tab-base card-tabs" style="">
+
+					<!--Nav tabs-->
+					<ul class="nav nav-tabs card-tabs-bg" style="">
+						<li class="active">
+							<a class="wz-card-tab" data-toggle="tab" href="#address-tab-1"><i class="fa fa-map-marker"></i>
+								Map
+							</a>
+						</li>
+					</ul>
+		
+					<!--Wizard Cards-->
+					<div class="tab-content" style="padding-top: 0px; padding-bottom: 0px;">
+						<!-- Card 1 -->
+						<div id="map-tab-1" class="tab-pane card-pane fade active in" style="">
+
+							<!-- Card Alert (use to display validation problem) -->
+							<div id="map-alert" class="panel card-alert" style=""></div>
+																					
+							<div class="panel card-panel" style="margin-left: -15px; margin-right: -15px;">
+								
+								<!-- Geom Tools -->
+								<div id="" class="" style="height: 50px; padding: 10px 0 5px 0; background: #46bbdc;">
+									
+									<!-- Geom Creation Tools  -->
+									<div class="" style="">
+										
+										<select id="geometry-creation" class="selectpicker col-xs-4" data-style="btn-primary">
+											<option>Draw Point</option>
+											<option>Draw Line</option>
+											<option>Draw Polygon</option>
+											<option>Enter Coordinates</option>
+											<option>Load File (kml. gpx, geojson)</option>
+										</select>
+
+									</div>
+									
+									<!-- Geocoder / Coordinate Entry -->
+									<div class="col-xs-6">
+										<div class="input-group">
+											<input type="text" class="form-control" style="border: 1px solid #5fa2dd;" placeholder="Geocoder">
+											<span class="input-group-addon bg-primary" style="border: none; padding: 0px;">
+
+												<div class="btn-group">
+													<button class="btn dropdown-toggle" data-toggle="dropdown" type="button" style="border-width: 0px;">
+														<i class="dropdown-caret fa fa-chevron-down" style="padding: 0px; color: #fff;"></i>
+													</button>
+													<ul class="dropdown-menu">
+														<li class="dropdown-header">Options</li>
+														<li><a href="#">Geocoder</a>
+														</li>
+														<li><a href="#">Coordinate Entry</a>
+													</ul>
+												</div>
+
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Form for nodes related to Geometry -->
+								<div id="" class="panel-alert">
+									<div id="geometry-related-nodes" class="alert-wrap" style="position: absolute; position: absolute; z-index: 300; opacity: .94;right: 36px; left: 26px;">
+										<div class="alert alert-primary" role="alert">
+											<div class="media" style="height: 200px; overflow-y: scroll;">
+												
+												<h4 class="alert-title" style="font-size: 1.15em">Related Information</h4>
+												<p class="alert-message" style="font-size: 1em;">
+													In addition to defining a geometry, you may also enter related information:
+												</p>
+
+												<!-- Widget -->
+												<div class="data-card-widget-container" style="padding-bottom: 10px; padding-top: 10px; padding-left: 10px;">
+
+													<div class="" style="">
+														<label class="control-label">Geometry Type</label>
+													</div>
+													<div>
+														<select class="selectpicker" style="min-">
+															<option>Footprint Polygon</option>
+															<option>Boundary</option>
+															<option>Access Point</option>
+															<option>Survey Point</option>
+														</select>
+													</div>
+												</div>
+												<!-- End Widget -->
+
+												<!-- Close Form -->
+												<div class="mar-top">
+													<button id="" class="btn btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+													
+													<button id="close-form" class="btn btn-primary btn-labeled btn-lg fa fa-check">Done</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Map Widget -->
+								<div class="col-xs-12" style="margin: 0px; padding: 0px;">
+									<div id="demo-marker-map" style="height:500px; margin-bottom: 0px; position: relative; background: #eee;"></div>
+								</div>
+								<!-- End Widget -->
+
+							</div>
+						</div>
+						<!-- End Card 1 -->
+
+						<!-- Records List -->
+						<div id="" class="rp-results " style="">
+
+							<hr class="tile-spacer" style="">
+							
+							<!-- Records Grid -->
+							<ul id="map-results" class="og-grid hidden fade effect easeInBack" style="padding-bottom: 10px;">
+
+								<!-- Record -->
+								<li class="" style="">
+									
+									<!-- Record Summary Container -->
+									<div class="panel tile-panel" style="">
+										<!-- Menu -->
+										<div class="panel-heading tile-heading" style="">
+											<!-- Edit/Delete Buttons -->
+											<div class="" style="">
+												<!-- Edit Button -->
+												<button class="btn btn-icon fa fa-pencil tile-menu-btn" title="edit" style=""></button>
+												
+												<!-- Delete Button -->
+												<button class="btn btn-icon fa fa-trash tile-menu-btn" title="delete" style=""></button>
+											</div>
+										</div>
+									
+										<!-- Data -->
+										<div class="panel-body tile" style="">
+											<!-- First Card Summary -->
+											<h5 class="tile-card-title" style=""></h5>
+
+											<!-- First Card Summary -->
+											<div class="" style="margin-bottom: 10px;">
+												<dl class="tile-card-section" style="">
+													<dt class="card-category">Geometry</dt>
+													<dd class="card-value" style="">POLYGON(-123.39947 37.44012, -123.40011 27.44011, -123.39947 37.440120</dd>
+													<dt class="card-category">Type</dt>
+													<dd class="card-value" style="">Footprint Polygon</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<!-- End Record Summary Container -->
+
+								</li>
+								<!-- End Record -->
+
+							</ul>
+							<!-- End Records Grid -->
+						</div>
+						<!-- End Records List -->
+					</div>
+				</div>
+			</div>
+			<!-- End Wizard Forms Container -->
+		</div>
+	</div>
+	<!-- End Main Grid and Form Container -->
+
+	<!-- Footer Message -->
+	<div class="panel-footer card-footer" style="">
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="" style="padding-right: 15px;">
+					Geometries: 1 &nbsp; &nbsp; Last edit: 11/16/16
+				</p>
+			</div>
+
+			<div class="col-sm-6">
+				<!-- Help link -->
+				<a id="map-help" href="" class="pull-right card-help" style="">Help <i class="fa fa-question-circle"></i></a>
+				
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Message -->
+</div>
+<!-- End Mapping Card -->
+
+
+
+
+	
+
+
+<!-- Arches JS -->
+<script src="js/arches/config/config_map.js"></script>
+
+

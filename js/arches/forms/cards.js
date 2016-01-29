@@ -17,11 +17,13 @@
 
 // Help Panel
 	$('#address-help').on('click', function (ev) {
-		ev.preventDefault();
+		
 
 		// Show help/thesaurus panel
 		$('.arches-help-container').css('left', '80%');
 		$('.arches-form-container').css('right', '19%');
+
+		return false;
 
 		
 	});
@@ -85,6 +87,14 @@
 
 
 	});
+
+
+
+
+	// var idArray = [];
+	// $('.red').each(function () {
+	//     idArray.push(this.id);
+	// });
 
 
 

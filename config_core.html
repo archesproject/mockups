@@ -1,0 +1,145 @@
+<!-- 	Core (Basic) Configuration Cards 
+		This file contains the set of data entry cards used to define Arches' core configuration parameters
+-->
+
+
+<!-- Installation Summary Card -->
+<div class="panel card-panel" style="">
+	<div class="panel-heading">
+		<h3 class="panel-title card-main-title">
+			Installation Summary
+		</h3>
+	</div>
+	
+	<div class="panel-body card-body" style="">
+		<div class="tab-base card-content-container" style="">
+
+			<!--Nav Tabs-->
+			<ul class="nav nav-tabs card-nav-container" style="">
+				<li id="settings-menu-li" class="active">
+					<a id="settings-menu" data-toggle="tab" href="#settings-tab" class="card-tab-title">Installation Settings</a>
+				</li>
+				<li id="db-menu-li" class="">
+					<a id="db-menu" data-toggle="tab" href="#db-tab" class="card-tab-title">Database</a>
+				</li>
+			</ul>
+
+			<div id="db-arches-app-alert" class="panel data-card-alert" style=""></div>
+
+			<!--Tabs Content-->
+			<div class="tab-content card-content-tab" style="">
+				
+				<!-- Install Settings -->
+				<div id="settings-tab" class="tab-pane fade active in">	
+					<div class="panel-body card-panel-body" style="">
+						<div class="card-content summary-panel" style="">
+		
+							<!--Horizontal description-->
+							<dl class="dl-horizontal">
+								<dt>Application Information</dt>
+								<dd><span class="sub-title">Application:</span> Arches-HIP v2.0.0</dd>
+								<dd><span class="sub-title">Name:</span> Arches-HIP</dd>
+								<dd><span class="sub-title">Mode:</span> Production</dd>
+								<dd><span class="sub-title">Debug:</span> On</dd>
+								<hr class="summary-divider">
+								<dt>Database</dt>
+								<dd><span class="sub-title">Host:</span> localhost</dd>
+								<dd><span class="sub-title">Port:</span> 5432</dd>
+								<dd><span class="sub-title">Schema:</span> arches-hip</dd>
+								<dd><span class="sub-title">Account:</span> postgres</dd>
+								<hr class="summary-divider">
+								<dt>Search Engine</dt>
+								<dd><span class="sub-title">Version:</span> Elasticsearch v1.1.0</dd>
+								<dd><span class="sub-title">URL:</span> http://gci.search.org</dd>
+								<dd><span class="sub-title">Port:</span> 9200</dd>
+								<hr class="summary-divider">
+								<dt>Arches Map Server</dt>
+								<dd><span class="sub-title">URL:</span> http://gci.arches.org/mapservices/[dataset_name]</dd>
+								<dd><span class="sub-title">Tilecache folder:</span> arches4/arches-hip/mapserver/tilecaches[dataset]</dd>
+								<hr class="summary-divider">
+								<dt>Data Folders</dt>
+								<dd><span class="sub-title">Image Library:</span> s3 (Arches images bucket)</dd>
+								<dd><span class="sub-title">Resource Library:</span> arches4/arches-hip/resources</dd>
+								<dd><span class="sub-title">Concepts:</span> arches4/arches-hip/concepts</dd>
+								<dd><span class="sub-title">Data Import:</span> arches4/arches-hip/data/import</dd>
+							</dl>
+		
+						</div>
+					</div>
+				</div>
+
+				<!-- Db Checks -->
+				<div id="db-tab" class="tab-pane fade">	
+					<div class="panel-body card-panel-body" style="">
+						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
+
+						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+						<form class="form-horizontal">
+							<div class="widget-input-group">
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">User</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="" placeholder="postgres" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">Password</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="password" placeholder="password" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">Port</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="" placeholder="5432" id="" class="form-control input-lg widget-input widget-input-disabled" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label widget-input-label" for="">PostGIS Template</label>
+									<div class="col-sm-9 col-md-6 col-lg-4">
+										<input type="" placeholder="template_postgis_20" id="" class="form-control input-lg widget-input" disabled>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="install-buttons">
+							<button id="db-test-connection" class="btn btn-primary btn-labeled btn-lg fa fa-check">Test Connection</button>
+							<button id="" class="btn btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save New Credentials</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="panel-footer card-footer" style="">
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="" style="padding-right: 15px;">
+					<strong>Framework:</strong> Arches v4.0.0  &nbsp; &nbsp; <strong>Application:</strong> Arches-HIP v2.0.0
+				</p>
+			</div>
+
+			<div class="col-sm-6">
+				<!-- Help link -->
+				<a id="address-help" href="" class="pull-right card-help" style="">Help <i class="fa fa-question-circle"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Installation Summary Card -->
+
+
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+	
+<!--DropZone Example -->
+<script src="plugins/dropzone/dropzone.min.js"></script>
+
+
+<!--Page Scripts -->
+<script src="js/arches/config/config_core.js"></script>
+

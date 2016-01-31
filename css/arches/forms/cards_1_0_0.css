@@ -7,7 +7,8 @@
 /* Generic Card Classes
 ---------------------------------------------- */
 .card-main-title {
-	font-size: 17px;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 .card-panel {
@@ -37,7 +38,7 @@
 
 .card-content-tab {
 	padding: 5px 0 0 0; 
-	min-height: 400px;
+	min-height: 350px;
 	margin-top: 15px;
 	margin-left: -15px;
 	box-shadow: none; 
@@ -81,17 +82,18 @@
 }
 
 
-.data-card-alert {
-	margin-left: 10px; 
-	margin-right: -12px; 
-	margin-top: -12px; 
+.wizard-data-card-alert {
+	margin-left: 0px; 
+	margin-right: 0px; 
+	margin-top: 1px; 
+	margin-bottom: 0px;
 	box-shadow: none;
 }
 
 .content-instructions {
 	font-size: 13px;
 	color: #8d8d8d;
-	margin-top: -10px;
+	margin-top: -25px;
 	line-height: 1.25;
 	margin-bottom: 5px;
 }
@@ -103,6 +105,7 @@
 ---------------------------------------------- */
 .summary-panel {
 	background: #f9f9f9; 
+	margin-top: -30px;
 }
 
 #map-settings {
@@ -132,6 +135,27 @@
 .panel .panel-heading, .panel>:first-child {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+}
+
+
+.ol-control button {
+	height: 1.9em;
+	width: 1.9em;
+	font-size: 1.3em;
+}
+
+
+@media (min-width: 992px) {
+	#page-content {
+    	padding: 15px 15px 25px 15px;
+    }
+}
+
+@media (min-width: 400px) {
+	.card-wz-grid {
+    	padding-top: 0px;
+    	margin-top: -10px;
+    }
 }
 
 
@@ -167,7 +191,9 @@
 	<!-- border: 1px solid #266fb0; -->
 }
 
-
+.btn-shim {
+	margin-bottom: 3px;
+}
 
 
 /* Tile Classes     

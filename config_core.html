@@ -3,11 +3,11 @@
 -->
 
 
-<!-- Installation Summary Card -->
-<div class="panel card-panel" style="">
+<!-- Arches Server Card -->
+<div id="arches-server" class="panel card-panel" style="">
 	<div class="panel-heading">
 		<h3 class="panel-title card-main-title">
-			Installation Settings
+			Arches Server Settings
 		</h3>
 	</div>
 	
@@ -17,7 +17,7 @@
 			<!--Nav Tabs-->
 			<ul class="nav nav-tabs card-nav-container" style="">
 				<li id="settings-menu-li" class="active">
-					<a id="settings-menu" data-toggle="tab" href="#settings-tab" class="card-tab-title">Installation Summary</a>
+					<a id="settings-menu" data-toggle="tab" href="#settings-tab" class="card-tab-title">Arches Server Summary</a>
 				</li>
 				<li id="db-menu-li" class="">
 					<a id="db-menu" data-toggle="tab" href="#db-tab" class="card-tab-title">Database</a>
@@ -48,14 +48,10 @@
 								<dd><span class="sub-title">Schema:</span> arches-hip</dd>
 								<dd><span class="sub-title">Account:</span> postgres</dd>
 								<hr class="summary-divider">
-								<dt>Search Engine</dt>
-								<dd><span class="sub-title">Version:</span> Elasticsearch v1.1.0</dd>
-								<dd><span class="sub-title">URL:</span> http://gci.search.org</dd>
-								<dd><span class="sub-title">Port:</span> 9200</dd>
-								<hr class="summary-divider">
-								<dt>Arches Map Server</dt>
-								<dd><span class="sub-title">URL:</span> http://gci.arches.org/mapservices/[dataset_name]</dd>
-								<dd><span class="sub-title">Tilecache folder:</span> arches4/arches-hip/mapserver/tilecaches[dataset]</dd>
+								<dt>Keys</dt>
+								<dd><span class="sub-title">Mapbox:</span> kjdlkiwponnccppeqqq9opl</dd>
+								<dd><span class="sub-title">Microsoft:</span> At53AAkpRmfAAU6uclyo7DDveGo_PHSJE5nT4PDJ9htfDRZwjGcxFTXnLJY2GBcd</dd>
+								<dd><span class="sub-title">Mapzen:</span> 92gge6usddh00</dd>
 								<hr class="summary-divider">
 								<dt>Data Folders</dt>
 								<dd><span class="sub-title">Image Library:</span> s3 (Arches images bucket)</dd>
@@ -110,26 +106,131 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Help/Thesaurus term Panel -->
+				<aside id="arches-server-help" data-page="./help/config_manager/arches_server_summary.html" class="hide card-help-panel" style="">
+					<div class="relative">
+						<a id="arches-server-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+					</div>
+					<div id="arches-server-help-content" class="" style=""></div>
+				</aside>
 			</div>
 		</div>
-
 	</div>
 	<div class="panel-footer card-footer" style="">
 		<div class="row">
 			<div class="col-sm-6">
-				<p class="" style="padding-right: 15px;">
+				<p id="arches-server-footer" class="" style="padding-right: 15px;">
 					<strong>Framework:</strong> Arches v4.0.0  &nbsp; &nbsp; <strong>Application:</strong> Arches-HIP v2.0.0
 				</p>
 			</div>
 
 			<div class="col-sm-6">
 				<!-- Help link -->
-				<a id="" href="" class="pull-right card-help help" style="">Help <i class="fa fa-question-circle"></i></a>
+				<a id="arches-server-help-link" href="" class="pull-right card-help help" style="">Help <i class="fa fa-question-circle"></i></a>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- End Installation Summary Card -->
+<!-- End Arches Server Card -->
+
+
+<!-- ElasticSearch Card -->
+<div id="arches-search-server" class="panel card-panel" style="">
+	<div class="panel-heading">
+		<h3 class="panel-title card-main-title">
+			Search Server Settings
+		</h3>
+	</div>
+	
+	<div class="panel-body card-body" style="">
+		<div class="tab-base card-content-container" style="">
+
+			<!--Nav Tabs-->
+			<ul class="nav nav-tabs card-nav-container" style="">
+				<li id="search-menu-li" class="active">
+					<a id="search-menu" data-toggle="tab" href="#search-tab" class="card-tab-title">Search Server Summary</a>
+				</li>
+				<li id="search-config-menu-li" class="">
+					<a id="search-config-menu" data-toggle="tab" href="#search-config-tab" class="card-tab-title">Configuration</a>
+				</li>
+			</ul>
+
+			<div id="db-arches-es-alert" class="panel data-card-alert" style=""></div>
+
+			<!--Tabs Content-->
+			<div class="tab-content card-content-tab" style="min-height: 100px;">
+				
+				<!-- Install Settings -->
+				<div id="search-tab" class="tab-pane fade active in">	
+					<div class="panel-body card-panel-body" style="">
+						<div class="card-content summary-panel" style="">
+		
+							<!--Horizontal description-->
+							<dl class="dl-horizontal">
+								<dt>Search Engine</dt>
+								<dd><span class="sub-title">Version:</span> Elasticsearch v1.1.0</dd>
+								<dd><span class="sub-title">URL:</span> http://gci.search.org</dd>
+								<dd><span class="sub-title">Port:</span> 9200</dd>
+								<dd><span class="sub-title">Connection Timeout:</span> 30 sec</dd>
+								<hr class="summary-divider">
+								<dt>Search Options </dt>
+								<dd><span class="sub-title">Search results per page:</span> 20</dd>
+								<dd><span class="sub-title">Export limit:</span> 10000</dd>
+								<dd><span class="sub-title">Search dropdown limit:</span> 20</dd>
+								<dd><span class="sub-title">Characters to start search:</span> 2</dd>
+							</dl>
+		
+						</div>
+					</div>
+				</div>
+
+				<!-- Db Checks -->
+				<div id="search-config-tab" class="tab-pane fade">	
+					<div class="panel-body card-panel-body" style="">
+						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
+
+						<div id="search-config-alert" class="panel install-card-alert" style=""></div>
+
+						<form class="form-horizontal">
+							
+							Yo!  Form goes here
+
+						</form>
+
+						<div class="install-buttons">
+							<button id="" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check">Test Connection</button>
+							<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save New Credentials</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Help/Thesaurus term Panel -->
+				<aside id="arches-search-server-help" data-page="./help/config_manager/arches_search_server_summary.html" class="hide card-help-panel" style="">
+					<div class="relative">
+						<a id="arches-search-server-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+					</div>
+					<div id="arches-search-server-help-content" class="" style=""></div>
+				</aside>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer card-footer" style="">
+		<div class="row">
+			<div class="col-sm-6">
+				<p id="arches-server-footer" class="" style="padding-right: 15px;">
+					<strong>Search Server:</strong> Elasticsearch v 1.1.0
+				</p>
+			</div>
+
+			<div class="col-sm-6">
+				<!-- Help link -->
+				<a id="arches-search-server-help-link" href="" class="pull-right card-help help" style="">Help <i class="fa fa-question-circle"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Arches Server Card -->
 
 
 

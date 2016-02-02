@@ -3,8 +3,8 @@
 //	
 	
 //	Manage Form and Menu Item display with the following functions
-	var forms = ["#core-form", "#maps-form", "#search-form"];
-	var menuItems = ["#menu-core", "#menu-maps", "#menu-search"];
+	var forms = ["#core-form", "#maps-form", "#search-form", "#gui-form"];
+	var menuItems = ["#menu-core", "#menu-maps", "#menu-search", "#menu-gui"];
 	
 	var formsLength = forms.length;
 	var menuItemsLength = menuItems.length;
@@ -69,35 +69,43 @@
 	});
 
 
-//	Config_core page scripts
+//	Config_manager page scripts
 	$(document).ready(function(){
-        
-		//Open Help Panel
-        $(document).delegate(".help", "click", function() {
 
-            //Find offset of help panel;
-            // var position = $(document).find('.arches-help-container').offset().top;
-            // var panelTop = position - 40;
-            // var panelTopPX = "-" + panelTop + "px";
+		// Open Help Panel
+        $(document).delegate(".help", "click", function(event) {
 
+        	// Get id of user selected help link, strip off '-link' to get id of target help aside
+        	var helpLink = '#' + event.target.id;
+        	var helpPanel = helpLink.slice(0, -5);
+        	var helpPanelContent = helpPanel + '-content';
+
+        	console.log('target panel ' + helpPanelContent);
+
+        	//get page to load into help panel
+        	var page = $(helpPanel).attr("data-page");
+        	$(helpPanelContent).load(page);
+        	
 			// Show help/thesaurus panel
-			// $(document).find('.arches-help-container').css('top', panelTopPX);
-			// $(document).find('.slide').css('margin-right', '300px');
-			$(document).find('#aside-help').removeClass('hide');
-			$(document).find('#aside-help').addClass('show', 1000, "easeOutCubic");
+			$(document).find(helpPanel).removeClass('hide');
+			$(document).find(helpPanel).addClass('show', 1000, "easeOutCubic");
 			
-
 			return false;
+
         });
 
-
         //dismiss Help panel
-        $(document).delegate(".help-close", "click", function() {
+        $(document).delegate(".help-close", "click", function(event) {
 
-			$(document).find('#aside-help').addClass('hide');
-			$(document).find('#aside-help').removeClass('show');
+        	// Get id of user selected help close, strip off '-close' to get id of target help aside
+        	var helpLink = '#' + event.target.id;
+        	var helpClose = helpLink.slice(0, -6)
+
+			$(document).find(helpClose).addClass('hide');
+			$(document).find(helpClose).removeClass('show');
 
 			return false;
+
         });
 
 

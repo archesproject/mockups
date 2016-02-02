@@ -22,8 +22,9 @@
 
 .card-content-container {
 	border: 0px solid #eee; 
-	margin-bottom: 10px;
 	margin-left: 10px;
+	margin-bottom: 0px; 
+	position: relative;
 }
 
 .outline {
@@ -81,6 +82,24 @@
 	margin-top: -3px;
 }
 
+.card-help-panel {
+	width: 40%; 
+	max-width: 300px; 
+	min-width: 250px; 
+	background: #2d3c4b; 
+	padding-top: 0px; 
+	height: 100%; 
+	position: absolute; 
+	bottom: 0px; 
+	right: 0px; 
+	background: #2d3c4b;
+	opacity: .9; 
+	z-index: 500; 
+	margin-top: 50px; 
+	overflow-y: scroll; 
+	color: #fff;
+}
+
 
 .wizard-data-card-alert {
 	margin-left: 0px; 
@@ -98,7 +117,9 @@
 	margin-bottom: 5px;
 }
 
-
+.relative {
+	position: relative;
+}
 
 
 /* Card Classes
@@ -114,7 +135,17 @@
 	position: relative;
 }
 
+.help-close {
+	color: #ddd;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 600;
+}
 
+.help-close:hover {
+	color: #fff;
+}
 
 /* Base Class Overrides 
 ---------------------------------------------- */
@@ -311,7 +342,9 @@
   text-overflow: ellipsis;
 }
 
-
+.help-text-small {
+	font-size: 12px;
+}
 
 
 /* Card Classes
@@ -672,7 +705,7 @@ textarea:focus, input:focus{
 /*End Data Card Classes*/
 /* =============================================== */
 
-*/
+
 
 
 
@@ -876,7 +909,7 @@ textarea:focus, input:focus{
 /*End Resource Manager Classes*/
 /* =============================================== */
 
-*/
+
 
 
 

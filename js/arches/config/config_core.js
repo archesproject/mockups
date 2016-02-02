@@ -2,36 +2,38 @@
 //	Version: 0.1
 //
 
-// //	Config_core page scripts
-// 	$(document).ready(function(){
-        
-// 		//Open Help Panel
-//         $(document).delegate(".help", "click", function() {
-
-//             //Find offset of help panel;
-//             // var position = $(document).find('.arches-help-container').offset().top;
-//             // var panelTop = position - 40;
-//             // var panelTopPX = "-" + panelTop + "px";
-
-// 			// Show help/thesaurus panel
-// 			// $(document).find('.arches-help-container').css('top', panelTopPX);
-// 			// $(document).find('.slide').css('margin-right', '300px');
-// 			$(document).find('#aside-help').removeClass('hide');
-// 			$(document).find('#aside-help').addClass('show', 1000, "easeOutCubic");
-			
-
-// 			return false;
-//         });
+//	Arches Server Card functions.  Functions for clicking on a card navigation tab
+ 	var helpPanel = "#arches-server-help-content";
+ 	var footer = "#arches-server-footer";
+ 	var helpPage = "";
+ 	var footerText ="";
 
 
-//         //dismiss Help panel
-//         $(document).delegate(".help-close", "click", function() {
+// 	Handle Summary Link
+ 	$("#settings-menu").click(function(){
 
-// 			$(document).find('#aside-help').addClass('hide');
-// 			$(document).find('#aside-help').removeClass('show');
+		// Update Help file tag
+ 		helpPage = "./help/config_manager/arches_server_summary.html";
+		$(helpPanel).load(helpPage);
 
-// 			return false;
-//         });
+		// Update Footer Text
+		footerText = "<strong>Framework:</strong> Arches v4.0.0  &nbsp; &nbsp; <strong>Application:</strong> Arches-HIP v2.0.0";
+		$(footer).html(footerText)
+
+	});
+
+// 	Handle db Link
+ 	$("#db-menu").click(function(){
+
+		//Update Help file tag
+ 		helpPage = "./help/config_manager/database.html";
+		$(helpPanel).load(helpPage);
+
+		// Update Footer Text
+		footerText = "<strong>Database Server:</strong> PostgreSQL/PostGIS  &nbsp; &nbsp; <strong>Port:</strong> 5432";
+		$(footer).html(footerText);
+
+	});
 
 
 

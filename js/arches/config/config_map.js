@@ -31,7 +31,8 @@
 
 	$(".tile-panel").delegate("div", "click", function() {
 	   //call the edit function
-	   
+	   console.log("clicked tile-panel");
+
 	});
 
 	$(".tile-panel").hover (function() {
@@ -70,7 +71,7 @@
 	var overlay = new ol.layer.Tile({
 		source: new ol.source.XYZ({
 		    urls:[
-		        'http://192.168.99.100:32770/tiles/{z}/{x}/{y}@2x.png'
+		        'http://192.168.99.100:32771/tiles/{z}/{x}/{y}@2x.png'
 		    ],
 		    extent: extent,
 		    minZoom: 1,
@@ -94,10 +95,22 @@
 	//view.fit(extent, map.getSize());
 
 
-	
+	// Resize Map when help panel is called
+	$('#add-basemap-wizard-help-link').on('click', function (ev) {
+	  	//console.log('resized');
+	  	var delay = 500;
+			setTimeout(function() {
+				setTimeout( function() { map.updateSize();}, 200);
+		}, delay);
+	});
 
-
-
+	$('#add-basemap-wizard-help-close').on('click', function (ev) {
+		// Need to delay resize because we wait to move the card container back into position on close
+	  	var delay = 800;
+			setTimeout(function() {
+				setTimeout( function() { map.updateSize();}, 200);
+		}, delay);
+	});
 
 
 

@@ -37,4 +37,72 @@
 
 
 
+// Tile Records
+ 	$("#record-1").click(function(){
+
+		//Show form
+		$("#record-1-form").show(600);
+		$(this).find('#record-1-delete').show();
+		$(this).find('#record-1-close').show();
+
+		//update background color
+		$("#record-1").css("background", "#fff");
+
+	});
+
+	$("#record-1").hover(
+	  	function() {
+	    	// On hover
+	    	//$( this ).append( $( "<span> ***</span>" ) );
+	    	$(this).css("cursor", "pointer");
+	    	$(this).css("background", "#fff");
+	    	$(this).find('#record-1-delete').show();
+
+
+	  	}, function() {
+	  		// On exit
+	  		$( this ).css("cursor", "normal");
+	  		$(this).css("background", "#fafafa");
+	    	$(this).find('#record-1-delete').hide();
+	  	}
+	);
+
+	$("#record-1-close").click(function(){
+
+		//hide form
+		var delay = 500;
+			setTimeout(function() {
+				$("#record-1-form").hide(500);
+				$(this).find('#record-1-delete').hide();
+				$("#record-1-close").hide();
+
+				//update background color
+				$("#record-1").css("background", "#fafafa");
+		}, delay);
+
+		
+		
+		return false;
+
+	});
+
+	// $(".tile-record").hover(
+	//   	function() {
+	//     	// On hover
+	//     	//$( this ).append( $( "<span> ***</span>" ) );
+	//     	$(this).css("cursor", "pointer");
+	//     	$(this).css("background", "#fff");
+
+
+	//   	}, function() {
+	//   		// On exit
+	//   		$( this ).css("cursor", "normal");
+	//   		$(this).css("background", "#f7f7f7");
+
+	//   	}
+	// );
+
+
+
+
 // 	});

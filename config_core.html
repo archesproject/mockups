@@ -12,7 +12,7 @@
 	</div>
 	
 	<div class="panel-body card-body" style="">
-		<div class="tab-base card-content-container" style="">
+		<div id="arches-server-help-cc" class="tab-base card-content-container" style="">
 
 			<!--Nav Tabs-->
 			<ul class="nav nav-tabs card-nav-container" style="">
@@ -21,6 +21,12 @@
 				</li>
 				<li id="db-menu-li" class="">
 					<a id="db-menu" data-toggle="tab" href="#db-tab" class="card-tab-title">Database</a>
+				</li>
+				<li id="keys-menu-li" class="">
+					<a id="keys-menu" data-toggle="tab" href="#keys-tab" class="card-tab-title">Keys</a>
+				</li>
+				<li id="folders-menu-li" class="">
+					<a id="folders-menu" data-toggle="tab" href="#folders-tab" class="card-tab-title">Folders</a>
 				</li>
 			</ul>
 
@@ -49,9 +55,9 @@
 								<dd><span class="sub-title">Account:</span> postgres</dd>
 								<hr class="summary-divider">
 								<dt>Keys</dt>
-								<dd><span class="sub-title">Mapbox:</span> kjdlkiwponnccppeqqq9opl</dd>
-								<dd><span class="sub-title">Microsoft:</span> At53AAkpRmfAAU6uclyo7DDveGo_PHSJE5nT4PDJ9htfDRZwjGcxFTXnLJY2GBcd</dd>
-								<dd><span class="sub-title">Mapzen:</span> 92gge6usddh00</dd>
+								<dd><span class="sub-title">Service:</span> MapBox Basemaps</dd>
+								<dd><span class="sub-title">Service:</span> MapBox Egyptian Overlays</dd>
+								<dd><span class="sub-title">Service:</span> Mapzen</dd>
 								<hr class="summary-divider">
 								<dt>Data Folders</dt>
 								<dd><span class="sub-title">Image Library:</span> s3 (Arches images bucket)</dd>
@@ -67,33 +73,36 @@
 				<!-- Db Checks -->
 				<div id="db-tab" class="tab-pane fade">	
 					<div class="panel-body card-panel-body" style="">
-						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
-
+						
+						<!-- Card Level Alert -->
 						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+						<!-- Card Instruction -->
+						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
 
 						<form class="form-horizontal">
 							<div class="widget-input-group">
 								<div class="form-group">
-									<label class="col-sm-3 control-label widget-input-label" for="">User</label>
-									<div class="col-sm-9 col-md-6 col-lg-4">
+									<label class="col-sm-4 control-label widget-input-label" for="">User</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
 										<input type="" placeholder="postgres" id="" class="form-control input-lg widget-input">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-3 control-label widget-input-label" for="">Password</label>
-									<div class="col-sm-9 col-md-6 col-lg-4">
+									<label class="col-sm-4 control-label widget-input-label" for="">Password</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
 										<input type="password" placeholder="password" id="" class="form-control input-lg widget-input">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-3 control-label widget-input-label" for="">Port</label>
-									<div class="col-sm-9 col-md-6 col-lg-4">
+									<label class="col-sm-4 control-label widget-input-label" for="">Port</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
 										<input type="" placeholder="5432" id="" class="form-control input-lg widget-input widget-input-disabled" disabled>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-3 control-label widget-input-label" for="">PostGIS Template</label>
-									<div class="col-sm-9 col-md-6 col-lg-4">
+									<label class="col-sm-4 control-label widget-input-label" for="">PostGIS Template</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
 										<input type="" placeholder="template_postgis_20" id="" class="form-control input-lg widget-input" disabled>
 									</div>
 								</div>
@@ -107,8 +116,232 @@
 					</div>
 				</div>
 
+				<!-- Keys -->
+				<div id="keys-tab" class="tab-pane fade">	
+					<div class="panel-body card-panel-body" style="">
+
+						<!-- Card Level Alert -->
+						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+						<!-- Card Instruction -->
+						<p id="install-instructions" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
+
+						<form class="form-horizontal">
+							<div class="widget-input-group">
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Service Name</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Key</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled">
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="install-buttons">
+							<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+							<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save Key</button>
+						</div>
+
+						<!-- Records -->
+						<div class="list-group" style="margin: 30px -25px 30px -20px;">
+							
+							<!-- Record -->
+							<div id="record-1" class="tile-record list-group-item" style="">
+								<h5 class="list-group-item-heading text-thin">Service Name:<span class="text-semibold"> Mapbox Basemaps</span></h5>
+								<a id="record-1-close" href="#" class="record-close" style="display: none;">
+									<span class="icon-wrap icon-circle bg-mint"><i class="fa fa-times"></i>
+									</span>
+								</a>
+								<a id="record-1-delete" href="#" class="record-delete" style="display: none;">
+									<span class="icon-wrap icon-circle bg-danger"><i class="fa fa-trash"></i>
+									</span>
+								</a>
+								
+								<div id="record-1-form" class="effect" style="margin-top: 15px; background: #fff; padding: 60px 10px 20px 10px; display: none;">
+									
+									<p id="install-instructions" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
+
+									<form class="form-horizontal">
+										<div class="widget-input-group">
+											<div class="form-group">
+												<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
+												<div class="col-sm-8 col-md-6 col-lg-4">
+													<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input" value="MapBox">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label widget-input-label" for="">Service Name</label>
+												<div class="col-sm-8 col-md-6 col-lg-4">
+													<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input" value="MapBox Basemaps">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label widget-input-label" for="">Key</label>
+												<div class="col-sm-8 col-md-6 col-lg-4">
+													<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled" value="At53AAkpRmfAAU6uclyo7DDveGo_PHSJE5nT4PDJ9htfDRZwjGcxFTXnLJY2GBcd">
+												</div>
+											</div>
+										</div>
+									</form>
+
+									<div class="install-buttons">
+										<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+										<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save Key</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Record -->
+							<div id="record-1" class="tile-record list-group-item" style="">
+								<h5 class="list-group-item-heading text-thin">Service Name:<span class="text-semibold"> MapBox Egyptian Overlays</span></h5>
+								<a id="record-1-close" href="#" class="record-close" style="display: none;">
+									<span class="icon-wrap icon-circle bg-mint"><i class="fa fa-times"></i>
+									</span>
+								</a>
+								<a id="record-1-delete" href="#" class="record-delete" style="display: none;">
+									<span class="icon-wrap icon-circle bg-danger"><i class="fa fa-trash"></i>
+									</span>
+								</a>
+								
+								<div id="record-1-form" class="effect" style="margin-top: 15px; background: #fff; padding: 60px 10px 20px 10px; display: none;">
+									
+									<p id="install-instructions" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
+
+									<form class="form-horizontal">
+										<div class="widget-input-group">
+											<div class="form-group">
+												<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
+												<div class="col-sm-8 col-md-6 col-lg-4">
+													<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label widget-input-label" for="">Service Name</label>
+												<div class="col-sm-8 col-md-6 col-lg-4">
+													<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label widget-input-label" for="">Key</label>
+												<div class="col-sm-8 col-md-6 col-lg-4">
+													<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled">
+												</div>
+											</div>
+										</div>
+									</form>
+
+									<div class="install-buttons">
+										<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+										<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save Key</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Square Tiles Key Records (Can Discard) -->
+						<div id="" class="tile-grid-container-sm hidden" style="">
+							
+							<hr class="mar-no" style="padding-top: 10px;">
+
+							<ul id="" class="og-grid-sm card-wz-grid" style="">
+
+								<!-- Record -->
+								<li id="" class="fade in effect" style="">		
+									<!-- Record Summary Container -->
+									<div id="" class="panel tile-panel" style="">
+										<!-- Edit Menu -->
+										<div class="tile-menu-sm" style="">
+											<!-- Edit/Delete Buttons -->
+											<div class="" style="">
+												<!-- Edit Button -->
+												<button class="btn btn-icon fa fa-pencil tile-menu-btn" title="edit" style=""></button>
+												
+												<!-- Delete Button -->
+												<button id="" class="btn btn-icon fa fa-trash tile-menu-btn" title="delete" style=""></button>
+											</div>
+										</div>
+										<!-- Data -->
+										<div class="panel-body tile-sm" style="">
+											<div class="">
+
+												Yo!
+
+											</div>
+											<div class="tile-basemap-title-sm" style="">
+												<dl class="" style="">
+													<dt class="card-category">Mapbox</dt>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Folders -->
+				<div id="folders-tab" class="tab-pane fade">	
+					<div class="panel-body card-panel-body" style="">
+						
+						<!-- Card Level Alert -->
+						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+						<!-- Card Instruction -->
+						<p id="install-instructions" class="content-instructions">Setup the folders Arches uses to store files</p>
+
+						<form class="form-horizontal">
+							<div class="widget-input-group">
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">User</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="postgres" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Password</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="password" placeholder="password" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Port</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="5432" id="" class="form-control input-lg widget-input widget-input-disabled" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">PostGIS Template</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="template_postgis_20" id="" class="form-control input-lg widget-input" disabled>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="install-buttons">
+							<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+							<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save Folders</button>
+						</div>
+					</div>
+				</div>
+
 				<!-- Help/Thesaurus term Panel -->
-				<aside id="arches-server-help" data-page="./help/config_manager/arches_server_summary.html" class="hide card-help-panel" style="">
+				<aside id="arches-server-help" data-page="./help/config_manager/arches_server_summary.html" class="card-help-panel" style="display: none;">
 					<div class="relative">
 						<a id="arches-server-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
 					</div>
@@ -144,7 +377,7 @@
 	</div>
 	
 	<div class="panel-body card-body" style="">
-		<div class="tab-base card-content-container" style="">
+		<div id="arches-search-server-help-cc" class="tab-base card-content-container" style="">
 
 			<!--Nav Tabs-->
 			<ul class="nav nav-tabs card-nav-container" style="">
@@ -152,14 +385,14 @@
 					<a id="search-menu" data-toggle="tab" href="#search-tab" class="card-tab-title">Search Server Summary</a>
 				</li>
 				<li id="search-config-menu-li" class="">
-					<a id="search-config-menu" data-toggle="tab" href="#search-config-tab" class="card-tab-title">Configuration</a>
+					<a id="search-config-menu" data-toggle="tab" href="#search-config-tab" class="card-tab-title">Search Options</a>
 				</li>
 			</ul>
 
 			<div id="db-arches-es-alert" class="panel data-card-alert" style=""></div>
 
 			<!--Tabs Content-->
-			<div class="tab-content card-content-tab" style="min-height: 100px;">
+			<div class="tab-content card-content-tab" style="">
 				
 				<!-- Install Settings -->
 				<div id="search-tab" class="tab-pane fade active in">	
@@ -176,8 +409,8 @@
 								<hr class="summary-divider">
 								<dt>Search Options </dt>
 								<dd><span class="sub-title">Search results per page:</span> 20</dd>
-								<dd><span class="sub-title">Export limit:</span> 10000</dd>
-								<dd><span class="sub-title">Search dropdown limit:</span> 20</dd>
+								<dd><span class="sub-title">Max results for export:</span> 10000</dd>
+								<dd><span class="sub-title">Search box result limit:</span> 20</dd>
 								<dd><span class="sub-title">Characters to start search:</span> 2</dd>
 							</dl>
 		
@@ -185,28 +418,54 @@
 					</div>
 				</div>
 
-				<!-- Db Checks -->
+				<!-- Search Options -->
 				<div id="search-config-tab" class="tab-pane fade">	
 					<div class="panel-body card-panel-body" style="">
-						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
+						
+						<!-- Card Level Alert -->
+						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
 
-						<div id="search-config-alert" class="panel install-card-alert" style=""></div>
+						<!-- Card Instruction -->
+						<p id="install-instructions" class="content-instructions">Set up your search result options </p>
 
 						<form class="form-horizontal">
-							
-							Yo!  Form goes here
-
+							<div class="widget-input-group">
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Search results per page</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="20" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Max results for export </label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="10000" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for="">Search box result limit</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="20" id="" class="form-control input-lg widget-input widget-input-disabled">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label widget-input-label" for=""> Characters to start search</label>
+									<div class="col-sm-8 col-md-6 col-lg-4">
+										<input type="" placeholder="2" id="" class="form-control input-lg widget-input">
+									</div>
+								</div>
+							</div>
 						</form>
 
 						<div class="install-buttons">
-							<button id="" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check">Test Connection</button>
-							<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save New Credentials</button>
+							<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
+							<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save Search Options</button>
 						</div>
 					</div>
 				</div>
 
 				<!-- Help/Thesaurus term Panel -->
-				<aside id="arches-search-server-help" data-page="./help/config_manager/arches_search_server_summary.html" class="hide card-help-panel" style="">
+				<aside id="arches-search-server-help" data-page="./help/config_manager/arches_search_server_summary.html" class="card-help-panel" style="display: none;">
 					<div class="relative">
 						<a id="arches-search-server-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
 					</div>

@@ -69,6 +69,7 @@
 	});
 
 
+
 //	Config_manager page scripts
 	$(document).ready(function(){
 
@@ -79,16 +80,29 @@
         	var helpLink = '#' + event.target.id;
         	var helpPanel = helpLink.slice(0, -5);
         	var helpPanelContent = helpPanel + '-content';
+        	var cardContainer = helpPanel + '-cc';
 
-        	console.log('target panel ' + helpPanelContent);
+			// console.log('cc ' + cardContainer);
+   //      	console.log('target panel ' + helpPanelContent);
 
         	//get page to load into help panel
         	var page = $(helpPanel).attr("data-page");
         	$(helpPanelContent).load(page);
         	
 			// Show help/thesaurus panel
-			$(document).find(helpPanel).removeClass('hide');
-			$(document).find(helpPanel).addClass('show', 1000, "easeOutCubic");
+			//$(document).find(cardContainer).css('margin-right', '240px');
+			var delay = 300;
+				setTimeout(function() {
+					$(document).find(cardContainer).animate({
+					    "margin-right": "240px"
+					});
+			}, delay);
+
+			var delayPanel = 800;
+				setTimeout(function() {
+					$(document).find(helpPanel).fadeIn(1400);
+			}, delayPanel);
+			//$(document).find(helpPanel).fadeIn(1200);
 			
 			return false;
 
@@ -99,11 +113,20 @@
 
         	// Get id of user selected help close, strip off '-close' to get id of target help aside
         	var helpLink = '#' + event.target.id;
-        	var helpClose = helpLink.slice(0, -6)
+        	var helpClose = helpLink.slice(0, -6);
+        	var cardContainer = helpClose + '-cc';
 
-			$(document).find(helpClose).addClass('hide');
-			$(document).find(helpClose).removeClass('show');
+        	console.log('cc ' + cardContainer);
 
+        	// Hide
+			$(document).find(helpClose).fadeOut(750);
+			var delay = 600;
+				setTimeout(function() {
+					$(document).find(cardContainer).animate({
+					    "margin-right": "0px"
+					 });
+			}, delay);
+			
 			return false;
 
         });

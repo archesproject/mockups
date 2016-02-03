@@ -53,9 +53,12 @@
 				<!-- Db Checks -->
 				<div id="map-config-tab" class="tab-pane fade">	
 					<div class="panel-body card-panel-body" style="">
-						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
-
+						
+						<!-- Card Level Alert -->
 						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+						<!-- Card Instruction -->
+						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
 
 						<form class="form-horizontal">
 							<div class="widget-input-group">
@@ -185,7 +188,7 @@
 
 	<!-- Data Entry -->
 	<div id="add-basemap-wizard" class="panel-body card-body fade hidden" style="">
-		<div class="tab-base card-content-container outline" style="">
+		<div id="add-basemap-wizard-help-cc" class="tab-base card-content-container outline" style="margin-bottom: 10px;">
 
 			<!--Nav Tabs-->
 			<ul class="nav nav-tabs card-nav-container" style="">
@@ -206,10 +209,15 @@
 				<div id="provider-tab" class="tab-pane fade active in">	
 					<div class="panel-body card-panel-body" style="">
 						<div id="" class="card-content" style="">
+							<div class="col-md-4" style="">
 
-							<div id="map1" class="map" style="height: 450px; width:100%; margin: -25px 0 -25px 0; padding: 0 15px 0 0;"></div>
-						    
+								Basemap Provider form goes here
 
+							</div>
+
+							<div class="col-md-8" style="height: 450px;">
+								<div id="map1" class="map" style="height: 450px; width:100%; margin: -25px 0 -25px 0; padding: 0px;"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -227,7 +235,7 @@
 			</div>
 		
 			<!-- Help/Thesaurus term Panel -->
-			<aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="hide card-help-panel" style="">
+			<aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
 					<div class="relative">
 						<a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
 					</div>

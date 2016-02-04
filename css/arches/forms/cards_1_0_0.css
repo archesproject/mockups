@@ -99,6 +99,16 @@
 	color: #fff;
 }
 
+.card-checkbox {
+	height: 1.25em;
+	width: 1.25em;
+}
+
+input[type="checkbox"]{
+  width: 30px; /*Desired width*/
+  height: 30px; /*Desired height*/
+}
+
 
 .wizard-data-card-alert {
 	margin-left: 0px; 
@@ -143,7 +153,9 @@
 	margin-right: 10px;
 }
 
-
+.wizard-buttons {
+	padding: 5px 0 10px 10px;
+}
 
 
 /* Card Classes
@@ -197,6 +209,25 @@
 	height: 1.9em;
 	width: 1.9em;
 	font-size: 1.3em;
+}
+
+.chosen-container {
+	margin-bottom: 0px;
+	color: #8d8d8d;
+	line-height: 1.3333333;
+}
+
+.chosen-container-multi .chosen-choices li.search-field {
+    margin: 2px 3px 0 10px;
+}
+
+.chosen-container-single .chosen-single {
+	height: 36px;
+}
+
+.form-text.form-checkbox:not(.btn), .form-text.form-radio:not(.btn) {
+	padding-right: 20px;
+	padding-top: 5px;
 }
 
 

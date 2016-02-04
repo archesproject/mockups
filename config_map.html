@@ -174,7 +174,6 @@
 						<div class="tile-basemap-title" style="">
 							<dl class="" style="">
 								<dt class="card-category">Google Streets</dt>
-								<dd class="card-value truncate-tile" style="">anonymous, editors, admins, rdm-admins</dd>
 							</dl>
 						</div>
 					</div>
@@ -209,14 +208,58 @@
 				<div id="provider-tab" class="tab-pane fade active in">	
 					<div class="panel-body card-panel-body" style="">
 						<div id="" class="card-content" style="">
-							<div class="col-md-4" style="">
+							<div class="col-md-4" style="padding-bottom: 40px;">
 
-								Basemap Provider form goes here
+								<form class="" style="margin-bottom: 30px;">
+									<div class="row mar-btm">
+										<div class="form-group">
+											<label class="col-xs-12 control-label widget-input-label" for="">Map Service</label>
+											<div class="col-xs-12">
+												<select id="map-services" class="input-lg widget-input" data-placeholder="service" tabindex="4">
+													<option value="MapBox">MapBox Basemaps</option>
+													<option value="Mapzen">MapBox Egyptian Overlays</option>
+													<option value="Bing">Bing Streets</option>
+													<option value="GoogleAN">Bing Satellite</option>
+													<option value="GoogleAN">Google Streets</option>
+													<option value="GoogleAN">ESRI XYZ</option>
+													<option value="GoogleAN">Tilecache (XYZ)</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row mar-btm">
+										<div class="form-group">
+											<label class="col-xs-12 control-label widget-input-label" for="">Display Name</label>
+											<div class="col-xs-12">
+												<input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+											</div>
+										</div>
+									</div>
+									<div class="row mar-btm">
+										<div class="form-group">
+											<label class="col-xs-12 widget-input-label" for="">URL</label>
+											<div class="col-xs-12">
+												<input type="" placeholder="Map Service URL" id="" class="form-control input-lg widget-input widget-input-disabled">
+											</div>
+										</div>
+									</div>
+								</form>
+
+								<div class="install-buttons">
+									<button id="map-preview" class="btn btn-shim btn-mint btn-labeled btn-lg btn-block fa fa-refresh" style=""> Preview Map</button>
+								</div>
 
 							</div>
 
 							<div class="col-md-8" style="height: 450px;">
-								<div id="map1" class="map" style="height: 450px; width:100%; margin: -25px 0 -25px 0; padding: 0px;"></div>
+								<div id="map-preview-panel" class="" style="height: 450px; width:100%; margin: -25px 0 -25px 0; padding: 0px; background: #f4f4f4; border: 1px solid #ddd; padding-top: 180px; text-align: center;">
+									
+									<h3 class="text-thin" style="margin-top: 10px;"> Preview Map</h3>
+
+									<h5 class="" style="font-weight: 200; padding-left: 20px; padding-right: 20px;"> Enter your map service details, then preview your map here</h5>
+									
+								</div>
+								<div id="map1" class="map" style="height: 450px; width:100%; margin: -25px 0 -25px 0; padding: 0px; display: none;"></div>
 							</div>
 						</div>
 					</div>
@@ -227,7 +270,88 @@
 					<div class="panel-body card-panel-body" style="">
 						<div id="" class="card-content" style="">
 
-							Yo! BAsemap Permissions
+							<!-- Card Level Alert -->
+							<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+							<!-- Card Instruction -->
+							<p id="install-instructions" class="content-instructions">Grant access to</p>
+
+							<!-- Groups -->
+							<div class="pad-ver pad-lft" style="padding-top: 0px; margin-top: -5px;">
+								<label class="form-checkbox form-normal form-primary active form-text "><input class="card-checkbox" type="checkbox" checked=""> Guests</label>
+								<label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Editors</label>
+								<label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Mobile</label>
+								<label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> RDM Administrators</label>
+								<label class="form-checkbox form-normal form-primary active form-text "><input class="card-checkbox" type="checkbox" checked=""> Administrators</label>
+								<label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Crowdsourcers</label>
+							</div>
+
+
+
+
+							<div class="" style="">
+
+								<!--Searchbox-->
+								<div class="searchbox" style="float: right; padding-right: 20px; margin-bottom: 10px;">
+									<div class="input-group custom-search-form">
+										<input type="text" class="form-control input-lg widget-input" style="float: right; border: 1px solid #ddd;" placeholder="Search..">
+										<span class="input-group-btn">
+											<button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+										</span>
+									</div>
+								</div>
+
+
+								<div class="panel-body" style="padding-left: 5px;">
+									<table id="demo-dt-selection" class="table table-striped table-bordered" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th style="width: 40px;">
+													<label class="form-checkbox form-normal form-primary form-text "><input class="card-checkbox" type="checkbox" checked="">Ok</label>
+												</th>
+												<th>User Name</th>
+												<th class="min-tablet">User</th>
+												<th class="min-tablet">Group Membership</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<label class="form-checkbox form-normal form-primary active form-text "><input class="card-checkbox" type="checkbox" checked="">Ok</label>
+												</td>
+												<td>adalgity@getty.edu</td>
+												<td>Alison Dalgity</td>
+												<td>Guests, Editors, RDM Administrators </td>
+											</tr>
+											<tr>
+												<td>
+													<label class="form-checkbox form-normal form-primary form-text "><input class="card-checkbox" type="checkbox" checked="">Ok</label>
+												</td>
+												<td>dmyers@getty.edu</td>
+												<td>David Myers</td>
+												<td>Guests, Editors, Mobile</td>
+											</tr>
+											<tr>
+												<td>
+													<label class="form-checkbox form-normal form-primary active form-text "><input class="card-checkbox" type="checkbox" checked="">Ok</label>
+												</td>
+												<td>alodge@fargeo.com</td>
+												<td>Adam Lodge</td>
+												<td>Guests, Editors, RDM Administrators </td>
+											</tr>
+											<tr>
+												<td>
+													<label class="form-checkbox form-normal form-primary form-text "><input class="card-checkbox" type="checkbox" checked="">Ok</label>
+												</td>
+												<td>randerson@fargeo.com</td>
+												<td>Ryan Anderson</td>
+												<td>Guests, Editors, Mobile</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
 
 						</div>
 					</div>
@@ -241,6 +365,12 @@
 					</div>
 					<div id="add-basemap-wizard-help-content" class="" style=""></div>
 				</aside>
+		</div>
+
+		<!-- Save Input -->
+		<div class="wizard-buttons" style="">
+			<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt" style=""> Cancel New Basemap
+			<button id="map-preview" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-plus" style=""> Save New Basemap</button>
 		</div>
 	</div>
 
@@ -261,6 +391,20 @@
 </div>
 <!-- End Basemaps Card -->
 
+
+
+    <!--DataTables [ OPTIONAL ]-->
+    <script src="plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+	<script src="plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+
+
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="js/demo/nifty-demo.min.js"></script>
+
+
+    <!--DataTables Sample [ SAMPLE ]-->
+    <script src="js/demo/tables-datatables.js"></script>
 
 <!-- Arches JS -->
 <script src="js/arches/config/config_map.js"></script>

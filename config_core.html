@@ -131,7 +131,12 @@
 								<div class="form-group">
 									<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
 									<div class="col-sm-8 col-md-6 col-lg-4">
-										<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input">
+										<select id="services" class="input-lg widget-input" data-placeholder="service" tabindex="4">
+											<option value="MapBox">MapBox</option>
+											<option value="Mapzen">Mapzen</option>
+											<option value="Bing">Bing Maps</option>
+											<option value="GoogleAN">Google Analytics</option>
+										</select>
 									</div>
 								</div>
 								<div class="form-group">
@@ -161,11 +166,11 @@
 							<div id="record-1" class="tile-record list-group-item" style="">
 								<h5 class="list-group-item-heading text-thin">Service Name:<span class="text-semibold"> Mapbox Basemaps</span></h5>
 								<a id="record-1-close" href="#" class="record-close" style="display: none;">
-									<span class="icon-wrap icon-circle bg-mint"><i class="fa fa-times"></i>
+									<span class="icon-wrap icon-circle bg-gray-dark"><i class="fa fa-times"></i>
 									</span>
 								</a>
 								<a id="record-1-delete" href="#" class="record-delete" style="display: none;">
-									<span class="icon-wrap icon-circle bg-danger"><i class="fa fa-trash"></i>
+									<span class="icon-wrap icon-circle bg-gray-dark"><i class="fa fa-trash"></i>
 									</span>
 								</a>
 								
@@ -211,7 +216,7 @@
 									</span>
 								</a>
 								<a id="record-1-delete" href="#" class="record-delete" style="display: none;">
-									<span class="icon-wrap icon-circle bg-danger"><i class="fa fa-trash"></i>
+									<span class="icon-wrap icon-circle bg-gray-dark"><i class="fa fa-trash"></i>
 									</span>
 								</a>
 								

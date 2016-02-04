@@ -86,6 +86,17 @@
 
 	});
 
+	//	Chosen Select
+	$('#services').chosen({width:'100%'});
+	$("#services").chosen({
+	  	"disable_search": true
+	});
+
+	
+
+
+
+
 	// $(".tile-record").hover(
 	//   	function() {
 	//     	// On hover

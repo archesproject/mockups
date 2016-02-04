@@ -23,7 +23,7 @@
 
 
 		//scroll dive to top of page
-		$("html, body").animate({ scrollTop: $("#add-basemap-card").offset().top }, 1000);
+		$("html, body").animate({ scrollTop: $("#add-basemap-wizard").offset().top }, 1000);
 
 		map.updateSize();
 	});
@@ -113,7 +113,55 @@
 	});
 
 
+	// Map Service Selection
+	$('#map-services').chosen({width:'100%'});
 
+	$('#map-preview').on('click', function (ev) {
+		ev.preventDefault();
+
+
+		// show map
+		$('#map-preview-panel').fadeOut(500);
+		$('#map1').fadeIn(300);
+		$('.ol-control').fadeIn(600);
+		
+
+		var delay = 500;
+			setTimeout(function() {
+				setTimeout( function() { map.updateSize();}, 200);
+		}, delay);
+		
+	
+	});
+
+
+	// Row selection (single row)
+	// -----------------------------------------------------------------
+	$(window).on('load', function() {
+	
+		$.fn.DataTable.ext.pager.numbers_length = 5;
+
+		var rowSelection = $('#demo-dt-selection').DataTable({
+			"responsive": true,
+			"language": {
+				"paginate": {
+				  "previous": '<i class="fa fa-angle-left"></i>',
+				  "next": '<i class="fa fa-angle-right"></i>'
+				}
+			}
+		});
+
+		$('#demo-dt-selection').on( 'click', 'tr', function () {
+			if ( $(this).hasClass('selected') ) {
+				$(this).removeClass('selected');
+			}
+			else {
+				rowSelection.$('tr.selected').removeClass('selected');
+				$(this).addClass('selected');
+			}
+		} );
+
+	});
 
 
 

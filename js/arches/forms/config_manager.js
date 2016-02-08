@@ -93,16 +93,16 @@
 			//$(document).find(cardContainer).css('margin-right', '240px');
 			var delay = 300;
 				setTimeout(function() {
-					$(document).find(cardContainer).animate({
-					    "margin-right": "240px"
-					});
+					// $(document).find(cardContainer).animate({
+					//     "margin-right": "240px"
+					// });
 			}, delay);
 
-			var delayPanel = 800;
-				setTimeout(function() {
-					$(document).find(helpPanel).fadeIn(1400);
-			}, delayPanel);
-			//$(document).find(helpPanel).fadeIn(1200);
+			// var delayPanel = 800;
+			// 	setTimeout(function() {
+			// 		$(document).find(helpPanel).fadeIn(1400);
+			// }, delayPanel);
+			$(document).find(helpPanel).fadeIn(100);
 			
 			return false;
 
@@ -119,7 +119,7 @@
         	console.log('cc ' + cardContainer);
 
         	// Hide
-			$(document).find(helpClose).fadeOut(750);
+			$(document).find(helpClose).fadeOut(100);
 			var delay = 600;
 				setTimeout(function() {
 					$(document).find(cardContainer).animate({

@@ -97,16 +97,16 @@
 <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
 
 <body>
-	<div id="container" class="effect mainnav-sm aside-in aside-left aside-bright">
+	<div id="container" class="effect mainnav-sm aside-in aside-left aside-bright navbar-fixed">
 		
 		<!--NAVBAR-->
-		<header id="navbar" style="z-index: 1000;">
+		<header id="navbar" style="z-index: 1000; opacity: .9;">
 			<div id="navbar-container" class="boxed">
 
 				<!--Brand logo & name-->
 				<div class="navbar-header">
 					<a href="index.html" class="navbar-brand">
-						<img src="img/arches/arches_logo.png" alt="Nifty Logo" class="brand-icon" style="height: 20px; width: 20px; margin-top: 10px; margin-left: 15px; margin-right: 15px;">
+						<img src="img/arches/arches_logo_light.png" alt="Nifty Logo" class="brand-icon" style="height: 20px; width: 20px; margin-top: 10px; margin-left: 15px; margin-right: 15px;">
 						<div class="brand-title">
 							<span class="brand-text">Arches</span>
 						</div>
@@ -137,7 +137,7 @@
 
 
 						<!--Messages Dropdown-->
-						<li class="dropdown hidden">
+						<li class="dropdown">
 							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
 								<i class="fa fa-envelope fa-lg"></i>
 								<span class="badge badge-header badge-warning">9</span>
@@ -245,7 +245,7 @@
 
 
 						<!--Notification dropdown-->
-						<li class="dropdown hidden">
+						<li class="dropdown">
 							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
 								<i class="fa fa-bell fa-lg"></i>
 								<span class="badge badge-header badge-danger">5</span>
@@ -381,7 +381,7 @@
 						<!--End notifications dropdown-->
 
 						<!--Mega dropdown-->
-						<li class="mega-dropdown hidden">
+						<li class="mega-dropdown">
 							<a href="#" class="mega-dropdown-toggle">
 								<i class="fa fa-th-large fa-lg"></i>
 							</a>
@@ -642,7 +642,7 @@
 
 			
 			<!--MAIN NAVIGATION-->
-			<nav id="mainnav-container" class="mainnav-patch">
+			<nav id="mainnav-container" class="mainnav-patch" style="position: fixed;">
 				<div id="mainnav">
 
 					<!--Shortcut buttons-->
@@ -870,7 +870,7 @@
 			
 
 			<!--ASIDE-->
-			<aside id="aside-container">
+			<aside id="aside-container" style="position: fixed;">
 				<div id="aside">
 					<div class="nano">
 						<div class="nano-content">

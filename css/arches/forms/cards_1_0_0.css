@@ -90,8 +90,8 @@
 	height: 100%; 
 	position: absolute; 
 	bottom: 0px; 
-	right: -260px; 
-	background: #2d3c4b; /*#3acaa1;*/
+	right: -20px; 
+	background: #37495b; /*#3acaa1;*/
 	opacity: .9; 
 	z-index: 500; 
 	margin-top: 50px; 
@@ -183,6 +183,13 @@ input[type="checkbox"]{
 	color: #fff;
 }
 
+.scroll-shim {
+	height: 1px; 
+	color: #fff; 
+	font-size: 1px; 
+	margin-bottom: 25px;
+}
+
 /* Base Class Overrides 
 ---------------------------------------------- */
 .tab-base .nav-tabs>li:not(.active)>a:hover {
@@ -229,6 +236,16 @@ input[type="checkbox"]{
 	padding-right: 20px;
 	padding-top: 5px;
 }
+
+span.icon-wrap.icon-circle.bg-gray-dark:hover {
+	background: #94A6BC;
+	color: #123;
+}
+
+.bg-gray-dark, .bg-gray-dark a {
+	color: #999;
+}
+
 
 
 @media (min-width: 992px) {
@@ -453,6 +470,8 @@ input[type="checkbox"]{
 	position: relative;
 	background: #fafafa; /*#90EAD1;*/
 	color: #123;
+	margin-left: 0px;
+	margin-right: -10px;
 	/*border: 1px solid #3acaa1;*/
 }
 

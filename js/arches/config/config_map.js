@@ -23,7 +23,7 @@
 
 
 		//scroll dive to top of page
-		$("html, body").animate({ scrollTop: $("#add-basemap-wizard").offset().top }, 1000);
+		$("html, body").animate({ scrollTop: $("#add-basemap-scroll").offset().top }, 1000);
 
 		map.updateSize();
 	});

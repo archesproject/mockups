@@ -78,7 +78,7 @@
 						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
 
 						<!-- Card Instruction -->
-						<p id="install-instructions" class="content-instructions">Update your PostgreSQL database access information</p>
+						<p id="" class="content-instructions">Update your PostgreSQL database access information</p>
 
 						<form class="form-horizontal">
 							<div class="widget-input-group">
@@ -124,37 +124,43 @@
 						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
 
 						<!-- Card Instruction -->
-						<p id="install-instructions" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
+						<p id="" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
 
-						<form class="form-horizontal">
-							<div class="widget-input-group">
+						<form class="">
+							<div class="row mar-btm">
 								<div class="form-group">
-									<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
-									<div class="col-sm-8 col-md-6 col-lg-4">
-										<select id="services" class="input-lg widget-input" data-placeholder="service" tabindex="4">
-											<option value="MapBox">MapBox</option>
-											<option value="Mapzen">Mapzen</option>
-											<option value="Bing">Bing Maps</option>
-											<option value="GoogleAN">Google Analytics</option>
-										</select>
+									<label class="col-xs-12 control-label widget-input-label" for="">Service Provider</label>
+									<div class="col-xs-12 col-md-9">
+										<div class="">
+											<select id="services" class="input-lg widget-input" data-placeholder="service" tabindex="4">
+												<option value="MapBox">MapBox</option>
+												<option value="Mapzen">Mapzen</option>
+												<option value="Bing">Bing Maps</option>
+												<option value="GoogleAN">Google Analytics</option>
+											</select>
+										</div>
 									</div>
 								</div>
+							</div>
+							<div class="row mar-btm">
 								<div class="form-group">
-									<label class="col-sm-4 control-label widget-input-label" for="">Service Name</label>
-									<div class="col-sm-8 col-md-6 col-lg-4">
-										<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input">
+									<label class="col-xs-12 control-label widget-input-label" for="">Service Name</label>
+									<div class="col-xs-12 col-md-9">
+										<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input" value="MapBox Basemaps">
 									</div>
 								</div>
+							</div>
+							<div class="row mar-btm">
 								<div class="form-group">
-									<label class="col-sm-4 control-label widget-input-label" for="">Key</label>
-									<div class="col-sm-8 col-md-6 col-lg-4">
-										<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled">
+									<label class="col-xs-12 widget-input-label" for="">Key</label>
+									<div class="col-xs-12 col-md-9">
+										<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled" value="At53AAkpRmfAAU6uclyo7DDveGo_PHSJE5nT4PDJ9htfDRZwjGcxFTXnLJY2GBcd">
 									</div>
 								</div>
 							</div>
 						</form>
 
-						<div class="install-buttons">
+						<div class="install-buttons pad-top">
 							<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times">Cancel</button>
 							<button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Save Key</button>
 						</div>
@@ -176,25 +182,29 @@
 								
 								<div id="record-1-form" class="effect" style="margin-top: 15px; background: #fff; padding: 60px 10px 20px 10px; display: none;">
 									
-									<p id="install-instructions" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
+									<p id="" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
 
-									<form class="form-horizontal">
-										<div class="widget-input-group">
+									<form class="">
+										<div class="row mar-btm">
 											<div class="form-group">
-												<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
-												<div class="col-sm-8 col-md-6 col-lg-4">
+												<label class="col-xs-12 control-label widget-input-label" for="">Service Provider1</label>
+												<div class="col-xs-12 col-md-9">
 													<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input" value="MapBox">
 												</div>
 											</div>
+										</div>
+										<div class="row mar-btm">
 											<div class="form-group">
-												<label class="col-sm-4 control-label widget-input-label" for="">Service Name</label>
-												<div class="col-sm-8 col-md-6 col-lg-4">
+												<label class="col-xs-12 control-label widget-input-label" for="">Service Name</label>
+												<div class="col-xs-12 col-md-9">
 													<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input" value="MapBox Basemaps">
 												</div>
 											</div>
+										</div>
+										<div class="row mar-btm">
 											<div class="form-group">
-												<label class="col-sm-4 control-label widget-input-label" for="">Key</label>
-												<div class="col-sm-8 col-md-6 col-lg-4">
+												<label class="col-xs-12 widget-input-label" for="">Key</label>
+												<div class="col-xs-12 col-md-9">
 													<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled" value="At53AAkpRmfAAU6uclyo7DDveGo_PHSJE5nT4PDJ9htfDRZwjGcxFTXnLJY2GBcd">
 												</div>
 											</div>
@@ -209,10 +219,10 @@
 							</div>
 
 							<!-- Record -->
-							<div id="record-1" class="tile-record list-group-item" style="">
-								<h5 class="list-group-item-heading text-thin">Service Name:<span class="text-semibold"> MapBox Egyptian Overlays</span></h5>
+							<div id="record-2" class="tile-record list-group-item" style="">
+								<h5 class="list-group-item-heading text-thin">Service Name:<span class="text-semibold"> Mapbox Egyptian Overlays</span></h5>
 								<a id="record-1-close" href="#" class="record-close" style="display: none;">
-									<span class="icon-wrap icon-circle bg-mint"><i class="fa fa-times"></i>
+									<span class="icon-wrap icon-circle bg-gray-dark"><i class="fa fa-times"></i>
 									</span>
 								</a>
 								<a id="record-1-delete" href="#" class="record-delete" style="display: none;">
@@ -222,26 +232,30 @@
 								
 								<div id="record-1-form" class="effect" style="margin-top: 15px; background: #fff; padding: 60px 10px 20px 10px; display: none;">
 									
-									<p id="install-instructions" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
+									<p id="" class="content-instructions">Keys allow you to access external services (like Mapbox maps) from Arches.  Add your user keys (optional):</p>
 
-									<form class="form-horizontal">
-										<div class="widget-input-group">
+									<form class="">
+										<div class="row mar-btm">
 											<div class="form-group">
-												<label class="col-sm-4 control-label widget-input-label" for="">Service Provider</label>
-												<div class="col-sm-8 col-md-6 col-lg-4">
-													<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input">
+												<label class="col-xs-12 control-label widget-input-label" for="">Service Provider1</label>
+												<div class="col-xs-12 col-md-9">
+													<input type="" placeholder="e.g.: MapBox" id="" class="form-control input-lg widget-input" value="MapBox">
 												</div>
 											</div>
+										</div>
+										<div class="row mar-btm">
 											<div class="form-group">
-												<label class="col-sm-4 control-label widget-input-label" for="">Service Name</label>
-												<div class="col-sm-8 col-md-6 col-lg-4">
-													<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input">
+												<label class="col-xs-12 control-label widget-input-label" for="">Service Name</label>
+												<div class="col-xs-12 col-md-9">
+													<input type="" placeholder="e.g. MapBox Base Maps" id="" class="form-control input-lg widget-input" value="MapBox Basemaps">
 												</div>
 											</div>
+										</div>
+										<div class="row mar-btm">
 											<div class="form-group">
-												<label class="col-sm-4 control-label widget-input-label" for="">Key</label>
-												<div class="col-sm-8 col-md-6 col-lg-4">
-													<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled">
+												<label class="col-xs-12 widget-input-label" for="">Key</label>
+												<div class="col-xs-12 col-md-9">
+													<input type="" placeholder="Enter key value" id="" class="form-control input-lg widget-input widget-input-disabled" value="At53AAkpRmfAAU6uclyo7DDveGo_PHSJE5nT4PDJ9htfDRZwjGcxFTXnLJY2GBcd">
 												</div>
 											</div>
 										</div>
@@ -254,48 +268,6 @@
 								</div>
 							</div>
 						</div>
-
-
-						<!-- Square Tiles Key Records (Can Discard) -->
-						<div id="" class="tile-grid-container-sm hidden" style="">
-							
-							<hr class="mar-no" style="padding-top: 10px;">
-
-							<ul id="" class="og-grid-sm card-wz-grid" style="">
-
-								<!-- Record -->
-								<li id="" class="fade in effect" style="">		
-									<!-- Record Summary Container -->
-									<div id="" class="panel tile-panel" style="">
-										<!-- Edit Menu -->
-										<div class="tile-menu-sm" style="">
-											<!-- Edit/Delete Buttons -->
-											<div class="" style="">
-												<!-- Edit Button -->
-												<button class="btn btn-icon fa fa-pencil tile-menu-btn" title="edit" style=""></button>
-												
-												<!-- Delete Button -->
-												<button id="" class="btn btn-icon fa fa-trash tile-menu-btn" title="delete" style=""></button>
-											</div>
-										</div>
-										<!-- Data -->
-										<div class="panel-body tile-sm" style="">
-											<div class="">
-
-												Yo!
-
-											</div>
-											<div class="tile-basemap-title-sm" style="">
-												<dl class="" style="">
-													<dt class="card-category">Mapbox</dt>
-												</dl>
-											</div>
-										</div>
-									</div>
-								</li>
-
-							</ul>
-						</div>
 					</div>
 				</div>
 
@@ -307,7 +279,7 @@
 						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
 
 						<!-- Card Instruction -->
-						<p id="install-instructions" class="content-instructions">Setup the folders Arches uses to store files</p>
+						<p id="" class="content-instructions">Setup the folders Arches uses to store files</p>
 
 						<form class="form-horizontal">
 							<div class="widget-input-group">

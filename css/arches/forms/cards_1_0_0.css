@@ -480,6 +480,34 @@ span.icon-wrap.icon-circle.bg-gray-dark:hover {
 }
 
 
+
+/* Grid Classes  */
+.grid {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #0D8;
+  border: 1px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  margin: 3px;
+}
+
+.grid-item--width2 { width: 200px; }
+.grid-item--height2 { height: 200px; }
+
+
 /* Card Classes
 .card-bg {
 	background: #fcfcfc;

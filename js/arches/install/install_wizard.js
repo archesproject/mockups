@@ -205,7 +205,7 @@ jQuery(document).ready(function() {
     });
 
 
-    new Switchery(document.getElementById('load-thesauri'));
+    new Switchery(document.getElementById('node-cardinality'));
     new Switchery(document.getElementById('load-data'));
     new Switchery(document.getElementById('load-search'));
     new Switchery(document.getElementById('web-preview'));

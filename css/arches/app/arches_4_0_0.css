@@ -18,6 +18,8 @@ div.tab-content.arches-tab {
 	padding-top: 0px;
 }
 
+
+/* ASIDE CLASSESS =============================== */
 #aside-container #aside .tab-content {
 	padding-top: 0px;
 }
@@ -41,10 +43,39 @@ a.aside-title.arches-aside-title {
 	padding: 15px 0 0 5px;
 }
 
+li.aside-li {
+	height: 58px;
+}
+
+#aside-container #aside .nav-tabs li:not(active) a {
+    padding: 20px 0;
+}
+
+#aside .nav-tabs a i:hover {
+	color: #fff;
+}
+
+li.aside-li:hover {
+	background: #123;
+}
+
+li.aside-li.active:hover {
+	background: #37495b;
+}
+
+ul.nav.nav-tabs.nav-justified {
+	height: 59px;
+}
+
 
 
 /* =============================================== */
 /* Arches v4 Layout Classes                        */
+.slide {
+	position: relative;
+}
+
+
 
 .v-menu {
 	height: 100vh; 

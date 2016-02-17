@@ -1,0 +1,155 @@
+/* =============================================== */
+/* Arches v4 Default CSS for Graph Manager
+/* =============================================== */
+
+
+
+/* Chosen Overrides
+---------------------------------------------- */
+.chosen-container-single .chosen-single {
+	background: #314151;
+	border: 1px solid #314151;
+	color: #fff;
+	height: 32px;
+}
+
+.chosen-container .chosen-results {
+	background: #314151;
+	color: #fff;
+	margin-right: 0px;
+}
+
+.chosen-container-single .chosen-drop {
+	background: #314151;
+}
+
+.chosen-container-single .chosen-single div b:before {
+    content: "\f0d7";
+    font: normal normal normal 14px/1 FontAwesome;
+    vertical-align: -50%;
+    color: #ddd;
+}
+
+.chosen-container {
+	color: #bbb;
+}
+
+
+
+/* Permissions
+---------------------------------------------- */
+.permission-card {
+  float: left;
+  width: 220px;
+  height: 40px;
+  margin: 0 0 0 -5px;
+  position: relative;
+  padding: 5px;
+}
+
+.permission-card:hover {
+	background: steelblue;
+}
+
+.permission-icon {
+	width: 30px;
+	margin-top: 3px;
+}
+
+.permission-account {
+	width: 130px;
+	position: absolute;
+	left: 35px;
+	top: 12px;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.permission-level {
+	width: 40px;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	padding: 2px 2px 3px 2px;
+	border-radius: 1px;
+	text-align: center;
+}
+
+.full {
+	background: #01579B;
+	color: #fff;
+}
+
+.write {
+	background: #0277BD;
+	color: #fff;
+}
+
+.read {
+	background: #039BE5;
+	color: #333;
+}
+
+.view {
+	background: #29B6F6;
+	color: #333;
+}
+
+.none {
+	background: #B3E5FC;
+	color: #333;
+}
+
+
+.table-premissions {
+	background: #f8f8f8;
+	border: 1px solid #1E3143;
+}
+
+tbody tr:nth-child(odd) {
+   background-color: #475A6C;
+   color: #fff;
+}
+
+tr {
+	height: 40px;
+}
+
+
+/* Library Panel
+---------------------------------------------- */
+.library {
+	height: 100vh; 
+	position: absolute; 
+	top: 0px; 
+	opacity: .95; 
+	padding: 5px 20px 20px 10px; 
+}
+
+.library-wide {
+	width: 400px; 
+}
+
+.library-medium {
+	width: 300px; 
+}
+
+.library-narrow {
+	width: 220px; 
+}
+
+.library-dark {
+	background: #314151; 
+	border-left: 1px solid #123;
+} 
+
+.library-bright {
+	background: #fff; 
+	border-right: 1px solid #ddd;
+} 
+
+
+
+
+

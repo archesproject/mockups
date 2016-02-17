@@ -13,9 +13,14 @@
   font: 10px sans-serif;
 }
 
+.node-text {
+	font-size: 10px;
+	text-overflow: ellipsis;
+}
+
 .link {
   fill: none;
-  stroke: #ccc;
+  stroke: #ddd;
   stroke-width: 1.5px;
 }
 

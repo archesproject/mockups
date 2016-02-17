@@ -77,9 +77,17 @@
 
 	  node.append("text")
 	    .attr("dy", ".31em")
+	    .attr("class", "node-text")
 	    .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
 	    .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
-	    .text(function(d) { return d.name; });
+	    // .text(function(d) { return d.name; });
+
+	    .text(function (d) {
+        	if(d.name.length > 13)
+           		return d.name.substring(0,13)+'...';
+         	else
+             	return d.name;                       
+        });
 	});
 
 	d3.select("#graph").style("height", diameter - 150 + "px");

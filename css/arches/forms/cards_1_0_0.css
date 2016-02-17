@@ -1,5 +1,5 @@
 /* =============================================== */
-/*Arches v4 Default CSS for forms*/
+/* Arches v4 Default CSS for forms*/
 /* =============================================== */
 
 
@@ -506,6 +506,13 @@ span.icon-wrap.icon-circle.bg-gray-dark:hover {
 
 .grid-item--width2 { width: 200px; }
 .grid-item--height2 { height: 200px; }
+
+.grid-card {
+  float: left;
+  width: 250px;
+  height: 170px;
+  margin: 3px;
+}
 
 
 /* Card Classes

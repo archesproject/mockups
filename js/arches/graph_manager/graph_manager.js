@@ -27,6 +27,12 @@
 	  	width: '100%'
 	});
 
+	$("#permissions").chosen({
+	  	disable_search_threshold: 15,
+	  	inherit_select_classes: true,
+	  	width: '100%'
+	});
+
 
 
 // 	Switches
@@ -35,28 +41,22 @@
 
 
 	
-// Permissions Table
-	var rowSelection = $('#permissions-table').DataTable({
-		"responsive": true,
-		"language": {
-			"paginate": {
-			  "previous": '<i class="fa fa-angle-left"></i>',
-			  "next": '<i class="fa fa-angle-right"></i>'
-			}
-		}
+//	Library Panel
+	$('#permissions-close').on('click', function (ev) {
+		ev.preventDefault();
+		$('#permissions-panel').fadeOut(100, "linear");
 	});
 
-	// $('#permissions-table').on( 'click', 'tr', function () {
-	// 	if ( $(this).hasClass('selected') ) {
-	// 		$(this).removeClass('selected');
-	// 	}
-	// 	else {
-	// 		rowSelection.$('tr.selected').removeClass('selected');
-	// 		$(this).addClass('selected');
-	// 	}
-	// } );
+	
+	$('.permission-card').on('click', function (ev) {
+		ev.preventDefault();
+		$(this).toggleClass("selected-card");
+		$('#permissions-panel').fadeIn(100, "linear");
 
+		//console.log('permission card clicked')
+	});
 
+	
 
 
 

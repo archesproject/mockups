@@ -34,6 +34,11 @@
 	color: #bbb;
 }
 
+.chosen-container a, .chosen-container a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
 
 
 /* Permissions
@@ -47,8 +52,13 @@
   padding: 5px;
 }
 
+.selected-card {
+	background: steelblue;
+}
+
 .permission-card:hover {
 	background: steelblue;
+	cursor: pointer;
 }
 
 .permission-icon {
@@ -76,6 +86,11 @@
 	text-align: center;
 }
 
+.permission-level-icon {
+	height: 20px;
+    margin-top: -5px;
+}
+
 .full {
 	background: #01579B;
 	color: #fff;
@@ -101,20 +116,23 @@
 	color: #333;
 }
 
-
-.table-premissions {
-	background: #f8f8f8;
-	border: 1px solid #1E3143;
+.key-container {
+	position: relative;
+	padding-bottom: 15px;
 }
 
-tbody tr:nth-child(odd) {
-   background-color: #475A6C;
-   color: #fff;
+.key-icon {
+	width: 50px;
 }
 
-tr {
-	height: 40px;
+.key-class {
+	position: absolute;
+	top: 0px;
+	left: 50px;
 }
+
+
+
 
 
 /* Library Panel
@@ -140,14 +158,36 @@ tr {
 }
 
 .library-dark {
-	background: #314151; 
+	background: #1E3143; 
 	border-left: 1px solid #123;
+	color: #f9f9f9;
 } 
 
 .library-bright {
 	background: #fff; 
 	border-right: 1px solid #ddd;
 } 
+
+.library-instructions {
+	font-size: 11px;
+	margin-left: 5px;
+	margin-top: -15px;
+}
+
+.key {
+	margin-top: 110px;
+}
+
+.library-close-btn {
+	position: absolute; 
+	right: 15px; 
+	top: 20px; 
+	color: #ddd;
+}
+
+.library-close-btn:hover {
+	color: #fff;
+}
 
 
 

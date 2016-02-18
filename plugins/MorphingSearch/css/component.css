@@ -4,7 +4,7 @@
 	min-height: 40px;
 	background: #f1f1f1;
 	position: absolute;
-	z-index: 2000;
+	z-index: 200;
 	top: 50px;
 	right: 50px;
 	-webkit-transform-origin: 100% 0;
@@ -320,7 +320,7 @@ input[type="search"] { /* reset normalize */
 @media screen and (max-width: 767px) {
 	.morphsearch {
 		width: 30%;
-		top: 90px;
+		top: 50px;
 		right: 10%;
 	}
 
@@ -344,10 +344,18 @@ input[type="search"] { /* reset normalize */
 	}
 }
 
+@media screen and (max-width: 969px) {
+	.morphsearch {
+		width: 30%;
+		top: 5px;
+		right: 50px;
+	}
+}
+
 @media screen and (min-width: 970px) {
 	.morphsearch {
-		width: 20%;
-		top: 55px;
+		width: 30%;
+		top: 10px;
 		right: 50px;
 	}
 }

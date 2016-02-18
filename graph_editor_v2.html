@@ -764,56 +764,85 @@
 					<!-- End Page Content -->
 
 					<!-- Permissions Form -->
-					<div id="" class="library library-wide library-dark" style="">
+					<div id="permissions-panel" class="library library-medium library-dark" style="display: none;">
+						
+						<!-- Title -->
 						<h4 class="node-title" style=""> Manage Permissions </h4>
-
+						<div class="relative">
+							<a id="permissions-close" href="" class="library-close-btn fa fa-times fa-lg" style=""></a>
+						</div>
 						<div id="" class="" style="padding-top: 20px; position: relative;">
-							<table id="premissions-table" class="table table-bordered table-premissions" style="position: absolute; top: 97px;" cellspacing="0" width="100%">
-								<thead>
-									<tr style="height: 40px;">
-										<th style="width: 25px;">
-											<label class="form-checkbox form-normal form-primary active"><input type="checkbox" checked="">
-											</label>
-										</th>
-										<th>Group/User</th>
-										<th>Permission</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<label class="form-checkbox form-normal form-primary active"><input type="checkbox" checked="">
-											</label>
-										</td>
-										<td>Guest</td>
-										<td>View</td>
-									</tr>
-									<tr>
-										<td>
-											<label class="form-checkbox form-normal form-primary active"><input type="checkbox" checked="">
-											</label>
-										</td>
-										<td>Crowd Source</td>
-										<td>Write</td>
-									</tr>
-									<tr>
-										<td>
-											<label class="form-checkbox form-normal form-primary active"><input type="checkbox" checked="">
-											</label>
-										</td>
-										<td>Editor</td>
-										<td>Full</td>
-									</tr>
-									<tr>
-										<td>
-											<label class="form-checkbox form-normal form-primary active"><input type="checkbox" checked="">
-											</label>
-										</td>
-										<td>rgaston@superuser.org</td>
-										<td>View</td>
-									</tr>
-								</tbody>
-							</table>
+							<p class="library-instructions" style=""> Update the Groups/User Accounts you selected with the following permissions:</p>
+						</div>
+
+						<!-- Premission Selector -->
+						<div class="col-sm-12 pad-no node-attribute-label" style="margin-top: 8px;">
+							<select class="design" data-placeholder="" id="permissions" tabindex="0">
+								<option>N - No Access</option>
+								<option>R - Read Only</option>
+								<option>RW -Read/Write</option>
+								<option>D - Delete</option>
+								<option>F - Full Access (read, write, delete)</option>
+							</select>
+
+							<button class="btn btn-primary btn btn-block btn-labeled fa fa-check"> Apply permissions</button>
+						</div>
+
+						<!-- Premission Key -->
+						<div class="key hidden" style="">
+							<h4 class="node-title" style=""> Key: </h4>
+
+							<div class="key-container" style="">
+								<div class="" style="padding-left: 15px;">
+									<div class="key-icon" style="">
+										<img class="permission-level-icon" src="img/arches/perm_no_access.png" alt="read access">
+									</div>
+									<div class="key-class" style="">
+										No Access
+									</div>
+								</div>
+							</div>
+							<div class="key-container" style="">
+								<div class="" style="padding-left: 15px;">
+									<div class="key-icon" style="">
+										<img class="permission-level-icon" src="img/arches/perm_read.png" alt="read access">
+									</div>
+									<div class="key-class" style="">
+										Read Access Only
+									</div>
+								</div>
+							</div>
+							<div class="key-container" style="">
+								<div class="" style="padding-left: 15px;">
+									<div class="key-icon" style="">
+										<img class="permission-level-icon" src="img/arches/perm_write.png" alt="read access">
+									</div>
+									<div class="key-class" style="">
+										Read and Write Access
+									</div>
+								</div>
+							</div>
+							<div class="key-container" style="">
+								<div class="" style="padding-left: 15px;">
+									<div class="key-icon" style="">
+										<img class="permission-level-icon" src="img/arches/perm_delete.png" alt="read access">
+									</div>
+									<div class="key-class" style="">
+										Read, Write, Delete Access
+									</div>
+								</div>
+							</div>
+							<div class="key-container" style="">
+								<div class="" style="padding-left: 15px;">
+									<div class="key-icon" style="">
+										<img class="permission-level-icon" src="img/arches/perm_full.png" alt="read access">
+									</div>
+									<div class="key-class" style="">
+										Full Access
+									</div>
+								</div>
+							</div>
+
 						</div>
 
 					</div>
@@ -1246,9 +1275,7 @@
 								<div class="tab-pane fade" id="node-permissions">
 									<!-- Title -->
 									<div class="">
-										<h4 class="node-title" style=""> Permissions 
-										<button class="btn btn-primary btn-xs btn-labeled pull-right fa fa-arrow-right" style="margin-right: 5px; margin-bottom: 5px;">Edit all</button>
-										</h4>
+										<h4 class="node-title" style=""> Permissions</h4>
 									</div>
 									
 									<!-- Group/User Search -->
@@ -1289,8 +1316,8 @@
 														Guest
 													</a>
 												</div>
-												<div class="permission-level none" style="">
-													none
+												<div class="permission-level full" style="">
+													R
 												</div>
 											</div>
 
@@ -1304,8 +1331,8 @@
 														Crowd Source
 													</a>
 												</div>
-												<div class="permission-level read" style="">
-													read
+												<div class="permission-level" style="">
+													<img class="permission-level-icon" src="img/arches/perm_full.png" alt="read access">
 												</div>
 											</div>
 
@@ -1319,8 +1346,8 @@
 														Editor
 													</a>
 												</div>
-												<div class="permission-level write" style="">
-													write
+												<div class="permission-level" style="">
+													<img class="permission-level-icon" src="img/arches/perm_write.png" alt="read access">
 												</div>
 											</div>
 
@@ -1334,8 +1361,8 @@
 														RDM Admin
 													</a>
 												</div>
-												<div class="permission-level view" style="">
-													view
+												<div class="permission-level" style="">
+													<img class="permission-level-icon" src="img/arches/perm_delete.png" alt="read access">
 												</div>
 											</div>
 
@@ -1349,8 +1376,8 @@
 														rgaston@superuser.com
 													</a>
 												</div>
-												<div class="permission-level full" style="">
-													full
+												<div class="permission-level" style="">
+													<img class="permission-level-icon" src="img/arches/perm_read.png" alt="read access">
 												</div>
 											</div>
 
@@ -1364,8 +1391,8 @@
 														adalgity@gci.edu
 													</a>
 												</div>
-												<div class="permission-level write" style="">
-													write
+												<div class="permission-level" style="">
+													<img class="permission-level-icon" src="img/arches/perm_delete.png" alt="read access">
 												</div>
 											</div>
 

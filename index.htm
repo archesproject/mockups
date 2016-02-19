@@ -11,74 +11,10 @@
       }
   </style>
   <body>
-    <div>
-        <a href="admin_resources.html">admin_resources</a>
-    </div>
-    <div>
-        <a href="card_examples.html">card_examples</a>
-    </div>
-    <div>
-        <a href="config_core.html">config_core</a>
-    </div>
-    <div>
-        <a href="config_manager.html">config_manager</a>
-    </div>
-    <div>
-        <a href="config_manager_v2.html">config_manager_v2</a>
-    </div>
-    <div>
-        <a href="config_map.html">config_map</a>
-    </div>
-    <div>
-        <a href="config_search.htm">config_search.htm</a>
-    </div>
-    <div>
-        <a href="d_dashboard.html">d_dashboard</a>
-    </div>
-    <div>
-        <a href="d_example_resource_manager.html">d_example_resource_manager</a>
-    </div>
-    <div>
-        <a href="d_explore.html">d_explore</a>
-    </div>
-    <div>
-        <a href="d_resource_manager.html">d_resource_manager</a>
-    </div>
-    <div>
-        <a href="default1.html">default1</a>
-    </div>
-    <div>
-        <a href="edit_data_card.html">edit_data_card</a>
-    </div>
-    <div>
-        <a href="edit_node_string.html">edit_node_string</a>
-    </div>
-    <div>
-        <a href="form_builder.html">form_builder</a>
-    </div>
-    <div>
-        <a href="form_builder_accordian.html">form_builder_accordian</a>
-    </div>
-    <div>
-        <a href="forms_example.html">forms_example</a>
-    </div>
-    <div>
-        <a href="graph_builder.html">graph_builder</a>
-    </div>
-    <div>
-        <a href="graph_editor.html">graph_editor</a>
-    </div>
-    <div>
-        <a href="graph_editor_v2.html">graph_editor_v2</a>
-    </div>
-    <div>
-        <a href="install_wizard_start.html">install_wizard_start</a>
-    </div>
-    <div>
-        <a href="install_wizard_v2.html">install_wizard_v2</a>
-    </div>
-    <div>
-        <a href="resource_designer.html">resource_designer</a>
+    <div data-bind="foreach: names">
+        <div>
+            <a data-bind="attr: {'href': name}, text: name"></a>
+        </div>
     </div>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
     <script>
@@ -91,9 +27,21 @@
                 'knockout': 'http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min'
             }
         });
-        require(['jquery', 'bootstrap'], function () {
-            $.get('https://github.com/archesproject/mockups/tree/gh-pages', function() {
-                console.log(arguments);
+        require(['jquery', 'knockout'], function ($, ko) {
+            window.jQuery = $;
+            require(['bootstrap'], function (){
+                $.get('https://api.github.com/repos/archesproject/mockups/contents?ref=gh-pages', function(data) {
+                    var names = [];
+                    for (var i = 0; i < data.length; i++) {
+                        var name = data[i].name;
+                        if (name.indexOf('.html')>0) {
+                            names.push(data[i]);
+                        }
+                    }
+                    ko.applyBindings({
+                        names: names
+                    });
+                });
             })
         })
     </script>

@@ -10,12 +10,16 @@
 body {
     padding: 10px;
 }
+.loading {
+    font-size: 26px
+}
 </style>
 <body>
     <div class="container">
         <h1>Arches 4 mockups</h1>
 
-        <table class="table table-striped">
+        <i class="fa fa-spinner fa-spin loading" data-bind="css: {'hide': names.length>0}"></i>
+        <table class="table table-striped hide"  data-bind="css: {'hide': names.length<0}">
             <tbody data-bind="foreach: names">
                 <tr>
                     <td>
@@ -41,15 +45,17 @@ body {
         window.jQuery = $;
         require(['bootstrap'], function (){
             $.get('https://api.github.com/repos/archesproject/mockups/contents?ref=gh-pages', function(data) {
-                var vm = {
-                    names: []
-                };
+                var names = [];
                 for (var i = 0; i < data.length; i++) {
-                    if (data[i].name.indexOf('.html')>0) {
-                        vm.names.push(data[i]);
+                    var name = data[i].name;
+                    if (name.indexOf('.html')>0) {
+                        console.log(data[i])
+                        names.push(data[i]);
                     }
                 }
-                ko.applyBindings(vm);
+                ko.applyBindings({
+                    names: names
+                });
             });
         })
     })

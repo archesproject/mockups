@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Arches v4 Mockups</title>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
-  </head>
-  <style media="screen">
-      body {
-          padding: 10px;
-      }
-  </style>
-  <body>
-    <h1>Mockups</h1>
-    <div data-bind="foreach: names">
-        <div>
-            <a data-bind="attr: {'href': name}, text: name"></a>
-        </div>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<style media="screen">
+body {
+    padding: 10px;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Arches 4 mockups</h1>
+
+        <table class="table table-striped">
+            <tbody data-bind="foreach: names">
+                <tr>
+                    <td>
+                        <a data-bind="attr: {'href': name}">
+                            <i class="fa fa-arrow-right"></i>
+                            <span data-bind="text: name.split('.html')[0]"></span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
     <script>
-        require.config({
-            paths: {
-                'jquery': 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
-                'bootstrap': 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min',
-                'knockout': 'http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min'
-            }
-        });
-        require(['jquery', 'knockout'], function ($, ko) {
-            window.jQuery = $;
-            require(['bootstrap'], function (){
-                $.get('https://api.github.com/repos/archesproject/mockups/contents?ref=gh-pages', function(data) {
-                    var names = [];
-                    for (var i = 0; i < data.length; i++) {
-                        var name = data[i].name;
-                        if (name.indexOf('.html')>0) {
-                            names.push(data[i]);
-                        }
+    require.config({
+        paths: {
+            'jquery': 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
+            'bootstrap': 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min',
+            'backbone': 'http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
+            'underscore': 'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min',
+            'knockout': 'http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min'
+        }
+    });
+    require(['jquery', 'knockout'], function ($, ko) {
+        window.jQuery = $;
+        require(['bootstrap'], function (){
+            $.get('https://api.github.com/repos/archesproject/mockups/contents?ref=gh-pages', function(data) {
+                var names = [];
+                for (var i = 0; i < data.length; i++) {
+                    var name = data[i].name;
+                    if (name.indexOf('.html')>0) {
+                        console.log(data[i])
+                        names.push(data[i]);
                     }
-                    ko.applyBindings({
-                        names: names
-                    });
+                }
+                ko.applyBindings({
+                    names: names
                 });
-            })
+            });
         })
+    })
     </script>
-  </body>
+</body>
 </html>

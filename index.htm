@@ -43,9 +43,7 @@ body {
             $.get('https://api.github.com/repos/archesproject/mockups/contents?ref=gh-pages', function(data) {
                 var names = [];
                 for (var i = 0; i < data.length; i++) {
-                    var name = data[i].name;
-                    if (name.indexOf('.html')>0) {
-                        console.log(data[i])
+                    if (data[i].name.indexOf('.html')>0) {
                         names.push(data[i]);
                     }
                 }

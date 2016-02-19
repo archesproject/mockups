@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Arches v4 Mockups</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
   </head>
+  <style media="screen">
+      body {
+          padding: 10px;
+      }
+  </style>
   <body>
     <div>
         <a href="admin_resources.html">admin_resources</a>
@@ -74,5 +80,22 @@
     <div>
         <a href="resource_designer.html">resource_designer</a>
     </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+    <script>
+        require.config({
+            paths: {
+                'jquery': 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
+                'bootstrap': 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min',
+                'backbone': 'http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
+                'underscore': 'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min',
+                'knockout': 'http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min'
+            }
+        });
+        require(['jquery', 'bootstrap'], function () {
+            $.get('https://github.com/archesproject/mockups/tree/gh-pages', function() {
+                console.log(arguments);
+            })
+        })
+    </script>
   </body>
 </html>

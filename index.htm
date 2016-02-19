@@ -45,17 +45,15 @@ body {
         window.jQuery = $;
         require(['bootstrap'], function (){
             $.get('https://api.github.com/repos/archesproject/mockups/contents?ref=gh-pages', function(data) {
-                var names = [];
+                var vm = {
+                    names: []
+                };
                 for (var i = 0; i < data.length; i++) {
-                    var name = data[i].name;
-                    if (name.indexOf('.html')>0) {
-                        console.log(data[i])
-                        names.push(data[i]);
+                    if (data[i].name.indexOf('.html')>0) {
+                        vm.names.push(data[i]);
                     }
                 }
-                ko.applyBindings({
-                    names: names
-                });
+                ko.applyBindings(vm);
             });
         })
     })

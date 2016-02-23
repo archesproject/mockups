@@ -33,12 +33,13 @@
 #nodeCrud {
 	position: absolute;
 	width: 250px;
-	height: 600px;
-	left: 15px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
 	padding: 10px;
 	background-color: #37495b;
 	color: #fff;
-	z-index: 500;
+	z-index: 200;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;

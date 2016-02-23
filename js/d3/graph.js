@@ -60,7 +60,11 @@
 				d3.select("#nodeCrud")					
 				.select("#nodeName")
 				.text(nodeName);
-				console.log(nodeName);
+				
+				// move entire graph on click
+				// var tempx = 100;
+				// var tempy = 100;
+				// svg.attr("transform", "translate(" + tempx + "," + tempy + "), rotate(0)");
 
 		    	//Show the form if user clicks on a node
     			d3.select("#nodeCrud").classed("hidden", false);				
@@ -109,7 +113,7 @@ $(document).ready(function(){
         var xScreen = e.clientX;
         var yScreen = e.clientY;
         var windowHeight = $(window).height();
-        console.log ("xScreen = " + xScreen + ", yScreen = " + yScreen + "window" + windowHeight);
+        //console.log ("xScreen = " + xScreen + ", yScreen = " + yScreen + "window" + windowHeight);
        
 
         // Offset Crud Form.  
@@ -120,25 +124,29 @@ $(document).ready(function(){
         // Else, offset crud form up 300px so that it is centered around node
 
         
-        
+        $("#nodeCrud").fadeIn(300, "linear");
+
+        // Close Permissions/Branch Library panels
+        $('#branch-panel').fadeOut(200, "linear");
+        $('#permissions-panel').fadeOut(200, "linear");
         
 
-        if ((yScreen + 300) > windowHeight) {
-		    $("#nodeCrud").offset({left:x,top:300});
+  //       if ((yScreen + 300) > windowHeight) {
+		//     $("#nodeCrud").offset({left:x,top:300});
 		    
-		    //scroll div to top of page
-			$("html, body").animate({ scrollTop: $("#nodeCrud").offset().top }, 400);
-		 //    console.log("hitting bottom");
+		//     //scroll div to top of page
+		// 	$("html, body").animate({ scrollTop: $("#nodeCrud").offset().top }, 400);
+		//  //    console.log("hitting bottom");
 		
-		} else if ((yScreen - 300) < 150) { 
-		    $("#nodeCrud").offset({left:x,top:yScreen-100});
-		    $("html, body").animate({ scrollTop: $("#page-title").offset().top }, 400);
-		    // console.log("hitting top");
+		// } else if ((yScreen - 300) < 150) { 
+		//     $("#nodeCrud").offset({left:x,top:yScreen-100});
+		//     $("html, body").animate({ scrollTop: $("#page-title").offset().top }, 400);
+		//     // console.log("hitting top");
 		
-		} else { 
-		    $("#nodeCrud").offset({left:x,top:y-300});
-		    $("html, body").animate({ scrollTop: $("#nodeCrud").offset().top }, 400);
-		}
+		// } else { 
+		//     $("#nodeCrud").offset({left:x,top:y-300});
+		//     $("html, body").animate({ scrollTop: $("#nodeCrud").offset().top }, 400);
+		// }
 
 		
 

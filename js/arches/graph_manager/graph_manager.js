@@ -230,7 +230,7 @@
 //	CRUD Panel
 	$('#node-crud-close').on('click', function (ev) {
 		ev.preventDefault();
-		$('#nodeCrud').addClass("hidden");
+		$('#nodeCrud').fadeOut(200, "linear");;
 	});
 
 

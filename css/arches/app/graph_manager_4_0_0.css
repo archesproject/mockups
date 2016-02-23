@@ -41,106 +41,26 @@
 
 
 
-/* Permissions
----------------------------------------------- */
-.permission-card {
-  float: left;
-  width: 220px;
-  height: 40px;
-  margin: 0 0 0 -5px;
-  position: relative;
-  padding: 5px;
-}
-
-.selected-card {
-	background: steelblue;
-}
-
-.permission-card:hover {
-	background: steelblue;
-	cursor: pointer;
-}
-
-.permission-icon {
-	width: 30px;
-	margin-top: 3px;
-}
-
-.permission-account {
-	width: 130px;
-	position: absolute;
-	left: 35px;
-	top: 12px;
-	white-space: nowrap;
-  	overflow: hidden;
-  	text-overflow: ellipsis;
-}
-
-.permission-level {
-	width: 40px;
-	position: absolute;
-	right: 5px;
-	top: 10px;
-	padding: 2px 2px 3px 2px;
-	border-radius: 1px;
-	text-align: center;
-}
-
-.permission-level-icon {
-	height: 20px;
-    margin-top: -5px;
-}
-
-.full {
-	background: #01579B;
-	color: #fff;
-}
-
-.write {
-	background: #0277BD;
-	color: #fff;
-}
-
-.read {
-	background: #039BE5;
-	color: #333;
-}
-
-.view {
-	background: #29B6F6;
-	color: #333;
-}
-
-.none {
-	background: #B3E5FC;
-	color: #333;
-}
-
-.key-container {
-	position: relative;
-	padding-bottom: 15px;
-}
-
-.key-icon {
-	width: 50px;
-}
-
-.key-class {
-	position: absolute;
-	top: 0px;
-	left: 50px;
-}
-
-
-
-
-
 /* Library Panel
 ---------------------------------------------- */
 .library {
-	height: 100vh; 
+	min-height: 100vh; 
+	position: absolute; 
+	top: 0px;
+	bottom: 0; 
+	opacity: .95; 
+	padding: 5px 20px 20px 10px; 
+}
+
+.library-right {
+	min-height: 100vh; 
+	height: inherit;
 	position: absolute; 
 	top: 0px; 
+	right: 0px;
+	bottom: 0px;
+	/*border-right: 1px solid #123;*/
+	z-index: 400;
 	opacity: .95; 
 	padding: 5px 20px 20px 10px; 
 }
@@ -160,12 +80,13 @@
 .library-dark {
 	background: #1E3143; 
 	border-left: 1px solid #123;
-	color: #f9f9f9;
+	color: #ddd;
 } 
 
 .library-bright {
 	background: #fff; 
 	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
 } 
 
 .library-instructions {
@@ -174,8 +95,21 @@
 	margin-top: -15px;
 }
 
+.clear-search {
+	position: absolute; 
+	right: 15px; 
+	top: 97px; 
+	color: #123; 
+	font-size: 19px;
+}
+
+.clear-search:hover {
+	cursor: pointer;
+	color: rgba(0,0,0,0.95);
+}
+
 .key {
-	margin-top: 110px;
+	margin-top: 98px;
 }
 
 .library-close-btn {
@@ -189,7 +123,159 @@
 	color: #fff;
 }
 
+.alert {
+    padding: 15px;
+}
 
+
+.library-card {
+  float: left;
+  width: 220px;
+  height: 58px;
+  margin: 0 0 0 -5px;
+  position: relative;
+  padding: 5px;
+  color: #ccc;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.library-card:first-of-type {
+	border-top: 1px solid rgba(0,0,0,0.25);
+}
+
+.selected-card {
+	background-color: rgba(0,0,0,0.2);
+	/*border-top: 1px solid rgba(0,0,0,0.25);*/
+	opacity: .9;
+	color: #fff;
+}
+
+.library-card:hover {
+	background-color: rgba(0,0,0,0.10);
+	cursor: pointer;
+}
+
+.library-icon {
+	width: 30px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.library-card-main {
+	width: 155px;
+	position: absolute;
+	left: 52px;
+	top: 12px;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	font-size: 12px;
+}
+
+.library-card-subtitle {
+	width: 155px;
+	position: absolute;
+	left: 50px;
+	top: 25px;
+	padding: 2px 2px 3px 2px;
+	color: #8ba2b9;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.permission-level-icon {
+	height: 20px;
+    margin-top: -5px;
+}
+
+
+.library-search {
+	background: #314151; 
+	border: 1px solid #314151; 
+	color: #fff; 
+	height: 32px; 
+	width: 200px; 
+	margin-left: 10px; 
+	margin-right: 10px;
+}
+
+
+.key-container {
+	position: relative;
+	padding-bottom: 15px;
+}
+
+.key-icon {
+	width: 50px;
+}
+
+.key-class {
+	position: absolute;
+	top: 0px;
+	left: 50px;
+}
+
+
+
+/* Branches
+---------------------------------------------- */
+#branch-panel {
+	position: fixed;
+	top: 40px;
+	right: 220px;
+	overflow-y: scroll;
+}
+
+
+.branch-preview {
+	height: 550px;
+	width: 280px;
+	background: #f1f1f1;
+	border: 1px solid #123;
+	color: #123;
+}
+
+.branch-metadata {
+	padding-top: 8px;
+}
+
+.branch-icon{
+	border: 1px solid rgba(0,0,0,0.25);
+}
+
+.branch-icon:hover{
+	border: 1px solid rgba(0,0,0,0.25);
+	background: #5fa2dd;
+}
+
+
+/* Permissions
+---------------------------------------------- */
+#permissions-panel {
+	position: fixed;
+	top: 40px;
+	right: 220px;
+	overflow-y: scroll;
+}
+
+
+
+.clear-selection {
+	background: #314151; 
+	width: 100%; 
+	height: 21px; 
+	padding-top: 4px; 
+	margin-bottom: 0px; 
+	padding-bottom: 0px; 
+	margin-top: 10px;
+}
+
+.clear-selection-link {
+	font-size: 9px; 
+	float: right;
+}
 
 
 

@@ -18,7 +18,9 @@
 	    .attr("width", diameter)
 	    .attr("height", diameter - 150)
 	    .append("g")
-	    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+	    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + "), rotate(0)");
+	   
+
 
 	d3.json("flare.json", function(error, root) {
 	  if (error) throw error;
@@ -97,11 +99,48 @@ $(document).ready(function(){
   	$("#graph").click(function(e){
         
         //get cursor position, add a bit of offset
-        var x = e.pageX + 10;
-        var y = e.pageY - 5;
+        // var x = e.pageX + 15;
+        // var y = e.pageY - 5;
 
-        //$("#graph").show(2000);
-        $("#nodeCrud").offset({left:x,top:y});
+        //Get cursor position, add x offset
+        var x = e.pageX + 15;
+        var y = e.pageY;
+
+        var xScreen = e.clientX;
+        var yScreen = e.clientY;
+        var windowHeight = $(window).height();
+        console.log ("xScreen = " + xScreen + ", yScreen = " + yScreen + "window" + windowHeight);
+       
+
+        // Offset Crud Form.  
+        // Magic Numbers: 	top of form should be at 130px. 
+        //         			Form is 600px tall; half of form is 300px;
+        // 
+        // If current node position is less than 430 (e.g.: 130 + 300) place top of crud form at 130px
+        // Else, offset crud form up 300px so that it is centered around node
+
+        
+        
+        
+
+        if ((yScreen + 300) > windowHeight) {
+		    $("#nodeCrud").offset({left:x,top:300});
+		    
+		    //scroll div to top of page
+			$("html, body").animate({ scrollTop: $("#nodeCrud").offset().top }, 400);
+		 //    console.log("hitting bottom");
+		
+		} else if ((yScreen - 300) < 150) { 
+		    $("#nodeCrud").offset({left:x,top:yScreen-100});
+		    $("html, body").animate({ scrollTop: $("#page-title").offset().top }, 400);
+		    // console.log("hitting top");
+		
+		} else { 
+		    $("#nodeCrud").offset({left:x,top:y-300});
+		    $("html, body").animate({ scrollTop: $("#nodeCrud").offset().top }, 400);
+		}
+
+		
 
     })
 })

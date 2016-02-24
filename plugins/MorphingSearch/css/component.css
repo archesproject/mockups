@@ -4,7 +4,7 @@
 	min-height: 30px;
 	background: #f1f1f1;
 	position: absolute;
-	z-index: 200;
+	z-index: 500;
 	top: 45px;
 	right: 50px;
 	-webkit-transform-origin: 100% 0;

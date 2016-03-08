@@ -236,32 +236,23 @@
 
 
 //	Search Mockup
-	// var $grid = $('#node-grid').isotope({
-	//   	// options
-	// 	itemSelector: '.library-card',
-	// 	getSortData: {
-		    
-	// 	},
-	  
-	//   	// layout mode options
+	// var $grid = $('.grid').isotope({
+	//   	// set itemSelector so .grid-sizer is not used in layout
+	//   	itemSelector: '.library-card',
+	//   	percentPosition: true,
 	//   	masonry: {
+	//     	// use element for option
 	//     	columnWidth: 200
 	//   	}
-	// });
+	// })
 
-	
-	// $('#node-search').on('input', function (ev) {
-	// 	ev.preventDefault();
 
-	// 	console.log("filtering");
-	// 	//$( "#node-grid" ).find( "a" ).css( "color", "red" );
+	// $grid.isotope({ filter: function() {
+	//   	var name = $('#node-search').find('a').text();
+	//   	return name.match( $("#search-node").val() );
+	//   	}
+	// })	
 
-	// 	$grid.isotope({ filter: function() {
-	// 	  	var name = $('#node-grid').find('a').text();
-	// 	  	return name.match( $("#search-node").val() );
-	// 	  	}
-	// 	})	
-	// });
 
 
 

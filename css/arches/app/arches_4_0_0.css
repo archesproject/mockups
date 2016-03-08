@@ -313,6 +313,10 @@ ul.nav.nav-tabs.nav-justified {
 
 /* =============================================== */
 /* Card/Form  Designer                             */
+.card-list {
+	list-style: none;
+	padding-left: 15px;
+}
 
 .gf-designer-container {
 	position: absolute; 
@@ -324,12 +328,220 @@ ul.nav.nav-tabs.nav-justified {
 	height: 100vh;
 }
 
+.cd-card-item-container {
+	position: absolute; 
+	top: 0px; 
+	bottom: 60px; 
+	left: 0px; 
+	width: 220px; 
+	border-right-width: 0px; 
+	height: 100vh;
+}
+
+.cd-form-container {
+	position: absolute; 
+	top: 0px; 
+	bottom: 60px; 
+	left: 219px; 
+	width: 300px; 
+	border: 1px solid #ddd; 
+	border-left-width: 0px; 
+	height: 100vh;
+}
+
+.cd-config-panel {
+	position: absolute; 
+	top: 0px; 
+	bottom: 60px; 
+	right: 0px; 
+	width: 300px; 
+	border: 1px solid #ddd; 
+	border-left-width: 0px; 
+	height: 100vh;
+	transition: all .40s ease;
+}
+
+
+.cd-preview {
+	position: absolute; 
+	top: 0px; 
+	bottom: 60px; 
+	left: 0px; 
+	right: 300px; 
+	z-index: 1; 
+	background: #f8f8f8; 
+	height: 100vh; 
+	padding: 0px 20px 60px 20px; 
+	overflow-y: scroll; 
+	margin-bottom: 40px;
+	transition: all .40s ease;
+}
 
 
 
+.cd-form {
+	position: absolute; 
+	top: -1px; 
+	bottom: 0px; 
+	box-shadow: none; 
+	width: 300px;
+}
+
+.cd-dark {
+	background: #1E3143;  /*#37495b*/
+	border: 1px solid #123; 
+	border-top-width: 0px; 
+	color: #fbfbfb; 
+}
+
+.cd-light {
+	background: #fff; 
+	border: 1px solid #ddd; 
+	color: #37495b;
+}
+
+.item-selected {
+	background-color: #fafafa;
+}
+
+.card-item {
+	position: relative;
+	height: 24px;  
+	width: 220px; 
+	font-weight: 700;
+	font-size: 1.25;
+	margin-left: -20px; 
+	padding: 5px 5px 5px 10px;
+}
+
+.card-item-child {
+	padding-left: 20px;
+	font-weight: 400;
+}
+
+.card-item:hover {
+	background-color: #fafafa;
+	cursor: pointer;
+}
+
+.cd-dark > .panel-body > .card-item:hover {
+	background-color: #37495b;
+}
+
+.cd-dark > .panel-body > .card-item > a {
+	color: #e5e5e5;
+}
+
+.cd-dark > .panel-body > .card-item-group > .card-item > a {
+	color: #e5e5e5;
+}
+
+.cd-dark > .panel-body > .card-item-group > .card-item:hover {
+	background-color: #37495b;
+}
+
+.cd-dark > .panel-body > .item-selected {
+	background-color: #37495b;
+}
+
+.cd-form-container > .cd-dark {
+	background-color: #37495b;
+	border-left-width: 0px;
+	border-top: 1px solid #37495b; 
+}
+
+.cd-config-panel > .cd-dark {
+	background-color: #37495b;
+	border-left-width: 0px;
+	border-top: 1px solid #37495b; 
+}
+
+.cd-form-container > .cd-light {
+	background-color: #fafafa;
+	border-left-width: 0px;
+	border-top: 1px solid #ddd; 
+}
+
+.cd-config-panel > .cd-light {
+	background-color: #fafafa;
+	border-left-width: 0px;
+	border-top: 1px solid #ddd; 
+}
+
+.cd-form-container > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control {
+	background: #314151;
+	border-color: #314151;
+	color: #fff;
+}
+
+.cd-config-panel > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control {
+	background: #314151;
+	border-color: #314151;
+	color: #fff;
+}
+
+.cd-form-container > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control:focus {
+	border-color: steelblue;
+}
+
+.cd-config-panel > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control:focus {
+	border-color: steelblue;
+}
+
+.cd-form-container > .cd-dark > .panel-heading > div > a {
+	color: #ddd;
+}
+
+.cd-config-panel > .cd-dark > .panel-heading > div > a {
+	color: #ddd;
+}
+
+.drag-tool {
+	float: right; 
+	padding-right: 5px; 
+	color: #ddd;
+}
 
 
+.cd-dark > .panel-body > .card-item-group > .card-item > .drag-tool {
+	color: #314151;
+}
 
+.cd-dark > .panel-body > .card-item-group > .card-item > .drag-tool:hover {
+	color: steelblue;
+}
+
+.card-item-child > .drag-tool:hover{
+	opacity: .9;
+	color: steelblue;
+}
+
+.widget-container {
+	padding: 10px 15px 25px 15px;
+}
+
+.widget-container:hover {
+	background: #f8f8f8;
+}
+
+.pin-left-widget {
+	position: absolute;
+	top: 14px;
+	left: 15px;
+}
+
+.drag-tool-widget {
+	display: none; 
+	transition: all .40s ease;
+}
+
+.drag-tool-widget > .fa:hover{
+	cursor: move;
+}
+
+.control-label {
+	margin-bottom: 3px;
+}
 
 
 /* =============================================== */

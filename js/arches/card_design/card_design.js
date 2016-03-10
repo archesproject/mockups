@@ -56,7 +56,13 @@
 	});
 
 
+//	switches
+	new Switchery(document.getElementById('card-visibility'), {size: 'small'});
 
+
+
+// chosen
+	$('.design').chosen({width:'100%'});
 
 
 //	Container functions

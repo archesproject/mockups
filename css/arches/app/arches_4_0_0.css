@@ -543,6 +543,73 @@ ul.nav.nav-tabs.nav-justified {
 	margin-bottom: 3px;
 }
 
+a.selected {
+	font-weight: 600;
+	color: #123;
+}
+
+.edit-card-element {
+	font-size: 12px;
+	display: none;
+}
+
+.edit-card-element:hover {
+	cursor: pointer;
+}
+
+.active a .edit-card-element {
+	display: inline-block;
+}
+
+h3 .edit-card-element {
+	display: inline-block;
+}
+
+span .edit-card-element {
+	display: inline-block;
+}
+
+.wizard-level-tile .edit-card-element {
+	display: inline-block;
+}
+
+.tile-record .edit-card-element{
+	display: inline-block;
+	font-size: 11px;
+}
+
+.wizard-level-tile {
+	height: 50px; 
+	margin: 0px; 
+	border-top: 1px solid #ddd; 
+	background: #f4f5f7;
+}
+
+.wizard-tile-title {
+	color: #c9c9c9; 
+	font-size: 13px;
+	padding: 15px; 
+	color: #123;
+}
+
+.panel-section-title {
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+.form-divider {
+	border-top: 1px solid;
+	margin-top: 40px;
+}
+
+.cd-dark .panel-body .form-divider {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.function {
+	height: 32px;
+}
+
 
 /* =============================================== */
 /* Node Tree Classes (with jqtree default overrides */

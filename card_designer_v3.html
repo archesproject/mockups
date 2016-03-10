@@ -635,7 +635,7 @@
 								<div id="" class="panel-body" style="position: absolute; top: 35px; padding-left: 10px; width: 300px;">
 			
 									<!-- Card Container Settings -->
-									<div class="" style="padding-bottom: 25px;">
+									<div class="" style="padding-bottom: 5px;">
 
 										<!-- Card Container Name -->
 										<div class="node-widget-label" style="">
@@ -644,26 +644,6 @@
 											</div>
 											<div class="col-sm-12" style="padding: 0px 0px 15px 0px;">
 												<input type="text" placeholder="Card Container Name" id="" class="form-control" style="height: 32px; width: 100%;" value="">
-											</div>
-										</div>
-
-										<!-- New Button Title -->
-										<div class="node-widget-label" style="">
-											<div class="control-label">
-												"New" Button Title
-											</div>
-											<div class="col-sm-12" style="padding: 0px 0px 15px 0px;">
-												<input type="text" placeholder="New Title" id="" class="form-control" style="height: 32px; width: 100%;" value="">
-											</div>
-										</div>
-										
-										<!-- New Button Subtitle -->
-										<div class="node-widget-label" style="">
-											<div class="control-label">
-												"New" Button Subtitle
-											</div>
-											<div class="col-sm-12" style="padding: 0px 0px 15px 0px;">
-												<input type="text" placeholder="New subtitle" id="" class="form-control" style="height: 32px; width: 100%;" value="">
 											</div>
 										</div>
 
@@ -686,6 +666,48 @@
 												<input type="text" placeholder="Save" id="cc-save-btn-input" class="form-control" style="height: 32px; width: 100%;" value="">
 											</div>
 										</div>
+
+										<div class="form-divider">
+											<h4 class="panel-section-title" style=""> Settings </h4>
+										</div>
+
+										<!-- Visible -->
+										<div class="" style="padding-bottom: 15px;">
+
+											<input id="card-visibility" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
+											<p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
+												Visible
+											</p>
+											<span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px;">
+												Show this card by default
+											</span>
+										</div>
+
+										<!-- Functions -->
+										<div class="node-widget-label" style="">
+											<div class="control-label">
+												Functions
+											</div>
+											<div class="col-sm-12" style="padding: 0px 0px 15px 0px;">
+												<select id="" class="design" style="height: 32px;" data-placeholder="Choose a Function..." multiple tabindex="4">
+													<option value="United States">Function Name 1</option>
+													<option value="United Kingdom">Function Name 2</option>
+													<option value="Afghanistan">Function Name 3</option>
+													<option value="Aland Islands">Function Name 4</option>
+													<option value="Albania">Function Name 5</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-divider">
+											
+										</div>
+
+										<!-- Buttons -->
+										<div class="wizard-buttons pull-right" style="padding-top: 15px;">
+											<button id="" class="btn btn-shim btn-danger btn-labeled btn-md fa fa-times mar-rgt" style=""> Discard </button>
+											<button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-md fa fa-check" style=""> Save</button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -698,31 +720,32 @@
 							<div id="" class="panel" style="box-shadow: none;">
 
 								<div id="" class="panel-heading" style="">
-									<h3 class="panel-title" style="padding-left: 0px; background: #f8f8f8;">Card Preview</h3>
+									<h3 class="panel-title" style="padding-left: 0px; background: #f8f8f8;">Arches Card Manager</h3>
 								</div>
 
-								<!-- Card -->
 								<div id="" class="panel-body" style="position: absolute; top: 15px; left: 0px; right: 0px; padding-left: 20px; padding-bottom: 50px;">
 
 									<!-- Card Design Menu -->
-									<div class="" style="position: absolute; top: 45px; left: 22px;">
+									<div class="" style="position: absolute; top: 4px; right: 10px;">
 										<span class="pad-rgt">
-											<a id="container-functions" href="" class="">Data Entry Manager</a>
+											<a id="" href="" class="selected">Data Entry Manager</a>
 										</span>
 										<span class="pad-rgt">
 											<a href="" class="">Report Manager</a>
 										</span>
 										<span class="pad-rgt">
-											<a href="" class="">Third menu item</a>
+											<a href="" class="">Template</a>
 										</span>
 									</div>
 
-									<div id="add-basemap-card" class="panel card-panel" style="border: 1px solid #ddd; border-bottom-width: 0px; margin-top: 50px;">
+									
+									<!-- Card -->
+									<div id="add-basemap-card" class="panel card-panel" style="border: 1px solid #ddd; border-bottom-width: 0px; margin-top: 10px;">
 									<div class="panel-heading relative">
 										<h3 id="cc-title" class="panel-title card-main-title">
-											Condition_Assessment.E45
-											<span class="" style="">
-												<a id="cc-title-link" href="" class="" style="font-size: 10px; transform: translate(0, 2px);"><i class="fa fa-pencil"></i></a>
+											<i class="edit-card-element fa fa-gears"></i> Condition_Assessment.E45
+											<span class="hidden" style="">
+												<a id="cc-title-link" href="" class="" style="font-size: 10px; transform: translate(0, 2px);"><i class="fa fa-gears"></i></a>
 											</span>
 										</h3>
 										
@@ -737,177 +760,31 @@
 										</div>
 									</div>
 
+
+									<!-- Alert Panel -->
 									<div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
 
-									<div id="add-basemap-card" class="tile-grid-container" style="">
-										<!-- Add New Button and Wizard Record Display Grid -->
-										<ul id="" class="og-grid card-wz-grid" style="">
-
-											<!-- Add New Record -->
-											<li class="" style="">
-												<div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record" style="">
-													
-													<a id="add-basemap" href="" class="" style="">
-														<h3 class="text-thin" style="margin-top: 10px;"> New Basemap</h3>
-
-														<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
-															<i class="fa fa-plus fa-2x" style="color: #fff;"></i>
-														</span>
-
-														<h5 class="" style="font-weight: 200;"> Add basemaps to support enhanced mapping</h5>
-													</a>
-
-												</div>
-											</li>
-
-											<!-- Record -->
-											<li id="add-basemp-1" class="fade in effect" style="">		
-
-												<!-- Record Summary Container -->
-												<div id="tile-test" class="panel tile-panel" style="">
-													
-													<!-- Edit Menu -->
-													<div class="tile-menu" style="">
-														<!-- Edit/Delete Buttons -->
-														<div class="" style="">
-															<!-- Edit Button -->
-															<button class="btn btn-icon fa fa-pencil tile-menu-btn" title="edit" style=""></button>
-															
-															<!-- Delete Button -->
-															<button id="basemap-delete" class="btn btn-icon fa fa-trash tile-menu-btn" title="delete" style=""></button>
-														</div>
-													</div>
-												
-													<!-- Data -->
-													<div class="panel-body tile-basemap" style="">
-														
-														<img alt="Google Streets Basemap" class="tile-img-lg" src="img/arches/basemaps/google_streets.png">
-
-														<!-- Basemap Summary -->
-														<div class="tile-basemap-title" style="">
-															<dl class="" style="">
-																<dt class="card-category">Google Streets</dt>
-															</dl>
-														</div>
-													</div>
-												</div>
-									
-											</li>
-
-											<li>
-												<div class="grid-card" style="width: 200px; margin: 0px;">
-													<div class="panel" style="border: 1px solid #ddd;">
-														
-														<!-- Card Name/Node List -->
-														<div class="panel-body" style="padding: 15px; height: 150px;">
-															
-															<h4 class="">Summary</h4>
-															
-															<dl>
-																<dt>Condition</dt>
-																<dd>fair</dd>
-																<dt>Assessed Date</dt>
-																<dd>May 13, 2013</dd>
-																<dt>Description</dt>
-																<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-															</dl>
-
-														</div>
-
-														<!-- Options -->
-														<div class="panel-footer" style="padding-top: 5px; padding-bottom: 5px; position: relative; height: 50px;">
-
-															<span class="" style="position: absolute; top: 13px; font-weight: 600; padding-left: 5px;">
-																<span class="badge badge-success" style="vertical-align: top; font-size: 9px; padding-left: 3px; padding-right: 3px;"><i class="fa fa-check"></i>
-																</span>
-																active
-															</span>
-															
-															<div class="btn-group" style="width: 100%; padding: 2px 0 2px 0;">
-
-																<button class="btn btn-mint btn-icon btn-circle icon-sm fa fa-ellipsis-h dropdown-toggle pull-right" data-toggle="dropdown" type="button" aria-expanded="false"></button>
-
-																<ul class="dropdown-menu dropdown-menu-right" style="width: 100%;">
-																	<li><a href="#">Edit Card</a>
-																	</li>
-																	<li><a href="#">Clone Card</a>
-																	</li>
-																	<li><a href="#">Disable Card</a>
-																	</li>
-																	<li class="divider"></li>
-																	<li><a href="#">Close</a>
-																	</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-
-											<li>
-												<div class="grid-card" style="width: 100px; margin: 0px;">
-													<div class="panel" style="border: 1px solid #ddd; box-shadow: none;">
-														
-														<!-- Card Name/Node List -->
-														<div class="panel-body" style="padding: 15px; height: 75px;">
-															
-															<dl>
-																<dt>Condition</dt>
-																<dd>Fair</dd>
-															</dl>
-
-														</div>
-
-														<!-- Options -->
-														<div class="panel-footer" style="padding-top: 0px; padding-bottom: 0px; padding-right: 0px; position: relative; height: 25px;">	
-															<div class="btn-group" style="width: 100%; padding: 2px 0 0px 0;">
-
-																<button class="btn icon-sm fa fa-ellipsis-h dropdown-toggle pull-right" style="border-width: 0px; margin-top: -2px;" data-toggle="dropdown" type="button" aria-expanded="false"></button>
-
-																<ul class="dropdown-menu dropdown-menu-right" style="width: 100%;">
-																	<li><a href="#">Edit Card</a>
-																	</li>
-																	<li><a href="#">Clone Card</a>
-																	</li>
-																	<li><a href="#">Disable Card</a>
-																	</li>
-																	<li class="divider"></li>
-																	<li><a href="#">Close</a>
-																	</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											
-
-										</ul>
-										<!-- End New Button and Record Display Grid -->
-
-										<div id="add-basemap-scroll" class="scroll-shim" style=""></div>
-									</div>
 
 									<!-- Data Entry -->
-									<div id="add-basemap-wizard" class="panel-body card-body fade in" style="">
-										<div id="add-basemap-wizard-help-cc" class="tab-base card-content-container outline" style="margin-bottom: 10px;">
+									<div id="add-basemap-wizard" class="panel-body card-body fade in" style="padding-top: 0px;">
+										<div id="add-basemap-wizard-help-cc" class="tab-base card-content-container outline" style="margin-bottom: 10px; margin-top: -2px;">
 
 											<!--Nav Tabs-->
 											<ul class="nav nav-tabs card-nav-container" style="">
 												<li id="summary-group" class="active">
-													<a id="summary-tab" data-toggle="tab" href="#summary-card" class="card-tab-title">Summary</a>
+													<a id="summary-tab" data-toggle="tab" href="#summary-card" class="card-tab-title"><i class="edit-card-element fa fa-gears"></i> Summary</a>
 												</li>
 												<li id="image-group" class="">
-													<a id="image-tab" data-toggle="tab" href="#image-card" class="card-tab-title">Images</a>
+													<a id="image-tab" data-toggle="tab" href="#image-card" class="card-tab-title"><i class="edit-card-element fa fa-gears"></i> Images</a>
 												</li>
 												<li id="location-group" class="">
-													<a id="location-tab" data-toggle="tab" href="#location-card" class="card-tab-title">Location</a>
+													<a id="location-tab" data-toggle="tab" href="#location-card" class="card-tab-title"><i class="edit-card-element fa fa-gears"></i> Location</a>
 												</li>
 												<li id="disturbance-group" class="">
-													<a id="disturbance-tab" data-toggle="tab" href="#disturbance-card" class="card-tab-title">Disturbances</a>
+													<a id="disturbance-tab" data-toggle="tab" href="#disturbance-card" class="card-tab-title"><i class="edit-card-element fa fa-gears"></i> Disturbances</a>
 												</li>
 												<li id="threats-group" class="">
-													<a id="threat-tab" data-toggle="tab" href="#threats-card" class="card-tab-title">Threats</a>
+													<a id="threat-tab" data-toggle="tab" href="#threats-card" class="card-tab-title"> <i class="edit-card-element fa fa-gears"></i>Threats</a>
 												</li>
 											</ul>
 
@@ -920,9 +797,24 @@
 												<div id="summary-card" class="tab-pane fade active in">	
 													<div class="panel-body card-panel-body" style="">
 														<div id="" class="card-content" style="">
-															<div class="col-md-6" style="padding-bottom: 40px;">
 
-																<form class="" style="margin-bottom: 30px;">
+															<!-- Card Level Alert -->
+															<div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+															<!-- Card Instruction -->
+															<p id="install-instructions" class="content-instructions">
+																Describe the overall condition of the resource 
+																
+																<!-- Help link -->
+																<span>	
+																	<a id="add-basemap-wizard-help-link" href="" class="pull-right card-help help" style=""><i class="edit-card-element fa fa-gears"></i> Help <i class="fa fa-question-circle"></i></a>
+																</span>
+															</p>
+															
+															<!-- Form -->
+															<div class="col-xs-6" style="padding-bottom: 10px;">
+
+																<form class="" style="margin-bottom: 20px;">
 																	<div class="row widget-container" style="">
 																		<div class="form-group">
 																			<div class="" style="">
@@ -939,21 +831,49 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="row widget-container">
+																	<div class="row widget-container" style="">
 																		<div class="form-group">
-																			<label class="col-xs-12 widget-input-label" for="">URL</label>
+																			<div class="" style="">
+
+																				<span class="pin-left-widget drag-tool-widget" style=""><i class="fa fa-align-justify"></i>
+																				</span>
+
+																				<label class="col-xs-12 control-label widget-input-label" for=""><a id="" href="" class="" style="">
+																					<i class="fa fa-gears" style=""></i></a> Name Type</label>
+																			</div>
+																			
 																			<div class="col-xs-12">
-																				<input type="" placeholder="Map Service URL" id="" class="form-control input-lg widget-input widget-input-disabled">
+																				<select id="" class="design" style="height: 32px;" data-placeholder="Choose a Function..." tabindex="4">
+																					<option value="United States">Primary</option>
+																					<option value="United Kingdom">Alternate</option>
+																					<option value="Afghanistan">Local</option>
+																					<option value="Aland Islands">Heritage Listed</option>
+																					<option value="Albania">Nickname</option>
+																				</select>
 																			</div>
 																		</div>
 																	</div>
 																</form>
 
 																<div class="install-buttons">
-																	<button id="map-preview" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-refresh" style=""> Preview Map</button>
+																	<button id="map-preview" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-plus" style=""> Add Name</button>
 																</div>
-
 															</div>
+														</div>
+													</div>
+
+
+
+													<!-- Card-level tiles -->
+													<div class="list-group" style="margin: 0px 15px 30px 10px;">
+							
+														<!-- Record -->
+														<div id="record-1" class="tile-record list-group-item" style="cursor: pointer; background: rgb(250, 250, 250);">
+															
+
+															<i class="edit-card-element fa fa-gears"></i> Record Summary: First widget label, value
+
+
 														</div>
 													</div>
 												</div>
@@ -1025,21 +945,33 @@
 										
 											<!-- Help/Thesaurus term Panel -->
 											<aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
-													<div class="relative">
-														<a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
-													</div>
-													<div id="add-basemap-wizard-help-content" class="" style=""></div>
-												</aside>
+												<div class="relative">
+													<a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+												</div>
+												<div id="add-basemap-wizard-help-content" class="" style=""></div>
+											</aside>
 										</div>
 
 										<!-- Save Input -->
-										<div class="wizard-buttons" style="">
-											<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt" style=""> Cancel New Basemap
-											</button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-plus" style=""> Save New Basemap</button>
+										<div class="wizard-buttons pull-right" style="">
+											<button id="" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt" style=""> Discard Assessment
+											</button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check" style=""> Save Assessment</button>
 										</div>
 									</div>
 
-									<div class="panel-footer card-footer" style="">
+
+									<!-- Wizard-level tiles -->
+									<div class="" style="margin-bottom: 0px; margin-top: 10px;">
+										<div class="wizard-level-tile bg-mint" style="">
+											<div class="wizard-tile-title" style="">
+												<i class="edit-card-element fa fa-gears"></i> Record Summary: First Card, First Widget Label, First Widget Value
+											</div>
+										</div>
+									</div>
+
+									
+									<!-- Wizard Footer -->
+									<div class="panel-footer card-footer hidden" style="background: #ececec;">
 										<div class="row">
 											<div class="col-sm-6">
 												<p class="" style="padding-right: 15px;">
@@ -1055,14 +987,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
-
-
-
-
-
-
-						
+						</div>	
 					</div>
 				</div>
 			</div>
@@ -1336,7 +1261,7 @@
 
         <!-- FOOTER -->
         <!--===================================================-->
-        <footer id="footer">
+        <footer id="footer" style="display: none;">
 
             <!-- Visible when footer positions are fixed -->
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

@@ -353,7 +353,7 @@ ul.nav.nav-tabs.nav-justified {
 	position: absolute; 
 	top: 0px; 
 	bottom: 60px; 
-	right: 0px; 
+	right: -300px; 
 	width: 300px; 
 	border: 1px solid #ddd; 
 	border-left-width: 0px; 
@@ -367,7 +367,7 @@ ul.nav.nav-tabs.nav-justified {
 	top: 0px; 
 	bottom: 60px; 
 	left: 0px; 
-	right: 300px; 
+	right: 0px; 
 	z-index: 1; 
 	background: #f8f8f8; 
 	height: 100vh; 
@@ -535,7 +535,7 @@ ul.nav.nav-tabs.nav-justified {
 	transition: all .40s ease;
 }
 
-.drag-tool-widget > .fa:hover{
+.drag-tool-widget .fa:hover{
 	cursor: move;
 }
 
@@ -554,7 +554,7 @@ a.selected {
 }
 
 .edit-card-element:hover {
-	cursor: pointer;
+	cursor: move;
 }
 
 .active a .edit-card-element {
@@ -606,8 +606,101 @@ span .edit-card-element {
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.function {
+.functions .chosen-choices {
 	height: 32px;
+	background: #314151;
+	border: 1px solid #314151;
+	color: #fff;
+}
+
+
+/*div.chosen-container.chosen-container-multi.functions.chosen-with-drop.chosen-container-active {
+	border: 1px solid #3f83de;
+	padding-left: 1px;
+	padding-right: 1px;
+	border-bottom-width: 0px; 
+}*/
+
+
+.design a.chosen-single {
+	height: 36px;
+	background: #fff;
+	border: 1px solid #ddd;
+	color: #999;
+}
+
+.design a.chosen-single:hover {
+	color: #999;
+}
+
+.design .chosen-drop .chosen-results {
+	background: #fff;
+	color: #123;
+	margin-bottom: 0px;
+}
+
+
+.editable {
+	background: #C1F8E9;
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.editable-title {
+	line-height: 35px;
+}
+
+.editable-title:hover {
+	cursor: pointer;
+}
+
+.editable-highlight {
+	background: #F1FFFB; /*#F1FFFB*/
+}
+
+
+.btn-editable {
+	opacity: .75;
+}
+
+
+
+
+
+/* =============================================== */
+/* Card Manager Report Classes */
+
+.report li {
+	margin-left: -10px;
+	padding-left: 5px;
+}
+
+.report li:not(:first-child) {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.report li:nth-child(2) {
+	background-color: #fcfcfc;
+}
+
+.report-image-grid {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.report-image-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.report-grid-item {
+  float: left;
+  margin: 3px;
 }
 
 

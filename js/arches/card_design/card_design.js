@@ -11,14 +11,12 @@
 
 		//
 		$( ".drag-tool-widget" ).each(function() {
-	    	$( this ).css("display", "inline-block");
+	    	$( this ).css("display", "block");
 	  	});
 
 	  	// $('.widgets').each(function() {
 	   //  	$( '.drag-tool-widget' ).css("display", "inline-block");
 	  	// });
-
-		
 	});
 
 	$('.widget-container').on('mouseout', function (ev) {
@@ -31,6 +29,8 @@
 
 
 //	switches
+	new Switchery(document.getElementById('card-container-visibility'), {size: 'small'});
+	new Switchery(document.getElementById('card-container-active'), {size: 'small'});
 	new Switchery(document.getElementById('card-visibility'), {size: 'small'});
 	new Switchery(document.getElementById('card-active'), {size: 'small'});
 
@@ -97,19 +97,29 @@
 	$('#cc-title').on('mouseover', function (ev) {
 		ev.preventDefault();
 
-		// highlight panel, card container level buttons
-		$('#card-container').addClass("editable-highlight");
+		// highlight card container level buttons
 		$('#cc-save-btn').removeClass("btn-editable");
 		$('#cc-delete-btn').removeClass("btn-editable");
+
+		//fade cards, wizard level tile
+		$('#cards').addClass("fade-back");
+		$('.wizard-level-tile').addClass("fade-back");
 		
 	});
 
+	//Card Container Title 
 	$('#cc-title').on('click', function (ev) {
 		ev.preventDefault();
 
 		//show config panel
 		$(".cd-config-panel").css("right", "0px");
 		$(".cd-preview").css("right", "300px");
+
+		//show card container level form
+		$('#card-settings').css("display", "none");
+		$('#card-settings').fadeOut(300, "linear");
+		$('#card-container-settings').fadeIn(300, "linear");
+
 
 		//continue to highlight panel, card container level buttons
 		$('#card-container').addClass("editable-highlight");
@@ -122,11 +132,92 @@
 		ev.preventDefault();
 
 		// Remove highlight
-		$('#card-container').removeClass("editable-highlight");
 		$('#cc-save-btn').addClass("btn-editable");
 		$('#cc-delete-btn').addClass("btn-editable");
+
+		//un-fade cards, wizard level tile
+		$('#cards').removeClass("fade-back");
+		$('.wizard-level-tile').removeClass("fade-back");
 		
 	});
+
+
+	//card tab
+	$('.card-tab-title').on('mouseover', function (ev) {
+		ev.preventDefault();
+
+		//fade card container title, wizard level tile
+		$('.panel-heading').addClass("fade-back");
+		$('.wizard-level-tile').addClass("fade-back");
+
+		// Card container level buttons,
+		$('#cc-save-btn').removeClass("btn-editable");
+		$('#cc-delete-btn').removeClass("btn-editable");
+		$('#cc-save-btn').addClass("fade-back");
+		$('#cc-delete-btn').addClass("fade-back");
+
+		//highlight card button
+		$('#map-preview').removeClass("btn-editable");
+
+		//card widgets
+		$('.editable-widget').addClass("fade-back");
+
+		
+	});
+
+	$('.card-tab-title').on('mouseout', function (ev) {
+		ev.preventDefault();
+
+		//fade card container title, wizard level tile
+		$('.panel-heading').removeClass("fade-back");
+		$('.wizard-level-tile').removeClass("fade-back");
+
+		// Card container level buttons,
+		$('#cc-save-btn').addClass("btn-editable");
+		$('#cc-delete-btn').addClass("btn-editable");
+		$('#cc-save-btn').removeClass("fade-back");
+		$('#cc-delete-btn').removeClass("fade-back");
+
+		//highlight card button
+		$('#map-preview').addClass("btn-editable");
+
+		//card widgets
+		$('.editable-widget').removeClass("fade-back");
+		
+	});
+
+
+	// Card COntainer Tile
+	$('.wizard-level-tile').on('mouseover', function (ev) {
+		ev.preventDefault();
+
+		//fade card container title, wizard level tile
+		$('.panel-heading').addClass("fade-back");
+		$('#cards').addClass("fade-back");
+
+		// Card container level buttons,
+		$('#cc-save-btn').removeClass("btn-editable");
+		$('#cc-delete-btn').removeClass("btn-editable");
+		$('#cc-save-btn').addClass("fade-back");
+		$('#cc-delete-btn').addClass("fade-back");
+	
+	});
+
+	$('.wizard-level-tile').on('mouseout', function (ev) {
+		ev.preventDefault();
+
+		//fade card container title, wizard level tile
+		$('.panel-heading').removeClass("fade-back");
+		$('#cards').removeClass("fade-back");
+
+		// Card container level buttons,
+		$('#cc-save-btn').addClass("btn-editable");
+		$('#cc-delete-btn').addClass("btn-editable");
+		$('#cc-save-btn').removeClass("fade-back");
+		$('#cc-delete-btn').removeClass("fade-back");
+	
+	});
+
 
 	function clearCardContainerHighlight() {
 		// Remove highlight
@@ -143,7 +234,36 @@
 	});
 
 
-// Reports
+	$('.close-card-form').on('click', function (ev) {
+		ev.preventDefault();
+
+		//hide config panel
+		$(".cd-config-panel").css("right", "-300px");
+		$(".cd-preview").css("right", "0px");
+	});
+
+
+	//Card Tab Functions 
+	$('.editable-card').on('click', function (ev) {
+		ev.preventDefault();
+
+		//open config panel
+		$(".cd-config-panel").css("right", "0px");
+		$(".cd-preview").css("right", "300px");
+
+		//show card form
+		$('#card-settings').css("display", "block");
+		$('#card-settings').fadeIn(300, "linear");
+		$('#card-container-settings').fadeOut(300, "linear");
+
+	});
+
+
+
+
+
+
+	// Reports
 	var $container = $('#report-image-grid');
 
 	// $container.imagesLoaded( function(){
@@ -155,10 +275,10 @@
 
 	var markerMap = new GMaps({
 		el: '#demo-marker-map',
-		zoom: 1,
 		lat: 37.336095,
 		lng: -121.8885431
 	});
+	
 
 
 
@@ -170,7 +290,7 @@
   var view = new ol.View({
     projection: 'EPSG:3857',
     center: center,
-    zoom: 0
+    zoom: 2
   });
 
   var overlay = new ol.layer.Tile({
@@ -197,8 +317,16 @@
     view: view
   });
 
-  view.fit(extent, map.getSize());
+  //view.fit(extent, map.getSize());
 
+  	$('#report-manager').on('click', function (ev) {
+	
+		// Need to delay resize because we wait to move the card container back into position on close
+  		var delay = 500;
+			setTimeout(function() {
+			setTimeout( function() { map.updateSize();}, 200);
+		}, delay);
+	});
 
 
 

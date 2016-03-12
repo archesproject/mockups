@@ -468,31 +468,31 @@ ul.nav.nav-tabs.nav-justified {
 	border-top: 1px solid #ddd; 
 }
 
-.cd-form-container > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control {
+.cd-form-container > .cd-dark > div > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control {
 	background: #314151;
 	border-color: #314151;
 	color: #fff;
 }
 
-.cd-config-panel > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control {
+.cd-config-panel > .cd-dark > div > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control {
 	background: #314151;
 	border-color: #314151;
-	color: #fff;
-}
-
-.cd-form-container > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control:focus {
-	border-color: steelblue;
-}
-
-.cd-config-panel > .cd-dark > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control:focus {
-	border-color: steelblue;
-}
-
-.cd-form-container > .cd-dark > .panel-heading > div > a {
 	color: #ddd;
 }
 
-.cd-config-panel > .cd-dark > .panel-heading > div > a {
+.cd-form-container > .cd-dark > div > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control:focus {
+	border-color: steelblue;
+}
+
+.cd-config-panel > .cd-dark > div > .panel-body > div > .node-widget-label > .col-sm-12 > .form-control:focus {
+	border-color: steelblue;
+}
+
+.cd-form-container > .cd-dark > div > .panel-heading > div > a {
+	color: #ddd;
+}
+
+.cd-config-panel > .cd-dark > div > .panel-heading > div > a {
 	color: #ddd;
 }
 
@@ -520,14 +520,11 @@ ul.nav.nav-tabs.nav-justified {
 	padding: 10px 15px 25px 15px;
 }
 
-.widget-container:hover {
-	background: #f8f8f8;
-}
 
 .pin-left-widget {
 	position: absolute;
-	top: 14px;
-	left: 15px;
+	top: 2px;
+	left: -4px;
 }
 
 .drag-tool-widget {
@@ -557,7 +554,7 @@ a.selected {
 	cursor: move;
 }
 
-.active a .edit-card-element {
+.active a span .edit-card-element {
 	display: inline-block;
 }
 
@@ -580,15 +577,22 @@ span .edit-card-element {
 
 .wizard-level-tile {
 	height: 50px; 
-	margin: 0px; 
-	border-top: 1px solid #ddd; 
+	margin-left: 20px; 
+	margin-right: 20px; 
+	margin-bottom: 15px;
+	border: 1px solid #ddd; 
 	background: #f4f5f7;
+}
+
+.wizard-level-tile:hover {
+	cursor: pointer;
 }
 
 .wizard-tile-title {
 	color: #c9c9c9; 
 	font-size: 13px;
 	padding: 15px; 
+	font-weight: 300;
 	color: #123;
 }
 
@@ -611,6 +615,24 @@ span .edit-card-element {
 	background: #314151;
 	border: 1px solid #314151;
 	color: #fff;
+}
+
+
+.bg-tile {
+	background: #D6DBE4;
+}
+
+textarea:placeholder {
+	top: 0px;
+}
+
+.instructions-text:placeholder {
+	position: absolute;
+	top: 0px;
+}
+
+.fade-back {
+	opacity: .5;
 }
 
 
@@ -665,8 +687,36 @@ span .edit-card-element {
 	opacity: .75;
 }
 
+.editable-tile-title {
+	margin-top: 0px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
+.editable-card {
+	background: #C1F8E9; 
+	border: 1px solid #C1F8E9; 
+	padding: 5px 15px 5px 15px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
 
+.editable-card:hover {
+	cursor: pointer;
+}
+
+.editable-widget {
+	background: #F1FFFB;
+	border: 1px solid #C1F8E9;
+}
+
+.editable-widget:hover {
+	background: #C1F8E9;
+	border: 1px solid #92EAD2;
+	cursor: pointer;
+}
 
 
 /* =============================================== */
@@ -680,11 +730,14 @@ span .edit-card-element {
 .report li:not(:first-child) {
     margin-top: 20px;
     padding-top: 10px;
+    padding-bottom: 20px;
     border-top: 1px solid #ddd;
 }
 
 .report li:nth-child(2) {
-	background-color: #fcfcfc;
+	background-color: #fafafa;
+	margin-left: -40px;
+    padding-left: 35px;
 }
 
 .report-image-grid {

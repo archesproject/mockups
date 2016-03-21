@@ -1,0 +1,79 @@
+1231 Arches    3/15/16
+
+HE Meeting re: Arches Implementation
+
+
+
+Attendees:
+	Steve Trow
+	Stuart
+	Sandy
+	AD
+	Mandy 
+	Gill
+	Lee
+
+	Barney (came in after 1st hour)
+
+
+
+1. Summary of Arches
+	> Lee: High level drivers for Arches; Goals
+
+
+
+2. HIAS
+	> Improve data flows between HE (including internal) and external partners.  Make responsibilities clear
+
+	> Designated, unlisted, monuments; (AMIE)
+		- national marine dataset
+		- GL area (GL HER)
+
+		- THerefore, both national and local responsibilities
+
+	> Undesignated monuments: Oracle (AMIE); should this be upgraded?  Or is this a time to move to a new system?
+
+
+	> Vision: single shared, but distributed recording system
+
+
+	> External Advisory Board
+
+
+
+3. Greater London
+	> User needs/areas for improvement over current system/workflow
+		- Database stability (secure, reliable)
+		- Accessibility (staff working from home, volunteers, other local gov partners)
+		- Improve ability to work across discipline boundaries (e.g.: Archaeology vs. Built heritage)
+		- Interoperability (avoid re-keying of data, review data flows from HERs to OASIS to HE)
+
+		- "Getting data out again" > query system, self-serve ability for users (not currently possible)
+			about 5000 archaeo excavations a year in England, 800 of which occur in London
+			understaffed relative to this data inflow
+
+			staff time dedicated to trying to respond to contractor queries, vs improving data quality or adding additional value to datasets. 
+
+			Stuart: Takes 8 hrs to respond to 6 "very straightforward queries"  (e.g.: largest return was 30 records)
+
+
+		- Key question (HIAS):  How much more efficient will the "new system" make us?  E.g.: can we avoid re-keying data?
+
+
+		- Barney: ability to automate requested queries?  Stuart: might be possible, would require a "workflow" but has potential to speed up returns, streamline billing, etc.
+
+			standard query: monumnets within xx meters of this building....
+
+
+	> Lee: Need to decide whether to engage Exegesis to upgrade their product and services or cut ties and look for an alternative
+		- 
+
+
+
+
+
+
+
+
+
+

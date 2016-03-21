@@ -8,7 +8,7 @@
 	var diameter = 960;
 
 	var tree = d3.layout.tree()
-	    .size([360, diameter / 2 - 120])
+	    .size([360, diameter / 2 ])
 	    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
 	var diagonal = d3.svg.diagonal.radial()
@@ -56,7 +56,7 @@
 		    	d3.select(this)
 		    			
 				//Get the Node Name
-				var nodeName = d.name;
+				var nodeName = d.entitytypeid;
 				
 				d3.select("#nodeCrud")					
 				.select("#nodeName")
@@ -106,10 +106,10 @@
 	    // .text(function(d) { return d.name; });
 
 	    .text(function (d) {
-        	if(d.name.length > 13)
-           		return d.name.substring(0,13)+'...';
+        	if(d.entitytypeid.length > 13)
+           		return d.entitytypeid.substring(0,13)+'...';
          	else
-             	return d.name;                       
+             	return d.entitytypeid;                       
         });
 	});
 

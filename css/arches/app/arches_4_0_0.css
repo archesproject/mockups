@@ -746,14 +746,21 @@ textarea:placeholder {
 }
 
 .report-image-grid:after {
-  content: '';
-  display: block;
-  clear: both;
+  	content: '';
+  	display: block;
+  	clear: both;
 }
 
 .report-grid-item {
-  float: left;
-  margin: 3px;
+  	float: left;
+  	margin: 3px;
+}
+
+.project-grid-item {
+	float: left;
+  	margin: 2px;
+  	max-width: 250px;
+  	border: 1px solid #ddd;
 }
 
 
@@ -908,6 +915,15 @@ div.dropdown-menu.open {
     max-width: 500px;
     vertical-align: top;
     margin-bottom: 15px;
+}
+
+
+.outlined-text {
+	color: #fff;
+	font-size: 21px;
+   -webkit-text-fill-color: #000; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: .020em;
+   -webkit-text-stroke-color: #fff;
 }
 
 

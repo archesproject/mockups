@@ -147,7 +147,7 @@
 		ev.preventDefault();
 
 		//fade card container title, wizard level tile
-		$('.panel-heading').addClass("fade-back");
+		$('.editable').addClass("fade-back");
 		$('.wizard-level-tile').addClass("fade-back");
 
 		// Card container level buttons,
@@ -169,7 +169,7 @@
 		ev.preventDefault();
 
 		//fade card container title, wizard level tile
-		$('.panel-heading').removeClass("fade-back");
+		$('.editable').removeClass("fade-back");
 		$('.wizard-level-tile').removeClass("fade-back");
 
 		// Card container level buttons,
@@ -192,7 +192,7 @@
 		ev.preventDefault();
 
 		//fade card container title, wizard level tile
-		$('.panel-heading').addClass("fade-back");
+		$('.editable').addClass("fade-back");
 		$('#cards').addClass("fade-back");
 
 		// Card container level buttons,
@@ -207,7 +207,7 @@
 		ev.preventDefault();
 
 		//fade card container title, wizard level tile
-		$('.panel-heading').removeClass("fade-back");
+		$('.editable').removeClass("fade-back");
 		$('#cards').removeClass("fade-back");
 
 		// Card container level buttons,

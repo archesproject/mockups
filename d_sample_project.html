@@ -98,8 +98,8 @@
 <!--TIPS-->
 <!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
 
-<body>
-	<div id="container" class="effect mainnav-sm aside-left aside-bright navbar-fixed">
+<body style="">
+	<div id="container" class="effect mainnav-sm aside-left aside-bright aside-in navbar-fixed">
 		
 		<!--NAVBAR-->
 		<header id="navbar" style="z-index: 1000; opacity: .9;">
@@ -465,16 +465,16 @@
 				<div class="slide" style="">
 					
 					<!--Page Title-->
-					<div id="page-title" style="background: #f8f8f8; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-						<h1 class="page-header text-overflow" style="font-size: 2.6em; padding-top: 7px; padding-bottom: 5px;">Projects</h1>
+					<div id="page-title" style="background: #ebeef0; padding-bottom: 6px; border-bottom: 1px solid #ddd;">
+						<h1 class="page-header text-overflow" style="font-size: 2.6em; padding-top: 7px; padding-bottom: 5px; font-weight: 500;">Aurora taking leave of Tithonus</h1>
 
 						<!--Searchbox-->
-						<div id="morphsearch" class="morphsearch">
+						<div id="morphsearch" class="morphsearch" style="background: #f4f4f4;">
 							<form class="morphsearch-form">
 								<input class="morphsearch-input" type="search" placeholder="Search..."/>
-								<button class="morphsearch-submit" type="submit">Search</button>
+								<button class="morphsearch-submit" style="color: #999;" type="submit">Search</button>
 							</form>
-							<div class="morphsearch-content">
+							<div class="morphsearch-content" style="margin-top: 0px; background: #f4f4f4;">
 								<div class="dummy-column">
 									<h2>People</h2>
 									<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
@@ -563,168 +563,145 @@
 					</div>
 					<!--End page title-->
 
-					<!--Breadcrumb-->
-					<ol class="breadcrumb hidden">
-						<li><a href="#">DISCO Home</a></li>
-						<li class="active">Projects</li>
-					</ol>
-					<!--End breadcrumb-->
-
-
 					<!-- Dashboard Content -->
-					<div id="" class="" style="padding: 10px 0px 30px 0px;">
+					<div id="" class="" style="padding: 20px 20px 30px 20px;">
+						<div class="row">
 
-						<!-- Project Tools -->
-						<div class="relative" style="height: 36px; border-bottom: 1px solid #ddd; margin-bottom: 20px;">
-							
-							<div class="" style="">
-								
-								<!-- Summary -->
-								<p class="" style="padding-top: 5px; padding-left: 25px; font-size: 13px; color: #888;">
-									You have <span style="color: #123; font-weight: 700;">3</span> active projects.
-								<p>
-
-								<!-- Sort -->
-								<div class="" style="position: absolute; left: 220px; top: 2px; font-size: 12px; color: #888;"> 
-									Sort by:
-									<div class="btn-group" style="">
-										<button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" type="button">
-											Date <i class="dropdown-caret fa fa-caret-down"></i>
-										</button>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Name</a>
-											</li>
-											<li><a href="#">Date</a>
-											</li>
-											<li><a href="#">Status</a>
-											</li>
-										</ul>
-									</div>
-								</div> 
-
-								<!-- Display -->
-								<div class="" style="position: absolute; left: 370px; top: 6px; font-size: 12px; color: #888;"> 
-									<a href="" class="selected" style="padding-right: 2px;"><i class="fa fa-th-large"></i></a>
-									<a href="" class="fade-back" style=""><i class="fa fa-align-justify"></i></a>
-								</div> 
-
-								<!-- Export Tools -->
-								<div class="hidden-xs" style="position: absolute; top: 6px; right: 15px;">
-									<a href="" class="" style="padding-right: 15px; font-size: 11px;"><i class="fa fa-ellipsis-h"></i> Manage Projects</a>
-								</div>
-
-							</div>
-						</div>
-
-
-						<!-- Card Report -->
-						<div class="" style="">
-							<div class="row" style="">
-
-								<!-- Section Data -->
-								<div class="col-xs-12" style="margin: 10px 10px 20px 40px; padding-right: 40px;">
+							<!-- Research Object -->
+							<div class="col-md-5 col-lg-4 mar-btm">
+								<div class="panel mar-no" style="border: 1px solid #ddd;">
 									
-									<!-- Isotope Layout -->
-									<div id="report-image-grid" class="report-image-grid">
-										
-										<!-- New Project Button -->
-										<div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record project-grid-item" style="">
-											<a id="add-basemap" href="#new-project-modal" data-toggle="modal" class="" style="">
-												<h3 class="text-thin" style="margin-top: 10px;"> New Project</h3>
+									<!-- Class Header -->
+									<div class="panel-heading">
+						                <div class="panel-control" style="padding-right: 0px;">
+						                    <div class="btn-group">
+						                        <button class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gear"></i></button>
+						                        <ul class="dropdown-menu dropdown-menu-right">
+						                            <li><a href="#">Action</a></li>
+						                            <li><a href="#">Another action</a></li>
+						                            <li><a href="#">Something else here</a></li>
+						                            <li class="divider"></li>
+						                            <li><a href="#">Separated link</a></li>
+						                        </ul>
+						                    </div>
+						                </div>
+						                <h3 class="panel-title">Research Object</h3>
+						            </div>
 
-												<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
-													<i class="fa fa-plus fa-2x" style="color: #fff;"></i>
-												</span>
-
-												<h5 class="" style="font-weight: 200;"> Create a new research project to manage your data and results</h5>
-											</a>
-										</div>
-
-										<!-- Project -->
-										<div class="project-grid-item" style="">
-											<div class="panel mar-no">
-
-												<!-- Project Name -->
-												<div class="panel-heading">
-									                <h3 class="panel-title" style="padding-left: 10px;">Aurora taking leave of Tithonus</h3>
-									            </div>
-
-												<!-- Project Image -->
-												<div class="panel-bg-cover" style="max-height: 300px; padding-left: 5px; padding-right: 5px;">
-													<img class="img-responsive" src="./img/arches/aurora.jpg" alt="Image">
-												</div>
-												
-												<!-- Abstract -->
-												<div class="panel-body" style="padding: 15px 20px 25px 10px;">
-													Study to sample blue paints in Aurora's robe and blueish tones in the sky
-												</div>
-
-												<!-- Project Tools -->
-												<div class="panel-footer" style="height: 40px;">
-													<a href="" class="" style=""><i class="fa fa-group"></i> Tony Stark</a>
-													<a href="" class="pull-right" style="margin-top: 3px;"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
-												</div>
-											</div>
-										</div>
-
-										<!-- Project -->
-										<div class="project-grid-item" style="">
-											<div class="panel mar-no">
-
-												<!-- Project Name -->
-												<div class="panel-heading">
-									                <h3 class="panel-title" style="padding-left: 10px;">Rouen Cathedral</h3>
-									            </div>
-
-												<!-- Project Image -->
-												<div class="panel-bg-cover" style="max-height: 300px; padding-left: 5px; padding-right: 5px;">
-													<img class="img-responsive" src="./img/arches/rouen_cathedral_thumb.jpg" alt="Image">
-												</div>
-												
-												<!-- Abstract -->
-												<div class="panel-body" style="padding: 15px 20px 25px 10px;">
-													Cross-section analyses
-												</div>
-
-												<!-- Project Tools -->
-												<div class="panel-footer" style="height: 40px;">
-													<a href="" class="" style=""><i class="fa fa-user"></i> John Doe</a>
-													<a href="" class="pull-right" style="margin-top: 3px;"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
-												</div>
-											</div>
-										</div>
-
-										<!-- Project -->
-										<div class="project-grid-item" style="">
-											<div class="panel mar-no">
-
-												<!-- Project Name -->
-												<div class="panel-heading">
-									                <h3 class="panel-title" style="padding-left: 10px;">Panoramic Landscape</h3>
-									            </div>
-
-												<!-- Project Image -->
-												<div class="panel-bg-cover" style="max-height: 300px; padding-left: 5px; padding-right: 5px;">
-													<img class="img-responsive" src="./img/arches/panoramic_landscape.jpg" alt="Image">
-												</div>
-												
-												<!-- Abstract -->
-												<div class="panel-body" style="padding: 15px 20px 25px 10px;">
-													X-rays and mass-spec analysis.  Multi-spectral imaging, including raking light
-												</div>
-
-												<!-- Project Tools -->
-												<div class="panel-footer" style="height: 40px;">
-													<a href="" class="" style=""><i class="fa fa-user"></i> John Doe</a>
-													<a href="" class="pull-right" style="margin-top: 3px;"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
-												</div>
-											</div>
-										</div>
-									  	
+									<!-- Project Image -->
+									<div class="panel-bg-cover" style="max-height: 100%; padding-left: 5px; padding-right: 5px;">
+										<img class="img-responsive" src="./img/arches/aurora.jpg" alt="Image">
+									</div>
+									
+									<!-- Project Name, Abstract -->
+									<div class="panel-body" style="padding: 15px 20px 25px 20px;">
+										<h4 class="mar-no" style="">Aurora taking leave of Tithonus</h4>
+										Study to sample blue paints in Aurora's robe and blueish tints in the sky
 									</div>
 								</div>
 							</div>
+					    	
+					    	<!--Network Line Chart-->
+					    	<div class="col-md-7 col-lg-8 mar-btm">
+						        <div id="demo-panel-network" class="panel" style="border: 1px solid #ddd;">
+						            
+						            <!-- Class Header -->
+						            <div class="panel-heading">
+						                <div class="panel-control" style="padding-right: 0px;">
+						                    <button id="demo-panel-network-refresh" data-toggle="panel-overlay" data-target="#demo-panel-network" class="btn"><i class="fa fa-rotate-right"></i></button>
+						                    <div class="btn-group">
+						                        <button class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gear"></i></button>
+						                        <ul class="dropdown-menu dropdown-menu-right">
+						                            <li><a href="#">Action</a></li>
+						                            <li><a href="#">Another action</a></li>
+						                            <li><a href="#">Something else here</a></li>
+						                            <li class="divider"></li>
+						                            <li><a href="#">Separated link</a></li>
+						                        </ul>
+						                    </div>
+						                </div>
+						                <h3 class="panel-title">Network</h3>
+						            </div>
+						
+						            <!--Morris line chart placeholder-->
+						            <div id="morris-chart-network" class="morris-full-content"></div>
+						
+						            <!--Chart information-->
+						            <div class="panel-body">
+						                <div class="row">
+						                    <div class="col-lg-6">
+						                        <div class="row">
+						                            <div class="col-xs-8">
+						
+						                                <!--Server load stat-->
+						                                <div class="pad-ver media">
+						                                    <div class="media-left">
+						                                        <span class="icon-wrap icon-wrap-xs">
+						                                            <i class="fa fa-cloud fa-2x"></i>
+						                                        </span>
+						                                    </div>
+						
+						                                    <div class="media-body">
+						                                        <p class="h3 text-thin media-heading">30%</p>
+						                                        <small class="text-uppercase">Server Load</small>
+						                                    </div>
+						                                </div>
+						
+						                                <!--Progress bar-->
+						                                <div class="progress progress-xs progress-dark-base mar-no">
+						                                    <div class="progress-bar progress-bar-light" style="width: 30%"></div>
+						                                </div>
+						
+						                            </div>
+						                            <div class="col-xs-4">
+						                                <!-- User Online -->
+						                                <div class="text-center">
+						                                    <span class="text-3x text-thin">43</span>
+						                                    <p>User Online</p>
+						                                </div>
+						                            </div>
+						                        </div>
+						
+						                        <!--Additional text-->
+						                        <div class="mar-ver">
+						                            <small class="pad-btm"><em>* Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</em></small>
+						                        </div>
+						
+						                    </div>
+						                    <div class="col-lg-6">
+						
+						                        <!-- List Group -->
+						                        <ul class="list-group bg-trans mar-no">
+						                            <li class="list-group-item">
+						                                <!-- Sparkline chart -->
+						                                <div id="demo-chart-visitors" class="pull-right"></div> Visitors
+						                            </li>
+						                            <li class="list-group-item">
+						                                <!-- Sparkline chart -->
+						                                <div id="demo-chart-bounce-rate" class="pull-right"></div> Bounce rate
+						                            </li>
+						                            <li class="list-group-item">
+						                                <span class="badge badge-success">11</span>
+						                                Today sales
+						                            </li>
+						                            <li class="list-group-item">
+						                                <span class="badge badge-warning">20</span>
+						                                Broken links found
+						                            </li>
+						                        </ul>
+						
+						                    </div>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
 						</div>
+						
+
+
+
+
+
 
 					</div>
 					<!-- End Dashboard Content -->
@@ -755,7 +732,7 @@
 							<!-- New Project Tools -->
 							<div class="row">
 								<div class="col-sm-6">
-									<input type="" placeholder="Name your project" id="" class="form-control input-lg widget-input" style="background: #f4f4f4;">
+									<input type="" placeholder="Name your project" id="" class="form-control input-lg widget-input" style="">
 								</div>
 								<div class="col-sm-6" style="margin-top: 10px;">
 									<a href="" class="pad-rgt pull-right" style="">
@@ -1088,7 +1065,7 @@
 							<!--Nav tabs (keeping tabs hook to support future expansion)-->
 							<ul class="nav nav-tabs nav-justified v-menu-title" style="">
 								<li class="pad-lft pad-top" style="">
-									<h4 class="text-normal" style=""> Application Settings </h4>
+									<h4 class="text-normal" style=""> Project Information </h4>
 								</li>
 							</ul>
 

@@ -761,6 +761,31 @@ textarea:placeholder {
   	margin: 2px;
   	max-width: 250px;
   	border: 1px solid #ddd;
+  	opacity: .79;
+}
+
+.project-grid-item:hover {
+	cursor: pointer;
+	opacity: 1.0;
+}
+
+.template-grid-item {
+	float: left;
+  	margin: 8px;
+  	max-width: 250px;
+  	border: 1px solid #ddd;
+  	opacity: .6;
+}
+
+.template-grid-item:hover {
+	cursor: pointer;
+	opacity: 1.0;
+	border: 1px solid steelblue;
+}
+
+.selected-template {
+	border: 1px solid steelblue;
+	opacity: 1.0;
 }
 
 

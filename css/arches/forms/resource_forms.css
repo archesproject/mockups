@@ -1,0 +1,58 @@
+/* =============================================== 	*/
+/* Arches Resource Forms CSS Classes               	*/
+/* v0.1												*/
+/* April 2016										*/
+
+
+.resource-list a.chosen-single {
+	background: transparent;
+	color: #333;
+	font-size: 22px;
+	border-color: transparent;
+	height: 40px;
+	padding-top: 0px;
+}
+
+.resource-list a.chosen-single div b {
+	margin-top: -8px;
+}
+
+.resource-list .chosen-drop .chosen-results {
+	background: #fff;
+	color: #555;
+	border-width: 1px;
+}
+
+.resource-list .chosen-drop {
+	border-width: 1px;
+}
+
+.resource-list .chosen-container-active .chosen-with-drop {
+	border: 1px solid #ddd;
+}
+
+
+
+/* Dataset Table  */
+#demo-dt-selection tbody tr:hover {
+	cursor: pointer;
+}
+
+
+/* MorphSearch Overrides  */
+
+@media screen and (min-width: 970px) {
+
+	.morphsearch { 
+		top: 50px; 
+		right: 45px;
+	}
+	
+}
+
+
+
+
+
+
+

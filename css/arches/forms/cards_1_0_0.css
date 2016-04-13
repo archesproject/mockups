@@ -158,6 +158,10 @@ input[type="checkbox"]{
 }
 
 
+.selected {
+	background: #f4f4f4;
+}
+
 /* Card Classes
 ---------------------------------------------- */
 .summary-panel {

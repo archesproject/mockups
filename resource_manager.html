@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arches v4.0 | Resource Manager</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font [ OPTIONAL ] -->
+     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="css/nifty.min.css" rel="stylesheet">
+
+    
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <link href="plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+
+     <!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+
+
+	<!--Bootstrap Table [ OPTIONAL ]-->
+    <link href="plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="css/demo/nifty-demo.min.css" rel="stylesheet">
+
+
+
+
+    <!--SCRIPT-->
+    <!--=================================================-->
+
+    <!--Page Load Progress Bar [ OPTIONAL ]-->
+    <link href="plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="plugins/pace/pace.min.js"></script>
+
+
+    
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+
+	<!-- OL3 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.css" type="text/css">
+
+
+
+	<!-- MorphingSearch -->
+	<link href="plugins/MorphingSearch/css/component.css" rel="stylesheet" />
+
+	<!-- Arches CSS -->
+	<link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
+	<link href="css/arches/forms/cards_1_0_0.css" rel="stylesheet">
+	<link href="css/arches/app/app_configuration.css" rel="stylesheet">
+
+	<link href="css/arches/forms/resource_forms.css" rel="stylesheet">
+	<link href="css/arches/forms/libraries.css" rel="stylesheet">
+		
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body style="">
+	<div id="container" class="effect mainnav-sm aside-left aside-bright navbar-fixed">
+		
+		<!--NAVBAR-->
+		<header id="navbar" style="z-index: 1000; opacity: .98;">
+
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand">
+						<img src="img/arches/arches_logo_light.png" alt="Nifty Logo" class="brand-icon" style="height: 20px; width: 20px; margin-top: 10px; margin-left: 15px; margin-right: 15px;">
+						<div class="brand-title">
+							<span class="brand-text">Arches</span>
+						</div>
+					</a>
+				</div>
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						<!--Navigation toogle button-->
+						<li class="tgl-menu-btn hidden-sm hidden-md hidden-lg">
+							<a class="mainnav-toggle" href="#">
+								<i class="fa fa-navicon fa-lg"></i>
+							</a>
+						</li>
+						<!--End Navigation toogle button-->
+
+						<!-- App Title -->
+						<li>
+							<a href="#" class="" style="" target="_blank">
+								<h4 class="" style="">DISCO v0.1</h4>
+							</a>
+						</li>
+
+						<!--Messages Dropdown-->
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								<i class="fa fa-envelope fa-lg"></i>
+								<span class="badge badge-header badge-warning">3</span>
+							</a>
+
+							<!--Message dropdown menu-->
+							<div class="dropdown-menu dropdown-menu-md with-arrow">
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-no">You have 3 new messages.</p>
+								</div>
+								<div class="nano scrollable">
+									<div class="nano-content">
+										<ul class="head-list">
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<img src="img/av2.png" alt="Profile Picture" class="img-circle img-sm">
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Andy sent you a message</div>
+														<small class="text-muted">15 minutes ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<img src="img/av4.png" alt="Profile Picture" class="img-circle img-sm">
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Lucy sent you a message</div>
+														<small class="text-muted">30 minutes ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<img src="img/av3.png" alt="Profile Picture" class="img-circle img-sm">
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Jackson sent you a message</div>
+														<small class="text-muted">40 minutes ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<img src="img/av6.png" alt="Profile Picture" class="img-circle img-sm">
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Donna sent you a message</div>
+														<small class="text-muted">5 hours ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<img src="img/av4.png" alt="Profile Picture" class="img-circle img-sm">
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Lucy sent you a message</div>
+														<small class="text-muted">Yesterday</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<img src="img/av3.png" alt="Profile Picture" class="img-circle img-sm">
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Jackson sent you a message</div>
+														<small class="text-muted">Yesterday</small>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<!--Dropdown footer-->
+								<div class="pad-all bord-top">
+									<a href="#" class="btn-link text-dark box-block">
+										<i class="fa fa-angle-right fa-lg pull-right"></i>Show All Messages
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--End message dropdown-->
+
+
+						<!--Notification dropdown-->
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								<i class="fa fa-bell fa-lg"></i>
+								<span class="badge badge-header badge-danger">5</span>
+							</a>
+
+							<!--Notification dropdown menu-->
+							<div class="dropdown-menu dropdown-menu-md with-arrow">
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-no">Your team added 5 new projects</p>
+								</div>
+								<div class="nano scrollable">
+									<div class="nano-content">
+										<ul class="head-list">
+
+											<!-- Dropdown list-->
+											<li>
+												<a href="#">
+													<div class="clearfix">
+														<p class="pull-left">Database Repair</p>
+														<p class="pull-right">70%</p>
+													</div>
+													<div class="progress progress-sm">
+														<div style="width: 70%;" class="progress-bar">
+															<span class="sr-only">70% Complete</span>
+														</div>
+													</div>
+												</a>
+											</li>
+
+											<!-- Dropdown list-->
+											<li>
+												<a href="#">
+													<div class="clearfix">
+														<p class="pull-left">Upgrade Progress</p>
+														<p class="pull-right">10%</p>
+													</div>
+													<div class="progress progress-sm">
+														<div style="width: 10%;" class="progress-bar progress-bar-warning">
+															<span class="sr-only">10% Complete</span>
+														</div>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<span class="icon-wrap icon-circle bg-primary">
+															<i class="fa fa-comment fa-lg"></i>
+														</span>
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">New comments waiting approval</div>
+														<small class="text-muted">15 minutes ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+											<span class="badge badge-success pull-right">90%</span>
+													<div class="media-left">
+														<span class="icon-wrap icon-circle bg-danger">
+															<i class="fa fa-hdd-o fa-lg"></i>
+														</span>
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">HDD is full</div>
+														<small class="text-muted">50 minutes ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<span class="icon-wrap bg-info">
+															<i class="fa fa-file-word-o fa-lg"></i>
+														</span>
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Write a news article</div>
+														<small class="text-muted">Last Update 8 hours ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+											<span class="label label-danger pull-right">New</span>
+													<div class="media-left">
+														<span class="icon-wrap bg-purple">
+															<i class="fa fa-comment fa-lg"></i>
+														</span>
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">Comment Sorting</div>
+														<small class="text-muted">Last Update 8 hours ago</small>
+													</div>
+												</a>
+											</li>
+									
+											<!-- Dropdown list-->
+											<li>
+												<a href="#" class="media">
+													<div class="media-left">
+														<span class="icon-wrap bg-success">
+															<i class="fa fa-user fa-lg"></i>
+														</span>
+													</div>
+													<div class="media-body">
+														<div class="text-nowrap">New User Registered</div>
+														<small class="text-muted">4 minutes ago</small>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<!--Dropdown footer-->
+								<div class="pad-all bord-top">
+									<a href="#" class="btn-link text-dark box-block">
+										<i class="fa fa-angle-right fa-lg pull-right"></i>Show All Notifications
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--End notifications dropdown-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+						<!--User dropdown-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="img/av1.png" alt="Profile Picture">
+								</span>
+								<div class="username hidden-xs">John Doe</div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+								<!-- Dropdown heading  -->
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-btm">750Gb of 1,000Gb Used</p>
+									<div class="progress progress-sm">
+										<div class="progress-bar" style="width: 70%;">
+											<span class="sr-only">70%</span>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="#">
+											<i class="fa fa-user fa-fw fa-lg"></i> Profile
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="badge badge-danger pull-right">9</span>
+											<i class="fa fa-envelope fa-fw fa-lg"></i> Messages
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="label label-success pull-right">New</span>
+											<i class="fa fa-gear fa-fw fa-lg"></i> Settings
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-question-circle fa-fw fa-lg"></i> Help
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-lock fa-fw fa-lg"></i> Lock screen
+										</a>
+									</li>
+								</ul>
+
+								<!-- Dropdown footer -->
+								<div class="pad-all text-right">
+									<a href="pages-login.html" class="btn btn-primary">
+										<i class="fa fa-sign-out fa-fw"></i> Logout
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--End user dropdown-->
+
+					</ul>
+				</div>
+				<!--End Navbar Dropdown-->
+
+				<!-- Project Selection -->
+				<div class="relative" style="">
+					<div class="" style="position: absolute; height: 50px; background: #f8f8f8; left: 50px; width: calc(100% - 50px);">
+						<div class="" style="padding-top: 10px;">
+							<h1 class="page-header text-overflow" style="font-size: 2.1em; padding-top: 0px; padding-bottom: 3px; padding-left: 25px; width: 130px; border-right: 1px solid #ddd;">Resource </h1>
+						</div>
+
+						<!-- Project Selector -->
+						<div id="" class="" style="position: absolute; left: 135px; top: 5px; z-index: 100; opacity: 1.0; min-width: 200px;">
+							<select class="resource-list" style="" data-placeholder="" id="" tabindex="0" style="display: none;">
+								<optgroup label="Resource Graphs">
+								<option>Heritage Resource</option>
+								<option>Heritage District</option>
+								<option>Activity</option>
+								<option>Historic Event</option>
+								<option>Information Resource</option>
+								<optgroup label="Graph Branches">
+								<option>Location</option>
+								<option>Condition Assessement</option>
+								<option>Measurements</option>
+								<option>Phase Type Assignment</option>
+							</select>
+						</div>
+
+					</div>
+
+					<div class="" style="position: absolute; right: 5px; top: 10px;">
+						<div class="btn-group">
+	                        <button class="dropdown-toggle btn" style="border-color: transparent;" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gears"></i></button>
+	                        <ul class="dropdown-menu dropdown-menu-right">
+	                            <li><a href="#"><i class="fa fa-copy"></i> Clone Project</a></li>
+	                            <li><a href="#"><i class="fa fa-times"></i> Delete Project</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="#">Close</a></li>
+	                        </ul>
+	                    </div>
+					</div>
+				</div>
+
+				<!-- Searchbox  -->
+				<div class="" style="">
+					<div id="morphsearch" class="morphsearch" style="">
+						<form class="morphsearch-form" style="">
+							<input class="morphsearch-input" type="search" placeholder="Search..."/>
+							<button class="morphsearch-submit" type="submit">Search</button>
+						</form>
+						<div class="morphsearch-content" style="margin-top: 0px; padding-left: 150px;">
+							<div class="dummy-column">
+								<h2>People</h2>
+								<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+									<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+									<h3>Rachel Smith</h3>
+								</a>
+								<a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+									<img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+									<h3>Peter Finlan</h3>
+								</a>
+								<a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+									<img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+									<h3>Patrick Cox</h3>
+								</a>
+								<a class="dummy-media-object" href="https://twitter.com/twholman">
+									<img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+									<h3>Tim Holman</h3>
+								</a>
+							</div>
+							<div class="dummy-column">
+								<h2>GCI Projects</h2>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+									<img src="img/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/>
+									<h3>Rembrandt's Madonna Halo Paint Study</h3>
+								</a>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+									<img src="img/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/>
+									<h3>A Rural Landscape Cross Sections</h3>
+								</a>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+									<img src="img/thumbs/OffCanvas.png" alt="OffCanvas"/>
+									<h3>Jug with Bust Medallion (ca. 1460 Italian Vase)</h3>
+								</a>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
+									<img src="img/thumbs/TabStyles.png" alt="TabStyles"/>
+									<h3>Ringbecher element analysis</h3>
+								</a>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+									<img src="img/thumbs/ResponsiveSVGs.png" alt="ResponsiveSVGs"/>
+									<h3>Leaf 1002 Book of Hours Raking Light</h3>
+								</a>
+							</div>
+							<div class="dummy-column">
+								<h2>My Recent Projects</h2>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+									<img src="img/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/>
+									<h3>Rouen Cathedral</h3>
+								</a>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+									<img src="img/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/>
+									<h3>Panoramic Landscape Crosssections</h3>
+								</a>
+								<a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+									<img src="img/thumbs/OffCanvas.png" alt="OffCanvas"/>
+									<h3>St. Petersburg Campaign Paint Sample</h3>
+								</a>
+							</div>
+						</div><!-- /morphsearch-content -->
+						<span class="morphsearch-close"></span>
+					</div>
+				</div>
+				<!-- /morphsearch -->
+
+			</div>
+		</header>
+		<!--END NAVBAR-->
+
+		<div class="boxed" style="padding-top: 60px;">
+
+			<!--CONTENT CONTAINER-->
+			<div id="content-container" style="margin-bottom: 20px; background: #ebeef0;">
+				
+				<!-- Form Container -->
+				<div id="slide" class="slide" style="">
+
+	
+
+					<div id="" class="" style="">
+						
+						<!-- Data Entry -->
+						<div id="" class="fade in" style="padding-top: 0px;">
+							<div id="" class="tab-base card-content-container outline" style="margin-bottom: 10px; margin-top: -10px; margin-left: 0px; border-top: 1px solid #ddd;">
+
+								<!--Nav Tabs-->
+								<ul class="nav nav-tabs card-nav-container" style="padding-left: 15px; margin-bottom: 0px;">
+									<li id="summary-group" class="active">
+										<a id="summary-tab" data-toggle="tab" href="#graph-manager-card" class="card-tab-title">
+											<i class="edit-card-element fa fa-align-justify"></i> Graph Manager
+										</a>
+									</li>
+									<li id="image-group" class="">
+										<a id="image-tab" data-toggle="tab" href="#card-manager-card" class="card-tab-title">
+											<i class="edit-card-element fa fa-align-justify"></i> Card Manager
+										</a>
+									</li>
+									<li id="location-group" class="">
+										<a id="location-tab" data-toggle="tab" href="#form-manager-card" class="card-tab-title">
+											<i class="edit-card-element fa fa-align-justify"></i> Form Manager
+										</a>
+									</li>
+									<li id="disturbance-group" class="">
+										<a id="disturbance-tab" data-toggle="tab" href="#meta-manager-card" class="card-tab-title">
+											<i class="edit-card-element fa fa-align-justify"></i> Metadata Manager
+										</a>
+									</li>
+								</ul>
+
+								<!--Tabs Content-->
+								<div class="tab-content" style="margin-left: 0px; padding: 0px; border-top: 1px solid #ddd; margin-top: 0px;">
+
+									<!-- Card -->
+									<div id="graph-manager-card" class="tab-pane fade active in">	
+										
+											
+
+										<div class="panel" style="">
+
+											<div class="panel-heading hidden" style="box-shadow: none; border-bottom-width: 0px;">
+
+												<div class="relative" style="height: 42px; border: 1px solid #ddd; margin: 5px; background: #fbfbfb; box-shadow: none;">
+						
+													<!-- Resource Summary -->
+													<div class="" style="padding-top: 5px; padding-bottom: 10px; padding-left: 20px; " <div="">
+														<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+															Manage Graph <i class="dropdown-caret fa fa-caret-down"></i>
+														</button>
+														<ul class="dropdown-menu" style="margin-left: 25px; margin-top: -5px;">
+															<li><a href="#"><i class="fa fa-check"></i> Save graph edits</a>
+															</li>
+															<li><a href="#"><i class="fa fa-times"></i> Delete graph</a>
+															</li>
+															<li><a href="#"><i class="fa fa-pencil"></i> Edit graph metadata</a>
+															</li>
+															<li class="divider"></li>
+															<li><a href="#">Close</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel-body">
+
+												yo!
+											</div>
+
+
+										</div>
+
+												
+
+												
+
+
+											
+										
+									</div>
+
+									<!-- Card -->
+									<div id="card-manager-card" class="tab-pane fade" style="padding-bottom: 15px;">	
+										<div class="panel-body" style="height: 100vh; padding: 7px;">
+											<div id="" class="" style="background: #ebeef0; height: 100vh;">
+
+												
+
+												<!-- Card Instruction -->
+												<p id="" class="">Grant access to</p>
+
+					
+											</div>
+										</div>
+									</div>
+
+
+									<!-- Card -->
+									<div id="form-manager-card" class="tab-pane fade">	
+										<div class="panel-body" style="height: 100vh; padding: 7px;">
+											<div id="" class="" style="background: #ebeef0; height: 100vh;">
+
+												
+
+												<!-- Card Instruction -->
+												<p id="" class="">Grant access to</p>
+
+					
+											</div>
+										</div>
+									</div>
+
+									<!-- Card -->
+									<div id="meta-manager-card" class="tab-pane fade">	
+										
+
+										<div class="panel-body" style="height: 100vh; padding: 18px 10px 25px 5px;">
+
+											<!-- instrument -->
+											<div id="" class="relative" style="">
+												
+												<!-- Library -->
+												<div id="" class="library library-in" style="height: 100vh;">
+
+													<!-- Instrument Search -->
+													<div class="library-search-container" style="">
+														<div class="relative" style="padding: 10px 15px;">
+															<input type="text" class="form-control library-search" style="" placeholder="Find an instrument"> 
+
+															<!-- Remove Search -->
+															<span class="clear-search" style="position: absolute; right: 20px; top: 12px; color: #123; font-size: 17px;"><i class="fa fa-times-circle"></i></span>
+														</div>
+													</div>
+
+													<!-- Instrument List -->
+													<div id="" class="grid" style="margin-top: 0px; background: rgb(248, 248, 248);">
+
+														<!-- Instrument -->									
+														<div class="library-item" style="">
+															<div class="" style="">
+																<h4 class="library-item-title" style=""> HP 34000lx </h4>
+																<p class="library-item-subtitle">Type: Gas Chromatograph
+															</div>
+															
+															<dl>
+																<dd>A short description of the instrument (perhaps its location or other identifying features).</dd>	
+															</dl>
+														</div>
+
+														<!-- Instrument -->									
+														<div class="library-item" style="">
+															<div class="" style="">
+																<h4 class="library-item-title" style=""> Annabel's XRF </h4>
+																<p class="library-item-subtitle">Type: X-ray Flourescense
+															</div>
+															
+															<dl>
+																<dd>A short description of the instrument (perhaps its location or other identifying features).</dd>	
+															</dl>
+														</div>
+
+														<!-- Instrument -->									
+														<div class="library-item" style="">
+															<div class="" style="">
+																<h4 class="library-item-title" style=""> Mass Spec (Siemens 2500lx) </h4>
+															</div>
+															<div class="" style="">
+																<img class="img-md" src="img/av1.png" alt="Sample Image">
+															</div>
+														</div>
+
+														<!-- Instrument -->									
+														<div class="library-item" style="">
+															<div class="" style="">
+																<h4 class="library-item-title" style=""> Bosch 4200rx X-ray Machine </h4>
+															</div>
+															<div class="" style="">
+																<img class="img-md" src="img/av1.png" alt="Sample Image">
+															</div>
+														</div>
+
+													</div>
+													<!-- End Instrument List -->
+												</div>
+												<!-- End Library -->
+
+												<!-- CRUD -->
+												<div class="card" style="padding: 20px 20px 25px 20px; background: #ebeef0; height: 100vh; margin-right: -5px;">
+
+													<!-- Toolbar -->
+													<div class="form-toolbar" style="position: fixed; height: 53px; margin-top: -30px; margin-left: 280px; width: calc(100% - 300px); border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; z-index: 300; background: #ebeef0;">
+														
+														<!-- Library Visible Toggle -->
+														<div class="" style="padding: 15px 20px;">
+
+															<input id="node-required" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;"><span class="switchery switchery-small" style="border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 0px inset; transition: border 0.4s, box-shadow 0.4s, background-color 1.2s; background-color: rgb(100, 189, 99);"><small style="left: 12px; transition: left 0.2s; background-color: rgb(255, 255, 255);"></small></span>
+															<p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
+																Show instruments
+															</p>
+														</div>
+
+														<div class="relative" style="">
+															<p class="" style="position: absolute; right: 70px; top: -33px; font-size: 13px; color: #888;">
+															<span style="color: #123; font-weight: 700;">0</span> instruments configured.
+															</p>
+														</div>
+
+
+													</div>
+
+													<!-- Add Panel (Drag and Drop) -->
+													<div class="relative" style="height: 210px; background: #f4f4f4; border: 1px solid #ddd; margin-left: 300px; margin-top: 40px; border-radius: 2px; margin-bottom: 20px; padding: 5px 25px;">
+
+														<div class="box-vmiddle bg-trans pad-all text-center card-wz-add-record" style="border-width: 0px; float: left; margin: 2px; max-width: 250px;">
+																
+															<div class="" style="margin-top: 30px;">
+																<span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
+																	<i class="fa fa-plus fa-4x" style="color: #fff; height: 56px; width: 56px; transform: translate(0, 5px);"></i>
+																</span>
+															</div>	
+														</div>
+
+														<div class="" style="position: absolute; top: 65px; left: 220px;">
+															<h3 class="text-thin" style="margin-top: 10px; margin-bottom: 5px; padding-right: 40px;"> Drag and drop an instrument here. </h3><br>
+															<p class="" style="font-size: 12px; margin-top: -15px; color: #aaa; padding-right: 20px;">Add an instrument to your project and update it's configuration to enable upload of datasets and files. 
+														</div>
+
+													</div>
+
+													
+													<!-- Instrument -->
+													
+
+												</div>	
+											</div>
+											<!-- End Dashboard Content -->
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+					
+
+				</div>
+				<!-- End Form Container-->
+			</div>
+			<!--END CONTENT CONTAINER-->
+
+
+			
+			<!--MAIN NAVIGATION-->
+			<nav id="mainnav-container" class="mainnav-patch" style="position: fixed;">
+				<div id="mainnav">
+
+					<!--Shortcut buttons-->
+					<div id="mainnav-shortcut" class="hidden">
+						<ul class="list-unstyled">
+							<li class="col-xs-4" data-content="Additional Sidebar">
+								<a id="demo-toggle-aside" class="shortcut-grid" href="#">
+									<i class="fa fa-magic"></i>
+								</a>
+							</li>
+							<li class="col-xs-4" data-content="Notification">
+								<a id="demo-alert" class="shortcut-grid" href="#">
+									<i class="fa fa-bullhorn"></i>
+								</a>
+							</li>
+							<li class="col-xs-4" data-content="Page Alerts">
+								<a id="demo-page-alert" class="shortcut-grid" href="#">
+									<i class="fa fa-bell"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--End shortcut buttons-->
+
+
+					<!--Menu-->
+					<div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+						
+									<!--Category name-->
+									<li class="list-header">Admin Tools</li>
+						
+									<!--Menu list item-->
+									<li>
+										<a href="index.html">
+											<i class="fa fa-dashboard"></i>
+											<span class="menu-title">
+												<strong>Dashboard</strong>
+												<span class="label label-success pull-right">Top</span>
+											</span>
+										</a>
+									</li>
+						
+									<!--Menu list item-->
+									<li class="active-sub">
+										<a href="#">
+											<i class="fa fa-th"></i>
+											<span class="menu-title">
+												<strong>Application Configuration</strong>
+											</span>
+											<i class="arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse in">
+											<li>
+												<a href="layouts-collapsed-navigation.html">Server Settings</a>
+											</li>
+											<li>
+												<a href="layouts-offcanvas-navigation.html">Map Settings</a>
+											</li>
+											<li>
+												<a href="layouts-offcanvas-slide-in-navigation.html">Saved Searches</a>
+											</li>
+											<li>
+												<a href="layouts-offcanvas-revealing-navigation.html">Branding/Appearance</a>
+											</li>
+											<li>
+												<a href="layouts-offcanvas-revealing-navigation.html">Backup Manager</a>
+											</li>
+											<li class="list-divider"></li>
+										</ul>
+									</li>
+						
+									<li class="list-divider"></li>
+						
+									<!--Category name-->
+									<li class="list-header">Data Management</li>
+
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="fa fa-briefcase"></i>
+											<span class="menu-title">Resource Manager</span>
+											<i class="arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li>
+												<a href="#">Resource Library</a>
+											</li>
+											<li>
+												<a href="#">Graph Library</a>
+											</li>
+											<li class="list-divider"></li>
+										</ul>
+									</li>
+
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="fa fa-line-chart"></i>
+											<span class="menu-title">Reference Data Manager</span>
+										</a>
+									</li>
+						
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="fa fa-table"></i>
+											<span class="menu-title">Data Exchange Manager</span>
+											<i class="arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li>
+												<a href="tables-static.html">Data Import/Export</a>
+											</li>
+											<li>
+												<a href="tables-bootstrap.html">Resource Import/Export</a>
+											</li>
+											<li>
+												<a href="tables-bootstrap.html">Thesauri Import/Export</a>
+											</li>
+											<li class="list-divider"></li>
+										</ul>
+									</li>
+
+									<li class="list-divider"></li>
+						
+									<!--Category name-->
+									<li class="list-header">Mobile Projects</li>
+
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="fa fa-briefcase"></i>
+											<span class="menu-title">Manage Projects</span>
+											<i class="arrow"></i>
+										</a>
+						
+										<!--Submenu-->
+										<ul class="collapse">
+											<li>
+												<a href="#">Project Library</a>
+											</li>
+											<li>
+												<a href="#">New Project</a>
+											</li>
+											<li class="list-divider"></li>
+										</ul>
+									</li>
+						
+								</ul>
+
+
+								<!--Widget-->
+								<div class="mainnav-widget">
+
+									<!-- Show the button on collapsed navigation -->
+									<div class="show-small">
+										<a href="#" data-toggle="menu-widget" data-target="#demo-wg-server">
+											<i class="fa fa-desktop"></i>
+										</a>
+									</div>
+
+									<!-- Hide the content on collapsed navigation -->
+									<div id="demo-wg-server" class="hide-small mainnav-widget-content">
+										<ul class="list-group">
+											<li class="list-header pad-no pad-ver">Server Status</li>
+											<li class="mar-btm">
+												<span class="label label-primary pull-right">15%</span>
+												<p>CPU Usage</p>
+												<div class="progress progress-sm">
+													<div class="progress-bar progress-bar-primary" style="width: 15%;">
+														<span class="sr-only">15%</span>
+													</div>
+												</div>
+											</li>
+											<li class="mar-btm">
+												<span class="label label-purple pull-right">75%</span>
+												<p>Bandwidth</p>
+												<div class="progress progress-sm">
+													<div class="progress-bar progress-bar-purple" style="width: 75%;">
+														<span class="sr-only">75%</span>
+													</div>
+												</div>
+											</li>
+											<li class="pad-ver"><a href="#" class="btn btn-success btn-bock">View Details</a></li>
+										</ul>
+									</div>
+								</div>
+								<!--End widget-->
+
+							</div>
+						</div>
+					</div>
+					<!--End menu-->
+				</div>
+			</nav>
+			<!--END MAIN NAVIGATION-->
+			
+
+			<!--ASIDE-->
+			<aside id="aside-container" class="" style="position: fixed; margin-top: 50px;">
+				<div id="aside">
+					<div class="nano">
+						<div class="nano-content">
+
+							<!-- Tabs Content -->
+							<div class="tab-content v-menu-items">
+
+								<!--First tab -->
+								<div class="tab-base tab-pane fade in active" id="tab-1">
+									
+									<!--Menu Items-->
+									<ul class="list-group bg-trans" style="background: #fff;">
+										<li class="list-group-item active">
+											<a id="" href="#core-form" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-archive"></i> Project Summary</div>
+													<span class="text-muted">Overall project information</span>
+												</div>
+											</a>
+										</li>
+										
+										<li class="list-group-item active">
+											<a id="" href="#maps-form" target="#slide" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-comment-o"></i> Identifiers and Notes</div>
+													<span class="text-muted">Project name and notes</span>
+												</div>
+											</a>
+										</li>
+										
+										<li class="list-group-item active">
+											<a id="" href="#gui-form" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-graduation-cap"></i> Research Object and Goals</div>
+													<span class="text-muted">Project study and objectives</span>
+												</div>
+											</a>
+										</li>
+
+										<li class="list-group-item selected">
+											<a id="" href="#" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-gavel"></i> Instruments</div>
+													<span class="text-muted">Devices used during investigation</span>
+												</div>
+											</a>
+										</li>
+										
+										<li class="list-group-item active">
+											<a id="" href="#" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-eyedropper"></i> Samples and Iconography</div>
+													<span class="text-muted">Sample locations and icons</span>
+												</div>
+											</a>
+										</li>
+										
+										<li class="list-group-item active">
+											<a id="" href="#" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-database"></i> Data</div>
+													<span class="text-muted">Datasets and files</span>
+												</div>
+											</a>
+										</li>
+
+										<li class="list-group-item active">
+											<a id="" href="#" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-puzzle-piece"></i> Interpretations</div>
+													<span class="text-muted">Analysis of datasets</span>
+												</div>
+											</a>
+										</li>
+
+										<li class="list-group-item active">
+											<a id="" href="#" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-arrow-right"></i> Assertions/Results</div>
+													<span class="text-muted">Project insights and results</span>
+												</div>
+											</a>
+										</li>
+										
+										<li class="list-group-item active">
+											<a id="" href="#" class="">
+												<div class="media-body">
+													<div class="text-lg text-semibold"><i class="fa fa-wrench"></i> Sharing/Accessibility</div>
+													<span class="text-muted">Manage access to project</span>
+												</div>
+											</a>
+										</li>
+
+									</ul>
+
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!--===================================================-->
+			<!--END ASIDE-->
+
+
+			<!-- Page level Help/Thesaurus Container -->
+			<aside id="aside-help-page" class="hide help" style="width: 300px; background: #42cca5; max-height: none; padding-top: 40px; height: 100%; position: absolute; top: 0px; right: 0px; opacity: .9; z-index: 500; margin-top: 40px;">
+				<div id="">
+					<div class="">
+						<div class="" style="">
+							
+							<div id="" class="bg-mint" style="">
+								<div class="panel panel-colorful panel-mint" style="box-shadow: none; margin-top: -40px;">
+									<div class="panel-heading">
+										<div class="panel-control">
+											<a id="" href="" class="add-tooltip help-close fa fa-times fa-lg"></a>
+										</div>
+
+										<h3 class="panel-title" style="padding: 0 10px 0 10px;">Addresses</h3>
+									</div>
+									<div class="panel-body" style="padding: 10px 10px 15px 10px;">
+										<p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+
+		
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                <ul class="footer-list list-inline">
+                    <li>
+                        <p class="text-sm">SEO Proggres</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <p class="text-sm">Online Tutorial</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-primary"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="btn btn-sm btn-dark btn-active-success">Checkout</button>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="hide-fixed pull-right pad-rgt">Arches v4.0.0</div>
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; Getty, WMF, Farallon Geographics</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+        <!--===================================================-->
+
+
+
+	</div>
+	<!--===================================================-->
+	<!-- END OF CONTAINER -->
+
+
+	
+	
+	
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!--Fast Click [ OPTIONAL ]-->
+    <script src="plugins/fast-click/fastclick.min.js"></script>
+
+    
+    <!--Nifty Admin [ RECOMMENDED ]-->
+    <script src="js/nifty.min.js"></script>
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
+
+
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+
+
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="js/demo/nifty-demo.min.js"></script>
+	<script src="js/demo/layouts.js"></script>
+
+
+	<!--Gmaps -->
+    <script src="http://maps.google.com/maps/api/js"></script>
+	<script src="plugins/gmaps/gmaps.js"></script>
+
+	<!-- OL3 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.js" type="text/javascript"></script>
+
+	<!--Chosen [ OPTIONAL ]-->
+	<script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+	<!--DataTables [ OPTIONAL ]-->
+	<script src="plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+	<script src="plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+
+
+	<!-- Grid Libraries -->
+	<script src="plugins/isotope/isotope.pkgd.min.js"></script>
+	<script src="plugins/isotope/packery-mode.pkgd.min.js"></script>
+	<script src="plugins/packery/packery.pkgd.min.js"></script>
+
+
+	<!-- MorphingSearch -->
+    <script src="plugins/MorphingSearch/js/morphingsearch.js"></script>
+
+
+	<!--Arches Forms -->
+    <script src="js/arches/grid/grid.js"></script>
+    <script src="js/arches/forms/resource_forms.js"></script>
+
+
+    
+	<!--
+
+	REQUIRED
+	You must include this in your project.
+
+	RECOMMENDED
+	This category must be included but you may modify which plugins or components which should be included in your project.
+
+	OPTIONAL
+	Optional plugins. You may choose whether to include it in your project or not.
+
+	DEMONSTRATION
+	This is to be removed, used for demonstration purposes only. This category must not be included in your project.
+
+	SAMPLE
+	Some script samples which explain how to initialize plugins or components. This category should not be included in your project.
+
+
+	Detailed information and more samples can be found in the document.
+
+	-->
+
+		
+
+</body>
+</html>

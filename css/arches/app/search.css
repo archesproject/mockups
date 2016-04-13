@@ -1,0 +1,57 @@
+/* =============================================== 	*/
+/* Arches Search CSS Classes               	*/
+/* v0.1												*/
+/* April 2016										*/
+
+
+
+/* Search Item Classes								*/
+
+.sr-container {
+	position: absolute; 
+	top: 80px; 
+	background: #fff; 
+	height: 100vh;
+}
+
+.sr-narrow {
+	width: 300px;
+	padding: 0px;
+}
+
+.sr-wide {
+	width: calc (100% - 50px);
+}
+
+.search-item-desc {
+	overflow: hidden; 
+	max-height: 30px;
+}
+
+.sr-wide .active .list-group .list-group-item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-left: 20px;
+}
+
+
+.search-display-link {
+	padding-right: 5px; 
+	font-size: 16px;
+}
+
+.search-display-link i {
+	color: #aaa;
+}
+
+a.search-display-link.selected i {
+	color: #123;
+}
+
+.sr-list-group {
+	background: #fff; 
+	margin-bottom: 0px;
+}
+
+
+

@@ -9,6 +9,7 @@
 	border-top: 1px solid #eee;
 }
 
+
 .library-in {
 	position: absolute;
     top: -10px;
@@ -19,6 +20,7 @@
 	border-left: 1px solid #ddd; 
 	border-right: 1px solid #ddd; 
 	overflow-y: scroll;
+	transition: all .5s;
 }
 
 .library-hide {
@@ -34,6 +36,14 @@
 	background: #fdfdfd; 
 	border-bottom: 1px solid #ddd; 
 	padding: 0 10px 10px 10px; 
+}
+
+.library-item-short {
+	height: 53px; 
+}
+
+
+.library-item-draggable {
 	cursor: move;
 }
 
@@ -44,7 +54,14 @@
 }
 
 .library-item-subtitle {
-	margin-top: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+.library-card-body {
+	padding: 5px 20px 25px 20px;
+	height: 106px;
 }
 
 

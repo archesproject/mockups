@@ -39,8 +39,73 @@
 }
 
 
-/* MorphSearch Overrides  */
 
+/* Resource Containers  */
+.form-toolbar {
+	position: absolute; 
+	height: 56px; 
+	margin-top: 0px; 
+	margin-left: 0px; 
+	width: 100%;
+	border-left-width: 0px; 
+	z-index: 300; 
+	background: #f8f8f8;
+	transition: all .5s;
+}
+
+.form-toolbar-library-in {
+	margin-left: 300px; 
+	width: calc(100% - 300px); 
+	transition: all .5s;
+}
+
+
+.form-container {
+	position: absolute;
+    left: 0px;
+    top: 56px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+    transition: all .5s;
+}
+
+.form-container-library-in {
+	left: 300px;
+	width: calc(100% - 300px);
+	transition: all .5s;
+}
+
+.form-container-config-in {
+	left: 300px;
+	width: calc(100% - 600px);
+	transition: all .5s;
+}
+
+.form-container-config-lib-in {
+	left: 0px;
+	width: calc(100% - 300px);
+	transition: all .5s;
+}
+
+.panel-left {
+	right: -310px;
+	transition: all .5s;
+}
+
+.panel-left-in {
+	right: 0px;
+	transition: all .5s;
+}
+
+.library-out {
+	left: -300px;
+	transition: all .5s;
+}
+
+
+/* MorphSearch Overrides  */
 @media screen and (min-width: 970px) {
 
 	.morphsearch { 

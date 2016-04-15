@@ -2,6 +2,27 @@
 /* Arches v4 Default CSS for forms*/
 /* =============================================== */
 
+/* CARD MANAGER CLASSESS */
+.card-preview {
+	position: absolute; 
+	top: 56px; 
+	padding: 10px; 
+	left: 0px; 
+	right: 0px;
+}
+
+.card-preview-indent {
+	right: 310px;
+}
+
+.config-panel {
+	position: absolute; 
+	top: 56px; 
+	padding: 10px; 
+	right: 0px;
+}
+
+
 
 
 /* Generic Card Classes

@@ -44,11 +44,12 @@
 .form-toolbar {
 	position: absolute; 
 	height: 56px; 
+	right: 0px;
+	left: 0px;
 	margin-top: 0px; 
 	margin-left: 0px; 
-	width: 100%;
 	border-left-width: 0px; 
-	z-index: 300; 
+	z-index: 2; 
 	background: #f8f8f8;
 	transition: all .5s;
 }

@@ -313,6 +313,17 @@ ul.nav.nav-tabs.nav-justified {
 
 /* =============================================== */
 /* Card/Form  Designer                             */
+
+.config-panel {
+	position: absolute; 
+	top: 56px; 
+	padding: 10px; 
+	right: 0px;
+	bottom: 5px;
+	height: 100vh;
+}
+
+
 .card-list {
 	list-style: none;
 	padding-left: 15px;
@@ -357,7 +368,7 @@ ul.nav.nav-tabs.nav-justified {
 	width: 300px; 
 	border: 1px solid #ddd; 
 	border-left-width: 0px; 
-	height: 100vh;
+	/*height: 100vh;*/
 	transition: all .40s ease;
 }
 

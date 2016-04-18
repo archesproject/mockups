@@ -87,10 +87,17 @@
 	<!-- MorphingSearch -->
 	<link href="plugins/MorphingSearch/css/component.css" rel="stylesheet" />
 
+
+	<!-- D3 Graph -->
+	<link href="css/arches/app/graph.css" rel="stylesheet">
+
+
 	<!-- Arches CSS -->
 	<link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
 	<link href="css/arches/forms/cards_1_0_0.css" rel="stylesheet">
 	<link href="css/arches/app/app_configuration.css" rel="stylesheet">
+
+	<link href="css/arches/app/graph_manager_4_0_0.css" rel="stylesheet">
 
 	<link href="css/arches/forms/resource_forms.css" rel="stylesheet">
 	<link href="css/arches/forms/libraries.css" rel="stylesheet">
@@ -546,46 +553,582 @@
 								<div class="tab-content" style="margin-left: 0px; padding: 0px; border-top: 1px solid #ddd; margin-top: 0px;">
 
 									<!-- Card -->
-									<div id="graph-manager-card" class="tab-pane fade active in">	
+									<div id="graph-manager-card" class="tab-pane fade active in" style="padding-bottom: 15px;">
 										
-										
-										<div class="panel" style="">
+										<div class="panel-body" style="height: 100vh; padding: 7px;">
 
-											<div class="panel-heading hidden" style="box-shadow: none; border-bottom-width: 0px;">
-
-												<div class="relative" style="height: 42px; border: 1px solid #ddd; margin: 5px; background: #fbfbfb; box-shadow: none;">
-						
-													<!-- Resource Summary -->
-													<div class="" style="padding-top: 5px; padding-bottom: 10px; padding-left: 20px; " <div="">
-														<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-															Manage Graph <i class="dropdown-caret fa fa-caret-down"></i>
-														</button>
-														<ul class="dropdown-menu" style="margin-left: 25px; margin-top: -5px;">
-															<li><a href="#"><i class="fa fa-check"></i> Save graph edits</a>
-															</li>
-															<li><a href="#"><i class="fa fa-times"></i> Delete graph</a>
-															</li>
-															<li><a href="#"><i class="fa fa-pencil"></i> Edit graph metadata</a>
-															</li>
-															<li class="divider"></li>
-															<li><a href="#">Close</a>
-															</li>
-														</ul>
+											<!-- Toolbar -->
+											<div class="">
+												<div id="form-toolbar" class="form-toolbar relative" style="border: 1px solid #ddd; left: 7px; right: 7px;">
+													
+													<div class="" style="position: absolute; right: 20px; top: 8px;">
+														<div class="switch">
+														  <input id="toggle-cards-x" class="cmn-toggle cmn-toggle-yes-no" type="checkbox" style="width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;">
+														  <label for="toggle-cards-x" data-on="List View" data-off="Graph View"></label>
+														</div>
 													</div>
 												</div>
 											</div>
 
-											<div class="panel-body">
+											<!-- Content -->
+											<div id="" class="relative" style="background: #ebeef0; height: 100vh; border: 1px solid #ddd;">
 
-												yo!
+												<div class="card-preview card-preview-indent-small" style="bottom: 0px; top: 56px; left: 0px; padding: 0px;">
+
+													<!-- Graph Container -->
+													<div class="eq-height clearfix">
+														<div class="row mar-no" style="">
+															<div id="" class="col-xs-12 eq-box-md eq-no-panel pad-no">
+													
+																<!-- Graph -->
+																<div id="graph" class="" style=""></div>
+
+																<!-- Node Editor -->
+																<div id="nodeCrud" class="hidden" style="top: -1px;" class="ui-widget-content">
+																	<p><span id="nodeName">100</span></p>
+																	<div class="relative">
+																		<a id="node-crud-close" href="" class="library-close-btn fa fa-times fa-lg" style="margin-top: -5px;"></a>
+																	</div>
+
+																	<!-- Settings -->
+																	<div class="">
+
+																		<!-- Node Information -->
+																		<hr class="section-division-dark node-section-division" style="">
+																		<div class="node-section" style="">
+																			
+																			<!-- Node Settings -->
+																			<div class="" style="padding-bottom: 25px;">
+
+																				<!-- Node Type -->
+																				<div class="node-widget-label" style="">
+																					<div class="control-label">
+																						Node Name
+																					</div>
+																					<div class="col-sm-12 pad-no node-attribute-label node-input-widget" style="">
+																						<input type="text" placeholder="Enter node name here..." id="" class="node-attribute-widget" style="background: #314151; height: 32px;" value="">
+																					</div>
+																				</div>
+																				<!-- End Label Text -->
+
+																				<!-- CRM -->
+																				<div class="node-widget-label" style="">
+																					<div class="control-label">
+																						CRM Class
+																					</div>
+																					<div class="col-sm-12 pad-no node-attribute-label" style="">
+																						<select class="design" data-placeholder="" id="crm" tabindex="0">
+																							<option>E1 CRM Entity</option>
+																							<option>E2 Temporal Entity</option>
+																							<option>E3 Condition State</option>
+																							<option>E4 Period</option>
+																							<option>E5 Event</option>
+																							<option>E6 Destruction</option>
+																							<option>E7 Activity</option>
+																							<option>E8 Acquisition</option>
+																						</select>
+																					</div>
+																				</div>
+																				<!-- End CRM -->
+
+																				<!-- Parent Relation -->
+																				<div class="node-widget-label" style="">
+																					<div class="control-label">
+																						Relation to parent
+																					</div>
+																					<div class="col-sm-12 pad-no node-attribute-label" style="">
+																						<select class="design" data-placeholder="" id="property" tabindex="0">
+																							<option>P1 Is identified by</option>
+																							<option>P2 Has type</option>
+																							<option>P3 Has note</option>
+																							<option>P4 Has time span</option>
+																							<option>P5 Consists of</option>
+																							<option>P6 A really long propety name just to see what will happen</option>
+																						</select>
+																					</div>
+																				</div>
+																				<!-- End Parent Relation -->
+
+																				<!-- Data Type -->
+																				<div class="node-widget-label" style="">
+																					<div class="control-label">
+																						Data type
+																					</div>
+																					<div class="col-sm-12 pad-no node-attribute-label" style="">
+																						<select class="design" data-placeholder="" id="data-type" tabindex="0">
+																							<option>Semantic</option>
+																							<option>String</option>
+																							<option>Number</option>
+																							<option>Date</option>
+																							<option>Domain</option>
+																							<option>Boolean</option>
+																							<option>Geometry</option>
+																							<option>File</option>
+																							<option>Image</option>
+																						</select>
+																					</div>
+																				</div>
+
+																				<!-- Group -->
+																				<div class="node-widget-label" style="">
+																					<div class="control-label">
+																						Group
+																					</div>
+																					<div class="col-sm-12 pad-no node-attribute-label" style="">
+																						<select class="design" data-placeholder="" id="node-group" tabindex="0">
+																							<option>Geospatial coordinates</option>
+																							<option>Geometry type</option>
+																							<option>Address</option>
+																							<option>Address type</option>
+																						</select>
+																					</div>
+																				</div>
+
+																			</div>
+																			<!-- End Widget Settings -->
+
+																		</div>
+																	</div>
+																</div>
+																<!-- End Node Editor -->
+															</div>
+														</div>
+													</div>
+													<!-- End Graph -->
+
+												</div>
 											</div>
+
+
+											<!-- Graph Tools -->
+											<div class="config-panel" style="">
+
+												<div id="card-preview-config-panel" class="cd-config-panel cd-config-panel-in" style="top: 48px; right: 7px; bottom: 7px">
+					
+													<!-- Element Panel -->
+													<div id="" class="panel " style="">
+														
+														<!-- Library/Permissions/Search -->
+														<div class="">
+															<div id="library" class="library library-right library-narrow library-dark">
+															
+																<!-- nav bar -->
+																<ul class="nav nav-tabs nav-justified nav-library" style="">
+																	<li id="branches-tab" class="nav-library-tab active" style="">
+																		<a href="#branch-library" class="nav-library-tab-link" style="" data-toggle="tab">
+																			<i class="fa fa-archive"></i>
+																		</a>
+																	</li>
+																	<li id="permissions-tab" class="nav-library-tab">
+																		<a href="#node-permissions" class="nav-library-tab-link" data-toggle="tab">
+																			<i class="fa fa-users"></i>
+																		</a>
+																	</li>
+																	<li id="nodes-tab" class="nav-library-tab">
+																		<a href="#node-listing" class="nav-library-tab-link" data-toggle="tab">
+																			<i class="fa fa-sitemap"></i>
+																		</a>
+																	</li>
+																</ul>
+
+																<!-- Tabs Content -->
+																<div class="tab-content" style="padding: 0px;">
+
+																	<!--Node Listing tab -->
+																	<div class="tab-pane fade" id="node-listing">
+																		<!-- Title -->
+																		<div class="">
+																			<h4 class="node-title" style=""> Node List </h4>
+																		</div>
+
+																		<!-- Node Search -->
+																		<div class="relative" style="">
+																			<input id="node-search" type="text" class="form-control library-search" style="" placeholder="Find a node in the graph"> 
+
+																			<!-- Remove Search -->
+																			<span class="clear-search" style=""><i class="fa fa-times-circle"></i></span>
+																		</div>
+
+																		<!-- Clear Selection -->
+																		<div class="pad-rgt pad-btm clear-selection" style="">
+																			<a id="clear-node-selection" class="clear-selection-link" style="" href="">clear selection</a>
+																		</div>
+																		
+																		<!-- Group/User List  -->
+																		<div class="" style="margin-left: 5px;">
+
+																			<!-- Group/User Grid -->
+																			<div id="node-grid" class="grid" style="margin-top: 0px; background: #f8f8f8; height: 500px;">
+
+																				<!-- Card -->									
+																				<div class="library-card node-list">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-file-code-o"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="name" style="" href="#">
+																							Names 
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle none" style="">
+																						String; E49
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card node-list">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-list-ul"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="name" style="" href="#">
+																							Name Type
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle none" style="">
+																						Domain; E32
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card node-list">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-calendar"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="name" style="" href="#">
+																							End of Existence
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle none" style="">
+																						Date; E19
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>	
+
+																	<!--Permissions tab -->
+																	<div class="tab-pane fade" id="node-permissions">
+																		<!-- Title -->
+																		<div class="">
+																			<h4 class="node-title" style=""> Permissions</h4>
+																		</div>
+																		
+																		<!-- Group/User Search -->
+																		<div class="" style="">
+																			<input type="text" class="form-control library-search" style="" placeholder="Find a group or user account"> 
+
+																			<!-- Remove Search -->
+																			<span class="clear-search" style=""><i class="fa fa-times-circle"></i></span>
+																		</div>
+
+																		<!-- Clear Selection -->
+																		<div class="pad-rgt pad-btm clear-selection" style="">
+																			<a id="clear-user-selection" class="clear-selection-link" style="" href="">clear selection</a>
+																		</div>
+
+																		<!-- Group/User List  -->
+																		<div class="" style="margin-left: 5px;">
+
+																			<!-- Group/User Grid -->
+																			<div id="user-grid" class="grid" style="margin-top: 0px; background: #f8f8f8;">
+
+																				<!-- Card -->									
+																				<div id="all" class="library-card permissions all">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							All accounts
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle none" style="">
+																						Permission: ---
+																					</div>
+																				</div>
+																			
+																				<!-- Card -->									
+																				<div class="library-card permissions" style="">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							Guest
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle text-muted full" style="">
+																						N - No Access
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card permissions">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							Crowd Source
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle full" style="">
+																						RW - Read/Write
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card permissions">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							Editor
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle full" style="">
+																						F -Full Access
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card permissions">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							RDM Admin
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle read" style="">
+																						R -Read Only
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card permissions">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="fa fa-user"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							rgaston@realsuperuser.com
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle full" style="">
+																						F - Full Access
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card permissions">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="fa fa-user"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							adalgity@gci.edu
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle delete" style="">
+																						D - Delete
+																					</div>
+																				</div>
+
+																			</div>
+																		</div>
+																	</div>	
+
+																	<!--Branch Library tab -->
+																	<div class="tab-pane fade in active" id="branch-library">
+																		<!-- Title -->
+																		<div class="">
+																			<h4 class="node-title" style=""> Branch Library</h4>
+																		</div>
+																		
+																		<!-- Group/User Search -->
+																		<div class="" style="">
+																			<input type="text" class="form-control library-search" style="" placeholder="Find a graph branch"> 
+
+																			<!-- Remove Search -->
+																			<span class="clear-search" style=""><i class="fa fa-times-circle"></i></span>
+																		</div>
+
+																		<!-- Group/User List  -->
+																		<div class="pad-top" style="margin-left: 5px;">
+
+																			<h4 class="node-section-title" style="font-size: 13px;"> Graph Branches</h4>
+
+																			<!-- Group/User Grid -->
+																			<div id="branch-grid" class="grid" style="margin-top: 0px; background: #f8f8f8;">
+
+																				<!-- Card -->									
+																				<div class="library-card graph-library">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-dark" style=""><i class="fa fa-hand-o-left"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							Node
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle delete" style="">
+																						Adds single node
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card graph-library">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-dark" style=""><i class="fa fa-hand-o-left"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							Node/Type
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle delete" style="">
+																						Adds single node and domain
+																					</div>
+																				</div>
+
+																				<!-- Card -->									
+																				<div class="library-card graph-library">
+																					<div class="library-icon" style="">
+																						<span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-dark" style=""><i class="fa fa-hand-o-left"></i></span>
+																					</div>
+																					<div class="library-card-main" style="">
+																						<a id="" class="" style="" href="#">
+																							Location Description
+																						</a>
+																					</div>
+																					<div class="library-card-subtitle delete" style="">
+																						Adds location nodes
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>							
+																</div>
+															</div>
+														</div>
+
+
+														<!-- Permissions Form -->
+														<div id="permissions-panel" class="library-right library-medium library-dark" style="display: none;">
+															
+															<!-- Title -->
+															<h4 class="node-title" style=""> Manage Permissions </h4>
+															<div class="relative">
+																<a id="permissions-close" href="" class="library-close-btn fa fa-times fa-lg" style=""></a>
+															</div>
+															<div id="" class="" style="padding-top: 20px; position: relative;">
+																<p class="library-instructions" style=""> Update the Groups/User Accounts you selected with the following permissions:</p>
+															</div>
+
+															<!-- Premission Selector -->
+															<div class="col-sm-12 pad-no node-attribute-label" style="margin-top: 8px;">
+																<select class="design" data-placeholder="" id="permissions" tabindex="0">
+																	<option>N - No Access</option>
+																	<option>R - Read Only</option>
+																	<option>RW -Read/Write</option>
+																	<option>D - Delete</option>
+																	<option>F - Full Access (read, write, delete)</option>
+																</select>
+
+																<div class="" style="margin: -5px 0px 10px 10px;">
+																	<label class="form-checkbox form-normal form-primary active form-text"><input type="checkbox" checked=""> Cascade permissions to children</label>
+																</div>
+
+																<button id="apply-permissions" class="btn btn-primary btn btn-block btn-labeled fa fa-plus" style="margin-top: 10px; margin-bottom: 10px;"> Apply permissions</button>
+															</div>
+
+															
+
+															<!-- Premission Key -->
+															<div id="confirm-permissions" class="key" style="display: none;">
+																
+																<h4 class="node-title" style="font-size: 13px;"> Applying F- Full Access permissions to: </h4>
+
+																<!-- Alert -->
+																<div id="permission-alert" class="panel install-card-alert" style="margin-bottom: 10px;"></div>
+
+											
+																<div id="" class="panel-body" style="padding: 0 10px 10px 10px;">
+																	<dl>
+																		<dd><i class="fa fa-check"></i> Guests Group updated</dd>
+																		<dd><i class="fa fa-check"></i> Crowd Source Group updated</dd>
+																		<dd><i class="fa fa-times"></i> rgaston@superuser.com <a id="" class="text-primary permission-alert" href="#">IGNORED</a></dd>
+																		<dd><i class="fa fa-check"></i> adalgity@gci.edu updated</dd>
+																	</dl>
+																</div>
+																<div class="" style="">
+																	<dt>Permission updates completed!</dt>
+																</div>
+															</div>
+
+														</div>
+
+														<!-- Graph Library -->
+														<div id="branch-panel" class="library-right library-medium library-dark" style="display: none;">
+
+															<div class="ltr" style="">
+																<!-- Title -->
+																<h4 class="node-title" style=""> Location Branch  </h4>
+																<div class="relative">
+																	<a id="branch-close" href="" class="library-close-btn fa fa-times fa-lg" style=""></a>
+																</div>
+																<div id="" class="" style="padding-top: 20px; position: relative;">
+																	<p class="library-instructions" style=""> A graph branch that describes the location of assets with geospatial coordinates and other location information.</p>
+																</div>
+
+																<!-- Alert -->
+																<div id="branch-alert" class="panel install-card-alert" style="margin-bottom: 10px;"></div>
+
+																<!-- Add Button -->
+																<button id="branch-append" class="btn btn-primary btn btn-block btn-labeled fa fa-check" style="margin-bottom: 5px; width: 280px;"> Append to current node</button>
+
+																<!-- Preview -->
+																<div id ="" class="branch-preview" style="">
+																	Graph Preview goes here
+																</div>
+
+																<!-- Branch Metadata -->
+																<div class="" style="">
+																	<dl>
+																		<dt class="branch-metadata">Top Node Class</dt>
+																		<dd>E45</dd>
+																		<dt class="branch-metadata">Connects to</dt>
+																		<dd>E1, E23, E34, E39, E59, E79</dd>
+																		<dt class="branch-metadata">Author</dt>
+																		<dd>Arches Community</dd>
+																		<dt class="branch-metadata">Version</dt>
+																		<dd>4.0.2</dd>
+																	</dl>
+
+																</div>
+
+																<!-- Close Panel -->
+																<button id="branch-close" class="btn btn-mint btn pull-right btn-labeled fa fa-times" style="margin-bottom: 45px;"> Close</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- End Graph Tools -->
+
+
 										</div>
 									</div>
 									<!-- End Card -->
 
 
 									<!-- Card -->
-									<div id="card-manager-card" class="tab-pane fade" style="padding-bottom: 15px;">	
+									<div id="card-manager-card" class="tab-pane fade" style="padding-bottom: 15px;">
 										<div class="panel-body" style="height: 100vh; padding: 7px;">
 
 											<!-- Content -->
@@ -1635,6 +2178,11 @@
 																					Data Entry Cards
 																				</a>
 																			</li>
+																			<li id="validation-group" class="">
+																				<a id="validation-tab" data-toggle="tab" href="#validation-card" class="card-tab-title" aria-expanded="false">
+																					Validations/Functions
+																				</a>
+																			</li>
 																		</ul>
 
 																		<div id="db-arches-app-alert" class="panel data-card-alert" style=""></div>
@@ -1701,7 +2249,7 @@
 																												</div>
 																												
 																												<div class="" style="position: absolute; left: 120px; top: 21px;">
-																													<input type="text" class="form-control library-search" style="width: 500px; height: 36px;" placeholder="Find an icon"> 
+																													<input type="text" class="form-control" style="width: 500px; height: 36px;" placeholder="Find an icon"> 
 
 																													<!-- Remove Search -->
 																													<span class="clear-search" style="position: absolute; left: 480px; top: 5px; color: #123; font-size: 17px;"><i class="fa fa-times-circle"></i></span>
@@ -3298,6 +3846,21 @@
 																					</div>
 																				</div>
 																			</div>
+
+																			<!-- Card -->
+																			<div id="validation-card" class="tab-pane fade">	
+																				<div class="panel-body card-panel-body" style="">
+																					<div id="" class="card-content" style="">
+
+																						<!-- Card Level Alert -->
+																						<div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+																						Add multi-select for validation functions and general form-level functions here.
+
+															
+																					</div>
+																				</div>
+																			</div>
 																		</div>
 																	
 																		<!-- Help/Thesaurus term Panel -->
@@ -3426,20 +3989,147 @@
 											<div id="" class="" style="background: #ebeef0; height: 100vh; border: 1px solid #ddd;">
 
 
+												<div id="data-preview" class="" style="display: block; padding: 7px;">
+													<div id="xx-card-container" class="panel card-panel" style="border: 1px solid #ddd; border-bottom-width: 0px;">
+														<div class="panel-heading">
+															<div class="" style="">
+																<h3 id="xx-cc-title" class="panel-title card-main-title">Resource Settings</h3>
+															</div>
+														</div>
 
 
+														<!-- Alert Panel -->
+														<div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
+
+
+														<!-- Data Entry -->
+														<div id="xx-add-basemap-wizard" class="panel-body card-body fade in" style="padding-top: 0px;">
+															<div id="cards" class="tab-base card-content-container outline" style="margin-bottom: 10px; margin-top: -2px;">
+
+																<!--Nav Tabs-->
+																<ul class="nav nav-tabs card-nav-container" style="">
+																	<li id="xx-summary-group" class="active">
+																		<a id="xx-summary-tab" data-toggle="tab" href="#access-card" class="card-tab-title" aria-expanded="true">
+																			Status
+																		</a>
+																	</li>
+																	<li id="related-resources-group" class="">
+																		<a id="related-resources-tab" data-toggle="tab" href="#related-resources-card" class="card-tab-title" aria-expanded="true">
+																			Relationships
+																		</a>
+																	</li>
+																</ul>
+
+																<div id="xx-db-arches-app-alert" class="panel data-card-alert" style=""></div>
+
+																<!--Tabs Content-->
+																<div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+																	<!-- Card -->
+																	<div id="access-card" class="tab-pane fade active in">	
+																		<div class="panel-body card-panel-body" style="">
+																			<div id="" class="card-content" style="">
+
+																				<!-- Card Level Alert -->
+																				<div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+																				<!-- Card Instruction -->
+																				<p id="install-instructions" class="content-instructions">
+																					Define the resource availability 
+																					
+																					<!-- Help link -->
+																					<span>	
+																						<a id="add-basemap-wizard-help-link" href="" class="pull-right card-help help editable-help" style=""> Help <i class="fa fa-question-circle"></i></a>
+																					</span>
+																				</p>
+																				
+																				<!-- Form -->
+																				<div class="col-sm-9 col-md-6" style="padding-bottom: 10px;">
+
+																					<form class="widgets" style="margin-bottom: 20px;">
+																						<div class="row widget-container" style="">
+																							<div class="form-group">
+																								<div class="relative" style="">
+																									<label class="col-xs-12 control-label widget-input-label" for=""> Display Name</label>
+																								</div>
+																								
+																								<div class="col-xs-12">
+																									<input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+																								</div>
+																							</div>
+																						</div>
+																					</form>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+
+																	<!-- Card -->
+																	<div id="related-resources-card" class="tab-pane fade active in">	
+																		<div class="panel-body card-panel-body" style="">
+																			<div id="" class="card-content" style="">
+
+																				<!-- Card Level Alert -->
+																				<div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+																				<!-- Card Instruction -->
+																				<p id="install-instructions" class="content-instructions">
+																					Define this resource's allowed relationships 
+																				</p>
+																				
+																				<!-- Form -->
+																				<div class="col-sm-9 col-md-6" style="padding-bottom: 10px;">
+
+																					<form class="widgets" style="margin-bottom: 20px;">
+																						<div class="row widget-container" style="">
+																							<div class="form-group">
+																								<div class="relative" style="">
+																									<label class="col-xs-12 control-label widget-input-label" for=""> Related Resources</label>
+																								</div>
+																								
+																								<div class="col-xs-12">
+																									<input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+																								</div>
+																							</div>
+																						</div>
+																					</form>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															
+																<!-- Help/Thesaurus term Panel -->
+																<aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
+																	<div class="relative">
+																		<a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+																	</div>
+																	<div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
+																		<div class="panel-heading">
+																			<h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> New Basemap</h3>
+																		</div>
+																		<div class="panel-body" style="padding: 10px 10px 15px 10px;">
+																			<p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
+																		</div>
+																	</div>
+																</div></aside>
+															</div>
+
+															<!-- Save Input -->
+															<div class="wizard-buttons pull-right" style="">
+																<button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt btn-editable" style=""> Discard edits
+																</button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check btn-editable" style=""> Save settings</button>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
-											
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						
 					</div>
-
-					
-
 				</div>
 				<!-- End Form Container-->
 			</div>
@@ -3912,9 +4602,22 @@
     <script src="plugins/MorphingSearch/js/morphingsearch.js"></script>
 	-->
 
+
+   	<!-- D3 -->
+	<script src="//d3js.org/d3.v3.min.js"></script>
+	<script src="js/d3/graph.js"></script>
+
+
+
+
+
+
 	<!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
     <script src="js/arches/forms/resource_forms.js"></script>
+
+
+
 
 
 	<!-- Arches JS -->

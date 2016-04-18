@@ -5,7 +5,8 @@
         nodeMouseOver = 8;	//Mouseover Node size
         opacity = 0.5;
 	
-	var diameter = 960;
+	var diameter = 1080;
+	var height = 700;
 
 	var tree = d3.layout.tree()
 	    .size([360, diameter / 2 ])
@@ -16,7 +17,7 @@
 
 	var svg = d3.select("#graph").append("svg")
 	    .attr("width", diameter)
-	    .attr("height", diameter - 150)
+	    .attr("height", height)
 	    .call(d3.behavior.zoom().on("zoom", redraw))
 	    .append("g")
 	    .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + "), rotate(0)");

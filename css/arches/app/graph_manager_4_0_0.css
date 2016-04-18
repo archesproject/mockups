@@ -19,15 +19,15 @@
 	margin-right: 0px;
 }
 
-.chosen-container-single .chosen-drop {
+/*.chosen-container-single .chosen-drop {
 	background: #314151;
-}
+}*/
 
 .chosen-container-single .chosen-single div b:before {
     content: "\f0d7";
     font: normal normal normal 14px/1 FontAwesome;
     vertical-align: -50%;
-    color: #ddd;
+    color: #123;
 }
 
 .chosen-container {
@@ -80,6 +80,10 @@
 	border-left: 1px solid #1E3143;
 	color: #ddd;
 } 
+
+.library-dark .tab-content {
+	background: #37495b;
+}
 
 .library-bright {
 	background: #fff; 

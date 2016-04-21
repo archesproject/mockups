@@ -18,6 +18,27 @@ div.tab-content.arches-tab {
 	padding-top: 0px;
 }
 
+.list-divider-dark {
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+.nano>.nano-content {
+	font-size: 11px;
+}
+
+ul .collapse li {
+	height: 25px;
+}
+
+
+ul .collapse li:first-of-type {
+	margin-top: -10px;
+}
+
+ul .collapse li:last-of-type {
+	height: 35px;
+}
+
 
 /* ASIDE CLASSESS =============================== */
 #aside-container #aside .tab-content {

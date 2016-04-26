@@ -297,6 +297,12 @@ span.icon-wrap.icon-circle.bg-gray-dark:hover {
 	font-size: 12px;
 	margin-top: 2px;
 	font-weight: 600;
+	color: #666;
+}
+
+.widget-label-required {
+	font-size: 16px;
+	color: #666;
 }
 
 .widget-input {

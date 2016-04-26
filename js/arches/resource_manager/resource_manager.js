@@ -2,6 +2,186 @@
 //	Version: 0.1
 //
 
+//	Load default content
+ 	var contentPage = "";
+
+ 	
+ 	$( document ).ready(function() {
+ 		contentPage = "arches_designer_settings.html";
+	    $('#external-page-content').load(contentPage);
+	});
+
+
+	$("#settings-manager").click(function(ev){
+ 		ev.preventDefault();
+
+ 		//make sure all content in target div is removed before loading new page
+ 		$('#external-page-content').empty();
+
+		// Update Help file tag
+ 		contentPage = "arches_designer_settings.html";
+		$('#external-page-content').load(contentPage);
+
+		//update parent li, show as selected
+		$( ".edit-menu-item" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$("#settings-manager").addClass('selected');
+
+
+	});
+
+
+ 	$("#card-manager").click(function(ev){
+ 		ev.preventDefault();
+
+ 		//make sure all content in target div is removed before loading new page
+ 		$('#external-page-content').empty();
+
+		// Update Help file tag
+ 		contentPage = "arches_designer_card_manager.html";
+		$('#external-page-content').load(contentPage);
+
+		//update parent li, show as selected
+		$( ".edit-menu-item" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$("#card-manager").addClass('selected');
+
+
+	});
+
+	$("#form-manager").click(function(ev){
+ 		ev.preventDefault();
+
+ 		//make sure all content in target div is removed before loading new page
+ 		$('#external-page-content').empty();
+
+		// Update Help file tag
+ 		contentPage = "arches_designer_form_manager.html";
+		$('#external-page-content').load(contentPage);
+
+		//update parent li, show as selected
+		$( ".edit-menu-item" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$("#form-manager").addClass('selected');
+
+	});
+
+
+
+
+// Resource Grid Item Highlight
+
+	$('.resource-grid-item').on('mouseover', function (ev) {
+
+		//select the 'resource-grid-main-container' div child
+		var container = $( event.target ).closest('.resource-grid-main-container');
+		container.addClass('container-highlight');
+
+		var icon = $( event.target ).find('.resource-grid-icon');
+		icon.addClass('resource-grid-icon-highlight');
+
+		//$('.resource-grid-item .resource-grid-main-container .resource-grid-main .resource-grid-icon').addClass('resource-grid-icon-highlight');
+		
+
+		//$( event.target ).closest('.resource-grid-main-container').addClass('container-highlight');
+		//$( event.target ).closest('.resource-grid-main-container').children('.resource-grid-main').children('.resource-grid-icon').addClass('resource-grid-icon-highlight');
+
+	});
+
+	$('.resource-grid-item').on('mouseout', function (ev) {
+
+		//select the 'resource-grid-main-container' div child
+		var container = $( event.target ).closest('.resource-grid-main-container');
+		container.removeClass('container-highlight');
+
+		var icon = $( event.target ).find('.resource-grid-icon');
+		icon.removeClass('resource-grid-icon-highlight');
+
+	});
+
+	
+
+	// $('.resource-grid-item').on('mouseover', function (ev) {
+	// 	$('.resource-grid-main-container').addClass('container-highlight');
+	// 	$('.resource-grid-item .resource-grid-main-container > .resource-grid-main .resource-grid-icon').addClass('resource-grid-icon-highlight');
+	// });
+
+	// $('.resource-grid-item').on('mouseout', function (ev) {
+	// 	$('.resource-grid-item .resource-grid-main-container').removeClass('container-highlight');
+	// 	$('.resource-grid-item .resource-grid-main-container .resource-grid-main .resource-grid-icon').removeClass('resource-grid-icon-highlight');
+	// });
+
+
+// Manage Display of edit panel
+	$('.resource-grid-item').on('click', function (ev) {
+		ev.preventDefault();
+		
+		$("#content-container").addClass('hidden');	
+		$("#edit-panel").addClass('in');	
+
+		//hide nav, footer
+		$('#mainnav-container').addClass('hidden');
+		$('#navbar').addClass('hidden');
+		$('#footer').addClass('hidden');
+	
+	});
+
+	$('.dismiss-panel').on('click', function (ev) {
+		ev.preventDefault();
+		
+		$("#content-container").removeClass('hidden');	
+		$("#edit-panel").removeClass('in');	
+
+		//show nav, footer
+		$('#mainnav-container').removeClass('hidden');
+		$('#navbar').removeClass('hidden');
+		$('#footer').removeClass('hidden');
+	
+	
+	});
+
+
+// Manage Display of edit panel menu
+	$('#menu-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		if ( $('#edit-menu').is(':visible')) {
+			//console.log ("menu visible");
+			$('#edit-menu').addClass('edit-menu-out');
+		  	$('.edit-panel-content').addClass('edit-panel-content-full');
+
+		  	//update state of menu control
+		  	$('#menu-forward').removeClass('hidden');
+		  	$('#menu-back').addClass('hidden');
+		  	$('.edit-menu-control').addClass('edit-menu-control-out');
+
+
+		} else {
+		  	//console.log ("menu hidden");
+		  	$('#edit-menu').removeClass('edit-menu-out');
+		  	$('.edit-panel-content').removeClass('edit-panel-content-full');
+
+		  	//update state of menu control
+		  	$('#menu-forward').addClass('hidden');
+		  	$('#menu-back').removeClass('hidden');
+		  	$('.edit-menu-control').removeClass('edit-menu-control-out');
+
+		}
+
+	});
+
+
+
+
+
+
+
+
+
+
 //	Show drag/drop tool for widget ordering on card
 	$('.widget-container').on('mouseover', function (ev) {
 		ev.preventDefault();
@@ -38,6 +218,8 @@
 
 
 
+
+
 // chosen
 	$(".functions").chosen({
 	  	disable_search_threshold: 15,
@@ -50,6 +232,10 @@
 	  	inherit_select_classes: true,
 	  	width: '100%'
 	});
+
+
+
+
 
 
 
@@ -322,6 +508,30 @@
 	});
 
 
+
+// Notification Example
+// $.niftyNoty({
+//     type: 'danger',
+//     icon : 'fa fa-bolt fa-2x',
+//     container : 'page',
+//     title : 'Server Load Limited',
+//     message : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
+// });
+
+$('.ion-ios-trash').on('click', function(ev){
+	//console.log("trashing");
+	ev.preventDefault();
+
+	//push content to accomodate alert
+	$('#external-page-content').addClass('slide-down');
+
+    $.niftyNoty({
+        type: 'danger',
+        container : '#edit-page-alert',
+        html : '<h4 class="alert-title">Oh snap! You got an error!</h4><p class="alert-message">Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p><div class="mar-top"><button type="button" class="btn btn-danger" data-dismiss="noty">Close this notification</button></div>',
+        closeBtn : false
+    });
+});
 
 
 

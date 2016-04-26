@@ -20,6 +20,9 @@
     <!--Font Awesome [ OPTIONAL ]-->
     <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+    <!--Ion Icons [ OPTIONAL ]-->
+    <link href="plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+
 
 
     <!--Nifty Stylesheet [ REQUIRED ]-->
@@ -65,13 +68,19 @@
     <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
 
 
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
     <!-- Arches CSS -->
     <link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
-    <link href="css/arches/forms/cards_1_0_0.css" rel="stylesheet">
+    
     <link href="css/arches/app/app_configuration.css" rel="stylesheet">
 
+    <!--
+    <link href="css/arches/forms/cards_1_0_0.css" rel="stylesheet">
     <link href="css/arches/forms/resource_forms.css" rel="stylesheet">
-        
+    -->
 
 </head>
 
@@ -114,7 +123,7 @@
                             <a href="#" class="mega-dropdown-toggle">
                                 <i class="ti-ticket icon-lg"></i>
                             </a>
-                            <div class="dropdown-menu mega-dropdown-menu">
+                            <div class="dropdown-menu mega-dropdown-menu dropdown-shim">
                                 <div class="clearfix">
                                     <div class="col-sm-12 col-md-3">
 
@@ -192,7 +201,7 @@
                             </a>
 
                             <!--Notification dropdown menu-->
-                            <div class="dropdown-menu dropdown-menu-md">
+                            <div class="dropdown-menu dropdown-menu-md dropdown-shim">
                                 <div class="pad-all bord-btm">
                                     <p class="text-lg text-semibold mar-no">My recent edits</p>
                                 </div>
@@ -401,48 +410,15 @@
         </header>
         <!--END NAVBAR-->
 
-        <div class="boxed">
+        <div id="" class="boxed">
 
-            <!--CONTENT CONTAINER-->
-            <div id="content-container">
-                
-                <!-- Project Selection -->
-                <div class="relative" style="">
-                    <div class="" style="position: absolute; height: 50px; background: #f8f8f8; left: 0px; width: 100%; border-bottom: 1px solid #e9e9e9;">
-                        <div class="" style="padding-top: 10px;">
-                            <h1 class="page-header text-overflow" style="font-size: 2.1em; padding-top: 0px; padding-bottom: 3px; padding-left: 25px; width: 155px; border-right: 1px solid #ddd;">Resource </h1>
-                        </div>
-
-                        <!-- Project Selector -->
-                        <div id="" class="" style="position: absolute; left: 160px; top: 9px; opacity: 1.0">
-                            <select class="resource-list" data-placeholder="" id="" tabindex="0" style="display: none;">
-                                <option>Aurora taking leave of Tithonus</option>
-                                <option>Rouen Cathedral</option>
-                                <option>Panoramic Landscape</option>
-                                <option>St. Petersburg Campaign</option>
-                                <option>Rembrandt Madonna Halo Pigments Study</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="" style="position: absolute; right: 5px; top: 10px;">
-                        <div class="btn-group">
-                            <button class="dropdown-toggle btn" style="border-color: transparent;" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gears"></i></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#"><i class="fa fa-copy"></i> Clone Project</a></li>
-                                <li><a href="#"><i class="fa fa-times"></i> Delete Project</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Close</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <!-- Default Page -->
+            <div id="content-container" class="">
 
                 <!-- Searchbox  -->
-                <div class="" style="">
-                    <div id="morphsearch" class="morphsearch" style="">
-                        <form class="morphsearch-form" style="">
+                <div class="">
+                    <div id="morphsearch" class="morphsearch">
+                        <form class="morphsearch-form">
                             <input class="morphsearch-input" type="search" placeholder="Search..."/>
                             <button class="morphsearch-submit" type="submit">Search</button>
                         </form>
@@ -534,19 +510,246 @@
                 </div>
                 <!-- /morphsearch -->
 
+                
+                <!-- Page Header -->
+                <div class="">
+                    <!-- Title -->
+                    <div class="" style="height: 80px; background: #f8f8f8; border-bottom: 1px solid #ddd;">
+                        <div class="center-div" style="padding-top: 0px; padding-left: 28px;">
+                            <h1 class="page-header text-overflow arches-panel-header"><i class="text-center fa fa-bookmark icon-wrap bg-gray arches-panel-icon"></i> Arches Designer</h1>
+                            <p class="arches-panel-subtitle">Design new data types to include in your inventory</p>
+                        </div>
+                    </div>
 
-                <!--Page content-->
-                <div id="page-content">
-                    
-					
-					
-					        
+                    <!-- Toolbar -->
+                    <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4;">
+
+                        <!-- Search -->
+                        <div class="edit-panel-search-bar">
+                            <!-- Toggle Button -->
+                            <button class="btn btn-flat btn-flat-trans right-border"><i class="fa fa-search"></i> Find </button>
+
+                            <!-- Find widget -->
+                            <div class="find-widget">
+                                <input type="text" class="form-control" placeholder="Type a resource or graph name...">
+                                <span class="clear-find"><i class="fa fa-times-circle"></i></span>
+                            </div>
+
+                        </div>
+
+                        <div class="" style="position: absolute; right: 50px; top: 10px;">
+                            <button class="btn btn-flat btn-flat-trans"><i class="fa fa-plus-circle"></i> New Resource</button>
+                        </div>
+                    </div>  
                 </div>
-                <!--End page content-->
 
 
+                <!-- Default Page content-->
+                <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
+
+                    <!-- Resoure Grid -->
+                    <div id="report-image-grid" class="report-image-grid">
+                                        
+                            <!-- Resource -->
+                            <div class="resource-grid-item relative">
+                                <!-- Resource Type -->
+                                <div class="resource-grid-main-container">
+                                    <div class="resource-grid-main">
+                                        <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-th icon-wrap resource-grid-icon"></i> Heritage District</h1>
+                                        <p class="resource-grid-subtitle">A resource that can be used to inventory buildings, structures, and archaeological sites</p>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Tools -->
+                                <div class="resource-grid-tools-container">
+                                    <a id="" href="" class="pad-rgt hidden"><i class="fa fa-plus-circle"></i> Add new resource</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-check-circle"></i> Edit</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-copy"></i> Copy</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+
+                                <!-- Resource Metadata -->
+                                <div class="resource-grid-meta-container">
+                                    <ul class="list-inline resource-grid-meta">
+                                        <li>Resource</li>
+                                        <li class="text-semibold text-primary">Active</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Resource -->
+                            <div class="resource-grid-item relative">
+                                <!-- Resource Type -->
+                                <div class="resource-grid-main-container">
+                                    <div class="resource-grid-main">
+                                        <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-building-o icon-wrap resource-grid-icon"></i> Heritage Resource</h1>
+                                        <p class="resource-grid-subtitle">A resource that can be used to inventory buildings, structures, and archaeological sites</p>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Tools -->
+                                <div class="resource-grid-tools-container">
+                                    <a id="" href="" class="pad-rgt hidden"><i class="fa fa-plus-circle"></i> Add new resource</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-check-circle"></i> Edit</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-copy"></i> Copy</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+
+                                <!-- Resource Metadata -->
+                                <div class="resource-grid-meta-container">
+                                    <ul class="list-inline resource-grid-meta">
+                                        <li>Resource</li>
+                                        <li class="text-semibold text-primary">Active</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Resource -->
+                            <div class="resource-grid-item relative">
+                                <!-- Resource Type -->
+                                <div class="resource-grid-main-container">
+                                    <div class="resource-grid-main">
+                                        <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-map-marker icon-wrap resource-grid-icon"></i> Address</h1>
+                                        <p class="resource-grid-subtitle">A resource used to identify the main street-faced doorway of a structure</p>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Tools -->
+                                <div class="resource-grid-tools-container">
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-check-circle"></i> Edit</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-copy"></i> Copy</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+
+                                <!-- Resource Metadata -->
+                                <div class="resource-grid-meta-container">
+                                    <ul class="list-inline resource-grid-meta">
+                                        <li>Graph</li>
+                                        <li class="text-semibold text-danger">Inactive</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>	  
+                    </div>      
+                </div>
+                <!--End Default page content-->
             </div>
-            <!--END CONTENT CONTAINER-->
+            <!--END  Default Page-->
+
+
+            <!-- Edit Panel -->
+            <div id="edit-panel" class="pt-page fade">
+                
+                <!-- Page Header -->
+                <div class="edit-page-toolbar relative">
+                    
+                    <!-- Menu Panel Control -->
+                    <div class="edit-menu-control">
+                        <button id="menu-btn" class="text-semibold btn btn-flat btn-flat-sm"><i id="menu-back" class="ion-ios-arrow-back dismiss-panel"></i> Menu <i id="menu-forward" class="ion-ios-arrow-forward dismiss-panel hidden"></i></button>
+                    </div>
+
+                    <!-- Page Controls -->
+                    <div class="">
+                        <div class="dismiss-edit-panel">
+                            <i class="ion-ios-browsers add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Copy"></i>
+                            <i class="ion-ios-trash add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Delete"></i>
+                            <i class="ion-ios-close dismiss-panel add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Dismiss"></i>
+                            <i class="ion-ios-checkmark add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Save"></i>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Page Top Panel (title block) -->
+                <div class="relative edit-panel-content">
+                    <div class="edit-panel">
+                        <!-- Title -->
+                        <div class="text-left edit-panel-top-bar">
+                            <div class="center-div">
+                                <h1 class="page-header text-overflow arches-panel-header"><i class="text-center fa fa-certificate icon-wrap bg-gray arches-panel-icon"></i> Resource Name Here</h1>
+                                <p class="arches-panel-subtitle">Resource subtitle here</p>
+                            </div>
+                        </div>
+
+                        <!-- Page Alert -->
+                        <div id="edit-page-alert"></div>
+                    </div>
+                </div>
+
+                <!-- Edit Content -->
+                <div class="relative edit-panel-content">
+                    <div id="" class="edit-content">
+                        
+                        <!-- LOAD PAGE CONTENT HERE -->
+                        <div id="external-page-content" class=""></div>
+
+                    </div>
+                </div>
+
+                
+                <!-- Edit Menu -->
+                <div id="edit-menu" class="edit-menu">
+                    <ul class="list-group edit-menu-list">
+                        <!-- Menu Title -->
+                        <li class="">
+                            <div class="edit-menu-title">
+                                <h1 class="page-header text-overflow"><i class="text-center fa fa-bookmark icon-wrap bg-gray arches-panel-icon"></i> Arches Designer</h1>
+                                <p class="arches-panel-subtitle" style="padding-left: 45px;">Create Arches Resources</p>
+                            </div>
+                        </li>
+                        
+                        <!-- Menu Item -->
+                        <li id="settings-manager" class="edit-menu-item selected">
+                            <a href="#maps-form" target="#slide" class="">
+                                <div class="media-body">
+                                    <div class="menu-item-title"><i class="fa fa-wrench"></i> Settings</div>
+                                    <span class="text-muted menu-item-subtitle">Asset Name, Settings, Relations</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Menu Item -->
+                        <li class="edit-menu-item">
+                            <a id="" href="#maps-form" target="#slide" class="">
+                                <div class="media-body">
+                                    <div class="menu-item-title"><i class="fa fa-sitemap"></i> Graph Manager</div>
+                                    <span class="text-muted menu-item-subtitle">Define graph, permissions</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Menu Item -->
+                        <li id="card-manager" class="edit-menu-item">
+                            <a href="#maps-form" target="#slide" class="">
+                                <div class="media-body">
+                                    <div class="menu-item-title"><i class="fa fa-file-o"></i> Card Manager</div>
+                                    <span class="text-muted menu-item-subtitle">Configure data entry cards</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Menu Item -->
+                        <li id="form-manager" class="edit-menu-item">
+                            <a href="#maps-form" target="#slide" class="">
+                                <div class="media-body">
+                                    <div class="menu-item-title"><i class="fa fa-files-o"></i> Form Manager</div>
+                                    <span class="text-muted menu-item-subtitle">Group data entry cards</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Menu Item -->
+                        <li class="edit-menu-item">
+                            <a id="" href="#maps-form" target="#slide" class="">
+                                <div class="media-body">
+                                    <div class="menu-item-title"><i class="fa fa-book"></i> Report Manager</div>
+                                    <span class="text-muted menu-item-subtitle">Configure resource reports </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
 
             
@@ -697,7 +900,6 @@
             
             <!--ASIDE-->
             
-
         </div>
 
         
@@ -802,6 +1004,10 @@
     <script src="plugins/MorphingSearch/js/morphingsearch.js"></script>
 
 
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
+
+
     <!--Chosen [ OPTIONAL ]-->
     <script src="plugins/chosen/chosen.jquery.min.js"></script>
 
@@ -809,6 +1015,7 @@
     <!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
     <script src="js/arches/forms/resource_forms.js"></script>
+    <script src="js/arches/resource_manager/resource_manager.js"></script>
         
 
 </body>

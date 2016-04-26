@@ -20,6 +20,9 @@
     <!--Font Awesome [ OPTIONAL ]-->
     <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+    <!--Ion Icons [ OPTIONAL ]-->
+    <link href="plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+
 
 
     <!--Nifty Stylesheet [ REQUIRED ]-->
@@ -114,7 +117,7 @@
                             <a href="#" class="mega-dropdown-toggle">
                                 <i class="ti-ticket icon-lg"></i>
                             </a>
-                            <div class="dropdown-menu mega-dropdown-menu">
+                            <div class="dropdown-menu mega-dropdown-menu dropdown-shim">
                                 <div class="clearfix">
                                     <div class="col-sm-12 col-md-3">
 
@@ -192,7 +195,7 @@
                             </a>
 
                             <!--Notification dropdown menu-->
-                            <div class="dropdown-menu dropdown-menu-md">
+                            <div class="dropdown-menu dropdown-menu-md dropdown-shim">
                                 <div class="pad-all bord-btm">
                                     <p class="text-lg text-semibold mar-no">My recent edits</p>
                                 </div>
@@ -401,43 +404,10 @@
         </header>
         <!--END NAVBAR-->
 
-        <div class="boxed">
+        <div id="" class="boxed">
 
-            <!--CONTENT CONTAINER-->
-            <div id="content-container">
-                
-                <!-- Project Selection -->
-                <div class="relative" style="">
-                    <div class="" style="position: absolute; height: 50px; background: #f8f8f8; left: 0px; width: 100%; border-bottom: 1px solid #e9e9e9;">
-                        <div class="" style="padding-top: 10px;">
-                            <h1 class="page-header text-overflow" style="font-size: 2.1em; padding-top: 0px; padding-bottom: 3px; padding-left: 25px; width: 155px; border-right: 1px solid #ddd;">Resource </h1>
-                        </div>
-
-                        <!-- Project Selector -->
-                        <div id="" class="" style="position: absolute; left: 160px; top: 9px; opacity: 1.0">
-                            <select class="resource-list" data-placeholder="" id="" tabindex="0" style="display: none;">
-                                <option>Aurora taking leave of Tithonus</option>
-                                <option>Rouen Cathedral</option>
-                                <option>Panoramic Landscape</option>
-                                <option>St. Petersburg Campaign</option>
-                                <option>Rembrandt Madonna Halo Pigments Study</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="" style="position: absolute; right: 5px; top: 10px;">
-                        <div class="btn-group">
-                            <button class="dropdown-toggle btn" style="border-color: transparent;" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gears"></i></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#"><i class="fa fa-copy"></i> Clone Project</a></li>
-                                <li><a href="#"><i class="fa fa-times"></i> Delete Project</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Close</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <!-- Default Page -->
+            <div id="content-container" class="">
 
                 <!-- Searchbox  -->
                 <div class="" style="">
@@ -534,19 +504,389 @@
                 </div>
                 <!-- /morphsearch -->
 
+                
+                <!-- Page Header -->
+                <div class="" style="">
+                    <!-- Title -->
+                    <div class="" style="height: 80px; background: #f8f8f8; border-bottom: 1px solid #ddd;">
+                        <div class="center-div" style="padding-top: 0px; padding-left: 28px;">
+                            <h1 class="page-header text-overflow arches-panel-header"><i class="fa fa-sitemap icon-wrap bg-gray arches-panel-icon" style=""></i> Resource Manager</h1>
+                            <p class="arches-panel-subtitle" style="">Add new resources to your inventory</p>
+                        </div>
+                    </div>
 
-                <!--Page content-->
-                <div id="page-content">
-                    
-					
-					
-					        
+                    <!-- Toolbar -->
+                    <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4;">
+
+                        <!-- Search -->
+                        <div class="edit-panel-search-bar">
+                            <!-- Toggle Button -->
+                            <button class="btn btn-flat btn-flat-trans right-border"><i class="fa fa-search"></i> Find </button>
+
+                            <!-- Find widget -->
+                            <div class="find-widget">
+                                <input type="text" class="form-control" style="" placeholder="Type a resource or graph name...">
+                                <span class="clear-find" style=""><i class="fa fa-times-circle"></i></span>
+                            </div>
+
+                        </div>
+
+                        <div class="" style="position: absolute; right: 50px; top: 10px;">
+                            <button class="btn btn-flat btn-flat-trans"><i class="fa fa-plus-circle"></i> New Resource</button>
+                        </div>
+                    </div>  
                 </div>
-                <!--End page content-->
 
 
+                <!-- Default Page content-->
+                <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
+
+                    <!-- Resoure Grid -->
+                    <div id="report-image-grid" class="report-image-grid">
+                                        
+                            <!-- Resource -->
+                            <div class="resource-grid-item relative" style="">
+                                <!-- Resource Type -->
+                                <div class="resource-grid-main-container" style="">
+                                    <div class="resource-grid-main" style="">
+                                        <h1 class="page-header text-overflow resource-grid-title" style=""><i class="fa fa-th icon-wrap resource-grid-icon" style=""></i> Heritage District</h1>
+                                        <p class="resource-grid-subtitle" style="">A resource that can be used to inventory buildings, structures, and archaeological sites</p>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Tools -->
+                                <div class="resource-grid-tools-container" style="">
+                                    <a id="" href="" class="pad-rgt hidden"><i class="fa fa-plus-circle"></i> Add new resource</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-check-circle"></i> Edit</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-copy"></i> Copy</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+
+                                <!-- Resource Metadata -->
+                                <div class="resource-grid-meta-container" style="">
+                                    <ul class="list-inline resource-grid-meta">
+                                        <li>Resource</li>
+                                        <li class="text-semibold text-primary">Active</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Resource -->
+                            <div class="resource-grid-item relative" style="">
+                                <!-- Resource Type -->
+                                <div class="resource-grid-main-container" style="">
+                                    <div class="resource-grid-main" style="">
+                                        <h1 class="page-header text-overflow resource-grid-title" style=""><i class="fa fa-building-o icon-wrap resource-grid-icon" style=""></i> Heritage Resource</h1>
+                                        <p class="resource-grid-subtitle" style="">A resource that can be used to inventory buildings, structures, and archaeological sites</p>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Tools -->
+                                <div class="resource-grid-tools-container" style="">
+                                    <a id="" href="" class="pad-rgt hidden"><i class="fa fa-plus-circle"></i> Add new resource</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-check-circle"></i> Edit</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-copy"></i> Copy</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+
+                                <!-- Resource Metadata -->
+                                <div class="resource-grid-meta-container" style="">
+                                    <ul class="list-inline resource-grid-meta">
+                                        <li>Resource</li>
+                                        <li class="text-semibold text-primary">Active</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Resource -->
+                            <div class="resource-grid-item relative" style="">
+                                <!-- Resource Type -->
+                                <div class="resource-grid-main-container" style="">
+                                    <div class="resource-grid-main" style="">
+                                        <h1 class="page-header text-overflow resource-grid-title" style=""><i class="fa fa-map-marker icon-wrap resource-grid-icon" style=""></i> Address</h1>
+                                        <p class="resource-grid-subtitle" style="">A resource used to identify the main street-faced doorway of a structure</p>
+                                    </div>
+                                </div>
+
+                                <!-- Resource Tools -->
+                                <div class="resource-grid-tools-container" style="">
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-check-circle"></i> Edit</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-copy"></i> Copy</a>
+                                    <a id="" href="" class="pad-rgt"><i class="fa fa-trash"></i> Delete</a>
+                                </div>
+
+                                <!-- Resource Metadata -->
+                                <div class="resource-grid-meta-container" style="">
+                                    <ul class="list-inline resource-grid-meta">
+                                        <li>Graph</li>
+                                        <li class="text-semibold text-danger">Inactive</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>	  
+                    </div>      
+                </div>
+                <!--End Default page content-->
             </div>
-            <!--END CONTENT CONTAINER-->
+            <!--END  Default Page-->
+
+
+            <!-- Edit Panel -->
+            <div id="edit-panel" class="pt-page fade">
+                
+                <div class="edit-page-toolbar relative">
+                    
+                    <!-- Menu Panel Control -->
+                    <div class="edit-menu-control">
+                        <a id="" href="" class=""><i class="ion-ios-arrow-back dismiss-panel"></i> menu <i class="ion-ios-arrow-forward dismiss-panel hidden"></i></a>
+
+                    </div>
+
+                    <!-- Page Controls -->
+                    <div class="">
+                        <div class="dismiss-edit-panel">
+                            <i class="ion-ios-close dismiss-panel"></i>
+                            <i class="ion-ios-checkmark dismiss-panel"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="relative">
+
+                    <div class="edit-panel" style="left: 250px; width: calc(100% - 250px);">
+                        <!-- Title -->
+                        <div class="text-left edit-panel-top-bar" style="">
+                            <div class="center-div">
+                                <h1 class="page-header text-overflow arches-panel-header"><i class="fa fa-certificate icon-wrap bg-gray arches-panel-icon" style=""></i> Resource Name Here</h1>
+                                <p class="arches-panel-subtitle" style="">Resource abstract here</p>
+                            </div>
+                        </div>
+
+
+                        <!-- Tools -->
+                        <div class="relative edit-panel-tool-bar" style="">
+
+                            <!-- Search -->
+
+                            <!-- Page Level tools -->
+                            <div class="edit-panel-menu-bar">
+                                <button class="btn btn-flat btn-flat-trans selected"><i class="fa fa-tag"></i> Resource Settings</button>
+                                <button class="btn btn-flat btn-flat-trans"><i class="fa fa-wrench"></i> Graph Manager</button>
+                                <button class="btn btn-flat btn-flat-trans"><i class="ion-ios-list-outline"></i> Card Manager</button>
+                                <button class="btn btn-flat btn-flat-trans"><i class="ion-ios-paper"></i> Form Manager</button>
+                                <button class="btn btn-flat btn-flat-trans"><i class="ion-ios-analytics"></i> Report Manager</button>
+                            </div>
+                            
+
+                            <div class="hidden" style="position: absolute; right: 50px; top: 10px;">
+                                <button class="btn btn-flat"<i class="fa fa-tag"></i> New Resource</button>
+                            </div>
+                        </div> 
+
+
+                        <!-- Edit Content -->
+                        <div id="data-preview" class="" style="display: block; padding: 12px;">
+                            <div id="xx-card-container" class="panel card-panel" style="border: 1px solid #ddd; border-bottom-width: 0px;">
+                                <div class="panel-heading">
+                                    <div class="" style="">
+                                        <h3 id="xx-cc-title" class="panel-title card-main-title">Resource Settings</h3>
+                                    </div>
+                                </div>
+
+
+                                <!-- Alert Panel -->
+                                <div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
+
+
+                                <!-- Data Entry -->
+                                <div id="xx-add-basemap-wizard" class="panel-body card-body fade in" style="padding-top: 0px;">
+                                    <div id="cards" class="tab-base card-content-container outline" style="margin-bottom: 10px; margin-top: -2px;">
+
+                                        <!--Nav Tabs-->
+                                        <ul class="nav nav-tabs card-nav-container" style="">
+                                            <li id="xx-summary-group" class="active">
+                                                <a id="xx-summary-tab" data-toggle="tab" href="#access-card" class="card-tab-title" aria-expanded="true">
+                                                    Status
+                                                </a>
+                                            </li>
+                                            <li id="related-resources-group" class="">
+                                                <a id="related-resources-tab" data-toggle="tab" href="#related-resources-card" class="card-tab-title" aria-expanded="true">
+                                                    Relationships
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <div id="xx-db-arches-app-alert" class="panel data-card-alert" style=""></div>
+
+                                        <!--Tabs Content-->
+                                        <div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+                                            <!-- Card -->
+                                            <div id="access-card" class="tab-pane fade active in">  
+                                                <div class="panel-body card-panel-body" style="">
+                                                    <div id="" class="card-content" style="padding-top: 30px">
+
+                                                        <!-- Card Level Alert -->
+                                                        <div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+                                                        <!-- Card Instruction -->
+                                                        <p id="install-instructions" class="content-instructions">
+                                                            Set the defaults for your resource
+                                                            
+                                                            <!-- Help link -->
+                                                            <span>  
+                                                                <a id="add-basemap-wizard-help-link" href="" class="pull-right card-help help editable-help" style=""> Help <i class="fa fa-question-circle"></i></a>
+                                                            </span>
+                                                        </p>
+                                                        
+                                                        <!-- Form -->
+                                                        <div class="col-sm-9 col-md-6" style="padding-bottom: 10px;">
+
+                                                            <form class="widgets" style="margin-bottom: 20px;">
+                                                                <div class="row widget-container" style="">
+                                                                    <div class="form-group">
+                                                                        <div class="relative" style="">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Resource Name <i class="ion-ios-medical"></i>&nbsp;<i class="ion-ios-book"></i></label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card -->
+                                            <div id="related-resources-card" class="tab-pane fade">   
+                                                <div class="panel-body card-panel-body" style="">
+                                                    <div id="" class="card-content" style="">
+
+                                                        <!-- Card Level Alert -->
+                                                        <div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+                                                        <!-- Card Instruction -->
+                                                        <p id="install-instructions" class="content-instructions">
+                                                            Define this resource's allowed relationships 
+                                                        </p>
+                                                        
+                                                        <!-- Form -->
+                                                        <div class="col-sm-9 col-md-6" style="padding-bottom: 10px;">
+
+                                                            <form class="widgets" style="margin-bottom: 20px;">
+                                                                <div class="row widget-container" style="">
+                                                                    <div class="form-group">
+                                                                        <div class="relative" style="">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Related Resources</label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- Help/Thesaurus term Panel -->
+                                        <aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
+                                            <div class="relative">
+                                                <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+                                            </div>
+                                            <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> New Basemap</h3>
+                                                </div>
+                                                <div class="panel-body" style="padding: 10px 10px 15px 10px;">
+                                                    <p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
+                                                </div>
+                                            </div>
+                                        </div></aside>
+                                    </div>
+
+                                    <!-- Save Input -->
+                                    <div class="wizard-buttons pull-right" style="">
+                                        <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt btn-editable" style=""> Discard edits
+                                        </button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check btn-editable" style=""> Save settings</button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <!-- Edit Menu -->
+                    <div class="edit-menu">
+                        <ul class="list-group edit-menu-list" style="">
+                            <!-- Menu Title -->
+                            <li class="">
+                                <div class="edit-menu-title">
+                                    <h1 class="page-header text-overflow"><i class="fa fa-sitemap icon-wrap bg-gray arches-panel-icon" style=""></i> Arches Designer</h1>
+                                    <p class="arches-panel-subtitle" style="padding-left: 45px;">Create Arches Resources</p>
+                                </div>
+                            </li>
+                            
+                            <!-- Menu Item -->
+                            <li class="edit-menu-item selected">
+                                <a id="" href="#maps-form" target="#slide" class="">
+                                    <div class="media-body">
+                                        <div class="menu-item-title"><i class="fa fa-tag"></i> Settings</div>
+                                        <span class="text-muted menu-item-subtitle">Asset Name, Settings, Relations</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Menu Item -->
+                            <li class="edit-menu-item">
+                                <a id="" href="#maps-form" target="#slide" class="">
+                                    <div class="media-body">
+                                        <div class="menu-item-title"><i class="fa fa-wrench"></i> Graph Manager</div>
+                                        <span class="text-muted menu-item-subtitle">Define graph, permissions</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Menu Item -->
+                            <li class="edit-menu-item">
+                                <a id="" href="#maps-form" target="#slide" class="">
+                                    <div class="media-body">
+                                        <div class="menu-item-title"><i class="fa fa-file-o"></i> Card Manager</div>
+                                        <span class="text-muted menu-item-subtitle">Configure data entry cards</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Menu Item -->
+                            <li class="edit-menu-item">
+                                <a id="" href="#maps-form" target="#slide" class="">
+                                    <div class="media-body">
+                                        <div class="menu-item-title"><i class="fa fa-files-o"></i> Form Manager</div>
+                                        <span class="text-muted menu-item-subtitle">Group data entry cards</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Menu Item -->
+                            <li class="edit-menu-item">
+                                <a id="" href="#maps-form" target="#slide" class="">
+                                    <div class="media-body">
+                                        <div class="menu-item-title"><i class="fa fa-book"></i> Report Manager</div>
+                                        <span class="text-muted menu-item-subtitle">Configure resource reports </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
 
 
             
@@ -697,7 +1037,6 @@
             
             <!--ASIDE-->
             
-
         </div>
 
         
@@ -809,6 +1148,7 @@
     <!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
     <script src="js/arches/forms/resource_forms.js"></script>
+    <script src="js/arches/resource_manager/resource_manager.js"></script>
         
 
 </body>

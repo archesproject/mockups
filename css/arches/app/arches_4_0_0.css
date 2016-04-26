@@ -2631,6 +2631,31 @@ span.icon-wrap.icon-circle.bg-gray-dark:hover {
 }
 
 
+.login-panel {
+	opacity: .9;
+}
+
+.new-acct-panel {
+	padding-top: 5vh;
+}
+
+.login-panel-header {
+	font-size: 2.4em;
+	margin-top: 0px;
+	padding-bottom: 5px;
+	font-weight: 300;
+}
 
 
+.img-login {
+	background-image: url("../../../img/arches/backgrounds/easter_island.jpg");
+}
+
+.img-register {
+	background-image: url("../../../img/arches/backgrounds/easter_island_night.jpg");
+}
+
+.img-login-recover {
+	background-image: url("../../../img/arches/backgrounds/ganges_sunrise.jpg");
+}
 

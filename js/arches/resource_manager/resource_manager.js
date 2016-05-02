@@ -70,6 +70,20 @@
 	});
 
 
+	$("#graph-manager").click(function(ev){
+ 		ev.preventDefault();
+
+ 		
+
+
+		//update parent li, show as selected
+		$( ".edit-menu-item" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$("#graph-manager").addClass('selected');
+
+	});
+
 
 
 // Resource Grid Item Highlight

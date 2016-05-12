@@ -1,0 +1,2522 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arches | v4.0.0</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font [ OPTIONAL ] -->
+     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--Ion Icons [ OPTIONAL ]-->
+    <link href="plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="nifty-v2.4/css/nifty.min.css" rel="stylesheet">
+
+
+    <!--Themify Icons [ OPTIONAL ]-->
+    <link href="nifty-v2.4/plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
+
+
+    
+
+    <!--SCRIPT-->
+    <!--=================================================-->
+
+    <!--Page Load Progress Bar [ OPTIONAL ]-->
+    <link href="nifty-v2.4/plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="nifty-v2.4/plugins/pace/pace.min.js"></script>
+
+
+    
+    <!--
+
+    REQUIRED
+    You must include this in your project.
+
+    RECOMMENDED
+    This category must be included but you may modify which plugins or components which should be included in your project.
+
+    OPTIONAL
+    Optional plugins. You may choose whether to include it in your project or not.
+
+
+    Detailed information and more samples can be found in the document.
+
+    -->
+
+    <!-- MorphingSearch -->
+    <link href="plugins/MorphingSearch/css/component.css" rel="stylesheet" />
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!-- D3 Graph -->
+    <link href="css/arches/app/graph.css" rel="stylesheet">
+
+
+    <!-- Arches CSS -->
+    <link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
+    <link href="css/arches/app/app_configuration.css" rel="stylesheet">
+
+    <!-- 
+    <link href="css/arches/app/graph_manager_4_0_0.css" rel="stylesheet">
+    -->
+
+    <!--
+    <link href="css/arches/forms/cards_1_0_0.css" rel="stylesheet">
+    <link href="css/arches/forms/resource_forms.css" rel="stylesheet">
+    -->
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body>
+    <div id="container" class="effect mainnav-sm navbar-fixed">
+        
+        <!--NAVBAR-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/arches/arches_logo_light.png" alt="Arches" class="brand-icon arches-icon" style="height: 20px; width: 20px; margin-top: 10px; margin-left: 15px; margin-right: 15px;">
+                        <div class="brand-title">
+                            <span class="brand-text">Arches</span>
+                        </div>
+                    </a>
+                </div>
+                <!--End brand logo & name-->
+
+
+                <!--Navbar Dropdown-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <!--Navigation toogle button-->
+                        <li class="tgl-menu-btn hidden-sm hidden-md hidden-lg">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="ti-view-list icon-lg"></i>
+                            </a>
+                        </li>
+                        <!--End Navigation toogle button-->
+
+                        <!--Documentation dropdown-->
+                        <li class="mega-dropdown">
+                            <a href="#" class="mega-dropdown-toggle">
+                                <i class="ti-ticket icon-lg"></i>
+                            </a>
+                            <div class="dropdown-menu mega-dropdown-menu dropdown-shim">
+                                <div class="clearfix">
+                                    <div class="col-sm-12 col-md-3">
+
+                                        <!--Mega menu widget-->
+                                        <div class="text-center bg-purple pad-all">
+                                            <h3 class="text-thin mar-no">Arches Documentation</h3>
+                                            <div class="pad-ver box-inline">
+                                                <span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+                                                    <i class="ti-notepad icon-3x"></i>
+                                                </span>
+                                            </div>
+                                            <p class="pad-btm">
+                                                Use this quick reference get <span class="text-lg text-bold">help</span> on completing many common tasks.  
+                                            </p>
+                                            <a href="#" class="btn btn-purple">Visit ArchesProject.Org</a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <!--Mega menu list-->
+                                        <ul class="list-unstyled">
+									        <li class="dropdown-header">Adding Resources</li>
+									        <li><a href="#">Create New Resource</a></li>
+									        <li><a href="#">Editing a Resource</a></li>
+									        <li><a href="#">Linking Resources</a></li>
+									        <li><a href="#">Uploading Files</a></li>
+									        <li class="divider"></li>
+									        <li class="dropdown-header">Searches</li>
+									        <li><a href="#">Search by attribute</a></li>
+									        <li><a href="#">Map-based searches</a></li>
+                                            <li><a href="#">Time-based searches</a></li>
+                                            <li><a href="#">Period-based searches</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <!--Mega menu list-->
+                                        <ul class="list-unstyled">
+									        <li class="dropdown-header">Import/Export</li>
+									        <li><a href="#">Import a shapefile</a></li>
+									        <li><a href="#">Export files</a></li>
+                                            <li><a href="#">Configuring mapping files</a></li>
+                                            <li><a href="#">Reviewing imported data</a></li>
+									        <li class="divider"></li>
+									        <li class="dropdown-header">Map Services</li>
+									        <li><a href="#">Managing GIS layers</a></li>
+									        <li><a href="#">Creating a New Overlay</a></li>
+									        <li><a href="#">Adding and tiling aerials</a></li>
+									        <li><a href="#">Managing map permissions</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <!--Mega menu list-->
+                                        <ul class="list-unstyled">
+									        <li class="dropdown-header">Reference Data</li>
+									        <li><a href="#">Defining Controlled Vocabularies</a></li>
+									        <li><a href="#">Managing dropdown lists</a></li>
+									        <li><a href="#">Managing Ontologies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Documentation dropdown-->
+
+                        <!-- Recent Edits dropdown-->
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                <i class="ti-bell icon-lg"></i>
+                                <span class="badge badge-header badge-mint"></span>
+                            </a>
+
+                            <!--Notification dropdown menu-->
+                            <div class="dropdown-menu dropdown-menu-md dropdown-shim">
+                                <div class="pad-all bord-btm">
+                                    <p class="text-lg text-semibold mar-no">My recent edits</p>
+                                </div>
+                                <div class="nano scrollable">
+                                    <div class="nano-content">
+                                        <ul class="head-list">
+                                    
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-building-o icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Castle Anthrax</div>
+                                                        <small class="text-muted">15 minutes ago</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-calendar icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">1906 San Francisco Earthquake</div>
+                                                        <small class="text-muted">2 hours ago</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-building-o icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Castle Wolfenstein</div>
+                                                        <small class="text-muted">March 30, 2016</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-file-o icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Rush 2112</div>
+                                                        <small class="text-muted">March 22, 2016</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-tasks icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Leopold Archaeological Site Excavation</div>
+                                                        <small class="text-muted">March 19, 2016</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--Dropdown footer-->
+                                <div class="pad-all bord-top">
+                                    <a href="#" class="btn-link text-dark box-block">
+                                        <i class="ti-angle-right pull-right"></i>Show All Resources
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End recent edits dropdown-->
+
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        <!--Language selector-->
+                        <li class="dropdown">
+                            <a class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown">
+                                <span class="lang-selected">
+                                    <img class="lang-flag" src="img/flags/united-kingdom.png" alt="English">
+                                    <span class="lang-id">EN</span>
+                                    <span class="lang-name">English</span>
+                                </span>
+                            </a>
+
+                            <!--Language selector menu-->
+                            <ul class="head-list dropdown-menu">
+						        <li>
+						            <!--English-->
+						            <a href="#" class="active">
+						                <img class="lang-flag" src="img/flags/united-kingdom.png" alt="English">
+						                <span class="lang-id">EN</span>
+						                <span class="lang-name">English</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--France-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/france.png" alt="France">
+						                <span class="lang-id">FR</span>
+						                <span class="lang-name">Fran&ccedil;ais</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--Germany-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/germany.png" alt="Germany">
+						                <span class="lang-id">DE</span>
+						                <span class="lang-name">Deutsch</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--Italy-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/italy.png" alt="Italy">
+						                <span class="lang-id">IT</span>
+						                <span class="lang-name">Italiano</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--Spain-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/spain.png" alt="Spain">
+						                <span class="lang-id">ES</span>
+						                <span class="lang-name">Espa&ntilde;ol</span>
+						            </a>
+						        </li>
+                            </ul>
+                        </li>
+                        <!--End language selector-->
+
+
+                        <!--User dropdown-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <img class="img-circle img-user media-object" src="img/av1.png" alt="Profile Picture">
+                                </span>
+                                <div class="username hidden-xs">John Doe</div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+                                <!-- Dropdown heading  -->
+                                <div class="pad-all bord-btm">
+                                    <p class="text-lg text-semibold mar-btm">750Gb of 1,000Gb Used</p>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar" style="width: 70%;">
+                                            <span class="sr-only">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-user icon-fw icon-lg"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">9</span>
+                                            <i class="ti-email icon-fw icon-lg"></i> Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-success pull-right">New</span>
+                                            <i class="ti-settings icon-fw icon-lg"></i> Settings
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="pages-login.html" class="btn btn-primary">
+                                        <i class="ti-unlock icon-fw"></i> Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End user dropdown-->
+
+                    </ul>
+                </div>
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--END NAVBAR-->
+
+        <div id="" class="boxed">
+
+            <!-- Default Page -->
+            <div id="content-container" class="">
+
+                <!-- Searchbox  -->
+                <div class="">
+                    <div id="morphsearch" class="morphsearch">
+                        <form class="morphsearch-form">
+                            <input class="morphsearch-input" type="search" placeholder="Search..."/>
+                            <button class="morphsearch-submit" type="submit">Search</button>
+                        </form>
+                        <div class="morphsearch-content" style="margin-top: 0px; padding-left: 50px;">
+                            <div class="dummy-column">
+                                <h2>People</h2>
+                                <a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+                                    <img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+                                    <h3>Sara Soueidan</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+                                    <img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+                                    <h3>Rachel Smith</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+                                    <img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+                                    <h3>Peter Finlan</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+                                    <img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+                                    <h3>Patrick Cox</h3>
+                                </a>
+                                <a class="dummy-media-object" href="https://twitter.com/twholman">
+                                    <img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+                                    <h3>Tim Holman</h3>
+                                </a>
+                                <a class="dummy-media-object" href="https://twitter.com/shaund0na">
+                                    <img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+                                    <h3>Shaun Dona</h3>
+                                </a>
+                            </div>
+                            <div class="dummy-column">
+                                <h2>Popular</h2>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/05/page-preloading-effect/">
+                                    <img src="img/thumbs/PagePreloadingEffect.png" alt="PagePreloadingEffect"/>
+                                    <h3>Page Preloading Effect</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/28/arrow-navigation-styles/">
+                                    <img src="img/thumbs/ArrowNavigationStyles.png" alt="ArrowNavigationStyles"/>
+                                    <h3>Arrow Navigation Styles</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/">
+                                    <img src="img/thumbs/HoverEffectsIdeasNew.png" alt="HoverEffectsIdeasNew"/>
+                                    <h3>Ideas for Subtle Hover Effects</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/">
+                                    <img src="img/thumbs/FreebieHalcyonDays.png" alt="FreebieHalcyonDays"/>
+                                    <h3>Halcyon Days Template</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/">
+                                    <img src="img/thumbs/ArticleIntroEffects.png" alt="ArticleIntroEffects"/>
+                                    <h3>Inspiration for Article Intro Effects</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/06/26/draggable-dual-view-slideshow/">
+                                    <img src="img/thumbs/DraggableDualViewSlideshow.png" alt="DraggableDualViewSlideshow"/>
+                                    <h3>Draggable Dual-View Slideshow</h3>
+                                </a>
+                            </div>
+                            <div class="dummy-column">
+                                <h2>Recent</h2>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/10/07/tooltip-styles-inspiration/">
+                                    <img src="img/thumbs/TooltipStylesInspiration.png" alt="TooltipStylesInspiration"/>
+                                    <h3>Tooltip Styles Inspiration</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/23/animated-background-headers/">
+                                    <img src="img/thumbs/AnimatedHeaderBackgrounds.png" alt="AnimatedHeaderBackgrounds"/>
+                                    <h3>Animated Background Headers</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/16/off-canvas-menu-effects/">
+                                    <img src="img/thumbs/OffCanvas.png" alt="OffCanvas"/>
+                                    <h3>Off-Canvas Menu Effects</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/09/02/tab-styles-inspiration/">
+                                    <img src="img/thumbs/TabStyles.png" alt="TabStyles"/>
+                                    <h3>Tab Styles Inspiration</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">
+                                    <img src="img/thumbs/ResponsiveSVGs.png" alt="ResponsiveSVGs"/>
+                                    <h3>Make SVGs Responsive with CSS</h3>
+                                </a>
+                                <a class="dummy-media-object" href="http://tympanus.net/codrops/2014/07/23/notification-styles-inspiration/">
+                                    <img src="img/thumbs/NotificationStyles.png" alt="NotificationStyles"/>
+                                    <h3>Notification Styles Inspiration</h3>
+                                </a>
+                            </div>
+                        </div><!-- /morphsearch-content -->
+                        <span class="morphsearch-close"></span>
+                    </div>
+                </div>
+                <!-- /morphsearch -->
+
+                
+                <!-- Page Header -->
+                <div class="">
+                    <!-- Title -->
+                    <div class="" style="height: 80px; background: #f8f8f8; border-bottom: 1px solid #ddd;">
+                        <div class="center-div" style="padding-top: 0px; padding-left: 28px;">
+                            <h1 class="page-header text-overflow arches-panel-header"><i class="text-center fa fa-bookmark icon-wrap bg-gray arches-panel-icon"></i> Arches Designer</h1>
+                            <p class="arches-panel-subtitle">Design new asset types to include in your inventory</p>
+                        </div>
+                    </div>
+
+                    <!-- Toolbar -->
+                    <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4;">
+
+                        <!-- Search -->
+                        <div class="edit-panel-search-bar">
+                            <!-- Toggle Button -->
+                            <button class="btn btn-flat btn-flat-trans right-border"><i class="fa fa-search"></i> Find </button>
+
+                            <!-- Find widget -->
+                            <div class="find-widget">
+                                <input type="text" class="form-control" placeholder="Type a resource or graph name...">
+                                <span class="clear-find"><i class="fa fa-times-circle"></i></span>
+                            </div>
+
+                        </div>
+
+                        <div class="" style="position: absolute; right: 50px; top: 12px;">
+                            <button class="btn btn-primary"><i class="fa fa-plus-circle"></i> New Resource</button>
+                            <button class="btn btn-primary"><i class="fa fa-plus-circle"></i> New Graph</button>
+                        </div>
+                    </div>  
+                </div>
+
+
+                <!-- Default Page content-->
+                <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
+
+                    <h2 class="resource-grid-title text-overflow">Resources</h2>
+
+                    <!-- Resoure Grid -->
+                    <div id="report-image-grid" class="report-image-grid">
+                                        
+                        <!-- Resource -->
+                        <div class="resource-grid-item relative">
+                            <!-- Resource Type -->
+                            <div class="resource-grid-main-container">
+                                <div class="resource-grid-main">
+                                    <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-th icon-wrap resource-grid-icon"></i> Heritage District</h1>
+                                    <p class="resource-grid-subtitle">A resource that can be used to inventory buildings, structures, and archaeological sites</p>
+                                </div>
+                            </div>
+
+                            <!-- Resource Tools -->
+                            <div class="resource-grid-tools-container">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-mint dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"> Manage <i class="ion-ios-more"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">Settings</a>
+                                        </li>
+                                        <li><a href="#">Add Card</a>
+                                        </li>
+                                        <li><a href="#">Manage Cards</a>
+                                        </li>
+                                        <li><a href="#">Manage Forms</a>
+                                        </li>
+                                        <li><a href="#">Manage Reports</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Delete Resource</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Resource Status Message -->
+                                <div class="">
+                                    <p class="resource-status">Status: Active</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resource -->
+                        <div class="resource-grid-item relative">
+                            <!-- Resource Type -->
+                            <div class="resource-grid-main-container">
+                                <div class="resource-grid-main">
+                                    <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-building-o icon-wrap resource-grid-icon"></i> Heritage Resource</h1>
+                                    <p class="resource-grid-subtitle">A resource that can be used to inventory buildings, structures, and archaeological sites</p>
+                                </div>
+                            </div>
+
+                            <!-- Resource Tools -->
+                            <div class="resource-grid-tools-container">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-mint dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"> Manage <i class="ion-ios-more"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">Settings</a>
+                                        </li>
+                                        <li><a href="#">Add Card</a>
+                                        </li>
+                                        <li><a href="#">Manage Cards</a>
+                                        </li>
+                                        <li><a href="#">Manage Forms</a>
+                                        </li>
+                                        <li><a href="#">Manage Reports</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Delete Resource</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Resource Status Message -->
+                                <div class="">
+                                    <p class="resource-status">Status: Active</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- Graph Grid -->
+                    <h2 class="resource-grid-title text-overflow">Graphs</h2>
+                    <div id="" class="report-image-grid">
+                                        
+                        <!-- Graph -->
+                        <div class="resource-grid-item relative">
+                            <!-- Graph Type -->
+                            <div class="resource-grid-main-container">
+                                <div class="resource-grid-main">
+                                    <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-crosshairs icon-wrap resource-grid-icon"></i> Locations</h1>
+                                    <p class="resource-grid-subtitle">A graph that represents the spatial location of a physical thing.</p>
+                                </div>
+                            </div>
+
+                            <!-- Resource Tools -->
+                            <div class="resource-grid-tools-container">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-mint dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"> Manage <i class="ion-ios-more"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">Settings</a>
+                                        </li>
+                                        <li><a href="#">Add Card</a>
+                                        </li>
+                                        <li><a href="#">Manage Cards</a>
+                                        </li>
+                                        <li><a href="#">Manage Forms</a>
+                                        </li>
+                                        <li><a href="#">Manage Reports</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Delete Resource</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Resource Status Message -->
+                                <div class="">
+                                    <p class="resource-status">Status: Active</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Graph -->
+                        <div class="resource-grid-item relative">
+                            <!-- Graph Type -->
+                            <div class="resource-grid-main-container">
+                                <div class="resource-grid-main">
+                                    <h1 class="page-header text-overflow resource-grid-title"><i class="text-center fa fa-tag icon-wrap resource-grid-icon"></i> Names</h1>
+                                    <p class="resource-grid-subtitle">A graph that defines the semantics for appelations and their types; useful for identifying resources</p>
+                                </div>
+                            </div>
+
+                            <!-- Resource Tools -->
+                            <div class="resource-grid-tools-container">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-mint dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"> Manage <i class="ion-ios-more"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="#">Settings</a>
+                                        </li>
+                                        <li><a href="#">Add Card</a>
+                                        </li>
+                                        <li><a href="#">Manage Cards</a>
+                                        </li>
+                                        <li><a href="#">Manage Forms</a>
+                                        </li>
+                                        <li><a href="#">Manage Reports</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Delete Resource</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Resource Status Message -->
+                                <div class="">
+                                    <p class="resource-status">Status: Active</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>      
+                </div>
+                <!--End Default page content-->
+            </div>
+            <!--END  Default Page-->
+
+
+            <!-- Edit Panel -->
+            <div id="edit-panel" class="pt-page fade relative">
+                
+                <!-- Page Header -->
+                <div class="ep-toolbar relative">
+
+                    <!-- Tools Menu -->
+                    <div class="ep-tools text-center">
+                      <a id="menu-control" href="" class="ep-tool-title"> Manage <i class="ion-more"></i></a>
+                    </div>
+
+                    <!-- Title Bar -->
+                    <div class="ep-tools-title">
+                      <h1 class="page-header text-overflow ep-graph-title"><i class="text-center fa fa-certificate icon-wrap bg-gray ep-graph-title-icon"></i> Resource/Graph Name Here</h1>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="ep-tools-search text-center">
+                      <a id="" href="" class=""><i class="ion-search add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Search"></i></a>
+                    </div>
+
+                    <!-- Help Bar -->
+                    <div class="ep-tools-help text-center">
+                      <a id="help-control" href="" class=""><i class="ion-information-circled add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Help"></i></a>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div id="menu-panel" class="ep-menu" style="display: none;">
+                    <div class="panel ep-menu-panel relative" style="">
+                        
+                        <!-- Menu List -->
+                        <div class="panel-body">
+                           <ul class="list-group ep-menu-list">
+                                <!-- Menu Item -->
+                                <li id="" class="resource-selector">
+                                    <select id="" class="resources" style="" data-placeholder="Choose a Function..." tabindex="4">
+                                        <option value="r1" selected>Heritage Resource</option>
+                                        <option value="r2">Heritage District</option>
+                                        <option value="r3">Activity</option>
+                                        <option value="r4">Historic Event</option>
+                                        <option value="r5">Person/Organization</option>
+                                        <option value="r6">Information Resource</option>
+                                    </select>                   
+                                </li>
+                                
+                                <!-- Menu Item -->
+                                <li id="settings-manager" class="edit-menu-item selected">
+                                    <a href="" target="" class="">
+                                        <div class="media-body">
+                                            <div class="menu-item-title"><i class="fa fa-wrench"></i> Settings</div>
+                                            <span class="text-muted menu-item-subtitle">Asset Name, Settings, Relations</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Menu Item -->
+                                <li id="card-manager" class="edit-menu-item">
+                                    <a href="" target="" class="">
+                                        <div class="media-body">
+                                            <div class="menu-item-title"><i class="fa fa-file-o"></i> Data Widgets and Cards </div>
+                                            <span class="text-muted menu-item-subtitle">Configure data entry cards</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Menu Item -->
+                                <li id="form-manager" class="edit-menu-item">
+                                    <a href="" target="" class="">
+                                        <div class="media-body">
+                                            <div class="menu-item-title"><i class="fa fa-files-o"></i> Data Entry Forms</div>
+                                            <span class="text-muted menu-item-subtitle">Group data entry cards</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Menu Item -->
+                                <li class="edit-menu-item">
+                                    <a id="" href="" target="" class="">
+                                        <div class="media-body">
+                                            <div class="menu-item-title"><i class="fa fa-book"></i> Reports</div>
+                                            <span class="text-muted menu-item-subtitle">Configure resource reports </span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Menu Item -->
+                                <li id="graph-manager" class="edit-menu-item">
+                                    <a href="" target="" class="">
+                                        <div class="media-body">
+                                            <div class="menu-item-title"><i class="fa fa-sitemap"></i> Graphs/Semantics</div>
+                                            <span class="text-muted menu-item-subtitle">Define graph, permissions</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <!-- Menu Item -->
+                                <li class="edit-menu-item">
+                                    <a id="" href="" target="" class="">
+                                        <div class="media-body">
+                                            <div class="menu-item-title"><i class="fa fa-tag"></i> Return to Resource Designer</div>
+                                            <span class="text-muted menu-item-subtitle">Create Arches Resources </span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-footer ep-menu-footer hidden">
+
+                            footer
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Help Panel -->
+                <div id="" class="ep-help" style="display: none;">
+                    <div class="panel ep-help-panel relative" style="">
+
+                        <!-- Help Item List -->
+                        <div class="panel-body">
+                            <p class="ep-tool-title">Help Topics Go Here</p>
+
+                        </div>
+
+                        <div class="panel-footer ep-menu-footer">
+                            <div class="footer-tools">
+                                <button id="close-help" class="btn btn-sm btn-primary btn-labeled fa fa-times">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Edit Content -->
+                <div class="relative ep-content">
+                    <div id="" class="edit-content relative" style="top: 0px;">
+
+
+                        <!-- Settings -->
+                        <div id="settings-form" class="relative fade in" style="display: block;">
+
+                            <!-- Title Block -->
+                            <div class="ep-form-toolbar">
+                                <div class="">
+                                    <h4 class="ep-form-toolbar-title"> Resource Settings </h4>
+                                </div>
+
+                                <!-- Tools -->
+                                <div class="ep-form-toolbar-tools">
+                                    <button class="btn btn-sm btn-danger btn-labeled fa fa-trash">Discard Edits</button>
+                                    <button class="btn btn-sm btn-primary btn-labeled fa fa-check">Save Edits</button>
+                                </div>
+                            </div>
+
+                            <!-- Settings Form -->
+                            <div class="ep-form-content">
+                                <div id="" class="panel card-panel">
+                                    <div class="panel-heading">
+                                        <div class="" style="">
+                                            <h3 id="" class="panel-title card-main-title">Settings</h3>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Alert Panel -->
+                                    <div id="basemap-delete-alert" class="panel wizard-data-card-alert"></div>
+
+
+                                    <!-- Data Entry -->
+                                    <div id="settings-form-crud" class="panel-body card-body fade in">
+                                        <div id="cards" class="tab-base card-content-container outline">
+
+                                            <!--Nav Tabs-->
+                                            <ul class="nav nav-tabs card-nav-container">
+                                                <li id="xx-id-group" class="active">
+                                                    <a id="xx-id-tab" data-toggle="tab" href="#id-card" class="card-tab-title" aria-expanded="true">
+                                                        Resource Identifiers
+                                                    </a>
+                                                </li>
+                                                <li id="xx-desc-group" class="">
+                                                    <a id="xx-desc-tab" data-toggle="tab" href="#desc-card" class="card-tab-title" aria-expanded="true">
+                                                        Description
+                                                    </a>
+                                                </li>
+                                                <li id="xx-meta-group" class="">
+                                                    <a id="xx-meta-tab" data-toggle="tab" href="#meta-card" class="card-tab-title" aria-expanded="true">
+                                                        Status
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <div id="xx-db-arches-app-alert" class="panel data-card-alert"></div>
+
+                                            <!--Tabs Content-->
+                                            <div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+                                                <!-- Card -->
+                                                <div id="id-card" class="tab-pane fade active in">  
+                                                    <div class="panel-body card-panel-body">
+                                                        <div id="" class="card-content">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="summary-card-alert" class="panel install-card-alert"></div>
+
+                                                            <!-- Card Instruction -->
+                                                            <p id="install-instructions" class="content-instructions">
+                                                                Set the defaults for your resource
+                                                                
+                                                                <!-- Help link -->
+                                                                <span>  
+                                                                    <a id="card-help" href="" class="pull-right card-help help" style=""> Help <i class="fa fa-question-circle"></i></a>
+                                                                </span>
+                                                            </p>
+                                                            
+                                                            <!-- Form -->
+                                                            <div class="col-xs-12">
+
+                                                                <form class="widgets">
+                                                                    <div class="row widget-container">
+                                                                        <div class="form-group">
+                                                                            <div class="relative">
+                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Resource Name <i class="ion-ios-checkmark-outline"></i> <i class="ion-ios-book add-tooltip pull-right" data-placement="top" data-toggle="tooltip" data-original-title="Show Vocabulary"></i></label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12 col-lg-9">
+                                                                                <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row widget-container">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Resource Subtitle <i class="ion-ios-checkmark-outline"></i></label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12 col-lg-9">
+                                                                                <input type="" placeholder="Subtitle" id="" class="form-control input-lg widget-input">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row widget-container">
+                                                                        <div class="form-group">
+                                                                            <div class="" style="">
+                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Form Icon <i class="ion-ios-checkmark-outline"></i></label>
+                                                                            </div>
+
+                                                                            <!-- Icon search -->
+                                                                            <div class="" style="padding-left: 10px;">
+                                                                                <div class="relative" style="padding: 10px 0px;">
+
+                                                                                    <!-- Currently selected icon -->
+                                                                                    <div class="" style="">
+                                                                                        Selected icon: <button class="btn btn-default btn-icon icon-lg fa fa-automobile" style="height: 35px; width: 35px;"></button>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="" style="position: absolute; left: 130px; top: 21px;">
+                                                                                        <input type="text" class="form-control" style="width: 500px; height: 36px;" placeholder="Find an icon"> 
+
+                                                                                        <!-- Remove Search -->
+                                                                                        <span class="clear-search" style="position: absolute; left: 480px; top: 5px; color: #123; font-size: 17px;"><i class="fa fa-times-circle"></i></span>
+                                                                                    </div> 
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- Icon List -->
+                                                                            <div class="" style="height: 300px; overflow-y: scroll; padding-top: 15px; padding-left: 20px; border: 1px solid #e9e9e9; margin-left: 10px; margin-right: 30px;">
+
+                                                                                <div class="row">
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font selected">
+                                                                                        <i class="fa fa-automobile"></i> fa-automobile <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-bank"></i> fa-bank <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-behance"></i> fa-behance
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-behance-square"></i> fa-behance-square
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-bomb"></i> fa-bomb
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-building"></i> fa-building
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-cab"></i> fa-cab <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-car"></i> fa-car
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-child"></i> fa-child
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-circle-o-notch"></i> fa-circle-o-notch
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-circle-thin"></i> fa-circle-thin
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-codepen"></i> fa-codepen
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-cube"></i> fa-cube
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-cubes"></i> fa-cubes
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-database"></i> fa-database
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-delicious"></i> fa-delicious
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-deviantart"></i> fa-deviantart
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-digg"></i> fa-digg
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-drupal"></i> fa-drupal
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-empire"></i> fa-empire
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-envelope-square"></i> fa-envelope-square
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-fax"></i> fa-fax
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-archive-o"></i> fa-file-archive-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-audio-o"></i> fa-file-audio-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-code-o"></i> fa-file-code-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-excel-o"></i> fa-file-excel-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-image-o"></i> fa-file-image-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-movie-o"></i> fa-file-movie-o <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-pdf-o"></i> fa-file-pdf-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-photo-o"></i> fa-file-photo-o <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-picture-o"></i> fa-file-picture-o <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-powerpoint-o"></i> fa-file-powerpoint-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-sound-o"></i> fa-file-sound-o <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-video-o"></i> fa-file-video-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-word-o"></i> fa-file-word-o
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-file-zip-o"></i> fa-file-zip-o <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-ge"></i> fa-ge <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-git"></i> fa-git
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-git-square"></i> fa-git-square
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-google"></i> fa-google
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-graduation-cap"></i> fa-graduation-cap
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-hacker-news"></i> fa-hacker-news
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-header"></i> fa-header
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-history"></i> fa-history
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-institution"></i> fa-institution <span class="text-muted">(alias)</span>
+                                                                                    </div>
+
+                                                                                    <div class="col-xs-6 col-md-3 col-sm-4 demo-icon-font">
+                                                                                        <i class="fa fa-joomla"></i> fa-joomla
+                                                                                    </div>
+                                                                                </div>  
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card -->
+                                                <div id="meta-card" class="tab-pane fade">   
+                                                    <div class="panel-body card-panel-body" style="">
+                                                        <div id="" class="card-content" style="">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="meta-card-alert" class="panel install-card-alert" style=""></div>
+
+                                                            <!-- Card Instruction -->
+                                                            <p id="install-instructions" class="content-instructions">
+                                                                Define this resource's status 
+                                                            </p>
+                                                            
+                                                            <!-- Form -->
+                                                            <div class="col-xs-12" style="padding-bottom: 10px;">
+
+                                                                <div class="row widget-container">
+                                                                    <div class="form-group">
+                                                                        <div class="relative" style="">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Type <i class="ion-ios-checkmark-outline"></i></label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <div class="pad-hor">
+                                                                                <label class="form-radio form-normal active form-text">
+                                                                                    <input type="radio" name="type-w-label" checked=""> Resource
+                                                                                </label>
+                                                                                <label class="form-radio form-normal form-text">
+                                                                                    <input type="radio" name="type-w-label"> Graph
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row widget-container">
+                                                                    <div class="form-group">
+                                                                        <div class="relative" style="">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Status <i class="ion-ios-checkmark-outline"></i></label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <div class="pad-hor">
+                                                                                <label class="form-radio form-normal active form-text">
+                                                                                    <input type="radio" name="stat-w-label" checked=""> Active
+                                                                                </label>
+                                                                                <label class="form-radio form-normal form-text">
+                                                                                    <input type="radio" name="stat-w-label"> Inactive
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row widget-container" style="">
+                                                                    <div class="form-group">
+                                                                        <div class="relative" style="">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Resources that may be related:</label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <div class="pad-hor columns">
+                                                                                <label class="form-checkbox form-normal form-primary active form-text"><input type="checkbox" checked=""> Heritage Resource</label>
+                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Heritage District</label>
+                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Activity</label>
+                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Historic Event</label>
+                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Person/Organization</label>
+                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Information Object</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Card -->
+                                                <div id="desc-card" class="tab-pane fade">   
+                                                    <div class="panel-body card-panel-body" style="">
+                                                        <div id="" class="card-content" style="">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+                                                            <!-- Card Instruction -->
+                                                            <p id="install-instructions" class="content-instructions">
+                                                                Describe this resource
+                                                            </p>
+                                                            
+                                                            <!-- Form -->
+                                                            <div class="col-xs-12" style="padding-bottom: 10px;">
+
+                                                                <form class="widgets" style="margin-bottom: 20px;">
+                                                                    <div class="row widget-container" style="">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Author</label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12">
+                                                                                <input type="" placeholder="Author name" id="" class="form-control input-lg widget-input">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row widget-container" style="">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Abstract</label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12">
+                                                                                <textarea placeholder="Resource abstract/description" rows="6" class="form-control"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Help/Thesaurus term Panel -->
+                                            <aside id="wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel fade hidden" style="">
+                                                <div class="relative">
+                                                    <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+                                                </div>
+                                                <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> New Basemap</h3>
+                                                    </div>
+                                                    <div class="panel-body" style="padding: 10px 10px 15px 10px;">
+                                                        <p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
+                                                    </div>
+                                                </div>
+                                            </aside>
+
+                                            <aside id="thesaurus-panel" class="card-help-panel fade hidden" style="">
+                                                <div class="relative">
+                                                    <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+                                                </div>
+                                                <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> Thesaurus</h3>
+                                                    </div>
+                                                    <div class="panel-body" style="padding: 10px 10px 15px 10px;">
+                                                        <p>Listing of concepts (pref labels) for the associated thesaurus</p>
+                                                    </div>
+                                                </div>
+                                            </aside>
+                                        </div>
+
+                                        <!-- Save Input -->
+                                        <div class="wizard-buttons pull-right hidden" style="">
+                                            <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt btn-editable" style=""> Discard edits
+                                            </button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check btn-editable" style=""> Save settings</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Card Library -->
+                        <div id="card-library" class="relative fade in" style="display: none;">
+
+                            <!-- Title Block -->
+                            <div class="ep-form-toolbar relative">
+                                <div class="">
+                                    <h4 class="ep-form-toolbar-title"> Data Entry Cards </h4>
+                                </div>
+
+                                <!-- Card Filter Widget -->
+                                <div id="card-grid-tools" class="">
+                                    <div class="relative ep-card-search">
+                                        <input type="text" class="form-control card-search-widget" placeholder="Find a card"> 
+
+                                        <!-- Remove Search -->
+                                        <span class="clear-search card-search-widget-icon"><i class="fa fa-times-circle"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <div id="card-grid-controls" class="ep-form-toolbar-tools">
+                                    <button id="card-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="display: none;">Discard Edits</button> 
+                                    <button id="card-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="display: none;">Save Edits</button> 
+                                    <button class="btn btn-sm btn-mint btn-labeled fa fa-mail-reply">Exit</button>   
+                                </div>
+                            </div>
+
+                            <!-- Card Grid -->
+                            <div id="card-grid" class="relative ep-form-content">
+
+                                <div class="">
+                                    <!-- Isotope Layout -->
+                                    <div id="report-image-grid" class="report-image-grid">
+
+                                        <div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record project-grid-item form-item new-card" style="">
+                                            <a id="add-card" href="" data-toggle="modal" class="" style="">
+                                                <h3 class="text-thin" style="margin-top: 10px;"> New Card</h3>
+
+                                                <span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+                                                    <i class="fa fa-plus fa-2x" style="color: #fff;"></i>
+                                                </span>
+
+                                                <h5 class="" style="font-weight: 200;"> Create a new data entry form for your resource </h5>
+                                            </a>
+                                        </div>
+                                        
+                                        <!-- card -->
+                                        <div class="card-grid-item" style="">
+                                            <div class="panel mar-no">
+
+                                                <!-- card Name -->
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title library-card-panel-title" style="">Condition Assessment</h3>
+                                                </div>
+                                                
+                                                <!-- Abstract -->
+                                                <div class="panel-body library-card-body" style="">
+                                                    <p class="library-item-subtitle">Condition, Date Assessed, Description</p>
+                                                    <p class="library-item-subtitle">Images</p>
+                                                    <p class="library-item-subtitle">Threats</p>
+                                                    <p class="library-item-subtitle">Disturbances</p>
+                                                    <p class="library-item-subtitle">Management Recommendations</p>
+                                                </div>
+
+                                                <!-- card Tools -->
+                                                <div class="panel-footer" style="height: 40px;">
+                                                    <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                    <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                        <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- card -->
+                                        <div class="card-grid-item" style="">
+                                            <div class="panel mar-no">
+
+                                                <!-- card Name -->
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title library-card-panel-title" style="">Classifications</h3>
+                                                </div>
+                                                
+                                                <!-- Abstract -->
+                                                <div class="panel-body library-card-body" style="">
+                                                    <p class="library-item-subtitle">Period, Use, Start Date, End Date</p>
+                                                    <p class="library-item-subtitle">Description</p>
+                                                    <p class="library-item-subtitle">Components</p>
+                                                    <p class="library-item-subtitle">Related Features</p>
+                                                </div>
+
+                                                <!-- card Tools -->
+                                                <div class="panel-footer" style="height: 40px;">
+                                                    <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                    <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                        <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- card -->
+                                        <div class="card-grid-item" style="">
+                                            <div class="panel mar-no">
+
+                                                <!-- card Name -->
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title library-card-panel-title" style="">Measurements</h3>
+                                                </div>
+                                                
+                                                <!-- Abstract -->
+                                                <div class="panel-body library-card-body" style="">
+                                                    <p class="library-item-subtitle">Type, Unit, Value</p>
+                                                </div>
+
+                                                <!-- card Tools -->
+                                                <div class="panel-footer" style="height: 40px;">
+                                                    <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                    <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                        <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- card -->
+                                        <div class="card-grid-item" style="">
+                                            <div class="panel mar-no">
+
+                                                <!-- card Name -->
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title library-card-panel-title" style="">Names</h3>
+                                                </div>
+                                                
+                                                <!-- Abstract -->
+                                                <div class="panel-body library-card-body" style="">
+                                                    <p class="library-item-subtitle">Name, Name Type</p>
+                                                </div>
+
+                                                <!-- card Tools -->
+                                                <div class="panel-footer" style="height: 40px;">
+                                                    <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                    <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                        <ul class="dropdown-menu pull-right">
+                                                        <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                        </li>
+                                                        <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Card Grid -->
+
+
+                            <!-- Card (Tile) Listing -->
+                            <div id="ep-new-card-crud" class="crud-menu" style="display: none;">
+                                <div class="panel crud-menu-panel relative" style="">
+
+                                    <!-- Menu Title -->
+                                    <div class="panel-heading">
+                                        <div class="ep-menu-list-title">
+                                            <h3 id="" class="panel-title card-main-title">Data Widget Library</h3>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Menu List -->
+                                    <div class="panel-body">
+                                       <ul class="list-group ep-menu-list menu-title-shim">
+                                            <!-- Menu Item -->
+                                            <li id="" class="resource-selector">
+                                                <select id="" class="resources" style="" data-placeholder="Find a data type..." tabindex="4">
+                                                    <option value="r1">Locations</option>
+                                                    <option value="r2">Addresses</option>
+                                                    <option value="r3">Condition Assessement</option>
+                                                    <option value="r4">Evaluation</option>
+                                                    <option value="r5">Measurements</option>
+                                                    <option value="r6">Descriptions</option>
+                                                </select>                   
+                                            </li>
+                                            
+                                            <!-- Menu Item -->
+                                            <li id="" class="edit-menu-item">
+                                                <a href="" target="" class="">
+                                                    <div class="media-body">
+                                                        <div class="menu-item-title"> <i class="fa fa-tags"></i> Names</div>
+                                                        <span class="text-muted menu-item-subtitle">Name, Name Type</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Menu Item -->
+                                            <li id="" class="edit-menu-item">
+                                                <a href="" target="" class="">
+                                                    <div class="media-body">
+                                                        <div class="menu-item-title"> <i class="fa fa-flag"></i> Locations</div>
+                                                        <span class="text-muted menu-item-subtitle">Map, Addresses, Settings, Parcels</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Menu Item -->
+                                            <li id="" class="edit-menu-item">
+                                                <a href="" target="" class="">
+                                                    <div class="media-body">
+                                                        <div class="menu-item-title"> <i class="fa fa-puzzle-piece"></i> Keywords</div>
+                                                        <span class="text-muted menu-item-subtitle">Keywords</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Menu Item -->
+                                            <li id="" class="edit-menu-item">
+                                                <a href="" target="" class="">
+                                                    <div class="media-body">
+                                                        <div class="menu-item-title"> <i class="fa fa-book"></i> Descriptions</div>
+                                                        <span class="text-muted menu-item-subtitle">Description, Description Type</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Menu Item -->
+                                            <li id="" class="edit-menu-item">
+                                                <a href="" target="" class="">
+                                                    <div class="media-body">
+                                                        <div class="menu-item-title"> <i class="fa fa-plug"></i> Evaluation</div>
+                                                        <span class="text-muted menu-item-subtitle">Evaluation Criteria, Evaluation Date</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-footer ep-menu-footer hidden">
+
+                                        footer
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- New Card Panel -->
+                            <div id="card-pre-drop" class="relative" style="display: none;">
+                                                            
+                                <!-- Blank Card -->
+                                <div id="card-container" class="panel card-pre-drop" style="">
+                                    <div class="panel-heading relative">
+                                        <!-- Preview Panel Title -->
+                                        <div class="" style="">
+                                            <h3 id="" class="panel-title card-main-title">Data Type Preview</h3>
+                                        </div>
+
+                                        <!-- Preview Tools -->
+                                        <div class="preview-tools">
+                                            <button id="" class="btn btn-sm btn-mint btn-labeled fa fa-angle-left">Remove</button>
+                                            <button id="" class="btn btn-sm btn-mint btn-labeled fa fa-angle-right">Add</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Alert Panel -->
+                                    <div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
+
+                                    <!-- Data Entry Pre-Drag -->
+                                    <div id="card-pre-drag" class="panel-body card-body fade in" style="padding: 10px 20px 20px 20px;">
+                                        <div class="panel-body card-panel-body" style="">
+                                            <div id="" class="card-content" style="">
+
+                                                <!-- Card Level Alert -->
+                                                <div id="db-connection-alert" class="panel install-card-alert"></div>
+
+                                                <div class="relative data-preview-panel">
+
+                                                    <div class="drop-message">
+                                                        <div class="box-vmiddle bg-trans pad-all text-center card-wz-add-record" style="border-width: 0px; float: left; margin: 2px; max-width: 250px;">
+                                                                
+                                                            <div class="" style="margin-top: 30px;">
+                                                                <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
+                                                                    <i class="text-center fa fa-plus fa-4x" style="color: #fff; height: 56px; width: 56px; transform: translate(0, 5px);"></i>
+                                                                </span>
+                                                            </div>  
+                                                        </div>
+
+                                                        <div class="" style="position: absolute; top: 65px; left: 200px;">
+                                                            <h3 class="text-thin" style="margin-top: 0px; margin-bottom: 5px; padding-right: 40px;"> Drag and drop a data widget here. </h3><br>
+                                                            <p class="" style="font-size: 12px; margin-top: -15px; color: #aaa; padding-right: 100px;">Data types define a set of related information and the necessary data entry widgets.  Preview your data type by dragging it into this panel
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Selected Card (Tile) Listing -->
+                            <div id="ep-selected-card-crud" class="selected-card-menu" style="display: none;">
+                                <div class="panel selected-card-menu-panel relative">
+
+                                    <!-- Menu Title -->
+                                    <div class="panel-heading">
+                                        <div class="ep-menu-list-title">
+                                            <h3 id="" class="panel-title card-main-title">Selected Data Widgets</h3>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Menu List -->
+                                    <div class="panel-body">
+                                       <ul class="list-group ep-menu-list menu-title-shim-right">
+                                                                    
+                                            <!-- Menu Item -->
+                                            <li id="" class="edit-menu-item-right">
+                                                <a href="" target="" class="">
+                                                    <div class="media-body" style="">
+                                                        <div class="menu-item-title-right"><i class="fa fa-pencil"></i> Condition Assessment</div>
+                                                        <span class="text-muted menu-item-subtitle-right">Condition, Assessment Date, Description, Images, Threats, Disturbances, Recommendations</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Card Preview Tools -->
+                            <div id="ep-card-tools" class="ep-card-tools" style="display: none;">
+                                <div class="panel ep-card-tools-panel">
+                                    <li class="card-tree-list active">
+                                        <a href="#" class="" aria-expanded="true"><i class="ion-ios-folder-outline"></i> Resource Locations</a>
+
+                                        <!--Submenu-->
+                                        <ul class="card-tree-list-item" aria-expanded="true">
+                                            
+                                            <!-- Card Entry -->
+                                            <li class="card-tree-list">
+                                                <a href="#" aria-expanded="true"><i class="ion-ios-list-outline"></i> Addresses<i class="arrow"></i></a>
+
+                                                <!--Submenu-->
+                                                <ul class="card-tree-list-item" aria-expanded="true">
+                                                    <li class="card-tree-list selected"><a href="#"><i class="ion-ios-gear"></i> Address</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-gear"></i> Address Type</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-help-outline"></i> Help Text</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-stop"></i> Tile Heading</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <!-- Card Entry -->
+                                            <li class="card-tree-list">
+                                                <a href="#" aria-expanded="true"><i class="ion-ios-list-outline"></i> Mapped Locations<i class="arrow"></i></a>
+
+                                                <!--Submenu-->
+                                                <ul class="card-tree-list-item" aria-expanded="true">
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-gear"></i> Spatial Coordinates</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-gear"></i> Geometry Type</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-help-outline"></i> Help Text</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-stop"></i> Tile Heading</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <!-- Card Entry -->
+                                            <li class="card-tree-list">
+                                                <a href="#" aria-expanded="true"><i class="ion-ios-book"></i> Report Template<i class="arrow"></i></a>
+
+                                                <!--Submenu-->
+                                                <ul class="card-tree-list-item" aria-expanded="true">
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-pricetag"></i> Title</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-list-outline"></i> Adresses</a></li>
+                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-list-outline"></i> Mapped Locations</a></li>
+                                                </ul>
+                                            </li>
+                                             
+                                        </ul>
+                                    </li>
+                                </div>
+                            </div>
+
+
+                            <!-- Card CRUD -->
+                            <div id="ep-card-crud" class="ep-card-crud" style="display: none;">
+                                <div class="panel ep-card-crud-panel relative">
+                                    
+                                    <!-- Title Block -->
+                                    <div class="library-title-block">
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Card Container </h4>
+                                        </div>
+                                        
+                                        <!-- Dismiss Panel -->
+                                        <div class="relative">
+                                            <a id="node-crud-close" href="" class="library-close-btn" style="margin-top: -5px;"><i class="ion-ios-close"></i></a>
+                                        </div>
+
+                                        <!-- Panel Tools -->
+                                        <div class="library-tools">
+                                            <i class="ion-ios-list add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                            <i class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
+                                            <i class="ion-man add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Permissions"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card Container Form -->
+                                    <div class="library-crud-container"style="">
+                                        <div id="" class="">
+
+                                            <!-- Card Container Settings -->
+                                            <div id="" class="" style="padding-bottom: 5px;">
+
+                                                <!-- Card Container Name -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Name
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Cancel Button Title -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Cancel Button Text
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Cancel" id="" class="form-control input-md widget-input" value="">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Save Button Title -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Save Button Text
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Save" id="" class="form-control input-md widget-input" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-divider">
+                                                    <h4 class="title-block-title" style=""> Settings </h4>
+                                                </div>
+
+                                                <!-- Visible -->
+                                                <div class="" style="padding-bottom: 15px; padding-right: 15px;">
+
+                                                    <input id="card-container-visibility" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
+                                                    <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
+                                                        Visible
+                                                    </p>
+                                                    <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
+                                                        Show this card by default
+                                                    </span>
+                                                </div>
+
+                                                <!-- Active -->
+                                                <div class="" style="padding-bottom: 15px;">
+
+                                                    <input id="card-container-active" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
+                                                    <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
+                                                        Active
+                                                    </p>
+                                                    <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
+                                                        This card is active and can be used for data entry
+                                                    </span>
+                                                </div>
+
+                                                <!-- Functions -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Functions
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <select id="" class="functions" style="" data-placeholder="Choose a Function..." multiple tabindex="4">
+                                                            <option value="United States">Function Name 1</option>
+                                                            <option value="United Kingdom">Function Name 2</option>
+                                                            <option value="Afghanistan">Function Name 3</option>
+                                                            <option value="Aland Islands">Function Name 4</option>
+                                                            <option value="Albania">Function Name 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Card Preview -->
+                            <div id="card-preview" class="ep-card-preview" style="display: none;">
+
+                                <div id="" class="panel">
+                                    <div class="panel-heading">
+                                        <div class="">
+                                            <h3 id="cc-title" class="panel-title card-main-title">Resource Locations</h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Alert Panel -->
+                                    <div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
+
+                                    <!-- Data Entry -->
+                                    <div id="card-preview-crud" class="panel-body card-body fade in" style="padding-top: 0px;">
+                                        <div id="cards" class="tab-base card-content-container outline" style="margin-bottom: 20px; margin-top: -2px;">
+
+                                            <!--Nav Tabs-->
+                                            <ul class="nav nav-tabs card-nav-container" style="">
+                                                <li id="summary-group" class="active">
+                                                    <a id="summary-tab" data-toggle="tab" href="#summary-card" class="card-tab-title" aria-expanded="true">
+                                                        <!-- Editable Span -->
+                                                        <span class="editable-card" style="">
+                                                            <i class="fa fa-align-justify"></i> Addresses
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li id="map-group" class="">
+                                                    <a id="map-tab" data-toggle="tab" href="#map-card" class="card-tab-title" aria-expanded="true">
+                                                        <!-- Editable Span -->
+                                                        <span class="editable-card" style="">
+                                                            <i class="fa fa-align-justify"></i> Map Locations
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <div id="db-arches-app-alert" class="panel data-card-alert" style=""></div>
+
+                                            <!--Tabs Content-->
+                                            <div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+                                                <!-- Card -->
+                                                <div id="summary-card" class="tab-pane fade active in"> 
+                                                    <div class="panel-body card-panel-body" style="">
+                                                        <div id="" class="card-content" style="">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+                                                            <!-- Card Instruction -->
+                                                            <p id="install-instructions" class="content-instructions">
+                                                                Enter the resource address 
+                                                                
+                                                                <!-- Help link -->
+                                                                <span>  
+                                                                    <a id="add-basemap-wizard-help-link" href="" class="pull-right card-help help editable-help" style=""> Help <i class="fa fa-question-circle"></i></a>
+                                                                </span>
+                                                            </p>
+                                                            
+                                                            <!-- Form -->
+                                                            <div class="col-lg-9" style="padding-bottom: 10px;">
+
+                                                                <form class="widgets" style="margin-bottom: 20px;">
+                                                                    <div class="row widget-container editable-widget" style="">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <span class="pin-left-widget drag-tool-widget" style="display: none;"><i class="fa fa-align-justify"></i>
+                                                                                </span>
+
+                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Address</label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12">
+                                                                                <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row widget-container editable-widget" style="">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <span class="pin-left-widget drag-tool-widget" style="display: none;"><i class="fa fa-align-justify"></i>
+                                                                                </span>
+
+                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Address Type</label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12">
+                                                                                <select id="" class="design" style="height: 32px; display: none;" data-placeholder="Choose a Function..." tabindex="-1">
+                                                                                    
+                                                                                </select><div class="chosen-container chosen-container-single design chosen-container-single-nosearch" style="width: 100%;" title=""><a class="chosen-single chosen-default" tabindex="-1"><span>Choose a Function...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly="" tabindex="4"></div><ul class="chosen-results"></ul></div></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+
+                                                                <!-- Save/Add Button -->
+                                                                <div class="install-buttons">
+                                                                    <button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-plus btn-editable" style=""> Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Card-level tiles (only neccessary for tiles with Cardinality of n) -->
+                                                    <div class="list-group hidden" style="margin: 0px 15px 30px 10px;">
+                                                        <!-- Record -->
+                                                        <div id="record-1" class="tile-record list-group-item" style="cursor: pointer; background: rgb(250, 250, 250);">
+                                                            Record Summary: First widget label, value
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Add New Card -->
+                                                <div id="map-card" class="tab-pane fade"> 
+                                                    <div class="panel-body card-panel-body" style="">
+                                                        <div id="" class="card-content" style="">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+
+                                                            <div class="relative" style="height: 210px; background: #f4f4f4; border: 1px solid #ddd; margin: -40px 15px 20px 0px; border-radius: 2px; padding: 5px 25px;">
+
+                                                                <div class="box-vmiddle bg-trans pad-all text-center card-wz-add-record" style="border-width: 0px; float: left; margin: 2px; max-width: 250px;">
+                                                                        
+                                                                    <div class="" style="margin-top: 30px;">
+                                                                        <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
+                                                                            <i class="text-center fa fa-plus fa-4x" style="color: #fff; height: 56px; width: 56px; transform: translate(0, 5px);"></i>
+                                                                        </span>
+                                                                    </div>  
+                                                                </div>
+
+                                                                <div class="" style="position: absolute; top: 65px; left: 220px;">
+                                                                    <h3 class="text-thin" style="margin-top: 10px; margin-bottom: 5px; padding-right: 40px;"> Drag and drop a data type here. </h3><br>
+                                                                    <p class="" style="font-size: 12px; margin-top: -15px; color: #aaa; padding-right: 20px;">Data types define a set of related information and the necessary data entry widgets.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Help/Thesaurus term Panel -->
+                                            <aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
+                                                <div class="relative">
+                                                    <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+                                                </div>
+                                                <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> New Basemap</h3>
+                                                    </div>
+                                                    <div class="panel-body" style="padding: 10px 10px 15px 10px;">
+                                                        <p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
+                                                    </div>
+                                                </div>
+                                            </div></aside>
+                                        </div>
+
+                                        <!-- Save Input -->
+                                        <div class="wizard-buttons pull-right hidden" style="">
+                                            <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt btn-editable" style=""> Discard Assessment
+                                            </button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check btn-editable" style=""> Save Assessment</button>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Wizard-level tiles -->
+                                    <div class="hidden" style="margin-bottom: 0px; margin-top: 10px; padding-bottom: 10px;">
+                                        <div class="wizard-level-tile" style="">
+
+                                            <div class="editable" style="">
+                                                <h4 id="" class="wizard-tile-title editable-tile-title">Record Summary: First Card, First Widget Label, First Widget Value</h4>
+                                            </div>
+                                            <span class="pull-right" style="margin-top: 8px; margin-right: 10px;">
+                                                <span class="icon-wrap icon-circle bg-tile"><i class="fa fa-trash"></i></span>
+                                                <span class="icon-wrap icon-circle bg-tile"><i class="fa fa-pencil"></i></span>
+                                            </span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Form Manager -->
+                        <div id="" class="fade">
+
+
+
+                        </div>
+
+
+                        <!-- Report Manager -->
+                        <div id="" class="fade">
+
+
+
+
+
+
+                        </div>
+
+
+
+                        <!-- Graph Manager -->
+                        <div id="graph-container" class="relative fade in" style="display: none;">
+
+                            <!-- Title Block -->
+                            <div class="ep-form-toolbar relative">
+                                <div class="">
+                                    <h4 class="ep-form-toolbar-title"> Graph Designer </h4>
+                                </div>
+
+                                <!-- Tools -->
+                                <div class="ep-form-toolbar-tools">
+                                    <button class="btn btn-sm btn-danger btn-labeled fa fa-trash">Discard Edits</button>
+                                    <button class="btn btn-sm btn-primary btn-labeled fa fa-check">Save Edits</button>
+                                </div>
+                            </div>
+
+                            <!-- Node Listing -->
+                            <div id="ep-card-tools" class="ep-card-tools relative" style="">
+                                <div class="panel ep-card-tools-panel">
+
+                                    <div class="library-title-block">
+                                        <!-- Title -->
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Node List </h4>
+                                        </div>
+                                   
+
+                                        <!-- Node Search -->
+                                        <div class="relative">
+                                            <input id="node-search" type="text" class="form-control" style="" placeholder="Find a node in the graph"> 
+
+                                            <!-- Remove Search -->
+                                            <span class="clear-node-search" style=""><i class="fa fa-times-circle"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Group/User List  -->
+                                <div class="node-list" style="">
+
+                                    <!-- Group/User Grid -->
+                                    <div id="node-grid" class="grid" style="">
+
+                                        <!-- Card -->                                   
+                                        <div class="library-card node-list selected">
+                                            <div class="library-icon" style="">
+                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-file-code-o"></i></span>
+                                            </div>
+                                            <div class="library-card-main" style="">
+                                                <a id="" class="name" style="" href="#">
+                                                    Names 
+                                                </a>
+                                            </div>
+                                            <div class="library-card-subtitle none" style="">
+                                                String; E49
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Node CRUD Panel -->
+                                <div id="" class="ep-node-card" style="">
+                                    <div class="panel ep-card-crud-panel relative">
+                                        
+                                        <div class="library-title-block">
+                                            <div class="">
+                                                <h4 class="title-block-title" style=""> Node Editor </h4>
+                                            </div>
+                                            
+                                            <!-- Dismiss Panel -->
+                                            <div class="relative">
+                                                <a id="node-crud-close" href="" class="library-close-btn" style="margin-top: -5px;"><i class="ion-ios-close"></i></a>
+                                            </div>
+
+                                            <!-- Panel Tools -->
+                                            <div class="library-tools">
+                                                <i class="ion-ios-cog add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                                <i class="ion-ios-plus add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Child Nodes"></i>
+                                                <i class="ion-ios-glasses add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Preview Card"></i>
+                                                <i class="ion-ios-trash add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Delete Node"></i>
+                                            </div>
+                                        </div>
+
+                                        <!-- Node Information -->
+                                        <div class="node-section" style="">
+
+                                            <!-- Node Type -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Node Name
+                                                </div>
+                                                <div class="relative" style="">
+                                                    <input id="node-search" type="text" class="form-control library-search" style="" placeholder="node name"> 
+                                                </div>
+                                            </div>
+                                            <!-- End Label Text -->
+
+                                            <!-- CRM -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    CRM Class
+                                                </div>
+                                                <div class="col-sm-12 pad-no node-attribute-label" style="">
+                                                    <select class="functions" data-placeholder="" id="crm" tabindex="0">
+                                                        <option>E1 CRM Entity</option>
+                                                        <option>E2 Temporal Entity</option>
+                                                        <option>E3 Condition State</option>
+                                                        <option>E4 Period</option>
+                                                        <option>E5 Event</option>
+                                                        <option>E6 Destruction</option>
+                                                        <option>E7 Activity</option>
+                                                        <option>E8 Acquisition</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- End CRM -->
+
+                                            <!-- Parent Relation -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Relation to parent
+                                                </div>
+                                                <div class="col-sm-12 pad-no node-attribute-label" style="">
+                                                    <select class="functions" data-placeholder="" id="property" tabindex="0">
+                                                        <option>P1 Is identified by</option>
+                                                        <option>P2 Has type</option>
+                                                        <option>P3 Has note</option>
+                                                        <option>P4 Has time span</option>
+                                                        <option>P5 Consists of</option>
+                                                        <option>P6 A really long propety name just to see what will happen</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- End Parent Relation -->
+
+                                            <!-- Data Type -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Data type
+                                                </div>
+                                                <div class="col-sm-12 pad-no node-attribute-label" style="">
+                                                    <select class="functions" data-placeholder="" id="data-type" tabindex="0">
+                                                        <option>Semantic</option>
+                                                        <option>String</option>
+                                                        <option>Number</option>
+                                                        <option>Date</option>
+                                                        <option>Domain</option>
+                                                        <option>Boolean</option>
+                                                        <option>Geometry</option>
+                                                        <option>File</option>
+                                                        <option>Image</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <!--MAIN NAVIGATION-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--Shortcut buttons-->
+                    <div id="mainnav-shortcut" class="hidden">
+                        <ul class="list-unstyled">
+                            <li class="col-xs-4" data-content="Home">
+                                <a class="shortcut-grid" href="#">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li class="col-xs-4" data-content="Dashboard">
+                                <a class="shortcut-grid" href="#">
+                                    <i class="fa fa-tachometer"></i>
+                                </a>
+                            </li>
+                            <li class="col-xs-4" data-content="Add New Resource">
+                                <a class="shortcut-grid" href="#">
+                                    <i class="fa fa-building-o"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End shortcut buttons-->
+
+
+                    <!--Menu-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+                                <ul id="mainnav-menu" class="list-group">
+                        
+                                    <!-- Tools -->
+						            <li class="list-header">Tools</li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-tachometer"></i>
+                                            <span class="menu-title">
+                                                <strong>Dashboard</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-building-o"></i>
+                                            <span class="menu-title">
+                                                <strong>Add New Resource</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+					
+						
+						            <!--Menu list item-->
+						            <li>
+						                <a href="#">
+						                    <i class="ti-alarm-clock"></i>
+						                    <span class="menu-title">
+												<strong>System Settings</strong>
+											</span>
+						                </a>
+						            </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-bookmark"></i>
+                                            <span class="menu-title">
+                                                <strong>Resource Designer</strong>
+                                            </span>
+                                        </a>
+
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-server"></i>
+                                            <span class="menu-title">
+                                                <strong>Map Server Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-globe"></i>
+                                            <span class="menu-title">
+                                                <strong>Field Project Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-cloud-upload"></i>
+                                            <span class="menu-title">
+                                                <strong>Import/Export Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user-md"></i>
+                                            <span class="menu-title">
+                                                <strong>Profile Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-divider-dark"></li>
+                        
+                                    <!-- Tools -->
+                                    <li class="list-header">Modules</li>
+						
+						            <!--Menu list item-->
+						            <li>
+						                <a href="#">
+						                    <i class="fa fa-align-left"></i>
+						                    <span class="menu-title">
+												RDM
+												
+											</span>
+						                </a>
+						            </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--END MAIN NAVIGATION-->
+            
+            <!--ASIDE-->
+            
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <footer id="footer" style="background: #fff;">
+
+            <!-- Visible when footer positions are fixed -->
+            <div class="show-fixed pull-right">
+                <ul class="footer-list list-inline">
+                    <li>
+                        <p class="text-sm">SEO Proggres</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <p class="text-sm">Online Tutorial</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-primary"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="btn btn-sm btn-dark btn-active-success">Checkout</button>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="hide-fixed pull-right pad-rgt">Currently v2.4</div>
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; 2015 Your Company</p>
+
+
+
+        </footer>
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL TOP BUTTON -->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+
+
+    </div>
+    <!-- END OF CONTAINER -->
+
+
+    
+    
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="nifty-v2.4/js/jquery-2.2.1.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!--Fast Click [ OPTIONAL ]-->
+    <script src="nifty-v2.4/plugins/fast-click/fastclick.min.js"></script>
+
+    
+    <!--Nifty Admin [ RECOMMENDED ]-->
+    <script src="nifty-v2.4/js/nifty.min.js"></script>
+
+    
+    <!--
+
+    REQUIRED
+    You must include this in your project.
+
+    RECOMMENDED
+    This category must be included but you may modify which plugins or components which should be included in your project.
+
+    OPTIONAL
+    Optional plugins. You may choose whether to include it in your project or not.
+
+
+    Detailed information and more samples can be found in the document.
+
+    -->
+
+    <!-- Grid Libraries -->
+    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="plugins/isotope/packery-mode.pkgd.min.js"></script>
+    <script src="plugins/packery/packery.pkgd.min.js"></script>
+
+
+    <!-- MorphingSearch -->
+    <script src="plugins/MorphingSearch/js/morphingsearch.js"></script>
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+
+    <!-- D3 -->
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="js/d3/graph.js"></script>
+
+
+    <!--Arches Forms -->
+    <script src="js/arches/grid/grid.js"></script>
+    <script src="js/arches/forms/resource_forms.js"></script>
+    <script src="js/arches/resource_manager/arches_designer.js"></script>
+        
+
+</body>
+</html>

@@ -1,93 +1,34 @@
-//	JavaScript to Support Arches Map Configuration
+//	JavaScript to Support Arches Graph/Resource Configuration
 //	Version: 0.1
 //
 
-//	Load default content
- 	var contentPage = "";
 
- 	
- 	$( document ).ready(function() {
- 		contentPage = "arches_designer_settings.html";
-	    $('#external-page-content').load(contentPage);
+// Manage Edit Panel Tools Menu
+	$("#menu-control").click(function(ev){
+ 		ev.preventDefault();
+
+ 		//Toogle display of menu panel
+ 		$("#menu-panel").toggle();
 	});
 
 
-	$("#settings-manager").click(function(ev){
+	$("#help-control").click(function(ev){
  		ev.preventDefault();
 
- 		//make sure all content in target div is removed before loading new page
- 		$('#external-page-content').empty();
-
-		// Update Help file tag
- 		contentPage = "arches_designer_settings.html";
-		$('#external-page-content').load(contentPage);
-
-		//update parent li, show as selected
-		$( ".edit-menu-item" ).each(function() {
-			$( this ).removeClass( "selected" );
-		});
-		$("#settings-manager").addClass('selected');
-
-
+ 		//Toogle display of menu panel
+ 		$(".ep-help").toggle();
 	});
 
-
- 	$("#card-manager").click(function(ev){
+	$("#close-help").click(function(ev){
  		ev.preventDefault();
 
- 		//make sure all content in target div is removed before loading new page
- 		$('#external-page-content').empty();
-
-		// Update Help file tag
- 		contentPage = "arches_designer_card_manager.html";
-		$('#external-page-content').load(contentPage);
-
-		//update parent li, show as selected
-		$( ".edit-menu-item" ).each(function() {
-			$( this ).removeClass( "selected" );
-		});
-		$("#card-manager").addClass('selected');
-
-
-	});
-
-	$("#form-manager").click(function(ev){
- 		ev.preventDefault();
-
- 		//make sure all content in target div is removed before loading new page
- 		$('#external-page-content').empty();
-
-		// Update Help file tag
- 		contentPage = "arches_designer_form_manager.html";
-		$('#external-page-content').load(contentPage);
-
-		//update parent li, show as selected
-		$( ".edit-menu-item" ).each(function() {
-			$( this ).removeClass( "selected" );
-		});
-		$("#form-manager").addClass('selected');
-
-	});
-
-
-	$("#graph-manager").click(function(ev){
- 		ev.preventDefault();
-
- 		
-
-
-		//update parent li, show as selected
-		$( ".edit-menu-item" ).each(function() {
-			$( this ).removeClass( "selected" );
-		});
-		$("#graph-manager").addClass('selected');
-
+ 		//Toogle display of menu panel
+ 		$(".ep-help").toggle();
 	});
 
 
 
 // Resource Grid Item Highlight
-
 	$('.resource-grid-item').on('mouseover', function (ev) {
 
 		//select the 'resource-grid-main-container' div child
@@ -115,18 +56,6 @@
 		icon.removeClass('resource-grid-icon-highlight');
 
 	});
-
-	
-
-	// $('.resource-grid-item').on('mouseover', function (ev) {
-	// 	$('.resource-grid-main-container').addClass('container-highlight');
-	// 	$('.resource-grid-item .resource-grid-main-container > .resource-grid-main .resource-grid-icon').addClass('resource-grid-icon-highlight');
-	// });
-
-	// $('.resource-grid-item').on('mouseout', function (ev) {
-	// 	$('.resource-grid-item .resource-grid-main-container').removeClass('container-highlight');
-	// 	$('.resource-grid-item .resource-grid-main-container .resource-grid-main .resource-grid-icon').removeClass('resource-grid-icon-highlight');
-	// });
 
 
 // Manage Display of edit panel
@@ -156,40 +85,6 @@
 	
 	
 	});
-
-
-// Manage Display of edit panel menu
-	$('#menu-btn').on('click', function (ev) {
-		ev.preventDefault();
-		
-		if ( $('#edit-menu').is(':visible')) {
-			//console.log ("menu visible");
-			$('#edit-menu').addClass('edit-menu-out');
-		  	$('.edit-panel-content').addClass('edit-panel-content-full');
-
-		  	//update state of menu control
-		  	$('#menu-forward').removeClass('hidden');
-		  	$('#menu-back').addClass('hidden');
-		  	$('.edit-menu-control').addClass('edit-menu-control-out');
-
-
-		} else {
-		  	//console.log ("menu hidden");
-		  	$('#edit-menu').removeClass('edit-menu-out');
-		  	$('.edit-panel-content').removeClass('edit-panel-content-full');
-
-		  	//update state of menu control
-		  	$('#menu-forward').addClass('hidden');
-		  	$('#menu-back').removeClass('hidden');
-		  	$('.edit-menu-control').removeClass('edit-menu-control-out');
-
-		}
-
-	});
-
-
-
-
 
 
 
@@ -248,38 +143,143 @@
 	  	width: '100%'
 	});
 
-	// $(".design").chosen({
-	//   	disable_search_threshold: 15,
-	//   	inherit_select_classes: true,
-	//   	width: '100%'
-	// });
-
-
+	$(".multiple").chosen({
+	  	disable_search_threshold: 15,
+	  	inherit_select_classes: true,
+	  	width: '100%',
+	  	multiple: true
+	});
 
 
 
 
 
 // Card Manager Events
+	//Manage NEW CARD display
+	$('.new-card').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#card-grid").toggle();
+		$("#ep-new-card-crud").toggle();
+		$("#ep-selected-card-crud").toggle();
+		$("#card-pre-drop").toggle();
+		$("#card-pre-drag").toggle();
+		
+
+		//Update Card Toolbar
+		$("#card-grid-controls-btn-discard").toggle();
+		$("#card-grid-controls-btn-save").toggle();
+
+	});
 	
 	// Manage display of card grid and card preview
 	$('.card-grid-item').on('click', function (ev) {
 		ev.preventDefault();
-		$("label[for=toggle-cards]").trigger('click');	
+		
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#card-grid").toggle();
+		$("#card-preview").toggle();
+		$("#ep-card-tools").toggle();
+		$("#ep-card-crud").toggle();
+
+		$("#card-preview-crud").toggle();
+		$("#summary-card").toggle();
+
+
+		//Update Card Toolbar
+		$("#card-grid-controls-btn-discard").toggle();
+		$("#card-grid-controls-btn-save").toggle();
+
 	});
 
 
-	$("label[for=toggle-cards]").on('click', function(){
+	//Settings Menu
+	$('#settings-manager').on('click', function (ev) {
+		ev.preventDefault();
 
-		//Toggle display to card preview, 
-		$("#card-grid").toggle(350);
-		$("#card-preview").toggle(350);
+		//Close the currently open panel, them open card manager
+		$( ".fade .in" ).each(function() {
+			$( this ).css( "display", "none" );
+		});
 
-		//Toggle toolbar display
-		$("#card-grid-tools").toggle(350);
-		$("#card-preview-tools").toggle(350);
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#settings-form").toggle();
+		$("#settings-form-crud").toggle();
+		$("#id-card").toggle();
+
+		//Update Menu display: remove 'selected' class from currently active menu item, set settings-manager to 
+		//selected
+		$( ".edit-menu-item.selected" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$('#settings-manager').addClass('selected');
+
+		//close menu
+		$("#menu-panel").toggle();
 
 	});
+
+
+	//Graph Manager Menu
+	$('#graph-manager').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close the currently open panel, them open card manager
+		$( ".fade .in" ).each(function() {
+			$( this ).css( "display", "none" );
+		});
+
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#graph-container").toggle();
+
+		
+
+		//Update Menu display: remove 'selected' class from currently active menu item, set settings-manager to 
+		//selected
+		$( ".edit-menu-item.selected" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$('#graph-manager').addClass('selected');
+
+		//close menu
+		$("#menu-panel").toggle();
+
+	});
+
+
+
+	//Card Manager Menu
+	$('#card-manager').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close the currently open panel, them open card manager
+		$( ".fade .in" ).each(function() {
+			$( this ).css( "display", "none" );
+		});
+
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#card-library").toggle();
+
+		//Update Menu display: remove 'selected' class from currently active menu item, set settings-manager to 
+		//selected
+		$( ".edit-menu-item.selected" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$('#card-manager').addClass('selected');
+
+		//close menu
+		$("#menu-panel").toggle();
+
+	});
+
+
+
+
+
+
+
+
 
 
 	// Manage display of card preview and report preview
@@ -318,32 +318,6 @@
 	});
 
 
-// Card Container Title Function
-	$('#cc-title').on('click', function (ev) {
-		ev.preventDefault();
-
-		//show config panel if its not visible
-		// $("#card-config-panel").addClass("panel-left-in");
-		// $("#form-container").addClass("form-container-config-in");
-
-		//if card library is not shown, use full display for card preview
-		// if (changeCheckbox.checked) {
-		// 	$("#form-container").removeClass("form-container-config-lib-in");
-		// }
-
-		//show card container level form
-		$('#card-settings').css("display", "none");
-		$('#card-settings').fadeOut(300, "linear");
-		$('#card-container-settings').fadeIn(300, "linear");
-
-
-		//continue to highlight panel, card container level buttons
-		$('#card-container').addClass("editable-highlight");
-		$('#cc-save-btn').removeClass("btn-editable");
-		$('#cc-delete-btn').removeClass("btn-editable");
-		
-	});
-
 
 
 //Card Tab Functions 
@@ -362,33 +336,6 @@
 
 // UX/Editable Functions (MouseOver, MouseOut Events)
 	
-	//UX for Card Container Title
-	$('#cc-title').on('mouseover', function (ev) {
-		ev.preventDefault();
-
-		// highlight card container level buttons
-		$('#cc-save-btn').removeClass("btn-editable");
-		$('#cc-delete-btn').removeClass("btn-editable");
-
-		//fade cards, wizard level tile
-		$('#cards').addClass("fade-back");
-		$('.wizard-level-tile').addClass("fade-back");
-	});
-
-	$('#cc-title').on('mouseout', function (ev) {
-		ev.preventDefault();
-
-		// Remove highlight
-		$('#cc-save-btn').addClass("btn-editable");
-		$('#cc-delete-btn').addClass("btn-editable");
-
-		//un-fade cards, wizard level tile
-		$('#cards').removeClass("fade-back");
-		$('.wizard-level-tile').removeClass("fade-back");
-		
-	});
-
-
 	// UX for Wizard Level Tile
 	$('.wizard-level-tile').on('mouseover', function (ev) {
 		ev.preventDefault();
@@ -530,14 +477,7 @@
 
 
 
-// Notification Example
-// $.niftyNoty({
-//     type: 'danger',
-//     icon : 'fa fa-bolt fa-2x',
-//     container : 'page',
-//     title : 'Server Load Limited',
-//     message : 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-// });
+
 
 $('.ion-ios-trash').on('click', function(ev){
 	//console.log("trashing");

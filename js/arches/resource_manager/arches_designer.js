@@ -160,18 +160,25 @@
 		ev.preventDefault();
 		
 		//Update Panel Display (hide card library, show card manager, card manager tools)	
-		$("#card-grid").toggle();
-		$("#ep-new-card-crud").toggle();
-		$("#ep-selected-card-crud").toggle();
-		$("#card-pre-drop").toggle();
-		$("#card-pre-drag").toggle();
-		
+		$("#card-grid").addClass("new-card-indent");
+		$("#ep-new-card-crud").addClass("show-card-library");
 
 		//Update Card Toolbar
-		$("#card-grid-controls-btn-discard").toggle();
-		$("#card-grid-controls-btn-save").toggle();
+		// $("#card-grid-controls-btn-discard").toggle();
+		// $("#card-grid-controls-btn-save").toggle();
 
 	});
+
+
+
+	$('.dismiss-card-library').on('click', function (ev) {
+		ev.preventDefault();
+
+		$("#card-grid").removeClass("new-card-indent");
+		$("#ep-new-card-crud").removeClass("show-card-library");
+
+	});
+
 	
 	// Manage display of card grid and card preview
 	$('.card-grid-item').on('click', function (ev) {

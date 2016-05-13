@@ -1390,13 +1390,13 @@
 
                                         <div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record project-grid-item form-item new-card" style="">
                                             <a id="add-card" href="" data-toggle="modal" class="" style="">
-                                                <h3 class="text-thin" style="margin-top: 10px;"> New Card</h3>
+                                                <h3 class="text-thin" style="margin-top: 10px;"> Add Card</h3>
 
                                                 <span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
                                                     <i class="fa fa-plus fa-2x" style="color: #fff;"></i>
                                                 </span>
 
-                                                <h5 class="" style="font-weight: 200;"> Create a new data entry form for your resource </h5>
+                                                <h5 class="" style="font-weight: 200;"> Drag and drop a data widget onto your resource </h5>
                                             </a>
                                         </div>
                                         
@@ -1537,19 +1537,20 @@
 
 
                             <!-- Card (Tile) Listing -->
-                            <div id="ep-new-card-crud" class="crud-menu" style="display: none;">
-                                <div class="panel crud-menu-panel relative" style="">
+                            <div id="ep-new-card-crud" class="crud-menu hide-card-library" style="">
+                                <div class="panel crud-menu-panel data-widget-library relative" style="">
 
                                     <!-- Menu Title -->
                                     <div class="panel-heading">
                                         <div class="ep-menu-list-title">
                                             <h3 id="" class="panel-title card-main-title">Data Widget Library</h3>
+                                            <span class="dismiss-card-library"><i class="fa fa-times-circle"></i></span>
                                         </div>
                                     </div>
                                     
                                     <!-- Menu List -->
                                     <div class="panel-body">
-                                       <ul class="list-group ep-menu-list menu-title-shim">
+                                       <ul class="list-group ep-menu-list data-widget-library menu-title-shim">
                                             <!-- Menu Item -->
                                             <li id="" class="resource-selector">
                                                 <select id="" class="resources" style="" data-placeholder="Find a data type..." tabindex="4">
@@ -1561,146 +1562,133 @@
                                                     <option value="r6">Descriptions</option>
                                                 </select>                   
                                             </li>
+
+                                            <!-- Data Widget Library -->
+                                            <li class="data-widget-container">
+                                                <!-- Isotope Layout -->
+                                                <div id="report-image-grid" class="report-image-grid">
+                                                    
+                                                    <!-- card -->
+                                                    <div class="data-widget-grid-item relative" style="">
+                                                        <div class="panel mar-no">
+
+                                                            <!-- card Name -->
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title library-card-panel-title" style="">Evaluations</h3>
+                                                            </div>
+                                                            
+                                                            <!-- Abstract -->
+                                                            <div class="panel-body library-card-body" style="">
+                                                                <p class="library-item-subtitle">Evaluation, Evaluation Date Assessed</p>
+                                                                <p class="library-item-subtitle">Description</p>
+                                                                <p class="library-item-subtitle">Images</p>
+                                                            </div>
+
+                                                            <!-- Selectable -->
+                                                            <div class="selectable" style="display: none;">
+                                                                <i class="ion-ios-checkmark"></i>
+                                                            </div>
+
+                                                            <!-- card Tools -->
+                                                            <div class="panel-footer" style="height: 40px;">
+                                                                <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                                <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                                    <ul class="dropdown-menu pull-right">
+                                                                    <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                                    </li>
+                                                                    <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                                    </li>
+                                                                    <li class="divider"></li>
+                                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- card -->
+                                                    <div class="data-widget-grid-item relative" style="">
+                                                        <div class="panel mar-no">
+
+                                                            <!-- card Name -->
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title library-card-panel-title" style="">Locations</h3>
+                                                            </div>
+                                                            
+                                                            <!-- Abstract -->
+                                                            <div class="panel-body library-card-body" style="">
+                                                                <p class="library-item-subtitle">Geometry, Geometry Type</p>
+                                                                <p class="library-item-subtitle">Addresses</p>
+                                                                <p class="library-item-subtitle">Administrative Areas</p>
+                                                                <p class="library-item-subtitle">Settings</p>
+                                                                <p class="library-item-subtitle">Cadastral References</p>
+                                                            </div>
+
+                                                            <!-- Selectable -->
+                                                            <div class="selectable" style="display: none;">
+                                                                <i class="ion-ios-checkmark"></i>
+                                                            </div>
+
+                                                            <!-- card Tools -->
+                                                            <div class="panel-footer" style="height: 40px;">
+                                                                <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                                <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                                    <ul class="dropdown-menu pull-right">
+                                                                    <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                                    </li>
+                                                                    <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                                    </li>
+                                                                    <li class="divider"></li>
+                                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- card -->
+                                                    <div class="data-widget-grid-item relative" style="">
+                                                        <div class="panel mar-no">
+
+                                                            <!-- card Name -->
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title library-card-panel-title" style="">Descriptions</h3>
+                                                            </div>
+                                                            
+                                                            <!-- Abstract -->
+                                                            <div class="panel-body library-card-body" style="">
+                                                                <p class="library-item-subtitle">Descritpion, Description Type</p>
+                                                            </div>
+
+                                                            <!-- Selectable -->
+                                                            <div class="selectable" style="display: none;">
+                                                                <i class="ion-ios-checkmark"></i>
+                                                            </div>
+
+                                                            <!-- card Tools -->
+                                                            <div class="panel-footer" style="height: 40px;">
+                                                                <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                                                                <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                                                                    <ul class="dropdown-menu pull-right">
+                                                                    <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                                                                    </li>
+                                                                    <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                                                                    </li>
+                                                                    <li class="divider"></li>
+                                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             
-                                            <!-- Menu Item -->
-                                            <li id="" class="edit-menu-item">
-                                                <a href="" target="" class="">
-                                                    <div class="media-body">
-                                                        <div class="menu-item-title"> <i class="fa fa-tags"></i> Names</div>
-                                                        <span class="text-muted menu-item-subtitle">Name, Name Type</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <!-- Menu Item -->
-                                            <li id="" class="edit-menu-item">
-                                                <a href="" target="" class="">
-                                                    <div class="media-body">
-                                                        <div class="menu-item-title"> <i class="fa fa-flag"></i> Locations</div>
-                                                        <span class="text-muted menu-item-subtitle">Map, Addresses, Settings, Parcels</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <!-- Menu Item -->
-                                            <li id="" class="edit-menu-item">
-                                                <a href="" target="" class="">
-                                                    <div class="media-body">
-                                                        <div class="menu-item-title"> <i class="fa fa-puzzle-piece"></i> Keywords</div>
-                                                        <span class="text-muted menu-item-subtitle">Keywords</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <!-- Menu Item -->
-                                            <li id="" class="edit-menu-item">
-                                                <a href="" target="" class="">
-                                                    <div class="media-body">
-                                                        <div class="menu-item-title"> <i class="fa fa-book"></i> Descriptions</div>
-                                                        <span class="text-muted menu-item-subtitle">Description, Description Type</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <!-- Menu Item -->
-                                            <li id="" class="edit-menu-item">
-                                                <a href="" target="" class="">
-                                                    <div class="media-body">
-                                                        <div class="menu-item-title"> <i class="fa fa-plug"></i> Evaluation</div>
-                                                        <span class="text-muted menu-item-subtitle">Evaluation Criteria, Evaluation Date</span>
-                                                    </div>
-                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="panel-footer ep-menu-footer hidden">
 
                                         footer
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- New Card Panel -->
-                            <div id="card-pre-drop" class="relative" style="display: none;">
-                                                            
-                                <!-- Blank Card -->
-                                <div id="card-container" class="panel card-pre-drop" style="">
-                                    <div class="panel-heading relative">
-                                        <!-- Preview Panel Title -->
-                                        <div class="" style="">
-                                            <h3 id="" class="panel-title card-main-title">Data Type Preview</h3>
-                                        </div>
-
-                                        <!-- Preview Tools -->
-                                        <div class="preview-tools">
-                                            <button id="" class="btn btn-sm btn-mint btn-labeled fa fa-angle-left">Remove</button>
-                                            <button id="" class="btn btn-sm btn-mint btn-labeled fa fa-angle-right">Add</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Alert Panel -->
-                                    <div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
-
-                                    <!-- Data Entry Pre-Drag -->
-                                    <div id="card-pre-drag" class="panel-body card-body fade in" style="padding: 10px 20px 20px 20px;">
-                                        <div class="panel-body card-panel-body" style="">
-                                            <div id="" class="card-content" style="">
-
-                                                <!-- Card Level Alert -->
-                                                <div id="db-connection-alert" class="panel install-card-alert"></div>
-
-                                                <div class="relative data-preview-panel">
-
-                                                    <div class="drop-message">
-                                                        <div class="box-vmiddle bg-trans pad-all text-center card-wz-add-record" style="border-width: 0px; float: left; margin: 2px; max-width: 250px;">
-                                                                
-                                                            <div class="" style="margin-top: 30px;">
-                                                                <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
-                                                                    <i class="text-center fa fa-plus fa-4x" style="color: #fff; height: 56px; width: 56px; transform: translate(0, 5px);"></i>
-                                                                </span>
-                                                            </div>  
-                                                        </div>
-
-                                                        <div class="" style="position: absolute; top: 65px; left: 200px;">
-                                                            <h3 class="text-thin" style="margin-top: 0px; margin-bottom: 5px; padding-right: 40px;"> Drag and drop a data widget here. </h3><br>
-                                                            <p class="" style="font-size: 12px; margin-top: -15px; color: #aaa; padding-right: 100px;">Data types define a set of related information and the necessary data entry widgets.  Preview your data type by dragging it into this panel
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- Selected Card (Tile) Listing -->
-                            <div id="ep-selected-card-crud" class="selected-card-menu" style="display: none;">
-                                <div class="panel selected-card-menu-panel relative">
-
-                                    <!-- Menu Title -->
-                                    <div class="panel-heading">
-                                        <div class="ep-menu-list-title">
-                                            <h3 id="" class="panel-title card-main-title">Selected Data Widgets</h3>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Menu List -->
-                                    <div class="panel-body">
-                                       <ul class="list-group ep-menu-list menu-title-shim-right">
-                                                                    
-                                            <!-- Menu Item -->
-                                            <li id="" class="edit-menu-item-right">
-                                                <a href="" target="" class="">
-                                                    <div class="media-body" style="">
-                                                        <div class="menu-item-title-right"><i class="fa fa-pencil"></i> Condition Assessment</div>
-                                                        <span class="text-muted menu-item-subtitle-right">Condition, Assessment Date, Description, Images, Threats, Disturbances, Recommendations</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>

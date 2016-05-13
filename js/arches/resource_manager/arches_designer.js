@@ -125,8 +125,9 @@
 	new Switchery(document.getElementById('card-visibility'), {size: 'small'});
 	new Switchery(document.getElementById('card-active'), {size: 'small'});
 
-
-
+	//Card CRUD forms
+	new Switchery(document.getElementById('enable-card-help'), {size: 'small',});
+	new Switchery(document.getElementById('preview-card-help'), {size: 'small',});
 
 
 // chosen
@@ -188,7 +189,7 @@
 		$("#card-grid").toggle();
 		$("#card-preview").toggle();
 		$("#ep-card-tools").toggle();
-		$("#ep-card-crud").toggle();
+		$("#ep-card-container-crud").toggle();
 
 		$("#card-preview-crud").toggle();
 		$("#summary-card").toggle();
@@ -197,6 +198,90 @@
 		//Update Card Toolbar
 		$("#card-grid-controls-btn-discard").toggle();
 		$("#card-grid-controls-btn-save").toggle();
+
+	});
+
+
+
+//Manage Card Crud Forms
+
+	//Show Card level CRUD Form
+	$('.card-link').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide Any Card Container or Widget Forms
+		$("#ep-card-container-crud").fadeOut();
+		$("#ep-widget-crud").fadeOut();
+
+		//Show Card CRUD
+		$("#ep-card-crud").fadeIn();
+
+		//remove all "active" links, active this link
+		$( ".cc-link" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		$( this ).addClass("active");
+
+	});
+
+	$('.card-widget-link').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide Any Card Container or Widget Forms
+		$("#ep-card-crud").fadeOut();
+		$("#ep-card-container-crud").fadeOut();
+		
+
+		//Show Card CRUD
+		$("#ep-widget-crud").fadeIn();
+
+		//remove all "active" links, active this link
+		$( ".cc-link" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		$( this ).addClass("active");
+
+	});
+
+	$('.card-container-link').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide Any Card Container or Widget Forms
+		$("#ep-card-crud").fadeOut();
+		$("#ep-widget-crud").fadeOut();
+
+		//Show Card CRUD
+		$("#ep-card-container-crud").fadeIn();
+
+		//remove all "active" links, active this link
+		$( ".cc-link" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		$( this ).addClass("active");
+
+	});
+
+
+
+// Manage Toggles for CARD crud form
+	$('#card-crud-help').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide All CARD toggle forms, de-active currently active tool icon
+		$( ".ep-card-crud-panel .card-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		//Show Card CRUD help form, update tool display
+		$("#ep-card-crud-help").fadeIn();
+		$('#card-crud-help').addClass("active");
+
 
 	});
 

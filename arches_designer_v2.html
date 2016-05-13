@@ -1698,51 +1698,185 @@
                             <div id="ep-card-tools" class="ep-card-tools" style="display: none;">
                                 <div class="panel ep-card-tools-panel">
                                     <li class="card-tree-list active">
-                                        <a href="#" class="" aria-expanded="true"><i class="ion-ios-folder-outline"></i> Resource Locations</a>
+                                        <a href="#" class="cc-link card-container-link active" aria-expanded="true"><i class="ion-ios-folder-outline"></i> Resource Locations</a>
 
                                         <!--Submenu-->
                                         <ul class="card-tree-list-item" aria-expanded="true">
                                             
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" aria-expanded="true"><i class="ion-ios-list-outline"></i> Addresses<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline"></i> Addresses<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
-                                                    <li class="card-tree-list selected"><a href="#"><i class="ion-ios-gear"></i> Address</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-gear"></i> Address Type</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-help-outline"></i> Help Text</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-stop"></i> Tile Heading</a></li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Address</a>
+                                                    </li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Address Type</a>
+                                                    </li>
                                                 </ul>
                                             </li>
 
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" aria-expanded="true"><i class="ion-ios-list-outline"></i> Mapped Locations<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline"></i> Mapped Locations<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-gear"></i> Spatial Coordinates</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-gear"></i> Geometry Type</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-help-outline"></i> Help Text</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-stop"></i> Tile Heading</a></li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Spatial Coordinates</a>
+                                                    </li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Geometry Type</a>
+                                                    </li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Certainty</a>
+                                                    </li>
                                                 </ul>
                                             </li>
 
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" aria-expanded="true"><i class="ion-ios-book"></i> Report Template<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline"></i> Report Template<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-pricetag"></i> Title</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-list-outline"></i> Adresses</a></li>
-                                                    <li class="card-tree-list"><a href="#"><i class="ion-ios-list-outline"></i> Mapped Locations</a></li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Addresses</a>
+                                                    </li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Mapped Locations</a>
+                                                    </li>
                                                 </ul>
                                             </li>
-                                             
                                         </ul>
                                     </li>
+                                </div>
+                            </div>
+
+
+                            <!-- Card Container CRUD -->
+                            <div id="ep-card-container-crud" class="ep-card-crud" style="display: none;">
+                                <div class="panel ep-card-crud-panel relative">
+                                    
+                                    <!-- Title Block -->
+                                    <div class="library-title-block">
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Card Container </h4>
+                                        </div>
+
+                                        <!-- Panel Tools -->
+                                        <div class="library-tools">
+                                            <i class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                            <i class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
+                                            <i class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card Container Base Settings Form -->
+                                    <div id="cc-settings" class="library-crud-container" style="">
+                                        
+                                        <!-- Card Container Settings -->
+                                        <div id="" class="" style="padding-bottom: 5px;">
+
+                                            <!-- Card Container Name -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Name
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-divider">
+                                                <h4 class="title-block-title" style=""> Settings </h4>
+                                            </div>
+
+                                            <!-- Card Visibility -->
+                                            <div class="toggle-container">
+                                                <input id="card-container-visibility" class="arches-switch" type="checkbox" checked data-switchery="true" style="display: none;">
+                                                <p class="arches-toggle-sm">
+                                                    Make Card Visible
+                                                </p>
+                                                <span class="arches-toggle-subtitle">
+                                                    Show this card by default
+                                                </span>
+                                            </div>
+
+                                            <!-- Active -->
+                                            <div class="toggle-container">
+                                                <input id="card-container-active" class="arches-switch" type="checkbox" checked data-switchery="true" style="display: none;">
+                                                <p class="arches-toggle-sm">
+                                                    Make Card Active
+                                                </p>
+                                                <span class="arches-toggle-subtitle">
+                                                    This card is active and can be used for data entry
+                                                </span>
+                                            </div>
+                                        </div>    
+                                    </div>
+
+                                    <!-- Card Container ADVANCED Settings Form -->
+                                    <div id="cc-advanced-settings" class="library-crud-container" style="display: none;">
+                                        <div id="" class="">
+
+                                            <!-- Card Container Settings -->
+                                            <div id="" class="" style="padding-bottom: 5px;">
+
+                                                <!-- Card Container Name -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Name
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Cancel Button Title -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Cancel Button Text
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Cancel" id="" class="form-control input-md widget-input" value="">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Save Button Title -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Save Button Text
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Save" id="" class="form-control input-md widget-input" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-divider">
+                                                    <h4 class="title-block-title" style=""> Settings </h4>
+                                                </div>
+
+                                                <!-- Functions -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Functions
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <select id="" class="functions" style="" data-placeholder="Choose a Function..." multiple tabindex="4">
+                                                            <option value="United States">Function Name 1</option>
+                                                            <option value="United Kingdom">Function Name 2</option>
+                                                            <option value="Afghanistan">Function Name 3</option>
+                                                            <option value="Aland Islands">Function Name 4</option>
+                                                            <option value="Albania">Function Name 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1754,24 +1888,242 @@
                                     <!-- Title Block -->
                                     <div class="library-title-block">
                                         <div class="">
-                                            <h4 class="title-block-title" style=""> Card Container </h4>
-                                        </div>
-                                        
-                                        <!-- Dismiss Panel -->
-                                        <div class="relative">
-                                            <a id="node-crud-close" href="" class="library-close-btn" style="margin-top: -5px;"><i class="ion-ios-close"></i></a>
+                                            <h4 class="title-block-title" style=""> Card FORM </h4>
                                         </div>
 
                                         <!-- Panel Tools -->
                                         <div class="library-tools">
-                                            <i class="ion-ios-list add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                            <i class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
                                             <i class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
-                                            <i class="ion-man add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Permissions"></i>
+                                            <i class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
+                                            <i class="ion-ios-people add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Permissions"></i>
+                                            <i id="card-crud-help" class="ion-ios-help add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Help Text"></i>
                                         </div>
                                     </div>
 
-                                    <!-- Card Container Form -->
-                                    <div class="library-crud-container"style="">
+                                    <!-- Card Container Base Settings Form -->
+                                    <div id="ep-card-crud-settings" class="library-crud-container card-crud" style="">
+                                        
+                                        <!-- Card Container Settings -->
+                                        <div id="" class="" style="padding-bottom: 5px;">
+
+                                            <!-- Card Container Name -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Name
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Addresses">
+                                                </div>
+
+                                                <!-- Card Instructions -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Instructions
+                                                    </div>
+                                                    <div class="col-sm-12" style="padding: 0px 15px 15px 0px;">
+                                                        <textarea placeholder="Enter the resource address" rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+
+                                    
+                                    <!-- Card CRUD Cardinality Form -->
+                                    <div id="ep-card-crud-cardinality" class="library-crud-container card-crud" style="display: none;">
+                                        <div id="" class="">
+
+                                            <!-- Card Container Settings -->
+                                            <div id="" class="" style="padding-bottom: 5px;">
+
+                                                <!-- Card Container Name -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Cardinality
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Cancel Button Title -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Cancel Button Text
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Cancel" id="" class="form-control input-md widget-input" value="">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Save Button Title -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Save Button Text
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Save" id="" class="form-control input-md widget-input" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-divider">
+                                                    <h4 class="title-block-title" style=""> Settings </h4>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card CRUD Validation/Functions Form -->
+                                    <div id="ep-card-crud-validation" class="library-crud-container card-crud" style="display: none;">
+                                        <div id="" class="">
+
+                                            <!-- Card Container Settings -->
+                                            <div id="" class="" style="padding-bottom: 5px;">
+
+                                                <!-- Card Container Name -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Validation Functions
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card CRUD Permissions Form -->
+                                    <div id="ep-card-crud-permissions" class="library-crud-container card-crud" style="display: none;">
+                                        <div id="" class="">
+
+                                            <!-- Card Container Settings -->
+                                            <div id="" class="" style="padding-bottom: 5px;">
+
+                                                <!-- Card Container Name -->
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Validation Functions
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card CRUD Validation/Functions Form -->
+                                    <div id="ep-card-crud-help" class="library-crud-container card-crud" style="display: none;">
+
+                                        <!-- Enable help -->
+                                        <div class="toggle-container">
+                                            <input id="enable-card-help" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
+                                            <p class="arches-toggle-sm">
+                                                Enable Card-level help
+                                            </p>
+                                            <span class="arches-toggle-subtitle">
+                                                Provide specific user guidance for this card
+                                            </span>
+                                        </div>
+
+                                        <!-- Preview help -->
+                                        <div class="toggle-container">
+                                            <input id="preview-card-help" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
+                                            <p class="arches-toggle-sm">
+                                                Preview Help Panel
+                                            </p>
+                                            <span class="arches-toggle-subtitle">
+                                                Display help panel, confirm content
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tertiary Panel For Card Help Text-->
+                                <div id="help-text-crud" class="tertiary-panel" style="display: none;">
+                                    <div class="tertiary-panel-content">
+                                        Yo!
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Widget CRUD -->
+                            <div id="ep-widget-crud" class="ep-card-crud" style="display: none;">
+                                <div class="panel ep-card-crud-panel relative">
+                                    
+                                    <!-- Title Block -->
+                                    <div class="library-title-block">
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Widget FORM </h4>
+                                        </div>
+
+                                        <!-- Panel Tools -->
+                                        <div class="library-tools">
+                                            <i class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                            <i class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
+                                            <i class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card Container Base Settings Form -->
+                                    <div id="cc-settings" class="library-crud-container" style="">
+                                        
+                                        <!-- Card Container Settings -->
+                                        <div id="" class="" style="padding-bottom: 5px;">
+
+                                            <!-- Card Container Name -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Name
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-divider">
+                                                <h4 class="title-block-title" style=""> Settings </h4>
+                                            </div>
+
+                                            <!-- Visible -->
+                                            <div class="" style="padding-bottom: 15px; padding-right: 15px;">
+
+                                                <input id="card-container-visibility" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
+                                                <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
+                                                    Visible
+                                                </p>
+                                                <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
+                                                    Show this card by default
+                                                </span>
+                                            </div>
+
+                                            <!-- Active -->
+                                            <div class="" style="padding-bottom: 15px;">
+
+                                                <input id="card-container-active" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
+                                                <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
+                                                    Active
+                                                </p>
+                                                <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
+                                                    This card is active and can be used for data entry
+                                                </span>
+                                            </div>
+                                        </div>    
+                                    </div>
+
+                                    <!-- Card Container ADVANCED Settings Form -->
+                                    <div id="cc-advanced-settings" class="library-crud-container" style="display: none;">
                                         <div id="" class="">
 
                                             <!-- Card Container Settings -->

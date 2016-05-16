@@ -76,6 +76,10 @@
     <link href="css/arches/app/graph.css" rel="stylesheet">
 
 
+    <!--Summernote [ OPTIONAL ]-->
+    <link href="plugins/summernote/summernote.min.css" rel="stylesheet">
+
+
     <!-- Arches CSS -->
     <link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
     <link href="css/arches/app/app_configuration.css" rel="stylesheet">
@@ -823,7 +827,7 @@
                                 <li class="edit-menu-item">
                                     <a id="" href="" target="" class="">
                                         <div class="media-body">
-                                            <div class="menu-item-title"><i class="fa fa-tag"></i> Return to Resource Designer</div>
+                                            <div class="menu-item-title"><i class="fa fa-mail-reply"></i> Return to Resource Designer</div>
                                             <span class="text-muted menu-item-subtitle">Create Arches Resources </span>
                                         </div>
                                     </a>
@@ -875,6 +879,7 @@
                                 <div class="ep-form-toolbar-tools">
                                     <button class="btn btn-sm btn-danger btn-labeled fa fa-trash">Discard Edits</button>
                                     <button class="btn btn-sm btn-primary btn-labeled fa fa-check">Save Edits</button>
+                                    <button class="btn btn-sm btn-mint btn-labeled fa fa-mail-reply back-to-designer">Exit</button>
                                 </div>
                             </div>
 
@@ -903,9 +908,19 @@
                                                         Resource Identifiers
                                                     </a>
                                                 </li>
+                                                <li id="xx-icon-group" class="">
+                                                    <a id="xx-icon-tab" data-toggle="tab" href="#icon-card" class="card-tab-title" aria-expanded="true">
+                                                        Icon
+                                                    </a>
+                                                </li>
                                                 <li id="xx-desc-group" class="">
                                                     <a id="xx-desc-tab" data-toggle="tab" href="#desc-card" class="card-tab-title" aria-expanded="true">
                                                         Description
+                                                    </a>
+                                                </li>
+                                                <li id="xx-validation-group" class="">
+                                                    <a id="xx-validation-tab" data-toggle="tab" href="#validation-card" class="card-tab-title" aria-expanded="true">
+                                                        Validation/Functions
                                                     </a>
                                                 </li>
                                                 <li id="xx-meta-group" class="">
@@ -945,7 +960,7 @@
                                                                     <div class="row widget-container">
                                                                         <div class="form-group">
                                                                             <div class="relative">
-                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Resource Name <i class="ion-ios-checkmark-outline"></i> <i class="ion-ios-book add-tooltip pull-right" data-placement="top" data-toggle="tooltip" data-original-title="Show Vocabulary"></i></label>
+                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Resource Name <i class="ion-ios-checkmark-outline"></i></label>
                                                                             </div>
                                                                             
                                                                             <div class="col-xs-12 col-lg-9">
@@ -968,9 +983,54 @@
 
                                                                     <div class="row widget-container">
                                                                         <div class="form-group">
-                                                                            <div class="" style="">
-                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Form Icon <i class="ion-ios-checkmark-outline"></i></label>
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Top Node Semantic Class <i class="ion-ios-checkmark-outline"></i><i class="ion-ios-book add-tooltip pull-right" data-placement="top" data-toggle="tooltip" data-original-title="Show Vocabulary"></i></label>
                                                                             </div>
+                                                                            
+                                                                            <div class="col-xs-12 col-lg-9">
+                                                                                <select id="" class="resources" style="" data-placeholder="Choose a Function..." tabindex="4">
+                                                                                    <option value="r1" selected>E1 Entity</option>
+                                                                                    <option value="r2">E2 Temporal Entity</option>
+                                                                                    <option value="r3">E3 Condition State</option>
+                                                                                    <option value="r4">E4 Period</option>
+                                                                                    <option value="r5">E5 Event</option>
+                                                                                    <option value="r6">E22 Man Made Object</option>
+                                                                                </select>    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Card -->
+                                                <div id="icon-card" class="tab-pane fade">  
+                                                    <div class="panel-body card-panel-body">
+                                                        <div id="" class="card-content">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="summary-card-alert" class="panel install-card-alert"></div>
+
+                                                            <!-- Card Instruction -->
+                                                            <p id="install-instructions" class="content-instructions">
+                                                                Pick an icon for your resource
+                                                                
+                                                                <!-- Help link -->
+                                                                <span>  
+                                                                    <a id="card-help" href="" class="pull-right card-help help" style=""> Help <i class="fa fa-question-circle"></i></a>
+                                                                </span>
+                                                            </p>
+                                                            
+                                                            <!-- Form -->
+                                                            <div class="col-xs-12">
+
+                                                                <form class="widgets">
+                                                                    <div class="row widget-container">
+                                                                        <div class="form-group">
+                                                                            
 
                                                                             <!-- Icon search -->
                                                                             <div class="" style="padding-left: 10px;">
@@ -981,7 +1041,7 @@
                                                                                         Selected icon: <button class="btn btn-default btn-icon icon-lg fa fa-automobile" style="height: 35px; width: 35px;"></button>
                                                                                     </div>
                                                                                     
-                                                                                    <div class="" style="position: absolute; left: 130px; top: 21px;">
+                                                                                    <div class="" style="position: absolute; left: 130px; top: 10px;">
                                                                                         <input type="text" class="form-control" style="width: 500px; height: 36px;" placeholder="Find an icon"> 
 
                                                                                         <!-- Remove Search -->
@@ -1189,6 +1249,85 @@
                                                 </div>
 
                                                 <!-- Card -->
+                                                <div id="validation-card" class="tab-pane fade">  
+                                                    <div class="panel-body card-panel-body">
+                                                        <div id="" class="card-content">
+
+                                                            <!-- Card Level Alert -->
+                                                            <div id="summary-card-alert" class="panel install-card-alert"></div>
+
+                                                            <!-- Card Instruction -->
+                                                            <p id="install-instructions" class="content-instructions">
+                                                                Define the validation and processing functions for your resource
+                                                                
+                                                                <!-- Help link -->
+                                                                <span>  
+                                                                    <a id="card-help" href="" class="pull-right card-help help" style=""> Help <i class="fa fa-question-circle"></i></a>
+                                                                </span>
+                                                            </p>
+                                                            
+                                                            <!-- Form -->
+                                                            <div class="col-xs-12">
+
+                                                                <form class="widgets">
+                                                                    
+                                                                    <div class="row widget-container">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Validation Functions <i class="ion-ios-checkmark-outline"></i><i class="ion-ios-book add-tooltip pull-right" data-placement="top" data-toggle="tooltip" data-original-title="Show Vocabulary"></i></label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12 col-lg-9">
+                                                                                <select id="" class="resources" style="" multiple data-placeholder="Choose a Function..." tabindex="4">
+                                                                                    <option value="r1">Name is required</option>
+                                                                                    <option value="r2">Address is required</option>
+                                                                                    <option value="r3">Spatial Coordindates are required</option>
+                                                                                </select>    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row widget-container">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 col-lg-9 control-label widget-input-label" for=""> Processing Functions <i class="ion-ios-checkmark-outline"></i><i class="ion-ios-book add-tooltip pull-right" data-placement="top" data-toggle="tooltip" data-original-title="Show Vocabulary"></i></label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12 col-lg-9">
+                                                                                <select id="" class="resources" style="" multiple data-placeholder="Choose a Function..." tabindex="4">
+                                                                                    <option value="r1">Find Admin Areas</option>
+                                                                                    <option value="r2">Geocode Address</option>
+                                                                                    <option value="r3">Set QA/QC Flag</option>
+                                                                                </select>    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row widget-container" style="">
+                                                                        <div class="form-group">
+                                                                            <div class="relative" style="">
+                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> Resources that may be related:</label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-xs-12">
+                                                                                <div class="pad-hor columns">
+                                                                                    <label class="form-checkbox form-normal form-primary active form-text"><input type="checkbox" checked=""> Heritage Resource</label>
+                                                                                    <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Heritage District</label>
+                                                                                    <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Activity</label>
+                                                                                    <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Historic Event</label>
+                                                                                    <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Person/Organization</label>
+                                                                                    <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Information Object</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card -->
                                                 <div id="meta-card" class="tab-pane fade">   
                                                     <div class="panel-body card-panel-body" style="">
                                                         <div id="" class="card-content" style="">
@@ -1237,25 +1376,6 @@
                                                                                 <label class="form-radio form-normal form-text">
                                                                                     <input type="radio" name="stat-w-label"> Inactive
                                                                                 </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="row widget-container" style="">
-                                                                    <div class="form-group">
-                                                                        <div class="relative" style="">
-                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Resources that may be related:</label>
-                                                                        </div>
-                                                                        
-                                                                        <div class="col-xs-12">
-                                                                            <div class="pad-hor columns">
-                                                                                <label class="form-checkbox form-normal form-primary active form-text"><input type="checkbox" checked=""> Heritage Resource</label>
-                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Heritage District</label>
-                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Activity</label>
-                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Historic Event</label>
-                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Person/Organization</label>
-                                                                                <label class="form-checkbox form-normal form-primary form-text"><input type="checkbox"> Information Object</label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1312,35 +1432,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        
-                                            <!-- Help/Thesaurus term Panel -->
-                                            <aside id="wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel fade hidden" style="">
-                                                <div class="relative">
-                                                    <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
-                                                </div>
-                                                <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
-                                                    <div class="panel-heading">
-                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> New Basemap</h3>
-                                                    </div>
-                                                    <div class="panel-body" style="padding: 10px 10px 15px 10px;">
-                                                        <p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
-                                                    </div>
-                                                </div>
-                                            </aside>
-
-                                            <aside id="thesaurus-panel" class="card-help-panel fade hidden" style="">
-                                                <div class="relative">
-                                                    <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
-                                                </div>
-                                                <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
-                                                    <div class="panel-heading">
-                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> Thesaurus</h3>
-                                                    </div>
-                                                    <div class="panel-body" style="padding: 10px 10px 15px 10px;">
-                                                        <p>Listing of concepts (pref labels) for the associated thesaurus</p>
-                                                    </div>
-                                                </div>
-                                            </aside>
                                         </div>
 
                                         <!-- Save Input -->
@@ -1366,10 +1457,12 @@
                                 <!-- Card Filter Widget -->
                                 <div id="card-grid-tools" class="">
                                     <div class="relative ep-card-search">
-                                        <input type="text" class="form-control card-search-widget" placeholder="Find a card"> 
-
-                                        <!-- Remove Search -->
-                                        <span class="clear-search card-search-widget-icon"><i class="fa fa-times-circle"></i></span>
+                                        <select id="" class="resources" style="" data-placeholder="Choose a Function..." tabindex="4">
+                                            <option value="r1">Condition Assessment</option>
+                                            <option value="r2">Classifications</option>
+                                            <option value="r3">Measurements</option>
+                                            <option value="r4">Names</option>
+                                        </select>                                       
                                     </div>
                                 </div>
 
@@ -1698,55 +1791,55 @@
                             <div id="ep-card-tools" class="ep-card-tools" style="display: none;">
                                 <div class="panel ep-card-tools-panel">
                                     <li class="card-tree-list active">
-                                        <a href="#" class="cc-link card-container-link active" aria-expanded="true"><i class="ion-ios-folder-outline"></i> Resource Locations</a>
+                                        <a href="#" class="cc-link card-container-link active" aria-expanded="true"><i class="ion-ios-folder-outline card-tree-list-icon"></i> Resource Locations</a>
 
                                         <!--Submenu-->
                                         <ul class="card-tree-list-item" aria-expanded="true">
                                             
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline"></i> Addresses<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline card-tree-list-icon"></i> Addresses<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Address</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Address</a>
                                                     </li>
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Address Type</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Address Type</a>
                                                     </li>
                                                 </ul>
                                             </li>
 
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline"></i> Mapped Locations<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline card-tree-list-icon"></i> Mapped Locations<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Spatial Coordinates</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Spatial Coordinates</a>
                                                     </li>
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Geometry Type</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Geometry Type</a>
                                                     </li>
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Certainty</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Certainty</a>
                                                     </li>
                                                 </ul>
                                             </li>
 
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline"></i> Report Template<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link report-link" aria-expanded="true"><i class="ion-ios-book card-tree-list-icon"></i> Report Template<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Addresses</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-book-outline card-tree-list-icon"></i> Addresses</a>
                                                     </li>
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-gear"></i> Mapped Locations</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-book-outline card-tree-list-icon"></i> Mapped Locations</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -1865,7 +1958,7 @@
                                                         Functions
                                                     </div>
                                                     <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <select id="" class="functions" style="" data-placeholder="Choose a Function..." multiple tabindex="4">
+                                                        <select id="" class="functions" data-placeholder="Choose a Function..." multiple tabindex="4">
                                                             <option value="United States">Function Name 1</option>
                                                             <option value="United Kingdom">Function Name 2</option>
                                                             <option value="Afghanistan">Function Name 3</option>
@@ -1888,15 +1981,15 @@
                                     <!-- Title Block -->
                                     <div class="library-title-block">
                                         <div class="">
-                                            <h4 class="title-block-title" style=""> Card FORM </h4>
+                                            <h4 class="title-block-title" style=""> Card Manager </h4>
                                         </div>
 
                                         <!-- Panel Tools -->
                                         <div class="library-tools">
-                                            <i class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
-                                            <i class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
-                                            <i class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
-                                            <i class="ion-ios-people add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Permissions"></i>
+                                            <i id="card-crud-settings" class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                            <i id="card-crud-advanced" class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
+                                            <i id="card-crud-validation" class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
+                                            <i id="card-crud-permissions" class="ion-ios-people add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Permissions"></i>
                                             <i id="card-crud-help" class="ion-ios-help add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Help Text"></i>
                                         </div>
                                     </div>
@@ -1910,7 +2003,7 @@
                                             <!-- Card Container Name -->
                                             <div class="node-widget-label" style="">
                                                 <div class="control-label">
-                                                    Name
+                                                    Card Tab Title
                                                 </div>
                                                 <div class="col-sm-12 pad-no crud-widget-container">
                                                     <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Addresses">
@@ -1929,52 +2022,6 @@
                                         </div>    
                                     </div>
 
-                                    
-                                    <!-- Card CRUD Cardinality Form -->
-                                    <div id="ep-card-crud-cardinality" class="library-crud-container card-crud" style="display: none;">
-                                        <div id="" class="">
-
-                                            <!-- Card Container Settings -->
-                                            <div id="" class="" style="padding-bottom: 5px;">
-
-                                                <!-- Card Container Name -->
-                                                <div class="node-widget-label" style="">
-                                                    <div class="control-label">
-                                                        Cardinality
-                                                    </div>
-                                                    <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
-                                                    </div>
-                                                </div>
-
-                                                <!-- Cancel Button Title -->
-                                                <div class="node-widget-label" style="">
-                                                    <div class="control-label">
-                                                        Cancel Button Text
-                                                    </div>
-                                                    <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <input type="" placeholder="Cancel" id="" class="form-control input-md widget-input" value="">
-                                                    </div>
-                                                </div>
-
-                                                <!-- Save Button Title -->
-                                                <div class="node-widget-label" style="">
-                                                    <div class="control-label">
-                                                        Save Button Text
-                                                    </div>
-                                                    <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <input type="" placeholder="Save" id="" class="form-control input-md widget-input" value="">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-divider">
-                                                    <h4 class="title-block-title" style=""> Settings </h4>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <!-- Card CRUD Validation/Functions Form -->
                                     <div id="ep-card-crud-validation" class="library-crud-container card-crud" style="display: none;">
                                         <div id="" class="">
@@ -1987,12 +2034,28 @@
                                                     <div class="control-label">
                                                         Validation Functions
                                                     </div>
-                                                    <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    <div class="col-xs-12 pad-no crud-widget-container">
+                                                        <select id="" class="resources" style="" multiple data-placeholder="Choose a Function..." tabindex="4">
+                                                            <option value="r1">Name is required</option>
+                                                            <option value="r2">Address is required</option>
+                                                            <option value="r3">Spatial Coordindates are required</option>
+                                                        </select>    
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                
+                                            <div id="" class="" style="padding-bottom: 5px;">
+                                                <div class="node-widget-label" style="">
+                                                    <div class="control-label">
+                                                        Processing Functions
+                                                    </div>
+                                                    <div class="col-xs-12 pad-no crud-widget-container">
+                                                        <select id="" class="resources" style="" multiple data-placeholder="Choose a Function..." tabindex="4">
+                                                            <option value="r1">Find Admin Area</option>
+                                                            <option value="r2">Geocode Address</option>
+                                                        </select>    
+                                                    </div>
+                                                </div>   
                                             </div>
                                         </div>
                                     </div>
@@ -2002,24 +2065,164 @@
                                         <div id="" class="">
 
                                             <!-- Card Container Settings -->
-                                            <div id="" class="" style="padding-bottom: 5px;">
+                                            <div id="" class="" style="padding-bottom: 5px; margin-top: -14px; margin-left: -7px;">
 
-                                                <!-- Card Container Name -->
-                                                <div class="node-widget-label" style="">
-                                                    <div class="control-label">
-                                                        Validation Functions
+                                                <!-- Group/User Grid -->
+                                                <div id="user-grid" class="grid" style="">
+
+                                                    <!-- Card -->                                   
+                                                    <div id="all" class="library-card permissions all library-card-wide">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                All accounts
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle none" style="">
+                                                            Permission: ---
+                                                        </div>
                                                     </div>
-                                                    <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                
+                                                    <!-- Card -->                                   
+                                                    <div class="library-card permissions library-card-wide" style="">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                Guest
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle text-muted full" style="">
+                                                            N - No Access
+                                                        </div>
                                                     </div>
+
+                                                    <!-- Card -->                                   
+                                                    <div class="library-card permissions library-card-wide">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                Crowd Source
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle full" style="">
+                                                            RW - Read/Write
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Card -->                                   
+                                                    <div class="library-card permissions library-card-wide">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                Editor
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle full" style="">
+                                                            F -Full Access
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Card -->                                   
+                                                    <div class="library-card permissions library-card-wide">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-group"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                RDM Admin
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle read" style="">
+                                                            R -Read Only
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Card -->                                   
+                                                    <div class="library-card permissions library-card-wide">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="fa fa-user"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                rgaston@realsuperuser.com
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle full" style="">
+                                                            F - Full Access
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Card -->                                   
+                                                    <div class="library-card permissions library-card-wide">
+                                                        <div class="library-icon" style="">
+                                                            <span class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="fa fa-user"></i></span>
+                                                        </div>
+                                                        <div class="library-card-main" style="">
+                                                            <a id="" class="" style="" href="#">
+                                                                adalgity@gci.edu
+                                                            </a>
+                                                        </div>
+                                                        <div class="library-card-subtitle delete" style="">
+                                                            D - Delete
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
-                                                
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Card CRUD Validation/Functions Form -->
+                                    <!-- Card CRUD ADVANCED SETTINGS Form -->
+                                    <div id="ep-card-crud-advanced" class="library-crud-container card-crud" style="display: none;">
+
+                                        <!-- Enable help -->
+                                        <div class="toggle-container">
+                                            <input id="card-cardinality" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
+                                            <p class="arches-toggle-sm">
+                                                Allow multiple values
+                                            </p>
+                                            <span class="arches-toggle-subtitle">
+                                                Let users enter multiple values for this data entry card
+                                            </span>
+                                        </div>
+
+                                        <!-- Multiple values tools -->
+                                        <div class="cardinality-form" style="display: none;">
+
+                                            <div class="form-divider" style="margin-top: 0px; margin-bottom: 10px;"></div>
+
+                                            <!-- Cardinlity Tools: add button -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Save Button Text
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Add">
+                                                </div>
+                                            </div>
+
+                                            <!-- Cardinlity Tools: Tile Header -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Tile Name
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Tile name" id="" class="form-control input-md widget-input" value="[Address], [Address Type]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card CRUD HELP Form -->
                                     <div id="ep-card-crud-help" class="library-crud-container card-crud" style="display: none;">
 
                                         <!-- Enable help -->
@@ -2032,28 +2235,102 @@
                                                 Provide specific user guidance for this card
                                             </span>
                                         </div>
-
-                                        <!-- Preview help -->
-                                        <div class="toggle-container">
-                                            <input id="preview-card-help" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
-                                            <p class="arches-toggle-sm">
-                                                Preview Help Panel
-                                            </p>
-                                            <span class="arches-toggle-subtitle">
-                                                Display help panel, confirm content
-                                            </span>
-                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Tertiary Panel For Card Help Text-->
                                 <div id="help-text-crud" class="tertiary-panel" style="display: none;">
                                     <div class="tertiary-panel-content">
-                                        Yo!
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Card-Level Help </h4>
+                                        </div>
 
+                                        <!-- Help CRUD -->
+                                        <div class="pad-all">
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Help Panel Title
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Title">
+                                                </div>
+                                            </div>
+
+                                            <!--Summernote-->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Help Content
+                                                </div>
+                                                <div id="help-editor"></div>
+                                            </div>
+
+                                            <!-- Preview help -->
+                                            <div class="toggle-container">
+                                                <input id="preview-card-help" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
+                                                <p class="arches-toggle-sm">
+                                                    Preview Help Panel
+                                                </p>
+                                                <span class="arches-toggle-subtitle">
+                                                    Display help panel, confirm content
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
+                                <!-- Tertiary Panel For Permissions -->
+                                <div id="permissions-crud" class="tertiary-panel" style="display: none;">
+                                    <div class="tertiary-panel-content">
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Card Permissions </h4>
+                                            <div class="relative">
+                                                <a id="permissions-close" href="" class="library-close-btn fa fa-times fa-lg" style=""></a>
+                                            </div>
+                                            <div id="" class="" style="padding-top: 20px; position: relative;">
+                                                <p class="library-instructions" style=""> Set permissions for this data entry card.  Update the Groups/User accounts you selected with the following permissions:</p>
+                                            </div>
+                                        </div>
+                                     
+                                        <!-- Premission Selector -->
+                                        <div class="col-sm-12 pad-no node-attribute-label" style="margin-top: 8px;">
+                                            <select class="resources" data-placeholder="" id="permissions" tabindex="0">
+                                                <option>N - No Access</option>
+                                                <option>R - Read Only</option>
+                                                <option>RW -Read/Write</option>
+                                                <option>D - Delete</option>
+                                                <option>F - Full Access (read, write, delete)</option>
+                                            </select>
+
+                                            <div class="" style="margin: 5px 0px 10px 2px;">
+                                                <label class="form-checkbox form-normal form-primary active form-text"><input type="checkbox" checked=""> Apply permissions to all cards in this group</label>
+                                            </div>
+
+                                            <button id="apply-permissions" class="btn btn-primary btn btn-block btn-labeled fa fa-plus" style="margin-top: 10px; margin-bottom: 10px;"> Apply permissions</button>
+                                        </div>
+
+                                        <!-- Premission Key -->
+                                        <div id="confirm-permissions" class="key" style="display: none;">
+                                            
+                                            <h4 class="node-title" style="font-size: 13px;"> Applying F- Full Access permissions: </h4>
+
+                                            <!-- Alert -->
+                                            <div id="permission-alert" class="panel install-card-alert" style="margin-bottom: 10px;"></div>
+
+                        
+                                            <div id="" class="panel-body" style="padding: 0 10px 10px 10px;">
+                                                <dl>
+                                                    <dd><i class="fa fa-check"></i> Guests Group updated</dd>
+                                                    <dd><i class="fa fa-check"></i> Crowd Source Group updated</dd>
+                                                    <dd><i class="fa fa-times"></i> rgaston@superuser.com <a id="" class="text-primary permission-alert" href="#">IGNORED</a></dd>
+                                                    <dd><i class="fa fa-check"></i> adalgity@gci.edu updated</dd>
+                                                </dl>
+                                            </div>
+                                            <div class="" style="">
+                                                <dt>Permission updates completed!</dt>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
 
@@ -2065,7 +2342,7 @@
                                     <!-- Title Block -->
                                     <div class="library-title-block">
                                         <div class="">
-                                            <h4 class="title-block-title" style=""> Widget FORM </h4>
+                                            <h4 class="title-block-title" style=""> Widget Manager </h4>
                                         </div>
 
                                         <!-- Panel Tools -->
@@ -2082,42 +2359,24 @@
                                         <!-- Card Container Settings -->
                                         <div id="" class="" style="padding-bottom: 5px;">
 
-                                            <!-- Card Container Name -->
-                                            <div class="node-widget-label" style="">
+                                            <!-- Widget Label -->
+                                            <div class="node-widget-label">
                                                 <div class="control-label">
-                                                    Name
+                                                    Widget Label
                                                 </div>
                                                 <div class="col-sm-12 pad-no crud-widget-container">
-                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                                                    <input type="" placeholder="Widget Label" id="" class="form-control input-md widget-input" value="Address">
                                                 </div>
                                             </div>
 
-                                            <div class="form-divider">
-                                                <h4 class="title-block-title" style=""> Settings </h4>
-                                            </div>
-
-                                            <!-- Visible -->
-                                            <div class="" style="padding-bottom: 15px; padding-right: 15px;">
-
-                                                <input id="card-container-visibility" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
-                                                <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
-                                                    Visible
-                                                </p>
-                                                <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
-                                                    Show this card by default
-                                                </span>
-                                            </div>
-
-                                            <!-- Active -->
-                                            <div class="" style="padding-bottom: 15px;">
-
-                                                <input id="card-container-active" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
-                                                <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
-                                                    Active
-                                                </p>
-                                                <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
-                                                    This card is active and can be used for data entry
-                                                </span>
+                                            <!-- Widget Label -->
+                                            <div class="node-widget-label">
+                                                <div class="control-label">
+                                                    Placeholder
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Address" id="" class="form-control input-md widget-input" value="Enter an address">
+                                                </div>
                                             </div>
                                         </div>    
                                     </div>
@@ -2209,6 +2468,71 @@
                             </div>
 
 
+                            <!-- REPORT TILE Card CRUD -->
+                            <div id="ep-report-crud" class="ep-card-crud" style="display: none;">
+                                <div class="panel ep-card-crud-panel relative">
+                                    
+                                    <!-- Title Block -->
+                                    <div class="library-title-block">
+                                        <div class="">
+                                            <h4 class="title-block-title" style=""> Report Manager </h4>
+                                        </div>
+
+                                        <!-- Panel Tools -->
+                                        <div class="library-tools">
+                                            <i id="card-crud-settings" class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                            <i id="card-crud-advanced" class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Report Tile Settings Form -->
+                                    <div id="ep-card-crud-settings" class="library-crud-container card-crud" style="">
+                                        
+                                        <!-- Card Container Settings -->
+                                        <div id="" class="" style="padding-bottom: 5px;">
+
+                                            <!-- Card Container Name -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Report Title
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Addresses">
+                                                </div>
+                                            </div>
+
+                                            <!-- Card Instructions -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Template
+                                                </div>
+                                                <div class="col-sm-12" style="padding: 0px 15px 15px 0px;">
+                                                    <select class="resources" data-placeholder="" id="" tabindex="0">
+                                                        <option>Arches Default Report</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+
+                                    <!-- XXXXXX -->
+                                    <div id="ep-card-crud-help" class="library-crud-container card-crud" style="display: none;">
+
+                                        <!-- Enable help -->
+                                        <div class="toggle-container">
+                                            <input id="enable-card-help" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
+                                            <p class="arches-toggle-sm">
+                                                Enable Card-level help
+                                            </p>
+                                            <span class="arches-toggle-subtitle">
+                                                Provide specific user guidance for this card
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <!-- Card Preview -->
                             <div id="card-preview" class="ep-card-preview" style="display: none;">
 
@@ -2265,7 +2589,7 @@
                                                                 
                                                                 <!-- Help link -->
                                                                 <span>  
-                                                                    <a id="add-basemap-wizard-help-link" href="" class="pull-right card-help help editable-help" style=""> Help <i class="fa fa-question-circle"></i></a>
+                                                                    <a id="card-help-link" href="" class="pull-right card-help help editable-help" style="display: none;"> Help <i class="fa fa-question-circle"></i></a>
                                                                 </span>
                                                             </p>
                                                             
@@ -2283,7 +2607,7 @@
                                                                             </div>
                                                                             
                                                                             <div class="col-xs-12">
-                                                                                <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                                                <input type="" placeholder="Enter an address" id="" class="form-control input-lg widget-input">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -2297,27 +2621,27 @@
                                                                             </div>
                                                                             
                                                                             <div class="col-xs-12">
-                                                                                <select id="" class="design" style="height: 32px; display: none;" data-placeholder="Choose a Function..." tabindex="-1">
+                                                                                <select id="" class="design" style="height: 32px; display: none;" data-placeholder="Choose a Type..." tabindex="-1">
                                                                                     
-                                                                                </select><div class="chosen-container chosen-container-single design chosen-container-single-nosearch" style="width: 100%;" title=""><a class="chosen-single chosen-default" tabindex="-1"><span>Choose a Function...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly="" tabindex="4"></div><ul class="chosen-results"></ul></div></div>
+                                                                                </select><div class="chosen-container chosen-container-single design chosen-container-single-nosearch" style="width: 100%;" title=""><a class="chosen-single chosen-default" tabindex="-1"><span>Choose a type...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly="" tabindex="4"></div><ul class="chosen-results"></ul></div></div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </form>
 
                                                                 <!-- Save/Add Button -->
-                                                                <div class="install-buttons">
-                                                                    <button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-plus btn-editable" style=""> Save</button>
+                                                                <div id="card-save-tile-btn" class="install-buttons" style="display: none;">
+                                                                    <button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-plus"> Add</button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <!-- Card-level tiles (only neccessary for tiles with Cardinality of n) -->
-                                                    <div class="list-group hidden" style="margin: 0px 15px 30px 10px;">
+                                                    <div id="card-save-tile-list" class="list-group" style="margin: 0px 15px 30px 10px; display: none;">
                                                         <!-- Record -->
                                                         <div id="record-1" class="tile-record list-group-item" style="cursor: pointer; background: rgb(250, 250, 250);">
-                                                            Record Summary: First widget label, value
+                                                            [Address], [Address Type]
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2327,39 +2651,24 @@
                                                     <div class="panel-body card-panel-body" style="">
                                                         <div id="" class="card-content" style="">
 
-                                                            <!-- Card Level Alert -->
-                                                            <div id="db-connection-alert" class="panel install-card-alert" style=""></div>
+                                                            <div class="">
 
-                                                            <div class="relative" style="height: 210px; background: #f4f4f4; border: 1px solid #ddd; margin: -40px 15px 20px 0px; border-radius: 2px; padding: 5px 25px;">
-
-                                                                <div class="box-vmiddle bg-trans pad-all text-center card-wz-add-record" style="border-width: 0px; float: left; margin: 2px; max-width: 250px;">
-                                                                        
-                                                                    <div class="" style="margin-top: 30px;">
-                                                                        <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
-                                                                            <i class="text-center fa fa-plus fa-4x" style="color: #fff; height: 56px; width: 56px; transform: translate(0, 5px);"></i>
-                                                                        </span>
-                                                                    </div>  
-                                                                </div>
-
-                                                                <div class="" style="position: absolute; top: 65px; left: 220px;">
-                                                                    <h3 class="text-thin" style="margin-top: 10px; margin-bottom: 5px; padding-right: 40px;"> Drag and drop a data type here. </h3><br>
-                                                                    <p class="" style="font-size: 12px; margin-top: -15px; color: #aaa; padding-right: 20px;">Data types define a set of related information and the necessary data entry widgets.
-                                                                    </p>
-                                                                </div>
+                                                                Yo, new map!
                                                             </div>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         
                                             <!-- Help/Thesaurus term Panel -->
-                                            <aside id="add-basemap-wizard-help" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
+                                            <aside id="card-help-panel" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
                                                 <div class="relative">
                                                     <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
                                                 </div>
                                                 <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
                                                     <div class="panel-heading">
-                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> New Basemap</h3>
+                                                        <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> Title</h3>
                                                     </div>
                                                     <div class="panel-body" style="padding: 10px 10px 15px 10px;">
                                                         <p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
@@ -2389,6 +2698,146 @@
                                             </span>
                                             
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Card Report Preview -->
+                            <div id="report-preview" class="ep-card-preview" style="display: none;">
+                                    
+                                <div id="" class="panel card-panel" style="border: 1px solid #ddd; border-bottom-width: 0px; padding-bottom: 30px; margin-bottom: 60px;">
+
+                                    <div class="panel-heading">
+                                        <div class="" style="">
+                                            <h3 id="cc-title-report" class="panel-title card-main-title">Resource Locations</h3>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cards -->
+                                    <div class="panel-body" style="padding: 10px 20px 30px 20px;">
+
+                                        <!-- Card Report  -->
+                                        <ul class="report" style="list-style: none;">
+                                            
+                                            <!-- Tile (Wizard Level)  -->
+                                            <li class="" style="">
+                                                <div class="row" style="">
+                                                    <!-- Section Title -->
+                                                    <div class="col-sm-3">
+                                                        <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Addresses</h4>
+                                                    </div>
+
+                                                    <!-- Section Data -->
+                                                    <div class="col-sm-9" style="padding-top: 10px;">
+                                                        <dl class="dl-horizontal">
+                                                            <dt>Address</dt>
+                                                            <dd>[value]</dd>
+                                                            <dt>Type</dt>
+                                                            <dd>[value]</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card Report -->
+                                                <div class="row" style="">
+                                                    <!-- Section Title -->
+                                                    <div class="col-sm-3">
+                                                        <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Images</h4>
+                                                    </div>
+
+                                                    <!-- Section Data -->
+                                                    <div class="col-sm-9" style="padding-top: 10px;">
+                                                        <!-- Isotope Layout -->
+                                                        <div id="report-image-grid" class="report-image-grid">
+                                                            <div class="report-grid-item">
+                                                                <a href="http://www.flickr.com/photos/nemoorange/5013646314/" target="blank_" title="Take My Portrait by Dave DeSandro, on Flickr"><img src="http://farm5.static.flickr.com/4124/5013646314_c7eaf84918.jpg" alt="Take My Portrait"></a>
+                                                            </div>
+                                                            <div class="report-grid-item">
+                                                                <a href="http://www.flickr.com/photos/nemoorange/5013039541/" target="blank_" title="Giraffe by Dave DeSandro, on Flickr"><img src="http://farm5.static.flickr.com/4144/5013039541_17f2579e33.jpg" alt="Giraffe"></a>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card Report -->
+                                                <div class="row" style="">
+                                                    <!-- Section Title -->
+                                                    <div class="col-sm-3">
+                                                        <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Map Example</h4>
+                                                    </div>
+
+                                                    <!-- Section Data -->
+                                                    <div class="col-sm-9" style="padding-top: 10px; margin-bottom: 20px;">
+                                                        
+                                                        <!-- Map Widget -->
+                                                        <div class="col-xs-12 relative" style="margin: 0px; padding: 0px;">
+                                                            
+                                                            <div id="demo-marker-map" class="hidden" style="height:300px"></div>
+
+                                                            <div id="map" class="map" style="height: 400px; border: 1px solid #ddd;"></div>
+                                                                
+                                                            <!-- Legend -->
+                                                            <div class="" style="position: absolute; top: 0px; right: 0px; width: 220px; bottom: 0px; background: rgba(0, 0, 0, 0.18); color: #fff; z-index: 300;">
+                                                                <div class="pad-all" style="">
+                                                                    <h4 class="panel-section-title" style="">Legend</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card Report -->
+                                                <div class="row" style="">
+                                                    <!-- Section Title -->
+                                                    <div class="col-sm-3">
+                                                        <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Threats</h4>
+                                                    </div>
+
+                                                    <!-- Section Data -->
+                                                    <div class="col-sm-9" style="padding-top: 10px;">
+                                                        <dl class="dl-horizontal">
+                                                            <dt>Threats</dt>
+                                                            <dd>Lightning strikes, Locusts, Plague, Flooding, Major Earthquake, Landslide, Zombie Apocalypse</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card Report -->
+                                                <div class="row" style="">
+                                                    <!-- Section Title -->
+                                                    <div class="col-sm-3">
+                                                        <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Disturbances</h4>
+                                                    </div>
+
+                                                    <!-- Section Data -->
+                                                    <div class="col-sm-9" style="padding-top: 10px;">
+                                                        <dl class="dl-horizontal">
+                                                            <dt>Disturbances</dt>
+                                                            <dd>Looting, Agriculture, Demolition</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Card Report -->
+                                                <div class="row" style="">
+                                                    <!-- Section Title -->
+                                                    <div class="col-sm-3">
+                                                        <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Recommendations</h4>
+                                                    </div>
+
+                                                    <!-- Section Data -->
+                                                    <div class="col-sm-9" style="padding-top: 10px;">
+                                                        <dl class="dl-horizontal">
+                                                            <dt>Management Recommendations</dt>
+                                                            <dd>Excavation, Fencing, Aerial Survey</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -2828,6 +3277,9 @@
     Detailed information and more samples can be found in the document.
 
     -->
+
+    <!--Summernote [ OPTIONAL ]-->
+    <script src="plugins/summernote/summernote.min.js"></script>
 
     <!-- Grid Libraries -->
     <script src="plugins/isotope/isotope.pkgd.min.js"></script>

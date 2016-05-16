@@ -25,7 +25,7 @@
  		//Toogle display of menu panel
  		$(".ep-help").toggle();
 	});
-
+	
 
 
 // Resource Grid Item Highlight
@@ -126,8 +126,15 @@
 	new Switchery(document.getElementById('card-active'), {size: 'small'});
 
 	//Card CRUD forms
+	new Switchery(document.getElementById('card-cardinality'), {size: 'small',});
+
+
 	new Switchery(document.getElementById('enable-card-help'), {size: 'small',});
 	new Switchery(document.getElementById('preview-card-help'), {size: 'small',});
+
+
+
+	
 
 
 // chosen
@@ -223,6 +230,10 @@
 
 		$( this ).addClass("active");
 
+		//Toogle Card Preview and Report Previews
+		$("#card-preview").fadeIn();
+		$("#report-preview").fadeOut();
+
 	});
 
 	$('.card-widget-link').on('click', function (ev) {
@@ -243,6 +254,10 @@
 
 		$( this ).addClass("active");
 
+		//Toogle Card Preview and Report Previews
+		$("#card-preview").fadeIn();
+		$("#report-preview").fadeOut();
+
 	});
 
 	$('.card-container-link').on('click', function (ev) {
@@ -262,11 +277,137 @@
 
 		$( this ).addClass("active");
 
+		//Toogle Card Preview and Report Previews
+		$("#card-preview").fadeIn();
+		$("#report-preview").fadeOut();
+
 	});
+
+	//Card Help Panel
+	$('#enable-card-help').change(function() {
+        
+		// If user enables Card Level Help, show help CRUD form and Help link
+        if($(this).is(":checked")) {
+            $("#help-text-crud").fadeIn();
+            $("#card-help-link").fadeIn();
+        } else {
+        	$("#help-text-crud").fadeOut();
+        	$("#card-help-link").fadeOut();
+        }    
+    });
+
+	// Help WYSIWYG Editor
+    $('#help-editor').summernote({height: 250});
+    //$('.note-toolbar .note-insert, .note-toolbar .note-table, .note-toolbar .note-style:first, .note-toolbar .note-para').remove();
+	
+
+    //Preview Help Panel
+    $('#preview-card-help').change(function() {
+        
+		// If user enables Card Level Help, show help CRUD form
+        if($(this).is(":checked")) {
+            $("#card-help-panel").fadeIn();
+        } else {
+        	$("#card-help-panel").fadeOut();
+        }    
+    });
+
+
+    //Card-Level Cardinality Panel
+	$('#card-cardinality').change(function() {
+        
+		// If user enables Card Level Help, show help CRUD form and Help link
+        if($(this).is(":checked")) {
+            $(".cardinality-form").fadeIn();
+            $("#card-save-tile-btn").fadeIn();
+            $("#card-save-tile-list").fadeIn();
+        } else {
+        	$(".cardinality-form").fadeOut();
+        	$("#card-save-tile-btn").fadeOut();
+        	$("#card-save-tile-list").fadeOut();
+        }    
+    });
 
 
 
 // Manage Toggles for CARD crud form
+	$('#card-crud-settings').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide All CARD toggle forms, de-active currently active tool icon
+		$( ".ep-card-crud-panel .card-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( "#help-text-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		//Show SETTINGS form, update tool display
+		$("#ep-card-crud-settings").fadeIn();
+		$('#card-crud-settings').addClass("active");
+	});
+
+	$('#card-crud-advanced').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide All CARD toggle forms, de-active currently active tool icon
+		$( ".ep-card-crud-panel .card-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( "#help-text-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		//Show ADVANCED SETTINGS form, update tool display
+		$("#ep-card-crud-advanced").fadeIn();
+		$('#card-crud-advanced').addClass("active");
+	});
+
+	$('#card-crud-validation').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide All CARD toggle forms, de-active currently active tool icon
+		$( ".ep-card-crud-panel .card-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( "#help-text-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		//Show VALIDATION form, update tool display
+		$("#ep-card-crud-validation").fadeIn();
+		$('#card-crud-validation').addClass("active");
+	});
+
+	$('#card-crud-permissions').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide All CARD toggle forms, de-active currently active tool icon
+		$( ".ep-card-crud-panel .card-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( "#help-text-crud" ).each(function() {
+			$( this ).fadeOut();
+		});
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		//Show PERMISSIONS form, update tool display
+		$("#ep-card-crud-permissions").fadeIn();
+		$('#card-crud-permissions').addClass("active");
+	});
+
+
 	$('#card-crud-help').on('click', function (ev) {
 		ev.preventDefault();
 		
@@ -278,11 +419,9 @@
 			$( this ).removeClass("active");
 		});
 
-		//Show Card CRUD help form, update tool display
+		//Show HELP form, update tool display
 		$("#ep-card-crud-help").fadeIn();
 		$('#card-crud-help').addClass("active");
-
-
 	});
 
 
@@ -364,6 +503,125 @@
 		$("#menu-panel").toggle();
 
 	});
+
+
+
+// Report Tile
+	//Show Card level CRUD Form
+	$('.report-link').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Hide Any Card Container or Widget Forms
+		$("#ep-card-container-crud").fadeOut();
+		$("#ep-widget-crud").fadeOut();
+
+		//Show Report Tile CRUD
+		$("#ep-report-crud").fadeIn();
+
+		//remove all "active" links, active this link
+		$( ".cc-link" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		$( this ).addClass("active");
+
+		//Toogle Card Preview and Report Previews
+		$("#card-preview").fadeOut();
+		$("#report-preview").fadeIn();
+		
+
+	});
+
+
+// Permissions Functions
+	//	Library Panel
+	$('#permissions-close').on('click', function (ev) {
+		ev.preventDefault();
+		$('#permissions-crud').fadeOut();
+
+		//"unselect" permissions items
+		$( "#user-grid>div" ).each(function() {
+	    	$( this ).removeClass( "selected-card" );
+	  	});
+	});
+
+	
+	$('.library-card.permissions').on('click', function (ev) {
+		ev.preventDefault();
+		$(this).toggleClass("selected-card");
+		$('#permissions-crud').fadeIn();
+
+		//console.log('permission card clicked')
+	});
+
+
+	$('.library-card.graph-library').on('click', function (ev) {
+		ev.preventDefault();
+
+		// Clear all selected branches
+		$( "#branch-grid>div" ).each(function() {
+	    	$( this ).removeClass( "selected-card" );
+	  	});
+
+	  	//Highlight selected branch
+		$(this).toggleClass("selected-card");
+		$('#branch-panel').fadeIn(100, "linear");
+
+		//console.log('permission card clicked')
+	});
+
+
+	$('.library-card.node-list').on('click', function (ev) {
+		ev.preventDefault();
+		$(this).toggleClass("selected-card");
+	});
+
+
+	$('#apply-permissions').on('click', function (ev) {
+		ev.preventDefault();
+		$('#confirm-permissions').fadeIn();
+	});
+
+
+	$('#clear-user-selection').on('click', function (ev) {
+		ev.preventDefault();
+	  	$( "#user-grid>div" ).each(function() {
+	    	$( this ).removeClass( "selected-card" );
+	  	});
+	});
+
+
+	$('#clear-node-selection').on('click', function (ev) {
+		ev.preventDefault();
+	  	$( "#node-grid>div" ).each(function() {
+	    	$( this ).removeClass( "selected-card" );
+	  	});
+	});
+
+
+//	Toggle all accounts when user selects "all"
+	$('#all').on('click', function (ev) {
+		ev.preventDefault();
+
+		if ($('#all').hasClass("selected-card")) {
+		    $( "#user-grid>div" ).each(function() {
+		    	$( this ).addClass( "selected-card" );
+		  	});
+		
+		} else { 
+		    console.log("update accounts to selected");
+		    $( "#user-grid>div" ).each(function() {
+		    	$( this ).removeClass( "selected-card" );
+		  	});
+		}
+
+	});
+
+
+
+
+
+
 
 
 
@@ -536,24 +794,6 @@
 
 // Form Manager Events
 
-	// Manage display of form grid and card preview
-	$('.form-item').on('click', function (ev) {
-		ev.preventDefault();
-		$("label[for=toggle-forms]").trigger('click');	
-	});
-
-
-	$("label[for=toggle-forms]").on('click', function(){
-
-		//Toggle display to card preview, 
-		$("#form-grid").toggle(350);
-		$("#form-preview").toggle(350);
-
-		//Toggle toolbar display
-		$("#form-grid-tools").toggle(350);
-		$("#form-preview-tools").toggle(350);
-
-	});
 
 
 	// Show Card library on "cards" tab click
@@ -569,22 +809,6 @@
 
 
 
-
-
-$('.ion-ios-trash').on('click', function(ev){
-	//console.log("trashing");
-	ev.preventDefault();
-
-	//push content to accomodate alert
-	$('#external-page-content').addClass('slide-down');
-
-    $.niftyNoty({
-        type: 'danger',
-        container : '#edit-page-alert',
-        html : '<h4 class="alert-title">Oh snap! You got an error!</h4><p class="alert-message">Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p><div class="mar-top"><button type="button" class="btn btn-danger" data-dismiss="noty">Close this notification</button></div>',
-        closeBtn : false
-    });
-});
 
 
 

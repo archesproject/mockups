@@ -211,6 +211,28 @@
 
 
 //Manage Card Crud Forms
+	$('#forms-btn').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Toogle Form/Report TOCs
+		$("#card-management-forms").fadeIn();
+		$("#card-management-reports").fadeOut();
+
+		$(".report-link").click();
+
+	});
+
+	$('#reports-btn').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Toogle Form/Report TOCs
+		$("#card-management-forms").fadeOut();
+		$("#card-management-reports").fadeIn();
+
+		$(".report-link").click();
+	});
+
+
 
 	//Show Card level CRUD Form
 	$('.card-link').on('click', function (ev) {

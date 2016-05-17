@@ -1685,16 +1685,7 @@
                                                             <!-- card Tools -->
                                                             <div class="panel-footer" style="height: 40px;">
                                                                 <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
-                                                                <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
-                                                                    <ul class="dropdown-menu pull-right">
-                                                                    <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
-                                                                    </li>
-                                                                    <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
-                                                                    </li>
-                                                                    <li class="divider"></li>
-                                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
-                                                                    </li>
-                                                                </ul>
+                                                                <i class="ion-plus-circled add-tooltip pull-right" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Data Widget"></i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1725,16 +1716,7 @@
                                                             <!-- card Tools -->
                                                             <div class="panel-footer" style="height: 40px;">
                                                                 <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
-                                                                <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
-                                                                    <ul class="dropdown-menu pull-right">
-                                                                    <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
-                                                                    </li>
-                                                                    <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
-                                                                    </li>
-                                                                    <li class="divider"></li>
-                                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
-                                                                    </li>
-                                                                </ul>
+                                                                <i class="ion-plus-circled add-tooltip pull-right" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Data Widget"></i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1761,16 +1743,7 @@
                                                             <!-- card Tools -->
                                                             <div class="panel-footer" style="height: 40px;">
                                                                 <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
-                                                                <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
-                                                                    <ul class="dropdown-menu pull-right">
-                                                                    <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
-                                                                    </li>
-                                                                    <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
-                                                                    </li>
-                                                                    <li class="divider"></li>
-                                                                    <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
-                                                                    </li>
-                                                                </ul>
+                                                                <i class="ion-plus-circled add-tooltip pull-right" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Data Widget"></i>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1789,7 +1762,21 @@
 
                             <!-- Card Preview Tools -->
                             <div id="ep-card-tools" class="ep-card-tools" style="display: none;">
-                                <div class="panel ep-card-tools-panel">
+                                
+                                <!-- Toggle form/report TOC -->
+                                <div class="">
+                                    <ul id="card-management" class="nav nav-tabs">
+                                        <li class="active">
+                                            <a id="forms-btn" class="form-report-tab text-center" data-toggle="tab" href="#demo-lft-tab-1"><i class="ion-clipboard card-nav-icon" style=""></i> Forms</a>
+                                        </li>
+                                        <li>
+                                            <a id="reports-btn" class="form-report-tab text-center" data-toggle="tab" href="#demo-lft-tab-2"><i class="ion-document-text card-nav-icon" style=""></i> Reports</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- TOC Cards/Widgets -->
+                                <div id="card-management-forms" class="panel ep-card-tools-panel">
                                     <li class="card-tree-list active">
                                         <a href="#" class="cc-link card-container-link active" aria-expanded="true"><i class="ion-ios-folder-outline card-tree-list-icon"></i> Resource Locations</a>
 
@@ -1828,18 +1815,47 @@
                                                     </li>
                                                 </ul>
                                             </li>
+                                        </ul>
+                                    </li>
+                                </div>
 
+                                <!-- TOC Reports -->
+                                <div id="card-management-reports" class="panel ep-card-tools-panel" style="display: none;">
+                                    <li class="card-tree-list active">
+                                        <a href="#" class="cc-link card-container-link report-link active" aria-expanded="true"><i class="ion-ios-book card-tree-list-icon"></i> Report Template</a>
+
+                                        <!--Submenu-->
+                                        <ul class="card-tree-list-item" aria-expanded="true">
+                                            
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
-                                                <a href="#" class="cc-link card-link report-link" aria-expanded="true"><i class="ion-ios-book card-tree-list-icon"></i> Report Template<i class="arrow"></i></a>
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-book-outline card-tree-list-icon"></i> Addresses<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-book-outline card-tree-list-icon"></i> Addresses</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Address</a>
                                                     </li>
                                                     <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-book-outline card-tree-list-icon"></i> Mapped Locations</a>
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Address Type</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <!-- Card Entry -->
+                                            <li class="card-tree-list">
+                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-book-outline card-tree-list-icon"></i> Mapped Locations<i class="arrow"></i></a>
+
+                                                <!--Submenu-->
+                                                <ul class="card-tree-list-item" aria-expanded="true">
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Spatial Coordinates</a>
+                                                    </li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Geometry Type</a>
+                                                    </li>
+                                                    <li class="card-tree-list">
+                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Certainty</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -2740,7 +2756,7 @@
                                                 </div>
 
                                                 <!-- Card Report -->
-                                                <div class="row" style="">
+                                                <div class="row hidden" style="">
                                                     <!-- Section Title -->
                                                     <div class="col-sm-3">
                                                         <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Images</h4>

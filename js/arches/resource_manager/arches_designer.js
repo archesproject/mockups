@@ -641,7 +641,34 @@
 
 
 
+// Alert Panel Example
+	// Show Alert on discard edits
+	$('#card-grid-controls-btn-discard').on('click', function (ev) {
+		ev.preventDefault();
 
+		// Show Alert Panel
+		$('#card-alert-panel').fadeIn(600, "linear");
+
+
+		//Add shim to card container
+		$('#ep-card-crud').addClass("ep-form-alert-shim");
+
+	});
+
+	//dismiss alert
+	$('.ep-form-alert-default-dismiss').on('click', function (ev) {
+		ev.preventDefault();
+
+		// Show Alert Panel
+		$('#card-alert-panel').fadeOut(600, "linear");
+
+
+		//Add shim to card container
+		$('#ep-card-crud').removeClass("ep-form-alert-shim");
+
+	});
+
+	
 
 
 

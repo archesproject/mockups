@@ -220,7 +220,7 @@
 		$("#ep-form-crud-manager").toggle();
 
 		$("#ep-settings-form-crud").toggle();
-		$("#form-id-card").toggle();
+		$("#form-members-card").toggle();
 		
 
 		

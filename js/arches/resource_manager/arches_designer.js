@@ -209,6 +209,28 @@
 	});
 
 
+	// Manage display of form grid and form preview
+	$('.form-grid-item').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#form-grid").toggle();
+		$("#ep-form-crud-container").toggle();
+		$("#ep-form-crud").toggle();
+		$("#ep-form-crud-manager").toggle();
+
+		$("#ep-settings-form-crud").toggle();
+		$("#form-id-card").toggle();
+		
+
+		
+		//Update Card Toolbar
+		$("#form-grid-controls-btn-discard").toggle();
+		$("#form-grid-controls-btn-save").toggle();
+
+	});
+
+
 
 //Manage Card Crud Forms
 	$('#forms-btn').on('click', function (ev) {
@@ -527,6 +549,56 @@
 	});
 
 
+	//Form Manager Menu
+	$('#form-manager').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Manage form manager CRUD forms
+		$( ".fade .in" ).each(function() {
+			$( this ).css( "display", "none" );
+		});
+
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#form-library").toggle();
+
+		//Update Menu display: remove 'selected' class from currently active menu item, set settings-manager to 
+		//selected
+		$( ".edit-menu-item.selected" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$('#form-manager').addClass('selected');
+
+		//close menu
+		$("#menu-panel").toggle();
+
+	});
+
+
+	//Reports Manager Menu
+	$('#report-manager').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close the currently open panel, then open form manager
+		$( ".fade .in" ).each(function() {
+			$( this ).css( "display", "none" );
+		});
+
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#report-library").toggle();
+
+		//Update Menu display: remove 'selected' class from currently active menu item, set settings-manager to 
+		//selected
+		$( ".edit-menu-item.selected" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+		$('#report-manager').addClass('selected');
+
+		//close menu
+		$("#menu-panel").toggle();
+
+	});
+
+
 
 // Report Tile
 	//Show Card level CRUD Form
@@ -651,7 +723,7 @@
 
 
 		//Add shim to card container
-		$('#ep-card-crud').addClass("ep-form-alert-shim");
+		$('#ep-card-crud-container').addClass("ep-form-alert-shim");
 
 	});
 
@@ -664,9 +736,12 @@
 
 
 		//Add shim to card container
-		$('#ep-card-crud').removeClass("ep-form-alert-shim");
+		$('#ep-card-crud-container').removeClass("ep-form-alert-shim");
 
 	});
+
+
+
 
 	
 

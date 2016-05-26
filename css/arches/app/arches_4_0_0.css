@@ -3554,6 +3554,7 @@ li.card-tree-list:last-of-type {
 
 .data-widget-library {
 	width: 280px;
+	list-style: none;
 }
 
 
@@ -4053,6 +4054,7 @@ li.search-field {
 
 .ep-form-alert-default-dismiss:hover {
 	cursor: pointer;
+	color: #f9f9f9;
 }
 
 .ep-form-alert-buttons {
@@ -4060,6 +4062,86 @@ li.search-field {
 	bottom: 10px;
 	right: 25px;
 }
+
+.card-drag-panel {
+	position: absolute;
+	top: 10px;
+	left: 290px;
+	width: calc(100% - 290px);
+}
+
+.card-drag-panel-target {
+	height: 100vh; 
+	background: #f4f4f4; 
+	border: 1px solid #ddd; 
+	margin: -30px 0px 20px 0px; 
+	border-radius: 2px; 
+	padding: 5px 25px;
+}
+
+.card-listing-panel {
+	position: absolute;
+	top: -20px;
+	left: -10px;
+	padding: 7px;
+	height: 100vh;
+	width: 290px;
+	border: 1px solid #e9e9e9;
+	background: #fcfcfc;
+}
+
+.add-card-icon-placement {
+	position: absolute;
+	top: 190px;
+	left: 45%;
+}
+
+.add-card-icon {
+	color: #fff; 
+	height: 56px; 
+	width: 56px; 
+	transform: translate(0, 5px);
+}
+
+.add-card-message-placement {
+	position: absolute;
+	top: 290px;
+	margin: auto;
+    width: 100%;
+}
+
+.add-card-message-subtitle {
+	margin-top: -5px;
+	font-size: 13px; 
+	color: #aaa; 
+	padding-right: 20px;
+	line-height: 1.1em;
+}
+
+.dragged-card-panel {
+	position: absolute;
+	background: transparent; 
+	width: calc(100% - 290px);
+	top: -10px; 
+	left: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

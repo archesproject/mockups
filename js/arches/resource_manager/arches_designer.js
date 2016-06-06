@@ -133,6 +133,8 @@
 	new Switchery(document.getElementById('preview-card-help'), {size: 'small',});
 
 
+	//Report Manager Switches
+	new Switchery(document.getElementById('report-section-visibility'), {size: 'small',});
 
 	
 
@@ -371,6 +373,142 @@
         	$("#card-save-tile-list").fadeOut();
         }    
     });
+
+
+
+
+
+// Report Manager
+	//Manage NEW REPORT display
+	$('.new-report').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Update Panel Display (hide card library, show card manager, card manager tools)	
+		$("#report-grid").addClass("new-card-indent");
+		$("#ep-new-report-crud").addClass("show-card-library");
+	});
+
+
+	$('.dismiss-template-library').on('click', function (ev) {
+		ev.preventDefault();
+
+		$("#report-grid").removeClass("new-card-indent");
+		$("#ep-new-report-crud").removeClass("show-card-library");
+
+	});
+
+
+	// Manage display of report template preview
+	$('.report-template-item').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Update Panel Display (hide template library, show template manager, template manager tools)	
+		$("#report-grid").toggle();
+		$("#report-image-grid").toggle();
+		$("#ep-report-tools").toggle();
+		$("#ep-report-header").toggle();
+
+		$("#report-template-preview").toggle();
+		//$("#report-card").toggle();
+
+
+		//Update Card Toolbar
+		$("#card-grid-controls-btn-discard").toggle();
+		$("#card-grid-controls-btn-save").toggle();
+
+		var reportMap = new GMaps({
+			el: '#report-map',
+			zoom: 11,
+			scrollwheel: false,
+			lat: 37.786095,
+			lng: -122.09888,
+			styles: [{"featureType":"all","elementType":"geometry","stylers":[{"gamma":"0.82"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"gamma":"1.21"}]},{"featureType":"all","elementType":"labels","stylers":[{"lightness":"-60"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"gamma":"5.37"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#419d8c"},{"lightness":"-39"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"saturation":"0"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#42738d"},{"gamma":"5.37"}]}]
+		});
+
+
+	});
+
+	//Report Header Link
+	$('.report-header').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close and Header, Footer, Widget Forms that are current open
+		$( ".report-crud-form" ).each(function() {
+			$( this ).css("display", "none");
+		});
+
+		//Show Report Section Form
+		$('.report-header-crud-form').toggle();
+
+	});
+
+
+	//Report Section Link
+	$('.report-section').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close and Header, Footer, Widget Forms that are current open
+		$( ".report-crud-form" ).each(function() {
+			$( this ).css("display", "none");
+		});
+
+		//Show Report Section Form
+		$('.report-section-crud-form').toggle();
+
+	});
+
+
+	//Report Subsection Link
+	$('.report-cc').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close and Header, Footer, Widget Forms that are current open
+		$( ".report-crud-form" ).each(function() {
+			$( this ).css("display", "none");
+		});
+
+		//Show Report Section Form
+		$('.report-cc-crud-form').toggle();
+
+	});
+
+
+	//Report Tile Link
+	$('.report-tile').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close and Header, Footer, Widget Forms that are current open
+		$( ".report-crud-form" ).each(function() {
+			$( this ).css("display", "none");
+		});
+
+		//Show Report Section Form
+		$('.report-tile-crud-form').toggle();
+
+	});
+
+
+	//Report Footer Link
+	$('.report-footer').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Close and Header, Footer, Widget Forms that are current open
+		$( ".report-crud-form" ).each(function() {
+			$( this ).css("display", "none");
+		});
+
+		//Show Report Section Form
+		$('.report-footer-crud-form').toggle();
+
+	});
+
+
+
+
+
+
+
+
 
 
 
@@ -623,8 +761,15 @@
 		$("#card-preview").fadeOut();
 		$("#report-preview").fadeIn();
 		
+		//toggle display of link children
+		var linkChildren = this.id;
+		linkChildren = "#" + linkChildren + "-child";
+		$(linkChildren).toggle();
 
 	});
+
+
+
 
 
 // Permissions Functions
@@ -933,12 +1078,119 @@
 
 
 
+//Map
+var markerMap = new GMaps({
+	el: '#search-map',
+	zoom: 11,
+	scrollwheel: false,
+	lat: 37.786095,
+	lng: -122.09888,
+	styles: [{"featureType":"all","elementType":"geometry","stylers":[{"gamma":"0.82"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"gamma":"1.21"}]},{"featureType":"all","elementType":"labels","stylers":[{"lightness":"-60"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"gamma":"5.37"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#419d8c"},{"lightness":"-39"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"saturation":"0"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#42738d"},{"gamma":"5.37"}]}]
+});
+
+
+
+//Map Tools
+	$('.map-widget-container-closed').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Open Tools Panel
+		$(".map-widget-container-closed").addClass('map-widget-container-expanded');
+		$(".map-widget-container-closed").removeClass('map-widget-container-closed');
+
+		//Slide Geocode widget to make room
+		$("#geocode-container").addClass('geocode-container-shim');
+
+		//hide map tools icon
+		$("#map-tools").toggle();
+
+		//Show Default Tool Panel
+		$("#map-widget-toolbar").delay(400).fadeIn(300);
+		$("#map-widget-basemaps").delay(400).fadeIn(300);			
+	});
+
+
+	$('#close-map-tools').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Open Tools Panel
+		$(".map-widget-container-expanded").addClass('map-widget-container-closed');
+		$(".map-widget-container-expanded").removeClass('map-widget-container-expanded');
+
+		//Slide Geocode widget to make room
+		$("#geocode-container").removeClass('geocode-container-shim');
+
+		//show map tools icon
+		$("#map-tools").toggle();
+
+		//Hide Default Tool Panel
+		$("#map-widget-basemaps").toggle();
+		$("#map-widget-toolbar").toggle();
+		
+	});
+
+
+	//Basemap Item Highlight
+	$('.map-widget-overlay-item').on('mouseover', function (ev) {
+		ev.preventDefault();
+		
+		var kids = $( event.target ).children(); 
+		var relatedIcon = kids.find("i");
+		relatedIcon.addClass("in");
+		relatedIcon.addClass("basemap-mask");
+
+	});
+
+	//Basemap Item Highlight
+	$('.map-widget-overlay-item').on('mouseout', function (ev) {
+		ev.preventDefault();
+		
+		var kids = $( event.target ).children(); 
+		var relatedIcon = kids.find("i");
+		relatedIcon.removeClass("in");
+		relatedIcon.removeClass("basemap-mask");
+
+	});
+
+
+	//Overlays Panel
+	$('#overlays').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//close all map widget panels
+		$( ".map-widget-panel" ).each(function() {
+	    	$( this ).css("display", "none");
+	  	});
+
+	  	//show overlays panel
+	  	$( "#overlays-panel" ).fadeIn();
+	});
+
+	//Show Overlay Item tools
+	$('.map-overlay-item-tools').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//get id of selected overlay item
+		var linkID = this.id;
+		var linkNumber = linkID.split("-")[1];
+
+		var container = "#op-" + linkNumber;
+		var toolsPanel = "#op-" + linkNumber + "-tools";
+		var icon = "#op-" + linkNumber + "-icon";
+
+		//update icon
+		$( icon ).removeClass("ion-arrow-down-b");
+		$( icon ).addClass("ion-arrow-up-b");
+
+		//Show the tools panel
+		$( container ).addClass("show-tools");
+		$( toolsPanel ).fadeIn();	
+	
+	});
 
 
 
 
-
-
-
+	
 
 

@@ -76,6 +76,10 @@
     <link href="css/arches/app/graph.css" rel="stylesheet">
 
 
+    <!-- OL3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.css" type="text/css">
+
+
     <!--Summernote [ OPTIONAL ]-->
     <link href="plugins/summernote/summernote.min.css" rel="stylesheet">
 
@@ -1762,27 +1766,16 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="panel-footer ep-menu-footer hidden">
-
-                                        footer
-                                    </div>
                                 </div>
                             </div>
 
 
-                            <!-- Card Preview Tools -->
+                            <!-- Card Manager Tree -->
                             <div id="ep-card-tools" class="ep-card-tools" style="display: none;">
                                 
                                 <!-- Toggle form/report TOC -->
-                                <div class="">
-                                    <ul id="card-management" class="nav nav-tabs">
-                                        <li class="active">
-                                            <a id="forms-btn" class="form-report-tab text-center" data-toggle="tab" href="#demo-lft-tab-1"><i class="ion-clipboard card-nav-icon" style=""></i> Forms</a>
-                                        </li>
-                                        <li>
-                                            <a id="reports-btn" class="form-report-tab text-center" data-toggle="tab" href="#demo-lft-tab-2"><i class="ion-document-text card-nav-icon" style=""></i> Reports</a>
-                                        </li>
-                                    </ul>
+                                <div class="toc-title-block">
+                                    <h4 class="title-block-title"> Card Manager</h4>
                                 </div>
 
                                 <!-- TOC Cards/Widgets -->
@@ -1811,50 +1804,6 @@
                                             <!-- Card Entry -->
                                             <li class="card-tree-list">
                                                 <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-list-outline card-tree-list-icon"></i> Mapped Locations<i class="arrow"></i></a>
-
-                                                <!--Submenu-->
-                                                <ul class="card-tree-list-item" aria-expanded="true">
-                                                    <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Spatial Coordinates</a>
-                                                    </li>
-                                                    <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Geometry Type</a>
-                                                    </li>
-                                                    <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Certainty</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </div>
-
-                                <!-- TOC Reports -->
-                                <div id="card-management-reports" class="panel ep-card-tools-panel" style="display: none;">
-                                    <li class="card-tree-list active">
-                                        <a href="#" class="cc-link card-container-link report-link active" aria-expanded="true"><i class="ion-ios-book card-tree-list-icon"></i> Report Template</a>
-
-                                        <!--Submenu-->
-                                        <ul class="card-tree-list-item" aria-expanded="true">
-                                            
-                                            <!-- Card Entry -->
-                                            <li class="card-tree-list">
-                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-book-outline card-tree-list-icon"></i> Addresses<i class="arrow"></i></a>
-
-                                                <!--Submenu-->
-                                                <ul class="card-tree-list-item" aria-expanded="true">
-                                                    <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Address</a>
-                                                    </li>
-                                                    <li class="card-tree-list">
-                                                        <a href="#" class="cc-link card-widget-link"><i class="ion-ios-paper card-tree-list-icon"></i> Address Type</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-                                            <!-- Card Entry -->
-                                            <li class="card-tree-list">
-                                                <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-book-outline card-tree-list-icon"></i> Mapped Locations<i class="arrow"></i></a>
 
                                                 <!--Submenu-->
                                                 <ul class="card-tree-list-item" aria-expanded="true">
@@ -2495,71 +2444,6 @@
                                 </div>
 
 
-                                <!-- REPORT TILE Card CRUD -->
-                                <div id="ep-report-crud" class="ep-card-crud" style="display: none;">
-                                    <div class="panel ep-card-crud-panel relative">
-                                        
-                                        <!-- Title Block -->
-                                        <div class="library-title-block">
-                                            <div class="">
-                                                <h4 class="title-block-title" style=""> Report Manager </h4>
-                                            </div>
-
-                                            <!-- Panel Tools -->
-                                            <div class="library-tools">
-                                                <i id="card-crud-settings" class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
-                                                <i id="card-crud-advanced" class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
-                                            </div>
-                                        </div>
-
-                                        <!-- Report Tile Settings Form -->
-                                        <div id="ep-card-crud-settings" class="library-crud-container card-crud" style="">
-                                            
-                                            <!-- Card Container Settings -->
-                                            <div id="" class="" style="padding-bottom: 5px;">
-
-                                                <!-- Card Container Name -->
-                                                <div class="node-widget-label" style="">
-                                                    <div class="control-label">
-                                                        Report Title
-                                                    </div>
-                                                    <div class="col-sm-12 pad-no crud-widget-container">
-                                                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Addresses">
-                                                    </div>
-                                                </div>
-
-                                                <!-- Card Instructions -->
-                                                <div class="node-widget-label" style="">
-                                                    <div class="control-label">
-                                                        Template
-                                                    </div>
-                                                    <div class="col-sm-12" style="padding: 0px 15px 15px 0px;">
-                                                        <select class="resources" data-placeholder="" id="" tabindex="0">
-                                                            <option>Arches Default Report</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                        </div>
-
-                                        <!-- XXXXXX -->
-                                        <div id="ep-card-crud-help" class="library-crud-container card-crud" style="display: none;">
-
-                                            <!-- Enable help -->
-                                            <div class="toggle-container">
-                                                <input id="enable-card-help" class="arches-switch" type="checkbox" data-switchery="true" style="display: none;">
-                                                <p class="arches-toggle-sm">
-                                                    Enable Card-level help
-                                                </p>
-                                                <span class="arches-toggle-subtitle">
-                                                    Provide specific user guidance for this card
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
                                 <!-- Card Preview -->
                                 <div id="card-preview" class="ep-card-preview" style="display: none;">
 
@@ -2728,152 +2612,11 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <!-- Card Report Preview -->
-                                <div id="report-preview" class="ep-card-preview" style="display: none;">
-                                        
-                                    <div id="" class="panel card-panel" style="border: 1px solid #ddd; border-bottom-width: 0px; padding-bottom: 30px; margin-bottom: 60px;">
-
-                                        <div class="panel-heading">
-                                            <div class="" style="">
-                                                <h3 id="cc-title-report" class="panel-title card-main-title">Resource Locations</h3>
-                                            </div>
-                                        </div>
-
-                                        <!-- Cards -->
-                                        <div class="panel-body" style="padding: 10px 20px 30px 20px;">
-
-                                            <!-- Card Report  -->
-                                            <ul class="report" style="list-style: none;">
-                                                
-                                                <!-- Tile (Wizard Level)  -->
-                                                <li class="" style="">
-                                                    <div class="row" style="">
-                                                        <!-- Section Title -->
-                                                        <div class="col-sm-3">
-                                                            <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Addresses</h4>
-                                                        </div>
-
-                                                        <!-- Section Data -->
-                                                        <div class="col-sm-9" style="padding-top: 10px;">
-                                                            <dl class="dl-horizontal">
-                                                                <dt>Address</dt>
-                                                                <dd>[value]</dd>
-                                                                <dt>Type</dt>
-                                                                <dd>[value]</dd>
-                                                            </dl>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Card Report -->
-                                                    <div class="row hidden" style="">
-                                                        <!-- Section Title -->
-                                                        <div class="col-sm-3">
-                                                            <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Images</h4>
-                                                        </div>
-
-                                                        <!-- Section Data -->
-                                                        <div class="col-sm-9" style="padding-top: 10px;">
-                                                            <!-- Isotope Layout -->
-                                                            <div id="report-image-grid" class="report-image-grid">
-                                                                <div class="report-grid-item">
-                                                                    <a href="http://www.flickr.com/photos/nemoorange/5013646314/" target="blank_" title="Take My Portrait by Dave DeSandro, on Flickr"><img src="http://farm5.static.flickr.com/4124/5013646314_c7eaf84918.jpg" alt="Take My Portrait"></a>
-                                                                </div>
-                                                                <div class="report-grid-item">
-                                                                    <a href="http://www.flickr.com/photos/nemoorange/5013039541/" target="blank_" title="Giraffe by Dave DeSandro, on Flickr"><img src="http://farm5.static.flickr.com/4144/5013039541_17f2579e33.jpg" alt="Giraffe"></a>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Card Report -->
-                                                    <div class="row" style="">
-                                                        <!-- Section Title -->
-                                                        <div class="col-sm-3">
-                                                            <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Map Example</h4>
-                                                        </div>
-
-                                                        <!-- Section Data -->
-                                                        <div class="col-sm-9" style="padding-top: 10px; margin-bottom: 20px;">
-                                                            
-                                                            <!-- Map Widget -->
-                                                            <div class="col-xs-12 relative" style="margin: 0px; padding: 0px;">
-                                                                
-                                                                <div id="demo-marker-map" class="hidden" style="height:300px"></div>
-
-                                                                <div id="map" class="map" style="height: 400px; border: 1px solid #ddd;"></div>
-                                                                    
-                                                                <!-- Legend -->
-                                                                <div class="" style="position: absolute; top: 0px; right: 0px; width: 220px; bottom: 0px; background: rgba(0, 0, 0, 0.18); color: #fff; z-index: 300;">
-                                                                    <div class="pad-all" style="">
-                                                                        <h4 class="panel-section-title" style="">Legend</h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Card Report -->
-                                                    <div class="row" style="">
-                                                        <!-- Section Title -->
-                                                        <div class="col-sm-3">
-                                                            <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Threats</h4>
-                                                        </div>
-
-                                                        <!-- Section Data -->
-                                                        <div class="col-sm-9" style="padding-top: 10px;">
-                                                            <dl class="dl-horizontal">
-                                                                <dt>Threats</dt>
-                                                                <dd>Lightning strikes, Locusts, Plague, Flooding, Major Earthquake, Landslide, Zombie Apocalypse</dd>
-                                                            </dl>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Card Report -->
-                                                    <div class="row" style="">
-                                                        <!-- Section Title -->
-                                                        <div class="col-sm-3">
-                                                            <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Disturbances</h4>
-                                                        </div>
-
-                                                        <!-- Section Data -->
-                                                        <div class="col-sm-9" style="padding-top: 10px;">
-                                                            <dl class="dl-horizontal">
-                                                                <dt>Disturbances</dt>
-                                                                <dd>Looting, Agriculture, Demolition</dd>
-                                                            </dl>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Card Report -->
-                                                    <div class="row" style="">
-                                                        <!-- Section Title -->
-                                                        <div class="col-sm-3">
-                                                            <h4 class="" style="font-weight: 500; margin-bottom: 0px;"> Recommendations</h4>
-                                                        </div>
-
-                                                        <!-- Section Data -->
-                                                        <div class="col-sm-9" style="padding-top: 10px;">
-                                                            <dl class="dl-horizontal">
-                                                                <dt>Management Recommendations</dt>
-                                                                <dd>Excavation, Fencing, Aerial Survey</dd>
-                                                            </dl>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
 
-
-                        <!-- Form Manager -->
+                        <!-- Arches Form Manager -->
                         <div id="form-library" class="relative fade in" style="display: none;">
 
                            <!-- Title Block -->
@@ -3554,7 +3297,10 @@
 
                                                                                 <!-- card Name -->
                                                                                 <div class="panel-heading">
-                                                                                    <h3 class="panel-title library-card-panel-title" style="">Evaluations</h3>
+                                                                                    <h3 class="panel-title library-card-panel-title" style="">Evaluations
+                                                                                     <span class="badge badge-success pull-right mar-top">1</span>
+                                                                                    </h3>
+
                                                                                 </div>
                                                                                 
                                                                                 <!-- Abstract -->
@@ -3598,12 +3344,903 @@
                         </div>
 
 
+
+
+
+
                         <!-- Report Manager -->
                         <div id="report-library" class="" style="display: none;">
 
+<!-- Title Block -->
+<div class="ep-form-toolbar relative">
+    <div class="">
+        <h4 class="ep-form-toolbar-title"> Resource Reports </h4>
+    </div>
+
+    <!-- Card Filter Widget -->
+    <div id="report-grid-tools" class="">
+        <div class="relative ep-card-search">
+            <select id="" class="resources" style="" data-placeholder="Choose a Function..." tabindex="4">
+                <option value="r1">Heritage Resource Report</option>
+            </select>                                       
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div id="report-grid-controls" class="ep-form-toolbar-tools">
+        <button id="report-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="display: none;">Discard Edits</button> 
+        <button id="report-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="display: none;">Save Edits</button> 
+        <button class="btn btn-sm btn-mint btn-labeled fa fa-mail-reply">Exit</button>   
+    </div>
+</div>
+
+<!-- Alert Panel -->
+<div id="report-alert-panel" class="relative ep-form-alert ep-alert-blue" style="display: none;">
+    <h4 class="ep-form-alert-title"> Alert Title Goes Here</h4>
+    <p class="ep-form-alert-text">This is where the alert text goes.  Plenty of space for a succinct, to-the-point message!</p>
+
+    <!-- Default Dimiss Panel button -->
+    <div class="ep-form-alert-default-dismiss">
+        <i class="fa fa-times-circle"></i>
+    </div>
+
+    <!-- Panel Action Buttons -->
+    <div class="ep-form-alert-buttons">
+        <button id="" class="btn btn-sm btn-danger btn-labeled fa fa-times">Cancel</button> 
+        <button id="" class="btn btn-sm btn-primary btn-labeled fa fa-check">OK</button> 
+    </div>
+</div>
+
+<!-- Card Grid -->
+<div id="report-grid" class="relative ep-form-content">
+
+    <div class="">
+        <!-- Isotope Layout -->
+        <div id="report-image-grid" class="report-image-grid">
+
+            <div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record project-grid-item form-item new-report" style="">
+                <a id="add-card" href="" data-toggle="modal" class="" style="">
+                    <h3 class="text-thin" style="margin-top: 10px;"> Add Report</h3>
+
+                    <span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+                        <i class="fa fa-plus fa-2x" style="color: #fff;"></i>
+                    </span>
+
+                    <h5 class="" style="font-weight: 200;"> Drag and drop a report template onto your resource </h5>
+                </a>
+            </div>
+            
+            <!-- Report Templates -->
+            <div class="card-grid-item report-template-item" style="">
+                <div class="panel mar-no">
+
+                    <!-- card Name -->
+                    <div class="panel-heading">
+                        <h3 class="panel-title library-card-panel-title" style="">Hertiage Resource Report</h3>
+                    </div>
+                    
+                    <!-- Abstract -->
+                    <div class="panel-body library-card-body" style="">
+                        <p class="library-item-subtitle">Summary</p>
+                        <p class="library-item-subtitle">Condition Assessment</p>
+                        <p class="library-item-subtitle">Locations</p>
+                        <p class="library-item-subtitle">Descriptions</p>
+                        <p class="library-item-subtitle">Phase Type Assignment</p>
+                        <p class="library-item-subtitle">Measurements</p>
+                        <p class="library-item-subtitle">Related Resources</p>
+                    </div>
+
+                    <!-- card Tools -->
+                    <div class="panel-footer" style="height: 40px;">
+                        <a href="" class="" style=""><i class="fa fa-check-circle"></i> Active</a>
+                        <a href="" class="pull-right" style="margin-top: 3px;" data-toggle="dropdown"><i class="fa fa-ellipsis-h" style="color: #666;"></i></a>
+                            <ul class="dropdown-menu pull-right">
+                            <li><a href="#"><i class="fa fa-lock"></i> Disable Card</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-copy"></i> Clone Card</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-edit"></i> Edit Card</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Card Grid -->
 
 
-                            Yo!  Reports
+<!-- Template Library -->
+<div id="ep-new-report-crud" class="crud-menu hide-card-library" style="">
+    <div class="panel crud-menu-panel data-widget-library relative" style="">
+
+        <!-- Menu Title -->
+        <div class="panel-heading">
+            <div class="ep-menu-list-title">
+                <h3 id="" class="panel-title card-main-title">Report Templates</h3>
+                <span class="dismiss-template-library"><i class="fa fa-times-circle"></i></span>
+            </div>
+        </div>
+        
+        <!-- Menu List -->
+        <div class="panel-body">
+           <ul class="list-group ep-menu-list data-widget-library menu-title-shim">
+                <!-- Menu Item -->
+                <li id="" class="resource-selector">
+                    <select id="" class="resources" style="" data-placeholder="Find a data type..." tabindex="4">
+                        <option value="r1">Map Header Template</option>
+                        <option value="r2">Image Header Template</option>
+                        <option value="r3">No Header Template</option>
+                    </select>                   
+                </li>
+
+                <!-- Data Widget Library -->
+                <li class="data-widget-container">
+                    <!-- Isotope Layout -->
+                    <div id="report-image-grid" class="report-image-grid">
+                        
+                        <!-- card -->
+                        <div class="data-widget-grid-item relative" style="">
+                            <div class="panel mar-no">
+
+                                <!-- card Name -->
+                                <div class="panel-heading">
+                                    <h3 class="panel-title library-card-panel-title" style="">Map Header Template</h3>
+                                </div>
+                                
+                                <!-- Abstract -->
+                                <div class="panel-body library-card-body" style="">
+                                    <p class="library-item-subtitle">Map Widget</p>
+                                </div>
+
+                                <!-- Selectable -->
+                                <div class="selectable" style="display: none;">
+                                    <i class="ion-ios-checkmark"></i>
+                                </div>
+
+                                <!-- card Tools -->
+                                <div class="panel-footer" style="height: 40px;">
+                                    <i class="ion-plus-circled add-tooltip pull-right" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Data Widget"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card -->
+                        <div class="data-widget-grid-item relative" style="">
+                            <div class="panel mar-no">
+
+                                <!-- card Name -->
+                                <div class="panel-heading">
+                                    <h3 class="panel-title library-card-panel-title" style="">Image Header Template</h3>
+                                </div>
+                                
+                                <!-- Abstract -->
+                                <div class="panel-body library-card-body" style="">
+                                    <p class="library-item-subtitle">Image Header</p>
+                                </div>
+
+                                <!-- Selectable -->
+                                <div class="selectable" style="display: none;">
+                                    <i class="ion-ios-checkmark"></i>
+                                </div>
+
+                                <!-- card Tools -->
+                                <div class="panel-footer" style="height: 40px;">
+                                    <i class="ion-plus-circled add-tooltip pull-right" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Data Widget"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card -->
+                        <div class="data-widget-grid-item relative" style="">
+                            <div class="panel mar-no">
+
+                                <!-- card Name -->
+                                <div class="panel-heading">
+                                    <h3 class="panel-title library-card-panel-title" style="">No Header Template</h3>
+                                </div>
+                                
+                                <!-- Abstract -->
+                                <div class="panel-body library-card-body" style="">
+                                    <p class="library-item-subtitle">Default Template</p>
+                                </div>
+
+                                <!-- Selectable -->
+                                <div class="selectable" style="display: none;">
+                                    <i class="ion-ios-checkmark"></i>
+                                </div>
+
+                                <!-- card Tools -->
+                                <div class="panel-footer" style="height: 40px;">
+                                    <i class="ion-plus-circled add-tooltip pull-right" data-placement="bottom" data-toggle="tooltip" data-original-title="Add Data Widget"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Card Preview Tools -->
+<div id="ep-report-tools" class="ep-card-tools" style="display: none;">
+    
+    <!-- Toggle form/report TOC -->
+    <div class="toc-title-block">
+        <h4 class="title-block-title"> Report Manager</h4>
+    </div>
+
+    <!-- TOC Reports -->
+    <div id="card-management-reports" class="panel ep-card-tools-panel">
+        <!-- Data Entry Form Item -->
+        <li class="card-tree-list active">
+            <a id="toc-1" href="#" class="cc-link card-container-link report-link active report-header" aria-expanded="true"><i class="ion-ios-book card-tree-list-icon"></i> Header</a>
+
+            <!-- Card Container List -->
+            <ul id="toc-1-child" class="card-tree-list-item" style="">
+                
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Map<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link"><i class="ion-ios-list-outline card-tree-list-icon"></i> Basemap</a>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link"><i class="ion-ios-list-outline card-tree-list-icon"></i> Map Tools</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Data Entry Form Item -->
+        <li class="card-tree-list active">
+            <a id="toc-12" href="#" class="cc-link card-container-link report-link report-section" aria-expanded="true"><i class="ion-ios-folder card-tree-list-icon"></i> Form Name</a>
+
+            <!-- Card Container List -->
+            <ul id="toc-12-child" class="card-tree-list-item" style="display: none;">
+                
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link report-cc" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Card Container Name<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> First tile (card 1 name)</a>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Second tile (card 2 name)</a>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Third tile (card 3 name)</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+        <!-- Data Entry Form Item -->
+        <li class="card-tree-list active">
+            <a id="toc-2" href="#" class="cc-link card-container-link report-link report-section" aria-expanded="true"><i class="ion-ios-folder card-tree-list-icon"></i> Condition Assessment</a>
+
+            <!-- Card Container List -->
+            <ul id="toc-2-child" class="card-tree-list-item" style="display: none;">
+                
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link report-cc" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Conditions<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Condition</a>
+
+                            <!-- Widget List -->
+                            <ul class="card-tree-list-item hidden" aria-expanded="true">
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Observed Condition</a>
+                                </li>
+                                
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Observation Date</a>
+                                </li>
+
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Description</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Images</a>
+
+                            <!-- Widget List -->
+                            <ul class="card-tree-list-item hidden" aria-expanded="true">
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Image File</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Threats</a>
+
+                            <!-- Widget List -->
+                            <ul class="card-tree-list-item hidden" aria-expanded="true">
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Threats</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Disturbances</a>
+
+                            <!-- Widget List -->
+                            <ul class="card-tree-list-item hidden" aria-expanded="true">
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Disturbances</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Management Recommendations</a>
+
+                            <!-- Widget List -->
+                            <ul class="card-tree-list-item hidden" aria-expanded="true">
+                                <!-- Widget -->
+                                <li class="card-tree-list active">
+                                    <a href="#" class="cc-link card-container-link report-link" aria-expanded="true"><i class="ion-ios-compose-outline card-tree-list-icon"></i> Recommendations</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+        <!-- Data Entry Form Item -->
+        <li class="card-tree-list active">
+            <a id="toc-3" href="#" class="cc-link card-container-link report-link report-section" aria-expanded="true"><i class="ion-ios-folder card-tree-list-icon"></i> Resource Summary</a>
+
+            <!-- Card Container List -->
+            <ul id="toc-3-child" class="card-tree-list-item" style="display: none;">
+                
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link report-cc" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Names<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Name</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link report-cc" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Resource Type<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Resource Type</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link report-cc" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Important Dates<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Dates</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Card Container -->
+                <li class="card-tree-list">
+                    <a href="#" class="cc-link card-link report-cc" aria-expanded="true"><i class="ion-ios-copy-outline card-tree-list-icon"></i> Subject<i class="arrow"></i></a>
+
+                    <!-- Card List -->
+                    <ul class="card-tree-list-item" aria-expanded="true">
+                        
+                        <!-- Card -->
+                        <li class="card-tree-list">
+                            <a href="#" class="cc-link card-widget-link report-tile"><i class="ion-ios-list-outline card-tree-list-icon"></i> Keywords</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="card-tree-list active">
+            <a href="#" class="cc-link card-container-link report-link report-footer" aria-expanded="true"><i class="ion-ios-book card-tree-list-icon"></i> Footer</a>
+        </li>
+    </div>
+</div>
+
+
+<!-- Report Header CRUD -->
+<div id="ep-report-header" class="ep-card-crud report-crud-form report-header-crud-form" style="display: none;">
+    <div class="panel ep-card-crud-panel relative">
+        
+        <!-- Title Block -->
+        <div class="library-title-block">
+            <div class="">
+                <h4 class="title-block-title" style=""> Report Header </h4>
+            </div>
+        </div>
+
+        <!-- Card Container Base Settings Form -->
+        <div id="cc-settings" class="library-crud-container" style="">
+            
+            <!-- Card Container Settings -->
+            <div id="" class="" style="padding-bottom: 5px;">
+
+                <!-- Card Container Name -->
+                <div class="node-widget-label" style="">
+                    <div class="control-label">
+                        Report Title
+                    </div>
+                    <div class="col-sm-12 pad-no crud-widget-container">
+                        <input type="" placeholder="Report Title" id="" class="form-control input-md widget-input" value="Arches Historic Resources Report">
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+<!-- Report Footer CRUD -->
+<div id="ep-report-container-crud" class="ep-card-crud report-crud-form report-footer-crud-form" style="display: none;">
+    <div class="panel ep-card-crud-panel relative">
+        
+        <!-- Title Block -->
+        <div class="library-title-block">
+            <div class="">
+                <h4 class="title-block-title" style=""> Report Footer </h4>
+            </div>
+        </div>
+
+        <!-- Card Container Base Settings Form -->
+        <div id="cc-settings" class="library-crud-container" style="">
+            
+            <!-- Card Container Settings -->
+            <div id="" class="" style="padding-bottom: 5px;">
+
+                <!-- Card Container Name -->
+                <div class="node-widget-label" style="">
+                    <div class="control-label">
+                        Name
+                    </div>
+                    <div class="col-sm-12 pad-no crud-widget-container">
+                        <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+<!-- Report Section CRUD -->
+<div id="ep-report-container-crud" class="ep-card-crud report-crud-form report-section-crud-form" style="display: none;">
+    <div class="panel ep-card-crud-panel relative">
+        
+        <!-- Title Block -->
+        <div class="library-title-block">
+            <div class="">
+                <h4 class="title-block-title" style=""> Report Section </h4>
+            </div>
+
+            <!-- Section Visibility -->
+            <div class="toggle-container report-switch">
+                <input id="report-section-visibility" class="arches-switch" type="checkbox" checked data-switchery="true" style="display: none;">
+                <p class="arches-toggle-sm">
+                    Publish Section
+                </p>
+            </div>
+        </div>
+
+        <!-- Card Container Base Settings Form -->
+        <div id="cc-settings" class="library-crud-container" style="">
+            
+            <!-- Card Container Settings -->
+            <div id="" class="" style="padding-bottom: 5px;">
+
+                <!-- Card Container Name -->
+                <div class="node-widget-label" style="">
+                    <div class="control-label">
+                        Section Name
+                    </div>
+                    <div class="col-sm-12 pad-no crud-widget-container">
+                        <input type="" placeholder="Report Section Name" id="" class="form-control input-md widget-input" value="">
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+<!-- Card Manager Panels and Forms -->
+<div id="ep-report-crud-container" class="">
+    <div id="ep-form-crud" class="ep-card-crud report-crud-form report-cc-crud-form" style="display: none;">
+        <div class="panel ep-card-crud-panel relative">
+            
+            <!-- Title Block -->
+            <div class="library-title-block">
+                <div class="">
+                    <h4 class="title-block-title" style=""> Sub-Section Manager </h4>
+                </div>
+            </div>
+
+            <!-- Card Container Base Settings Form -->
+            <div id="ep-form-crud-settings" class="library-crud-container card-crud" style="">
+                
+                <!-- Card Container Settings -->
+                <div id="" class="" style="padding-bottom: 5px;">
+
+                    <!-- Card Container Name -->
+                    <div class="node-widget-label" style="">
+                        <div class="control-label">
+                            Card Tab Title
+                        </div>
+                        <div class="col-sm-12 pad-no crud-widget-container">
+                            <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Addresses">
+                        </div>
+
+                        <!-- Card Instructions -->
+                        <div class="node-widget-label" style="">
+                            <div class="control-label">
+                                Instructions
+                            </div>
+                            <div class="col-sm-12" style="padding: 0px 15px 15px 0px;">
+                                <textarea placeholder="Enter the resource address" rows="4" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <!-- Widget CRUD -->
+    <div id="ep-widget-crud" class="ep-card-crud report-crud-form report-tile-crud-form" style="display: none;">
+        <div class="panel ep-card-crud-panel relative">
+            
+            <!-- Title Block -->
+            <div class="library-title-block">
+                <div class="">
+                    <h4 class="title-block-title" style=""> Tile Manager </h4>
+                </div>
+            </div>
+
+            <!-- Card Container Base Settings Form -->
+            <div id="cc-settings" class="library-crud-container" style="">
+                
+                <!-- Card Container Settings -->
+                <div id="" class="" style="padding-bottom: 5px;">
+
+                    <!-- Widget Label -->
+                    <div class="node-widget-label">
+                        <div class="control-label">
+                            Widget Label
+                        </div>
+                        <div class="col-sm-12 pad-no crud-widget-container">
+                            <input type="" placeholder="Widget Label" id="" class="form-control input-md widget-input" value="Address">
+                        </div>
+                    </div>
+
+                    <!-- Widget Label -->
+                    <div class="node-widget-label">
+                        <div class="control-label">
+                            Placeholder
+                        </div>
+                        <div class="col-sm-12 pad-no crud-widget-container">
+                            <input type="" placeholder="Address" id="" class="form-control input-md widget-input" value="Enter an address">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Report Preview -->
+    <div id="report-template-preview" class="ep-card-preview" style="display: none;">
+            
+        <!-- Template Container -->
+        <div class="report-template-preview-container">
+
+            <!-- Report Title Bar -->
+            <div id="" class="relative" style="display: block;">
+
+                <!-- Title Block -->
+                <div class="report-toolbar-preview">
+                    <a href="index.html" class="">
+                        <h4 class="report-toolbar-title">Arches Historic Resource Report </h4>
+                    </a>
+
+                    <!-- Tools -->
+                    <div class="ep-form-toolbar-tools">
+                        <p class="report-print-date">Report Date: May 27, 2016</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Content -->
+            <div class="rp-report-container-preview">
+                
+                <!-- Report Header -->
+                <div class="rp-report-header relative">
+
+                    <!-- Map Header -->
+                    <div id="report-map" class="map"></div>
+
+                    <!-- Map Tools Panel -->
+                    <div id="map-widget-container" class="">
+                        <div class="map-widget-container-closed text-center">
+                            <a id="map-tools" href="" class=""><i class="ion-ios-gear add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Map Tools"></i></a>
+                        </div>
+
+                        <div id="map-widget-toolbar" class="map-widget-toolbar relative" style="display: none;">
+                            <div class="map-widget-tool active text-center">
+                                <a id="" href="" class=""><i class="ion-map add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Basemaps"></i></a>
+                            </div>
+                            <div class="map-widget-tool text-center">
+                                <a id="overlays" href="" class=""><i class="ion-navicon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Overlays"></i></a>
+                            </div>
+                            <div class="map-widget-tool text-center">
+                                <a id="" href="" class=""><i class="ion-crop add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Map Tools"></i></a>
+                            </div>
+                            <div class="map-widget-tool text-center">
+                                <a id="" href="" class=""><i class="ion-ios-list add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Legend"></i></a>
+                            </div>
+                            <div class="map-widget-tool text-center">
+                                <a id="close-map-tools" href="#" class=""><i class="ion-ios-close add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Close"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Basemaps -->
+                        <div id="map-widget-basemaps" class="panel map-widget-panel" style="display: none;">
+                            <!-- Panel Title -->
+                            <div class="map-widget-panel-title">
+                                <h4 class=""> Basemaps </h4>
+                            </div>
+                            
+                            <!-- Overlay Item -->
+                            <div class="map-widget-overlay-item relative">
+                                <div class="map-overlay-vis-toogle text-center">
+                                    <i class="ion-checkmark-circled fade"></i>
+                                </div>
+                                <div class="map-overlay-name">
+                                    <a id="" class="" href="">Bing Streets</a>
+                                </div>
+                            </div>
+
+                            <!-- Overlay Item -->
+                            <div class="map-widget-overlay-item relative">
+                                <div class="map-overlay-vis-toogle text-center">
+                                    <i class="ion-checkmark-circled"></i>
+                                </div>
+                                <div class="map-overlay-name">
+                                    <a id="" class="" href="">Google Streets (Gray)</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Overlays -->
+                        <div id="overlays-panel" class="panel map-widget-panel" style="display: none;">
+                            <!-- Panel Title -->
+                            <div class="map-widget-panel-title">
+                                <h4 class=""> Overlays </h4>
+                            </div>
+                            
+                            <!-- Overlay Item -->
+                            <div class="map-widget-overlay-item off relative">
+                                <div class="map-overlay-vis-toogle text-center">
+                                    <i class="ion-checkmark-circled"></i>
+                                </div>
+                                <div class="map-overlay-name">
+                                    <a id="" class="" href="">Overlay Name</a>
+                                </div>
+                            </div>
+
+                            <!-- Overlay Item -->
+                            <div class="map-widget-overlay-item relative">
+                                <div class="map-overlay-vis-toogle text-center">
+                                    <i class="ion-checkmark-circled"></i>
+                                </div>
+                                <div class="map-overlay-name">
+                                    <a id="" class="" href="">Overlay Item #2 Name</a>
+                                </div>
+                                <div class="map-overlay-item-tools" style="display: none;">
+                                    Tools Panel
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Section -->
+                <div class="rp-report-section relative">
+                    <!-- Section Title -->
+                    <div class="rp-report-section-title">
+                        <h4 class="rp-section-title">Condition Assessments</h4>
+                    </div>
+                    
+                    <!-- Card Wizard Tile -->
+                    <div class="rp-card-section">
+                        <!-- Section Tile -->
+                        <h4 class="rp-tile-title"><span class="rp-tile-title-float">Condition</span></h4>
+                        <div class="row rp-report-tile">
+                            <!-- Node/Node Type Template -->
+                            <dl class="dl-horizontal">
+                                <dt>Condition</dt>
+                                <dd>[value]</dd>
+                                <dt>Date Assessed</dt>
+                                <dd>[value]</dd>
+                                <dt>Description</dt>
+                                <dd>[value]</dd>
+                            </dl>
+                        </div>
+                        
+                        <!-- Section Tile -->
+                        <div class="row rp-report-tile">
+                            <!-- Image Template -->
+                            <dl class="dl-horizontal">
+                                <dt>Images</dt>
+                                <dd>
+                                    <div class="col-sm-12" style="padding-top: 10px;">
+                                        <!-- Isotope Layout -->
+                                        <div id="report-image-grid" class="report-image-grid">
+                                            <div class="rp-image-grid-item">
+                                                <a id="" class="" href="#"> <img class="img-responsive" src="img/thumbs/img1.jpg" alt="Image"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <!-- Section Tile -->
+                        <div class="row rp-report-tile">
+                            <!-- Multi-select Domain Template -->
+                            <dl class="dl-horizontal">
+                                <dt>Threats</dt>
+                                <dd>[values]</dd>
+                            </dl>
+                        </div>
+
+                        <!-- Section Tile -->
+                        <div class="row rp-report-tile">
+                            <!-- Multi-select Domain Template -->
+                            <dl class="dl-horizontal">
+                                <dt>Disturbances</dt>
+                                <dd>[values]</dd>
+                            </dl>
+                        </div>
+
+                        <!-- Section Tile -->
+                        <div class="row rp-report-tile">
+                            <!-- Multi-select Domain Template -->
+                            <dl class="dl-horizontal">
+                                <dt>Management Recommendations</dt>
+                                <dd>[values]</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Report Section -->
+                <div class="rp-report-section relative">
+                    <!-- Section Title -->
+                    <div class="rp-report-section-title">
+                        <h4 class="rp-section-title"> Resource Summary </h4>
+                    </div>
+                    
+                    <!-- Card Wizard Tile -->
+                    <div class="rp-card-section">
+                        <!-- Section Tile -->
+                        <h4 class="rp-tile-title"><span class="rp-tile-title-float"> Names </span></h4>
+                        <div class="row rp-report-tile">
+                            <!-- Label/String Template -->
+                            <dl class="dl-horizontal">
+                                <dt>[Type]</dt>
+                                <dd>[value]</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- Card Wizard Tile -->
+                    <div class="rp-card-section">
+                        <!-- Section Tile -->
+                        <h4 class="rp-tile-title"><span class="rp-tile-title-float"> Resource Types</span></h4>
+                        <div class="row rp-report-tile">
+                            <!-- Label/String Template -->
+                            <dl class="dl-horizontal">
+                                <dt>[Type]</dt>
+                                <dd>[value]</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- Card Wizard Tile -->
+                    <div class="rp-card-section">
+                        <!-- Section Tile -->
+                        <h4 class="rp-tile-title"><span class="rp-tile-title-float"> Important Dates </span></h4>
+                        <div class="row rp-report-tile">
+                            <!-- Label/String Template -->
+                            <dl class="dl-horizontal">
+                                <dt>[Type]</dt>
+                                <dd>[value]</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <!-- Card Wizard Tile -->
+                    <div class="rp-card-section">
+                        <!-- Section Tile -->
+                        <h4 class="rp-tile-title"><span class="rp-tile-title-float"> Keywords</span> </h4>
+                        <div class="row rp-report-tile">
+                            <!-- Label/String Template -->
+                            <dl class="dl-horizontal">
+                                <dt>Keywords</dt>
+                                <dd>[values]</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                            
 
 
                         </div>
@@ -4047,6 +4684,16 @@
     <!-- D3 -->
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="js/d3/graph.js"></script>
+
+
+    <!-- OL3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.js" type="text/javascript"></script>
+
+
+
+    <!--Gmaps -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBCUB9l8yOny87iJeuaaF8lok_9DFj--0A"></script>
+    <script src="plugins/gmaps/gmaps.js"></script>
 
 
     <!--Arches Forms -->

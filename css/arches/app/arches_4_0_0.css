@@ -614,17 +614,38 @@ span .edit-card-element {
 	background: #f4f5f7;
 }
 
-.wizard-level-tile:hover {
-	cursor: pointer;
+.wizard-card {
+	padding-left: 10px;
+	padding-right: 20px;
+	margin-top: -15px;
 }
+
+.wizard-card-tools {
+	float: right;
+	padding-left: 10px;
+	margin-top: 7px;
+	font-size: 19px;
+}
+
 
 .wizard-tile-title {
 	color: #c9c9c9; 
 	font-size: 13px;
-	padding: 15px; 
+	padding: 5px 15px; 
 	font-weight: 300;
 	color: #123;
 }
+
+.wizard-tile-title:hover {
+	cursor: pointer;
+}
+
+.wizard-level-tile-tools {
+	position: absolute;
+	top: 12px;
+	right: 25px;
+}
+
 
 .panel-section-title {
 	font-size: 1.3em;
@@ -919,14 +940,37 @@ div.card-grid-item.selected {
 	background: #f9f9f9;
 }
 
+.resource-tools {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 .resource-grid-title {
     font-weight: normal;
     padding: 0 20px 0 20px;
     font-size: 1.416em;
     line-height: 50px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.resource-tools a.resource-grid-title.active {
+	color: #333;
+}
+
+.resource-tools a.resource-grid-title {
+	color: #999;
+}
+
+.resource-tools a.resource-grid-title:hover {
+	color: #666;
+}
+
+.resource-tools a.resource-grid-title.active:hover {
+	color: #333;
+}
+
+.resource-grid-title:nth-child(2) {
+	padding-left: 0px;
 }
 
 .resource-grid-subtitle {
@@ -2215,7 +2259,8 @@ input[type="checkbox"]{
 }
 
 .wizard-buttons {
-	padding: 5px 0 10px 10px;
+	padding: 0px;
+	margin-top: -5px;
 }
 
 
@@ -4366,12 +4411,12 @@ h4.report-toolbar-title {
 	position: absolute;
 	top: 0px;
 	right: 0px;
+	bottom: 10px;
 	background: rgba(17,17,17,0.21);
 	opacity: .9;
 	width: 250px;
 	height: 500px;
-	border-left: 1px solid #999;
-	border-bottom: 1px solid #ddd;
+	border: 1px solid #999;
 	transition: all .40s ease;
 }
 
@@ -4389,7 +4434,7 @@ h4.report-toolbar-title {
 
 .map-widget-toolbar {
 	position: absolute;
-	top: 0px;
+	top: 00px;
 	right: 0px;
 	width: 250px;
 	height: 50px; 
@@ -4399,6 +4444,8 @@ h4.report-toolbar-title {
 	z-index: 5;
 	transition: all .40s ease;
 }
+
+
 
 .map-widget-tool {
     padding-top: 5px;
@@ -4448,7 +4495,7 @@ h4.report-toolbar-title {
 }
 
 .map-widget-overlay-item {
-	width: 250px;
+	width: 248px;
 	height: 50px;
 	padding: 7px;
 	background: #fff;
@@ -4506,10 +4553,25 @@ h4.report-toolbar-title {
 	left: 0px;
 	height: 50px;
 	width: 250px;
-	padding: 7px;
+	padding: 12px 7px 7px 17px;
+	font-size: 17px;
+	color: #888;
 	border-top: 1px solid #f4f4f4;
 	border-bottom: 1px solid #ddd;
 	transition: all .40s ease;
+}
+
+.overlay-tool-group {
+	margin-top: -87px;
+}
+
+.overlay-tool-icon {
+	padding-right: 7px;
+}
+
+.overlay-slider {
+	width: 150px;
+	margin-top: -5px;
 }
 
 
@@ -4563,7 +4625,7 @@ h4.report-toolbar-title {
 
 .map-widget-panel-title {
 	height: 50px;
-	width: 250px;
+	width: 248px;
 	padding: 8px;
 	background: #fff;
 	border-bottom: 1px solid #ddd;

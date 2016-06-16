@@ -507,7 +507,32 @@
 
 
 
+// Manage Widget Tools
+	$('#widget-settings-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		$( "#widget-settings" ).fadeIn();
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
 
+		//Show Default Settings form, update tool display
+		$("#widget-advanced-settings").fadeOut();
+		$('#widget-settings-btn').addClass("active");
+	});
+
+	$('#widget-advanced-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		$( "#widget-settings" ).fadeOut();
+		$( ".library-tools .active" ).each(function() {
+			$( this ).removeClass("active");
+		});
+
+		//Show ADVANCED SETTINGS form, update tool display
+		$("#widget-advanced-settings").fadeIn();
+		$('#widget-advanced-btn').addClass("active");
+	});
 
 
 
@@ -1040,13 +1065,9 @@
 	});
 
 
-
-
-
 	$('#cc-form-delete-btn').on('click', function (ev) {
 		ev.preventDefault();
-		clearCardContainerHighlight();
-		
+		clearCardContainerHighlight();	
 	});
 
 
@@ -1063,17 +1084,13 @@
 
 // Form Manager Events
 
-
-
 	// Show Card library on "cards" tab click
 	$('#card-list-tab').on('click', function (ev) {
 		ev.preventDefault();
 		
 		//slide card library in, slide data entry card container over to make room
 		$("#card-library").addClass('cd-config-panel-in');	
-		$("#form-preview-data-entry-card").addClass('card-preview-indent');	
-
-		
+		$("#form-preview-data-entry-card").addClass('card-preview-indent');		
 	});
 
 
@@ -1124,9 +1141,12 @@ var markerMap = new GMaps({
 		$("#map-tools").toggle();
 
 		//Hide Default Tool Panel
-		$("#map-widget-basemaps").toggle();
 		$("#map-widget-toolbar").toggle();
-		
+
+		//close all map widget panels
+		$( ".map-widget-panel" ).each(function() {
+	    	$( this ).css("display", "none");
+	  	});
 	});
 
 
@@ -1162,12 +1182,21 @@ var markerMap = new GMaps({
 	    	$( this ).css("display", "none");
 	  	});
 
+	  	//update toolbar buttons
+	  	$(".map-widget-tool").each(function() {
+	    	$( this ).removeClass("active");
+	  	});
+
+	  	$("#btn-overlays").addClass("active");
+
 	  	//show overlays panel
 	  	$( "#overlays-panel" ).fadeIn();
 	});
 
+
+
 	//Show Overlay Item tools
-	$('.map-overlay-item-tools').on('click', function (ev) {
+	$('.overlay-toggle').on('click', function (ev) {
 		ev.preventDefault();
 		
 		//get id of selected overlay item
@@ -1178,19 +1207,66 @@ var markerMap = new GMaps({
 		var toolsPanel = "#op-" + linkNumber + "-tools";
 		var icon = "#op-" + linkNumber + "-icon";
 
-		//update icon
-		$( icon ).removeClass("ion-arrow-down-b");
-		$( icon ).addClass("ion-arrow-up-b");
+		//manage display of overlay tools
+		if ($( icon ).hasClass("ion-arrow-left-b")) {
+			$( container ).addClass("show-tools");
+			$( toolsPanel ).delay(200).fadeIn();
 
-		//Show the tools panel
-		$( container ).addClass("show-tools");
-		$( toolsPanel ).fadeIn();	
+			//update arrow
+			$( icon ).removeClass("ion-arrow-left-b");
+			$( icon ).addClass("ion-arrow-down-b");	
+
+		} else {
+			$( container ).removeClass("show-tools");
+			$( toolsPanel ).toggle();
+
+			//update arrow
+			$( icon ).addClass("ion-arrow-left-b");
+			$( icon ).removeClass("ion-arrow-down-b");	
+		}
 	
 	});
 
 
 
 
+
+
+//  Overlay Opacity Sliders
+	// RANGE SLIDER PIPS
+	// =================================================================
+	var range_all_sliders = {
+		'min': [ 0 ],
+		'25%': [ 25 ],
+		'50%': [ 50 ],
+		'75%': [ 75 ],
+		'max': [ 100 ]
+	};
+
+
+
+	// RANGE SLIDER - HORIZONTAL PIPS
+	// =================================================================
+	// Require noUiSlider
+	// http://refreshless.com/nouislider/
+	// =================================================================
+	$("#op-1-slider").noUiSlider({
+		range: range_all_sliders,
+		connect: 'lower',
+		start: 100
+	});
+
+	$("#op-2-slider").noUiSlider({
+		range: range_all_sliders,
+		connect: 'lower',
+		start: 100
+	});
+
+	$("#op-3-slider").noUiSlider({
+		range: range_all_sliders,
+		connect: 'lower',
+		start: 100
+	});
 	
 
 

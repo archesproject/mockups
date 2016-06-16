@@ -76,6 +76,10 @@
     <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
 
 
+    <!--noUiSlider [ OPTIONAL ]-->
+    <link href="plugins/noUiSlider/jquery.nouislider.min.css" rel="stylesheet">
+
+
     <!-- D3 Graph -->
     <link href="css/arches/app/graph.css" rel="stylesheet">
 
@@ -274,7 +278,7 @@
                         </div>
 
                         <!-- Map Tools Panel -->
-                        <div id="map-widget-container" class="">
+                        <div id="map-widget-container relative" class="">
                             <div class="map-widget-container-closed text-center">
                                 <a id="map-tools" href="" class=""><i class="ion-ios-gear add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Map Tools"></i></a>
                             </div>
@@ -283,7 +287,7 @@
                                 <div class="map-widget-tool active text-center">
                                     <a id="" href="" class=""><i class="ion-map add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Basemaps"></i></a>
                                 </div>
-                                <div class="map-widget-tool text-center">
+                                <div id="btn-overlays" class="map-widget-tool text-center">
                                     <a id="overlays" href="" class=""><i class="ion-navicon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Overlays"></i></a>
                                 </div>
                                 <div class="map-widget-tool text-center">
@@ -329,7 +333,7 @@
                             <div id="overlays-panel" class="panel map-widget-panel" style="display: none;">
                                 <!-- Panel Title -->
                                 <div class="map-widget-panel-title">
-                                    <h4 class=""> Overlays </h4>
+                                    <h4 class=""> Overlays <i class="ion-ios-plus pull-right add-tooltip" data-placement="left" data-toggle="tooltip" data-original-title="add overlay"></i></h4>
                                 </div>
                                 
                                 <!-- Overlay Item -->
@@ -340,18 +344,17 @@
                                     <div class="map-overlay-name">
                                         <a id="" class="" href="">An Overlay with a long name </a>
                                     </div>
-                                    <div id="op-1-button" class="map-overlay-item-tools">
-                                        <i id="op-1-icon" class="ion-arrow-down-b"></i>
+                                    <div id="" class="map-overlay-item-tools">
+                                        <a id="op-1-button" href="#" class="overlay-toggle"><i id="op-1-icon" class="ion-arrow-left-b"></i></a>
                                     </div>
-                                    <div id="op-1-tools" class="map-overlay-item-tools-panel relative" style="display: none;">
-                                        <h5 class="map-widget-tools-title"> Transparency</h5>
-                                        <div class="map-overlay-slider">
-                                            slider
+                                    <div id="op-1-tools" class="map-overlay-item-tools-panel" style="display: none;">
+                                        <div class="overlay-slider">
+                                            <div id="op-1-slider" class="demo-pips pips"></div>
                                         </div>
-                                        <div class="map-overlay-tool-buttons">
-                                            <i class="ion-information-circled overly-tool"></i>
-                                            <i class="ion-arrow-up-a overly-tool"></i>
-                                            <i class="ion-arrow-down-a overly-tool"></i>
+                                        <div class="overlay-tool-group">
+                                            <i class="ion-information-circled pull-right overlay-tool-icon add-tooltip" data-placement="left" data-toggle="tooltip" data-original-title="visible: 7-20"></i>
+                                            <i class="ion-ios-arrow-up pull-right overlay-tool-icon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="move overlay up"></i>
+                                            <i class="ion-ios-arrow-down pull-right overlay-tool-icon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="move overlay down"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -364,12 +367,18 @@
                                     <div class="map-overlay-name">
                                         <a id="" class="" href="">Another Overlay </a>
                                     </div>
-                                    <div id="op-2-button" class="map-overlay-item-tools">
-                                        <i id="op-2-icon" class="ion-arrow-down-b"></i>
+                                    <div id="" class="map-overlay-item-tools">
+                                        <a id="op-2-button" href="#" class="overlay-toggle"><i id="op-2-icon" class="ion-arrow-left-b"></i></a>
                                     </div>
                                     <div id="op-2-tools" class="map-overlay-item-tools-panel" style="display: none;">
-                                        <h5 class="map-widget-tools-title"> Transparency</h5>
-
+                                        <div class="overlay-slider">
+                                            <div id="op-2-slider" class="demo-pips pips"></div>
+                                        </div>
+                                        <div class="overlay-tool-group">
+                                            <i class="ion-information-circled pull-right overlay-tool-icon add-tooltip" data-placement="left" data-toggle="tooltip" data-original-title="visible: 7-20"></i>
+                                            <i class="ion-ios-arrow-up pull-right overlay-tool-icon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="move overlay up"></i>
+                                            <i class="ion-ios-arrow-down pull-right overlay-tool-icon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="move overlay down"></i>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -381,18 +390,41 @@
                                     <div class="map-overlay-name">
                                         <a id="" class="" href="">Third Overlay </a>
                                     </div>
-                                    <div id="op-3-button" class="map-overlay-item-tools">
-                                        <i id="op-3-icon" class="ion-arrow-down-b"></i>
+                                    <div id="" class="map-overlay-item-tools">
+                                        <a id="op-3-button" href="#" class="overlay-toggle"><i id="op-3-icon" class="ion-arrow-left-b"></i></a>
                                     </div>
                                     <div id="op-3-tools" class="map-overlay-item-tools-panel" style="display: none;">
-                                        <h5 class="map-widget-tools-title"> Transparency</h5>
-
+                                        <div class="overlay-slider">
+                                            <div id="op-3-slider" class="demo-pips pips"></div>
+                                        </div>
+                                        <div class="overlay-tool-group">
+                                            <i class="ion-information-circled pull-right overlay-tool-icon add-tooltip" data-placement="left" data-toggle="tooltip" data-original-title="visible: 7-20"></i>
+                                            <i class="ion-ios-arrow-up pull-right overlay-tool-icon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="move overlay up"></i>
+                                            <i class="ion-ios-arrow-down pull-right overlay-tool-icon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="move overlay down"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
 
+                            <!-- Map Tools -->
+                            <div id="maptools-panel" class="panel map-widget-panel" style="display: none;">
+
+
+                            </div>
+
+                            <!-- Legend -->
+                            <div id="legend-panel" class="panel map-widget-panel" style="display: none;">
+                                <!-- Panel Title -->
+                                <div class="map-widget-panel-title">
+                                    <h4 class=""> Legend </h4>
+                                </div>
+                                
+                                
+
+
+                            </div>
+
+                        </div>
                     </div>
 
                     <!-- Report Section -->
@@ -678,6 +710,10 @@
 
     <!--Chosen [ OPTIONAL ]-->
     <script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+
+    <!--noUiSlider [ OPTIONAL ]-->
+    <script src="plugins/noUiSlider/jquery.nouislider.all.min.js"></script>
 
 
     <!-- D3 -->

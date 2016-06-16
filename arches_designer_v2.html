@@ -565,11 +565,6 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="hidden" style="position: absolute; right: 50px; top: 12px;">
-                            <button class="btn btn-primary"><i class="fa fa-plus-circle"></i> New Resource</button>
-                            <button class="btn btn-primary"><i class="fa fa-plus-circle"></i> New Graph</button>
-                        </div>
                     </div>  
                 </div>
 
@@ -577,7 +572,11 @@
                 <!-- Default Page content-->
                 <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
 
-                    <h2 class="resource-grid-title text-overflow">Resources</h2>
+                    <!-- Resource/Graph Toggle -->
+                    <div class="resource-tools relative">
+                        <a id="" class="resource-grid-title active" href="">Resources</a>
+                        <a id="" class="resource-grid-title" href="">Graphs</a>
+                    </div>
 
                     <!-- Resoure Grid -->
                     <div id="report-image-grid" class="report-image-grid">
@@ -660,8 +659,7 @@
                     </div> 
 
                     <!-- Graph Grid -->
-                    <h2 class="resource-grid-title text-overflow">Graphs</h2>
-                    <div id="" class="report-image-grid">
+                    <div id="" class="report-image-grid" style="display: none;">
                                         
                         <!-- Graph -->
                         <div class="resource-grid-item relative">
@@ -1848,6 +1846,21 @@
                                         <!-- Card Container Settings -->
                                         <div id="" class="" style="padding-bottom: 5px;">
 
+                                            <!-- Card Container Property -->
+                                            <div class="node-widget-label" style="">
+                                                <div class="control-label">
+                                                    Relation to Resource
+                                                </div>
+                                                <div class="col-sm-12 pad-no crud-widget-container">
+                                                    <select id="" class="resources" style="" data-placeholder="Choose a relation..." tabindex="4">
+                                                        <option value="r1">P34i_was_assessed_by</option>
+                                                        <option value="r2">P46i_xxxx</option>
+                                                        <option value="r3">P58_xxx</option>
+                                                        <option value="r4">P80_xxxxxx</option>
+                                                    </select> 
+                                                </div>
+                                            </div>
+
                                             <!-- Card Container Name -->
                                             <div class="node-widget-label" style="">
                                                 <div class="control-label">
@@ -2323,14 +2336,14 @@
 
                                             <!-- Panel Tools -->
                                             <div class="library-tools">
-                                                <i class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
-                                                <i class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
-                                                <i class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
+                                                <i id="widget-settings-btn" class="ion-settings add-tooltip library-tools-icon active" data-placement="bottom" data-toggle="tooltip" data-original-title="Settings"></i>
+                                                <i id="widget-advanced-btn" class="ion-ios-gear add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Advanced Settings"></i>
+                                                <i id="widget-validation-btn" class="ion-wand add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Validations"></i>
                                             </div>
                                         </div>
 
                                         <!-- Card Container Base Settings Form -->
-                                        <div id="cc-settings" class="library-crud-container" style="">
+                                        <div id="widget-settings" class="library-crud-container" style="">
                                             
                                             <!-- Card Container Settings -->
                                             <div id="" class="" style="padding-bottom: 5px;">
@@ -2354,86 +2367,40 @@
                                                         <input type="" placeholder="Address" id="" class="form-control input-md widget-input" value="Enter an address">
                                                     </div>
                                                 </div>
+
+                                                <!-- Domain Selection -->
+                                                <div class="node-widget-label">
+                                                    <div class="control-label">
+                                                        Controlled Vocabulary (domain only)
+                                                    </div>
+                                                    <div class="col-sm-12 pad-no crud-widget-container">
+                                                        <select class="resources" data-placeholder="" id="permissions" tabindex="0">
+                                                            <option>Top Concept Name 1</option>
+                                                            <option>Top Concept Name 2</option>
+                                                            <option>Top Concept Name 3</option>
+                                                            <option>Top Concept Name 4</option>
+                                                            <option>Top Concept Name 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>    
                                         </div>
 
-                                        <!-- Card Container ADVANCED Settings Form -->
-                                        <div id="cc-advanced-settings" class="library-crud-container" style="display: none;">
+                                        <!-- Widget ADVANCED Settings Form -->
+                                        <div id="widget-advanced-settings" class="library-crud-container" style="display: none;">
                                             <div id="" class="">
 
-                                                <!-- Card Container Settings -->
+                                                <!-- Widget Advanced Settings -->
                                                 <div id="" class="" style="padding-bottom: 5px;">
 
-                                                    <!-- Card Container Name -->
+                                                    <!-- Widget Templates -->
                                                     <div class="node-widget-label" style="">
                                                         <div class="control-label">
-                                                            Name
+                                                            Template
                                                         </div>
                                                         <div class="col-sm-12 pad-no crud-widget-container">
-                                                            <input type="" placeholder="Card name" id="" class="form-control input-md widget-input" value="Resource Locations">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Cancel Button Title -->
-                                                    <div class="node-widget-label" style="">
-                                                        <div class="control-label">
-                                                            Cancel Button Text
-                                                        </div>
-                                                        <div class="col-sm-12 pad-no crud-widget-container">
-                                                            <input type="" placeholder="Cancel" id="" class="form-control input-md widget-input" value="">
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Save Button Title -->
-                                                    <div class="node-widget-label" style="">
-                                                        <div class="control-label">
-                                                            Save Button Text
-                                                        </div>
-                                                        <div class="col-sm-12 pad-no crud-widget-container">
-                                                            <input type="" placeholder="Save" id="" class="form-control input-md widget-input" value="">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-divider">
-                                                        <h4 class="title-block-title" style=""> Settings </h4>
-                                                    </div>
-
-                                                    <!-- Visible -->
-                                                    <div class="" style="padding-bottom: 15px; padding-right: 15px;">
-
-                                                        <input id="card-container-visibility" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
-                                                        <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
-                                                            Visible
-                                                        </p>
-                                                        <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
-                                                            Show this card by default
-                                                        </span>
-                                                    </div>
-
-                                                    <!-- Active -->
-                                                    <div class="" style="padding-bottom: 15px;">
-
-                                                        <input id="card-container-active" class="arches-switch" type="checkbox" checked="" data-switchery="true" style="display: none;">
-                                                        <p class="" style="margin-left: 40px; margin-top: -17px; margin-bottom: 0px;font-size: 12px;">
-                                                            Active
-                                                        </p>
-                                                        <span class="" style="margin-left: 40px; display: inline-block; color: #8ba2b9; font-size: 10px; padding-right: 10px;">
-                                                            This card is active and can be used for data entry
-                                                        </span>
-                                                    </div>
-
-                                                    <!-- Functions -->
-                                                    <div class="node-widget-label" style="">
-                                                        <div class="control-label">
-                                                            Functions
-                                                        </div>
-                                                        <div class="col-sm-12 pad-no crud-widget-container">
-                                                            <select id="" class="functions" style="" data-placeholder="Choose a Function..." multiple tabindex="4">
-                                                                <option value="United States">Function Name 1</option>
-                                                                <option value="United Kingdom">Function Name 2</option>
-                                                                <option value="Afghanistan">Function Name 3</option>
-                                                                <option value="Aland Islands">Function Name 4</option>
-                                                                <option value="Albania">Function Name 5</option>
+                                                            <select id="" class="functions" style="" data-placeholder="Choose a Function..." tabindex="4">
+                                                                <option>Arches String Default</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -2588,27 +2555,142 @@
                                                 </div></aside>
                                             </div>
 
-                                            <!-- Save Input -->
-                                            <div class="wizard-buttons pull-right hidden" style="">
-                                                <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt btn-editable" style=""> Discard Assessment
-                                                </button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check btn-editable" style=""> Save Assessment</button>
+                                            <!-- Wizard Level Buttons -->
+                                            <div class="wizard-buttons pull-right">
+                                                <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt"> Discard
+                                                </button><button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check" style=""> Save</button>
                                             </div>
                                         </div>
 
 
                                         <!-- Wizard-level tiles -->
-                                        <div class="hidden" style="margin-bottom: 0px; margin-top: 10px; padding-bottom: 10px;">
-                                            <div class="wizard-level-tile" style="">
+                                        <div class="relative" style="margin-bottom: 0px; margin-top: 30px; padding-bottom: 10px;">
+                                            
+                                            <!-- Wizard Tile -->
+                                            <div class="wizard-card">
+                                                <div id="wizard-tile-card" class="tab-base card-content-container outline" style="margin-bottom: 20px; margin-top: -2px;">
 
-                                                <div class="editable" style="">
-                                                    <h4 id="" class="wizard-tile-title editable-tile-title">Record Summary: First Card, First Widget Label, First Widget Value</h4>
-                                                </div>
-                                                <span class="pull-right" style="margin-top: 8px; margin-right: 10px;">
-                                                    <span class="icon-wrap icon-circle bg-tile"><i class="fa fa-trash"></i></span>
-                                                    <span class="icon-wrap icon-circle bg-tile"><i class="fa fa-pencil"></i></span>
-                                                </span>
+                                                    <!--Nav Tabs-->
+                                                    <ul class="nav nav-tabs card-nav-container" style="margin-bottom: 1px;">
+                                                        <li id="summary-group-1" class="active">
+                                                            <a id="summary-tab-1" data-toggle="tab" href="#summary-card-1" class="card-tab-title" aria-expanded="true">Addresses</a>
+                                                        </li>
+                                                        <li id="map-group-1" class="">
+                                                            <a id="map-tab-1" data-toggle="tab" href="#map-card-1" class="card-tab-title" aria-expanded="true">Map Locations</a>
+                                                        </li>
+                                                        <li class="wizard-card-tools">
+                                                            <i class="ion-ios-trash add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Delete"></i>
+                                                            <i class="ion-ios-loop-strong add-tooltip library-tools-icon" data-placement="bottom" data-toggle="tooltip" data-original-title="Show/Hide"></i>
+                                                        </li>
+                                                    </ul>
+
+                                                    <!--Tabs Content-->
+                                                    <div class="tab-content card-content-tab" style="margin-left: 0px; display: none;">
+
+                                                        <!-- Card -->
+                                                        <div id="summary-card-1" class="tab-pane fade active in"> 
+                                                            <div class="panel-body card-panel-body" style="">
+                                                                <div id="" class="card-content" style="">
+
+                                                                    <!-- Card Level Alert -->
+                                                                    <div id="summary-card-alert" class="panel install-card-alert" style=""></div>
+
+                                                                    <!-- Card Instruction -->
+                                                                    <p id="install-instructions" class="content-instructions">
+                                                                        Enter the resource address 
+                                                                        
+                                                                        <!-- Help link -->
+                                                                        <span>  
+                                                                            <a id="card-help-link" href="" class="pull-right card-help help editable-help" style="display: none;"> Help <i class="fa fa-question-circle"></i></a>
+                                                                        </span>
+                                                                    </p>
+                                                                    
+                                                                    <!-- Form -->
+                                                                    <div class="col-lg-9" style="padding-bottom: 10px;">
+
+                                                                        <form class="widgets" style="margin-bottom: 20px;">
+                                                                            <div class="row widget-container editable-widget" style="">
+                                                                                <div class="form-group">
+                                                                                    <div class="relative" style="">
+                                                                                        <span class="pin-left-widget drag-tool-widget" style="display: none;"><i class="fa fa-align-justify"></i>
+                                                                                        </span>
+
+                                                                                        <label class="col-xs-12 control-label widget-input-label" for=""> Address</label>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="col-xs-12">
+                                                                                        <input type="" placeholder="Enter an address" id="" class="form-control input-lg widget-input">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row widget-container editable-widget" style="">
+                                                                                <div class="form-group">
+                                                                                    <div class="relative" style="">
+                                                                                        <span class="pin-left-widget drag-tool-widget" style="display: none;"><i class="fa fa-align-justify"></i>
+                                                                                        </span>
+
+                                                                                        <label class="col-xs-12 control-label widget-input-label" for=""> Address Type</label>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="col-xs-12">
+                                                                                        <select id="" class="design" style="height: 32px; display: none;" data-placeholder="Choose a Type..." tabindex="-1">
+                                                                                            
+                                                                                        </select><div class="chosen-container chosen-container-single design chosen-container-single-nosearch" style="width: 100%;" title=""><a class="chosen-single chosen-default" tabindex="-1"><span>Choose a type...</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly="" tabindex="4"></div><ul class="chosen-results"></ul></div></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+
+                                                                        <!-- Save/Add Button -->
+                                                                        <div id="card-save-tile-btn" class="install-buttons" style="display: none;">
+                                                                            <button id="" class="btn btn-shim btn-mint btn-labeled btn-lg fa fa-plus"> Add</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Card-level tiles (only neccessary for tiles with Cardinality of n) -->
+                                                            <div id="card-save-tile-list" class="list-group" style="margin: 0px 15px 30px 10px; display: none;">
+                                                                <!-- Record -->
+                                                                <div id="record-1" class="tile-record list-group-item" style="cursor: pointer; background: rgb(250, 250, 250);">
+                                                                    [Address], [Address Type]
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Add New Card -->
+                                                        <div id="map-card-1" class="tab-pane fade"> 
+                                                            <div class="panel-body card-panel-body" style="">
+                                                                <div id="" class="card-content" style="">
+
+                                                                    <div class="">
+
+                                                                        Yo, new map!
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 
+                                                    <!-- Help/Thesaurus term Panel -->
+                                                    <aside id="card-help-panel" data-page="./help/config_manager/new_basemap.html" class="card-help-panel" style="display: none;">
+                                                        <div class="relative">
+                                                            <a id="add-basemap-wizard-help-close" href="" class="help-close fa fa-times fa-lg" style=""></a>
+                                                        </div>
+                                                        <div id="add-basemap-wizard-help-content" class="" style=""><div id="" class="" style="">
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title" style="padding: 0 10px 0 10px;"><span class="help-text-small"> Help</span> Title</h3>
+                                                            </div>
+                                                            <div class="panel-body" style="padding: 10px 10px 15px 10px;">
+                                                                <p>Put Card-Specific help text here.  When panel is initiated from a controlled vocabulary, put thesaurus listing here instead.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div></aside>
+                                                </div>
                                             </div>
+
+
                                         </div>
                                     </div>
                                 </div>

@@ -967,6 +967,7 @@ div.card-grid-item.selected {
 
 .resource-tools a.resource-grid-title.active:hover {
 	color: #333;
+	cursor: default;
 }
 
 .resource-grid-title:nth-child(2) {
@@ -1204,15 +1205,15 @@ div.card-grid-item.selected {
 
 .find-widget {
 	position: absolute;
-	left: 85px;
-	top: 13px;
-	width: 400px;
+	left: 15px;
+	top: 8px;
+	width: 450px;
 }
 
 .clear-find {
 	position: absolute; 
 	right: 10px; 
-	top: 5px; 
+	top: 8px; 
 	color: #123; 
 	font-size: 17px;
 }

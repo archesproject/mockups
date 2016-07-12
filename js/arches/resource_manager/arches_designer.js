@@ -27,6 +27,15 @@
 	});
 	
 
+// Find Resource/Graph
+	$('.graph-find').on('click', function (ev) {
+		ev.preventDefault();
+		
+		$(".find-widget").toggle();	
+		$(".resource-tools").toggle();	
+	
+	});
+
 
 // Resource Grid Item Highlight
 	$('.resource-grid-item').on('mouseover', function (ev) {
@@ -148,7 +157,7 @@
 
 
 	$(".resources").chosen({
-	  	disable_search_threshold: 15,
+	  	disable_search_threshold: 1,
 	  	inherit_select_classes: true,
 	  	width: '100%'
 	});

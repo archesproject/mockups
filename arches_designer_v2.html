@@ -542,16 +542,39 @@
                         <!-- Search -->
                         <div class="edit-panel-search-bar">
 
-                            <!-- Find widget -->
-                            <div class="find-widget">
-                                <input type="text" class="form-control input-lg" placeholder="Find a resource or graph...">
-                                <span class="clear-find"><i class="fa fa-times-circle"></i></span>
+                            <!-- Find Button -->
+                            <div class="">
+                                <a class="page-header text-overflow graph-find" href="#"> Find </a>
                             </div>
 
+                            <!-- Find widget -->
+                            <div class="find-widget" style="display: none;">
+                                <div class="">
+                                    <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4">
+                                        <optgroup label="Resources">
+                                        <option>Heritage Resource</option>
+                                        <option>Heritage District</option>
+                                        <option>Activity</option>
+                                        <option>Historic Event</option>
+                                        <option>Information Resource</option>
+                                        <optgroup label="Graphs">
+                                        <option>Location</option>
+                                        <option>Condition Assessement</option>
+                                        <option>Measurements</option>
+                                        <option>Phase Type Assignment</option>
+                                    </select>                                       
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="btn-group" style="position: absolute; right: 50px; top: 12px;">
-                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                        <!-- Resource/Graph Toggle -->
+                        <div class="resource-tools relative" style="display: block;">
+                            <a id="" class="resource-grid-title active" href="">Resources</a>
+                            <a id="" class="resource-grid-title" href="">Graph Library</a>
+                        </div>
+
+                        <div class="btn-group btn-add-group">
+                            <button class="btn btn-primary dropdown-toggle btn-add-graph" data-toggle="dropdown" type="button" aria-expanded="false">
                                 Add <i class="ion-more"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-right">
@@ -571,7 +594,7 @@
                 <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
 
                     <!-- Resource/Graph Toggle -->
-                    <div class="resource-tools relative">
+                    <div class="resource-tools relative hidden">
                         <a id="" class="resource-grid-title active" href="">Resources</a>
                         <a id="" class="resource-grid-title" href="">Graph Library</a>
                     </div>

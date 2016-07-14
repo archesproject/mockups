@@ -2250,7 +2250,7 @@ input[type="checkbox"]{
 .content-instructions {
 	font-size: 13px;
 	color: #8d8d8d;
-	margin-top: -50px;
+	margin-top: -30px;
 	line-height: 1.25;
 	margin-bottom: 20px;
 }
@@ -4273,6 +4273,7 @@ li.search-field {
 	padding: 15px 50px 35px 50px;
 	background: #f4f4f4;
 	border-bottom: 1px solid #e9e9e9;  /*#ebeef0 */
+	margin-right: 15px;
 }
 
 .rp-report-section:nth-child(2) {
@@ -4405,9 +4406,28 @@ h4.report-toolbar-title {
 }
 
 
+.map-container {
+	height: 545px;
+}
+
+.map-crud-container {
+	position: absolute;
+	top: -34px;
+	left: -15px;
+	right: 0px;
+	height: 500px;
+}
+
+.map-tab {
+	padding: 0px;
+}
+
+.map-bordered-top {
+	border-top: 2px solid #ddd;
+}
+
 .map {
 	height: 500px;
-	border-left: 1px solid #ddd;
 }
 
 .map-widget-container-closed {
@@ -4583,6 +4603,14 @@ h4.report-toolbar-title {
 	border-top: 1px solid #f4f4f4;
 	border-bottom: 1px solid #ddd;
 	transition: all .40s ease;
+}
+
+.map-report-tile {
+	height: 545px;
+}
+
+.map-report-container {
+	padding-left: 5px;
 }
 
 .overlay-tool-group {

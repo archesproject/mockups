@@ -6,3 +6,7 @@ $(".resource-list").chosen({
     inherit_select_classes: true,
     width: '100%'
 });
+
+
+//Date picker
+$('#default-date-picker .input-group.date').datepicker({autoclose:true});

@@ -355,6 +355,7 @@
     $('#help-editor').summernote({height: 250});
     //$('.note-toolbar .note-insert, .note-toolbar .note-table, .note-toolbar .note-style:first, .note-toolbar .note-para').remove();
 	
+	$('#editor').summernote({height: 250});
 
     //Preview Help Panel
     $('#preview-card-help').change(function() {

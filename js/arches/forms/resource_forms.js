@@ -10,3 +10,8 @@ $(".resource-list").chosen({
 
 //Date picker
 $('#default-date-picker .input-group.date').datepicker({autoclose:true});
+
+
+
+//Time picker
+$('#default-time-picker').timepicker();

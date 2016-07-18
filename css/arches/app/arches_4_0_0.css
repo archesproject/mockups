@@ -4720,6 +4720,24 @@ h4.report-toolbar-title {
 }
 
 
+.overlay-container {
+	position: absolute;
+	height: 500px;
+	color: #123;
+	background: #eee;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 5;
+	padding: 20px;
+}
+
+.icon-xl {
+	font-size: 36px;
+	padding-top: 7px;
+	padding-right: 10px;
+}
+
 
 /* Search Classes (V4) */
 

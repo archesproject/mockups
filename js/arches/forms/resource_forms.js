@@ -9,7 +9,12 @@ $(".resource-list").chosen({
 
 
 //Date picker
-$('#default-date-picker .input-group.date').datepicker({autoclose:true});
+$('#default-date-picker .input-group.date').datepicker({
+	autoclose:true,
+	format: 'mm/dd/yyyy',
+	todayBtn: 'linked',
+	todayHighlight: true
+});
 
 
 

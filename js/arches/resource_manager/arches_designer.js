@@ -3,6 +3,48 @@
 //
 
 
+// Toggle Resource/Records
+	$('#lnk-resource-records').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//toggle panels
+		$("#resource-records").removeClass('hidden');	
+		$("#resource-list").addClass('hidden');	
+	
+		//toggle link display
+		$("#lnk-resource-records").addClass('active');
+		$("#lnk-resource-list").removeClass('active');
+
+	});
+
+
+
+
+
+// Resource Instance Data Table
+// Row selection (single row)
+	// -----------------------------------------------------------------
+	var rowSelection = $('#demo-dt-selection').DataTable({
+		"responsive": true,
+		"language": {
+			"paginate": {
+			  "previous": '<i class="fa fa-angle-left"></i>',
+			  "next": '<i class="fa fa-angle-right"></i>'
+			}
+		}
+	});
+
+	$('#demo-dt-selection').on( 'click', 'tr', function () {
+		if ( $(this).hasClass('selected') ) {
+			$(this).removeClass('selected');
+		}
+		else {
+			rowSelection.$('tr.selected').removeClass('selected');
+			$(this).addClass('selected');
+		}
+	} );
+
+
 // Manage Edit Panel Tools Menu
 	$("#menu-control").click(function(ev){
  		ev.preventDefault();

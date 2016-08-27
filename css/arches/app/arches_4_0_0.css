@@ -2769,7 +2769,7 @@ span.icon-wrap.icon-circle.bg-gray-dark:hover {
 
 
 .img-login {
-	background-image: url("../../../img/arches/backgrounds/easter_island.jpg");
+	background-image: url("../../../img/arches/backgrounds/easter_island_night.jpg");
 }
 
 .img-register {
@@ -3878,6 +3878,10 @@ li.card-tree-list:last-of-type {
     background: #2d3c4b;
  }
 
+ .link-submenu-item {
+ 	margin-left: 0px;
+ }
+
  .link-submenu {
  	width: 235px;
     text-overflow: ellipsis;
@@ -4418,6 +4422,12 @@ li.search-field {
 	position: absolute;
 	top: 190px;
 	left: 45%;
+}
+
+.arches-menu-icon {
+	font-size: 10px; 
+	color: #abb1b7; 
+	transform: translate(0, -2px);
 }
 
 .add-card-icon {
@@ -5105,7 +5115,7 @@ a.btn-link {
 	}
 
 	.ep-menu-panel {
-		top: 39px;
+		top: 50px;
 	}
 
 	.ep-tools-home {
@@ -5136,6 +5146,18 @@ a.btn-link {
 		left: 0px;
 	}
 
+	.link-submenu-item {
+		margin-left: -23px;
+	}
+
+	.link-submenu {
+		width: 258px;
+	}
+
+	.crud-card-container {
+		padding: 20px 15px 50px 10px;
+	}
+
 	.crud-menu-container {
 		margin-left: -275px;
 	}
@@ -5147,7 +5169,7 @@ a.btn-link {
 
 	.report-toolbar {
 		width: 100%;
-		top: 90px;
+		top: 100px;
 	}
 
 	.rp-report-section {

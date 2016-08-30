@@ -150,7 +150,7 @@
 
                                 <!-- Title Bar -->
                                 <div class="ep-tools-title">
-                                  <h1 class="page-header text-overflow ep-graph-title"><i class="text-center fa fa-certificate icon-wrap bg-gray ep-graph-title-icon"></i> Resource Name Here</h1>
+                                  <h1 class="page-header text-overflow ep-graph-title"><i class="text-center fa fa-university icon-wrap bg-gray ep-graph-title-icon"></i> New Archaeological Resource</h1>
                                 </div>
 
                                 <!-- Home -->
@@ -264,10 +264,10 @@
 
         <div id="" class="boxed">
 
-            <!-- Default Page -->
-            <div id="" class="responsive-content">
+            <!-- Main Editor -->
+            <div id="current-resource-panel" class="responsive-content" style="">
 
-                <!-- Secondary Title Bar -->
+                <!-- Title Bar -->
                 <div id="" class="relative fade in" style="display: block;">
 
                     <!-- Title Block -->
@@ -276,7 +276,7 @@
                         
                         <!-- Tools -->
                         <div class="ep-form-toolbar-tools">
-                            <button class="btn btn-sm btn-mint btn-labeled fa fa-code-fork" data-bind="">Related Resources</button>
+                            <button id="related-resources-open-btn" class="btn btn-sm btn-mint btn-labeled fa fa-code-fork" data-bind="">Related Resources</button>
                         </div>
                     </div>
                 </div>
@@ -727,7 +727,520 @@
                     </div>
                 </div>
             </div>
-            <!--END  Default Page-->
+            <!--END  Main Editor -->
+
+
+            <!-- Related Resources Editor -->
+            <div id="related-resources-panel" class="responsive-content hidden">
+
+                <!-- Title Bar -->
+                <div id="" class="relative fade in" style="display: block;">
+
+
+
+
+                    <!-- Page Header -->
+                    <div class="">
+                        
+                        <!-- Toolbar -->
+                        <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4; margin-top: 50px;">
+
+                            <!-- Search -->
+                            <div class="edit-panel-search-bar">
+
+                                <!-- Find Button -->
+                                <div class="">
+                                    <a class="page-header text-overflow graph-find" href="#"> Find </a>
+                                </div>
+
+                                <!-- Find widget -->
+                                <div class="find-widget" style="display: none;">
+                                    <div class="">
+                                        <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4">
+                                            <option>Brauerei Paulaner</option>
+                                            <option>Weihenstephaner Recipe</option>
+                                        </select>                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Resource/Graph Toggle -->
+                            <div class="resource-tools relative" style="display: block;">
+                                <a id="lnk-resource-list" class="resource-grid-title active" href="">Related resources</a>
+                                <a id="lnk-resource-records" class="resource-grid-title" href="">Add relation</a>
+                            </div>
+                        </div> 
+
+                        <!-- Tools -->
+                        <div class="ep-form-toolbar-tools">
+                            <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
+                        </div> 
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Title Block -->
+                    <div class="report-toolbar hidden">
+                        
+                        <!-- Title/Search -->
+                        <div class="relative">
+                            <div class="rr-panel-search-bar">
+
+                                <!-- Find Button -->
+                                <div class="">
+                                    <a class="page-header text-overflow graph-find" href="#"> Find </a>
+                                </div>
+
+                                <!-- Find widget -->
+                                <div class="find-widget" style="display: none;">
+                                    <div class="">
+                                        <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4">
+                                            <option>Archaeological Resource</option>
+                                            <option>Architectural Resource</option>
+                                            <option>Heritage District</option>
+                                            <option>Activity</option>
+                                            <option>Historic Event</option>
+                                            <option>Person/Organization</option>
+                                            <option>Information Resource</option>
+                                        </select>                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Resource/Graph Toggle -->
+                            <div class="resource-tools relative" style="display: block;">
+                                <a id="lnk-resource-list" class="rr-grid-title active" href="">Related Resources</a>
+                                <a id="lnk-resource-records" class="rr-grid-title" href="">New Relations</a>
+                            </div>
+                        </div>
+
+
+                        <!-- Tools -->
+                        <div class="ep-form-toolbar-tools">
+                            <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editor Content -->
+                <div class="content-panel">
+                    <div class="flex">
+
+                        <!-- Default Page content-->
+                        <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
+
+                            <!-- Resoure Grid -->
+                            <div id="resource-list" class="report-image-grid" style="margin-top: 5px;">
+
+                                <!-- Resource -->
+                                <div class="card-grid-item" data-bind="">
+                                    <div class="panel mar-no">
+                                        <!-- card Name -->
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-university"></i> Brauerei Paulaner</h3>
+                                        </div>
+
+                                        <!-- Abstract -->
+                                        <div class="panel-body library-card-body">
+                                            <div class="text-bold">
+                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                To: <span class="text-normal text-muted"> --</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- CRUD -->
+                                        <div class="librart-card-body-expanded hidden">
+                                            Yo!
+                                        </div>
+
+                                        <!-- Selectable -->
+                                        <div class="selectable" style="display: none;">
+                                            <i class="ion-ios-checkmark"></i>
+                                        </div>
+
+                                        <!-- card Tools -->
+                                        <div class="panel-footer" style="height: 53px;">
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li><a href="#">Edit this relation</a>
+                                                        </li>
+                                                        <li><a href="#">Edit this resource</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Close</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Resource -->
+                                <div class="card-grid-item" data-bind="">
+                                    <div class="panel mar-no">
+                                        <!-- card Name -->
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
+                                        </div>
+
+                                        <!-- Abstract -->
+                                        <div class="panel-body library-card-body">
+                                            <div class="text-bold">
+                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                To: <span class="text-normal text-muted"> --</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selectable -->
+                                        <div class="selectable" style="display: none;">
+                                            <i class="ion-ios-checkmark"></i>
+                                        </div>
+
+                                        <!-- card Tools -->
+                                        <div class="panel-footer" style="height: 53px;">
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li><a href="#">Edit this relation</a>
+                                                        </li>
+                                                        <li><a href="#">Edit this resource</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Close</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Resource -->
+                                <div class="card-grid-item" data-bind="">
+                                    <div class="panel mar-no">
+                                        <!-- card Name -->
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
+                                        </div>
+
+                                        <!-- Abstract -->
+                                        <div class="panel-body library-card-body">
+                                            <div class="text-bold">
+                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                To: <span class="text-normal text-muted"> --</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selectable -->
+                                        <div class="selectable" style="display: none;">
+                                            <i class="ion-ios-checkmark"></i>
+                                        </div>
+
+                                        <!-- card Tools -->
+                                        <div class="panel-footer" style="height: 53px;">
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li><a href="#">Edit this relation</a>
+                                                        </li>
+                                                        <li><a href="#">Edit this resource</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Close</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Resource -->
+                                <div class="card-grid-item" data-bind="">
+                                    <div class="panel mar-no">
+                                        <!-- card Name -->
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
+                                        </div>
+
+                                        <!-- Abstract -->
+                                        <div class="panel-body library-card-body">
+                                            <div class="text-bold">
+                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                To: <span class="text-normal text-muted"> --</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selectable -->
+                                        <div class="selectable" style="display: none;">
+                                            <i class="ion-ios-checkmark"></i>
+                                        </div>
+
+                                        <!-- card Tools -->
+                                        <div class="panel-footer" style="height: 53px;">
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li><a href="#">Edit this relation</a>
+                                                        </li>
+                                                        <li><a href="#">Edit this resource</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Close</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Resource -->
+                                <div class="card-grid-item" data-bind="">
+                                    <div class="panel mar-no">
+                                        <!-- card Name -->
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
+                                        </div>
+
+                                        <!-- Abstract -->
+                                        <div class="panel-body library-card-body">
+                                            <div class="text-bold">
+                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                To: <span class="text-normal text-muted"> --</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selectable -->
+                                        <div class="selectable" style="display: none;">
+                                            <i class="ion-ios-checkmark"></i>
+                                        </div>
+
+                                        <!-- card Tools -->
+                                        <div class="panel-footer" style="height: 53px;">
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li><a href="#">Edit this relation</a>
+                                                        </li>
+                                                        <li><a href="#">Edit this resource</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Close</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Resource -->
+                                <div class="card-grid-item" data-bind="">
+                                    <div class="panel mar-no">
+                                        <!-- card Name -->
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
+                                        </div>
+
+                                        <!-- Abstract -->
+                                        <div class="panel-body library-card-body">
+                                            <div class="text-bold">
+                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
+                                            </div>
+                                            <div class="text-bold">
+                                                To: <span class="text-normal text-muted"> --</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Selectable -->
+                                        <div class="selectable" style="display: none;">
+                                            <i class="ion-ios-checkmark"></i>
+                                        </div>
+
+                                        <!-- card Tools -->
+                                        <div class="panel-footer" style="height: 53px;">
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-right">
+                                                        <li><a href="#">Edit this relation</a>
+                                                        </li>
+                                                        <li><a href="#">Edit this resource</a>
+                                                        </li>
+                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
+                                                        </li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Close</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Resources Edit History -->
+            <div id="edit-history-panel" class="responsive-content hidden">
+
+                <!-- Title Bar -->
+                <div id="" class="relative fade in" style="display: block;">
+
+                    <!-- Title Block -->
+                    <div class="report-toolbar">
+                        <h4 class="report-toolbar-title">Edit History </h4>
+                        
+                        <!-- Tools -->
+                        <div class="ep-form-toolbar-tools">
+                            <button class="btn btn-sm btn-mint btn-labeled fa fa-code-fork" data-bind="">Related Resources</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editor Content -->
+                <div class="content-panel resource-editor">
+                    <div class="flex">
+
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Timeline panel</h3>
+                            </div>
+                            <div class="panel-body">
+                                <!-- Timeline -->
+                                <!--===================================================-->
+                                <div class="timeline">
+                
+                                    <!-- Timeline header -->
+                                    <div class="timeline-header">
+                                        <div class="timeline-header-title bg-info">Now</div>
+                                    </div>
+                
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat">
+                                            <div class="timeline-icon bg-danger"><i class="fa fa-building fa-lg"></i>
+                                            </div>
+                                            <div class="timeline-time">2 Hours ago</div>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h4 class="mar-no pad-btm"><a href="#" class="text-danger">Job Meeting</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat">
+                                            <div class="timeline-icon"><img src="img/av4.png" alt="Profile picture">
+                                            </div>
+                                            <div class="timeline-time">3 Hours ago</div>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p class="mar-no pad-btm"><a href="#" class="btn-link text-semibold">Lisa D.</a> commented on <a href="#">The Article</a>
+                                            </p>
+                                            <blockquote class="bq-sm bq-open">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</blockquote>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat">
+                                            <div class="timeline-icon bg-purple"><i class="fa fa-check fa-lg"></i>
+                                            </div>
+                                            <div class="timeline-time">December 25, 2029</div>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <img class="img-xs img-circle" src="img/av3.png" alt="Profile picture">
+                                            <a href="#" class="btn-link text-semibold">Bobby Marz</a> followed you.
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat">
+                                            <div class="timeline-icon"></div>
+                                            <div class="timeline-time">11:27</div>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--===================================================-->
+                                <!-- End Timeline -->
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
 
 
             <!--MAIN NAVIGATION-->
@@ -938,8 +1451,9 @@
     <script src="plugins/packery/packery.pkgd.min.js"></script>
 
 
-    <!-- MorphingSearch -->
+    <!-- MorphingSearch 
     <script src="plugins/MorphingSearch/js/morphingsearch.js"></script>
+    -->
 
 
     <!--Switchery [ OPTIONAL ]-->
@@ -960,9 +1474,10 @@
 
 
 
-    <!--Gmaps -->
+    <!--Gmaps 
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyBCUB9l8yOny87iJeuaaF8lok_9DFj--0A"></script>
     <script src="plugins/gmaps/gmaps.js"></script>
+    -->
 
 
     <!--DataTables [ OPTIONAL ]-->
@@ -973,8 +1488,11 @@
 
     <!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
+    <!--
     <script src="js/arches/forms/resource_forms.js"></script>
     <script src="js/arches/resource_manager/arches_designer.js"></script>
+    -->
+    <script src="js/arches/resource_manager/arches_new_resource.js"></script>
         
 
 </body>

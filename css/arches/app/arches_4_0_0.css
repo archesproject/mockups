@@ -831,6 +831,13 @@ textarea:placeholder {
 	opacity: 1.0;
 }
 
+.related-resource-card {
+	float: left;
+  	margin: 3px;
+  	width: 350px;
+  	border: 1px solid #ddd;
+  	opacity: .79;
+}
 
 .card-grid-item {
 	float: left;
@@ -965,6 +972,15 @@ div.card-grid-item.selected {
     display: inline-block;
 }
 
+.rr-grid-title {
+    font-weight: normal;
+    margin-left: -30px;
+    margin-top: -1px;
+    font-size: 1.416em;
+    line-height: 50px;
+    display: inline-block;
+}
+
 .resource-tools a.resource-grid-title.active {
 	color: #333;
 }
@@ -1072,6 +1088,12 @@ div.card-grid-item.selected {
 	position: absolute;
 	left: 40px;
 	padding-top: 10px;
+}
+
+.rr-panel-search-bar {
+	position: absolute;
+	left: 0px;
+	padding-top: 5px;
 }
 
 .btn-add-group {
@@ -4596,8 +4618,18 @@ li.search-field {
     border-bottom: 1px solid #ddd;
 }
 
+.stamp {
+  position: absolute;
+  background: orange;
+  border: 4px dotted black;
+}
+
 .report-toolbar a {
 	width: 500px;
+}
+
+.rr-panel-search-bar a {
+	width: 75px;
 }
 
 .report-toolbar-preview {

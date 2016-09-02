@@ -762,6 +762,11 @@
 		//close menu
 		$("#menu-panel").toggle();
 
+
+		//force form open
+		$("#form-id-card").css("display", "block");
+		
+
 	});
 
 

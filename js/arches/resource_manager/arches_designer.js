@@ -21,30 +21,6 @@
 
 
 
-// Resource Instance Data Table
-// Row selection (single row)
-	// -----------------------------------------------------------------
-	// var rowSelection = $('#demo-dt-selection').DataTable({
-	// 	"responsive": true,
-	// 	"language": {
-	// 		"paginate": {
-	// 		  "previous": '<i class="fa fa-angle-left"></i>',
-	// 		  "next": '<i class="fa fa-angle-right"></i>'
-	// 		}
-	// 	}
-	// });
-
-	// $('#demo-dt-selection').on( 'click', 'tr', function () {
-	// 	if ( $(this).hasClass('selected') ) {
-	// 		$(this).removeClass('selected');
-	// 	}
-	// 	else {
-	// 		rowSelection.$('tr.selected').removeClass('selected');
-	// 		$(this).addClass('selected');
-	// 	}
-	// } );
-
-
 // Manage Edit Panel Tools Menu
 	$("#menu-control").click(function(ev){
  		ev.preventDefault();

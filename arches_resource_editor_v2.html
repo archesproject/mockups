@@ -731,7 +731,7 @@
 
 
             <!-- Related Resources Editor -->
-            <div id="related-resources-panel" class="responsive-content hidden">
+            <div id="related-resources-panel" class="responsive-content">
 
                 <!-- Title Bar -->
                 <div id="" class="relative fade in" style="display: block;">
@@ -742,29 +742,9 @@
                         <!-- Toolbar -->
                         <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4; margin-top: 50px;">
 
-                            <!-- Search -->
-                            <div class="edit-panel-search-bar">
-
-                                <!-- Find Button -->
-                                <div class="">
-                                    <a class="page-header text-overflow graph-find" href="#"> Find </a>
-                                </div>
-
-                                <!-- Find widget -->
-                                <div class="find-widget" style="display: none;">
-                                    <div class="">
-                                        <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4">
-                                            <option>Brauerei Paulaner</option>
-                                            <option>Weihenstephaner Recipe</option>
-                                        </select>                                       
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Resource/Graph Toggle -->
-                            <div class="resource-tools relative" style="display: block;">
+                            <div class="relative" style="display: block;">
                                 <a id="lnk-resource-list" class="resource-grid-title active" href="">Related resources</a>
-                                <a id="lnk-resource-records" class="resource-grid-title" href="">Add relation</a>
                             </div>
                         </div> 
 
@@ -772,48 +752,6 @@
                         <div class="ep-form-toolbar-tools">
                             <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
                         </div> 
-                    </div>
-
-                    <!-- Title Block -->
-                    <div class="report-toolbar hidden">
-                        
-                        <!-- Title/Search -->
-                        <div class="relative">
-                            <div class="rr-panel-search-bar">
-
-                                <!-- Find Button -->
-                                <div class="">
-                                    <a class="page-header text-overflow graph-find" href="#"> Find </a>
-                                </div>
-
-                                <!-- Find widget -->
-                                <div class="find-widget" style="display: none;">
-                                    <div class="">
-                                        <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4">
-                                            <option>Archaeological Resource</option>
-                                            <option>Architectural Resource</option>
-                                            <option>Heritage District</option>
-                                            <option>Activity</option>
-                                            <option>Historic Event</option>
-                                            <option>Person/Organization</option>
-                                            <option>Information Resource</option>
-                                        </select>                                       
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Resource/Graph Toggle -->
-                            <div class="resource-tools relative" style="display: block;">
-                                <a id="lnk-resource-list" class="rr-grid-title active" href="">Related Resources</a>
-                                <a id="lnk-resource-records" class="rr-grid-title" href="">New Relations</a>
-                            </div>
-                        </div>
-
-
-                        <!-- Tools -->
-                        <div class="ep-form-toolbar-tools">
-                            <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
-                        </div>
                     </div>
                 </div>
 
@@ -822,318 +760,73 @@
                 <div class="content-panel">
                     <div class="flex">
 
-                        <!-- Default Page content-->
-                        <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
+                        
 
-                            <!-- Resoure Grid -->
-                            <div id="resource-list" class="report-image-grid" style="margin-top: 5px;">
+                        <!-- Control Panel -->
+                        <div class="search-control-container">
+                            
+                            <!-- Panel Title-->
+                            <h3 class="search-title text-center"> Select and Relate Resources! </h3>
 
-                                <!-- Resource -->
-                                <div class="card-grid-item" data-bind="">
-                                    <div class="panel mar-no">
-                                        <!-- card Name -->
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-university"></i> Brauerei Paulaner</h3>
-                                        </div>
+                            <!-- Panel Tools -->
+                            <div class="search-toolbar text-center">
+                                
 
-                                        <!-- Abstract -->
-                                        <div class="panel-body library-card-body">
-                                            <div class="text-bold">
-                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                To: <span class="text-normal text-muted"> --</span>
-                                            </div>
-                                        </div>
 
-                                        <!-- CRUD -->
-                                        <div class="librart-card-body-expanded hidden">
-                                            Yo!
-                                        </div>
+                                <a class="pad-rgt pad-lft" href=""> Related Resources</a>
+                                <a class="pad-rgt pad-lft" href=""> Select Resources</a>
+                                <a class="pad-rgt pad-lft" href=""> Filters</a>
 
-                                        <!-- Selectable -->
-                                        <div class="selectable" style="display: none;">
-                                            <i class="ion-ios-checkmark"></i>
-                                        </div>
 
-                                        <!-- card Tools -->
-                                        <div class="panel-footer" style="height: 53px;">
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="#">Edit this relation</a>
-                                                        </li>
-                                                        <li><a href="#">Edit this resource</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Close</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Resource -->
-                                <div class="card-grid-item" data-bind="">
-                                    <div class="panel mar-no">
-                                        <!-- card Name -->
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
-                                        </div>
-
-                                        <!-- Abstract -->
-                                        <div class="panel-body library-card-body">
-                                            <div class="text-bold">
-                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                To: <span class="text-normal text-muted"> --</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Selectable -->
-                                        <div class="selectable" style="display: none;">
-                                            <i class="ion-ios-checkmark"></i>
-                                        </div>
-
-                                        <!-- card Tools -->
-                                        <div class="panel-footer" style="height: 53px;">
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="#">Edit this relation</a>
-                                                        </li>
-                                                        <li><a href="#">Edit this resource</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Close</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Resource -->
-                                <div class="card-grid-item" data-bind="">
-                                    <div class="panel mar-no">
-                                        <!-- card Name -->
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
-                                        </div>
-
-                                        <!-- Abstract -->
-                                        <div class="panel-body library-card-body">
-                                            <div class="text-bold">
-                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                To: <span class="text-normal text-muted"> --</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Selectable -->
-                                        <div class="selectable" style="display: none;">
-                                            <i class="ion-ios-checkmark"></i>
-                                        </div>
-
-                                        <!-- card Tools -->
-                                        <div class="panel-footer" style="height: 53px;">
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="#">Edit this relation</a>
-                                                        </li>
-                                                        <li><a href="#">Edit this resource</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Close</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Resource -->
-                                <div class="card-grid-item" data-bind="">
-                                    <div class="panel mar-no">
-                                        <!-- card Name -->
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
-                                        </div>
-
-                                        <!-- Abstract -->
-                                        <div class="panel-body library-card-body">
-                                            <div class="text-bold">
-                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                To: <span class="text-normal text-muted"> --</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Selectable -->
-                                        <div class="selectable" style="display: none;">
-                                            <i class="ion-ios-checkmark"></i>
-                                        </div>
-
-                                        <!-- card Tools -->
-                                        <div class="panel-footer" style="height: 53px;">
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="#">Edit this relation</a>
-                                                        </li>
-                                                        <li><a href="#">Edit this resource</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Close</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Resource -->
-                                <div class="card-grid-item" data-bind="">
-                                    <div class="panel mar-no">
-                                        <!-- card Name -->
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
-                                        </div>
-
-                                        <!-- Abstract -->
-                                        <div class="panel-body library-card-body">
-                                            <div class="text-bold">
-                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                To: <span class="text-normal text-muted"> --</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Selectable -->
-                                        <div class="selectable" style="display: none;">
-                                            <i class="ion-ios-checkmark"></i>
-                                        </div>
-
-                                        <!-- card Tools -->
-                                        <div class="panel-footer" style="height: 53px;">
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="#">Edit this relation</a>
-                                                        </li>
-                                                        <li><a href="#">Edit this resource</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Close</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Resource -->
-                                <div class="card-grid-item" data-bind="">
-                                    <div class="panel mar-no">
-                                        <!-- card Name -->
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-o"></i> Weihenstephaner Recipe</h3>
-                                        </div>
-
-                                        <!-- Abstract -->
-                                        <div class="panel-body library-card-body">
-                                            <div class="text-bold">
-                                                Relationship: <span class="text-normal text-muted"> P130i_features_are_also_found_on</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                From: <span class="text-normal text-muted"> May 12, 1989</span>
-                                            </div>
-                                            <div class="text-bold">
-                                                To: <span class="text-normal text-muted"> --</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Selectable -->
-                                        <div class="selectable" style="display: none;">
-                                            <i class="ion-ios-checkmark"></i>
-                                        </div>
-
-                                        <!-- card Tools -->
-                                        <div class="panel-footer" style="height: 53px;">
-                                            <div class="pull-right">
-                                                <div class="btn-group">
-                                                    <button class="btn btn-primary btn-labeled fa fa-pencil dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                        Edit Relation <i class="dropdown-caret fa fa-caret-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="#">Edit this relation</a>
-                                                        </li>
-                                                        <li><a href="#">Edit this resource</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="text-bold">Delete</span> this relation</a>
-                                                        </li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Close</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+
+                        <!-- Attribute Search and listing -->
+                        <div class="" style="padding: 20px; width: 100%;">
+                            
+                            <div class="search-bar">
+                                <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4" multiple>
+                                    <option>Brauerei (Resource Type)</option>
+                                    <option>Beer (Asset)</option>
+                                    <option>Paulaner (Appelation)</option>
+                                    <option>Brewing (Activity)</option>
+                                    <option>Racer 5 (Appellation)</option>
+                                    <option>Alison Dalgity (Agent)</option>
+                                </select>  
+                            </div>
+
+                            <!-- Results: Resource Listing -->
+                            <div class="search-results-container">
+
+                                <!-- Search Metadata and sorting -->
+                                <div class="search-metadata">
+                                    21337 results
+                                </div>
+
+                                <!-- Resource -->
+                                <div class="search-listing">
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <!-- Relation CRUD Panel -->
+                        <div class="data-entry-container hidden">
+
+                            Enter Data!
+
+                        </div>
+
+
+                            
+
+
+
+                        
                     </div>
                 </div>
             </div>

@@ -2112,6 +2112,38 @@ div.dropdown-menu.open {
     overflow-x: hidden; 
 }
 
+.search-control-container {
+    -ms-flex: 0 0 400px;
+    -webkit-flex: 0 0 400px;
+    flex: 0 0 400px;
+    margin-bottom: 0px;
+    background-color: #fafafa;
+    padding: 20px;
+    border-right: solid 1px #dddddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+.search-title {
+	font-size: 19px;
+	font-weight: 200;
+	margin-top: 0px;
+}
+
+.search-listing {
+	height: 150px;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
+.data-entry-container {
+	width: 450px;
+	background: #f4f4f4;
+}
+
 
 .left-column-container{
     -ms-flex: 0 0 220px;

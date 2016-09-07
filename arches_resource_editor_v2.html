@@ -731,7 +731,7 @@
 
 
             <!-- Related Resources Editor -->
-            <div id="related-resources-panel" class="responsive-content">
+            <div id="related-resources-panel" class="responsive-content hidden">
 
                 <!-- Title Bar -->
                 <div id="" class="relative fade in" style="display: block;">
@@ -749,7 +749,9 @@
                         </div> 
 
                         <!-- Tools -->
-                        <div class="ep-form-toolbar-tools">
+                        <div class="ep-form-toolbar-tools" style="margin-top: 5px;">
+                            <button id="form-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="">Discard Edits</button>
+                            <button id="form-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="">Save Edits</button>
                             <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
                         </div> 
                     </div>
@@ -760,32 +762,20 @@
                 <div class="content-panel">
                     <div class="flex">
 
-                        
-
                         <!-- Control Panel -->
                         <div class="search-control-container">
                             
                             <!-- Panel Title-->
-                            <h3 class="search-title text-center"> Select and Relate Resources! </h3>
+                            <h3 class="search-title"> Search 
+                                <span class="pull-right">
+                                    <a class="" href=""><i class="search-filter active fa fa-code-fork"></i></a>
+                                    <a class="" href=""><i class="search-filter fa fa-calendar"></i></a>
+                                    <a class="" href=""><i class="search-filter fa fa-map-marker"></i></a>
+                                </span>
+                            </h3>
 
-                            <!-- Panel Tools -->
-                            <div class="search-toolbar text-center">
-                                
-
-
-                                <a class="pad-rgt pad-lft" href=""> Related Resources</a>
-                                <a class="pad-rgt pad-lft" href=""> Select Resources</a>
-                                <a class="pad-rgt pad-lft" href=""> Filters</a>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Attribute Search and listing -->
-                        <div class="" style="padding: 20px; width: 100%;">
-                            
-                            <div class="search-bar">
-                                <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4" multiple>
+                            <div class="search-bar" style="margin-top: 10px;">
+                                <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4" multiple>
                                     <option>Brauerei (Resource Type)</option>
                                     <option>Beer (Asset)</option>
                                     <option>Paulaner (Appelation)</option>
@@ -793,166 +783,273 @@
                                     <option>Racer 5 (Appellation)</option>
                                     <option>Alison Dalgity (Agent)</option>
                                 </select>  
+                            </div>  
+
+                            <!-- Search Metadata and sorting -->
+                            <div class="search-metadata" style="padding-top: 20px;">
+                                21337 results
+                                <span class="pull-right"> select all</span>
                             </div>
 
-                            <!-- Results: Resource Listing -->
-                            <div class="search-results-container">
-
-                                <!-- Search Metadata and sorting -->
-                                <div class="search-metadata">
-                                    21337 results
-                                </div>
-
-                                <!-- Resource -->
+                            <!-- Search Results -->
+                            <div class="" style="padding-top: 5px;">
+                                
+                                <!-- Search Candidate -->
                                 <div class="search-listing">
+                                    <h3 class="search-listing-title"><i class="search-listing-icon fa fa-th"></i> Phelan Building</h3>
 
+                                    <div class="search-listing-body">
+                                        A very long description of a very interesting resource, just to see how its rendered in the default search listing widget.  Not sure if it will fit, but you never know
+                                    </div>
 
+                                    <div class="search-listing-footer">
+                                        Yo, footer
+                                    </div>
                                 </div>
 
+                                <!-- Search Candidate -->
+                                <div class="search-listing">
+                                    <h3 class="search-listing-title"><i class="search-listing-icon fa fa-university"></i> Petra</h3>
 
+                                    <div class="search-listing-body">
+                                        Nabbetean city remains
+                                    </div>
+
+                                    <div class="search-listing-footer">
+                                        Yo, footer
+                                    </div>
+                                </div>
                             </div>
 
+                        </div>
+
+                        <!-- Related Resource Panel -->
+                        <div class="related-resources-container">
+              
+                            <!-- Drag Panel -->
+                            <div class="relative">
+                                
+                                <!-- Target -->
+                                <div class="relative rr-drag-panel-target">
+
+                                    <h3 class="related-resources-title"> Resources</h3>
+
+
+                                    <div class="rr-card-icon-placement">
+                                        <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
+                                            <i class="add-card-icon fa fa-plus fa-4x"></i>
+                                        </span>
+                                    </div> 
+
+                                    <!-- Message -->
+                                    <div class="rr-card-message-placement">
+                                        <p class="text-center">
+                                            Relate resources by dragging them from the search panel and dropping them here.
+                                        </p>
+                                    </div> 
+                                </div>
+
+                                <div id="report-image-grid" class="report-image-grid rr-grid" style="">
+
+                                    <!-- Resource -->
+                                    <div class="rr-grid-item selected" data-bind="">
+                                        <div class="rr-listing">
+                                            <h3 class="search-listing-title"><i class="search-listing-icon fa fa-university"></i> Brauerei Paulaner</h3>
+
+                                            <div class="search-listing-body">
+                                                Brewery where the first Doppel Bock was created in the year 1396
+                                            </div>
+
+                                            <div class="search-listing-footer">
+                                                Yo, footer
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Relation CRUD Panel -->
-                        <div class="data-entry-container hidden">
+                        <div class="data-entry-container">
 
-                            Enter Data!
+                            <!-- Relationship Form Option 1 -->
+                            <!-- Relationship Details CRUD -->
+                            <div class="settings-config-panel hidden">
+
+                                <h3 class="search-title">Relationship details</h3>
+
+                                <!-- Relationship participants -->
+                                <div class="resource-relation-description">
+                                    <div class="target-resource">
+                                        <i class="fa fa-university"></i> New Archaeological Resource <span class="resource-conjunction"> relationship with</span>
+                                    </div>
+                                    <div class="selected-resource">
+                                        <br><i class="fa fa-university"></i> Brauerei Paulaner
+                                    </div>
+                                </div>
+
+                                <div class="settings-crud-panel">
+                                    <div class="col-xs-12 no-instructions-shim">
+                                        <form class="widgets">
+                                            <div class="row widget-container">
+                                                <div class="form-group">
+                                                    <div class="relative">
+                                                        <label class="col-xs-12 control-label widget-input-label" for=""> Relationship <i class="ion-ios-checkmark-outline"></i></label>
+                                                    </div>
+                                                    
+                                                    <div class="col-xs-12">
+                                                        <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row widget-container">
+                                                <div class="form-group">
+                                                    <div class="relative" style="">
+                                                        <label class="col-xs-6 control-label widget-input-label" for=""> From Date  <i class="ion-ios-checkmark-outline"></i></label>
+                                                        <label class="col-xs-6 control-label widget-input-label" for=""> To Date  <i class="ion-ios-checkmark-outline"></i></label>
+                                                    </div>
+                                                    
+                                                    <div class="relative">
+                                                        <div class="col-xs-6">
+                                                            <input type="" placeholder="" id="" class="form-control input-lg widget-input">
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <input type="" placeholder="" id="" class="form-control input-lg widget-input">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row widget-container">
+                                                <div class="form-group">
+                                                    <div class="relative">
+                                                        <label class="col-xs-12 control-label widget-input-label" for=""> Description <i class="ion-ios-checkmark-outline"></i></label>
+                                                    </div>
+                                                    
+                                                    <div class="col-xs-12">
+                                                        <div id="editor1" class=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Relationship Form Option 2 -->
+                            <div class="panel card-panel">
+                                <div class="panel-heading">
+                                    <div class="" style="">
+                                        <h3 id="" class="panel-title card-main-title">Relationship details</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Relationship participants -->
+                                <div class="resource-relation-description" style="margin-bottom: 15px; margin-left: 20px;">
+                                    <div class="target-resource">
+                                        <i class="fa fa-university"></i> New Archaeological Resource <span class="resource-conjunction"> relationship with</span>
+                                    </div>
+                                    <div class="selected-resource">
+                                        <br><i class="fa fa-university"></i> Brauerei Paulaner
+                                    </div>
+                                </div>
+
+                                <!-- Data Entry -->
+                                <div id="ep-settings-form-crud" class="panel-body card-body fade in" style="">
+                                    <div id="cards" class="tab-base card-content-container outline">
+
+                                        <!--Tabs Content-->
+                                        <div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+                                            <!-- Card -->
+                                            <div id="form-id-card" class="tab-pane fade active in" style="display: block;">  
+                                                <div class="panel-body card-panel-body" style="padding-left: 0px;">
+                                                    <div id="" class="card-content">
+
+                                                        <!-- Card Level Alert -->
+                                                        <div id="summary-card-alert" class="panel install-card-alert"></div>
+                                                        
+                                                        <!-- Form -->
+                                                        <div class="col-xs-12 no-instructions-shim">
+
+                                                            <form class="widgets">
+                                                                <div class="row widget-container">
+                                                                    <div class="form-group">
+                                                                        <div class="relative">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Relationship <i class="ion-ios-checkmark-outline"></i></label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row widget-container">
+                                                                    <div class="form-group">
+                                                                        <div class="relative" style="">
+                                                                            <label class="col-xs-6 control-label widget-input-label" for=""> From Date  <i class="ion-ios-checkmark-outline"></i></label>
+                                                                            <label class="col-xs-6 control-label widget-input-label" for=""> To Date  <i class="ion-ios-checkmark-outline"></i></label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="relative">
+                                                                            <div class="col-xs-6">
+                                                                                <input type="" placeholder="" id="" class="form-control input-lg widget-input">
+                                                                            </div>
+                                                                            <div class="col-xs-6">
+                                                                                <input type="" placeholder="" id="" class="form-control input-lg widget-input">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row widget-container">
+                                                                    <div class="form-group">
+                                                                        <div class="relative">
+                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Description <i class="ion-ios-checkmark-outline"></i></label>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-xs-12">
+                                                                            <div id="editor" class=""></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Map Filter Panel -->
+                        <div class="map-search-container hidden">
+
+                            <h3 class="search-title"> Map Panel</h3>
 
                         </div>
 
 
+                        <!-- Time Filter Panel -->
+                        <div class="time-search-container hidden">
+
+                            <h3 class="search-title"> Time Panel</h3>
+
+                        </div>
                             
-
-
-
-                        
                     </div>
                 </div>
             </div>
 
 
-            <!-- New Relations Editor -->
-            <div id="new-relations-panel" class="responsive-content hidden">
-
-                <!-- Title Bar -->
-                <div id="" class="relative fade in" style="display: block;">
-
-                    <!-- Page Header -->
-                    <div class="">
-                        
-                        <!-- Toolbar -->
-                        <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4; margin-top: 50px;">
-
-                            <!-- Search -->
-                            <div class="edit-panel-search-bar">
-
-                                <!-- Find Button -->
-                                <div class="">
-                                    <a class="page-header text-overflow graph-find" href="#"> Find </a>
-                                </div>
-
-                                <!-- Find widget -->
-                                <div class="find-widget" style="display: none;">
-                                    <div class="">
-                                        <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4">
-                                            <option>Brauerei Paulaner</option>
-                                            <option>Weihenstephaner Recipe</option>
-                                        </select>                                       
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Resource/Graph Toggle -->
-                            <div class="resource-tools relative" style="display: block;">
-                                <a id="lnk-resource-list" class="resource-grid-title active" href="">Related resources</a>
-                                <a id="lnk-resource-records" class="resource-grid-title" href="">Add relation</a>
-                            </div>
-                        </div> 
-
-                        <!-- Tools -->
-                        <div class="ep-form-toolbar-tools">
-                            <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
-                        </div> 
-                    </div>
-
-                    <!-- Title Block -->
-                    <div class="report-toolbar hidden">
-                        
-                        <!-- Title/Search -->
-                        <div class="relative">
-                            <div class="rr-panel-search-bar">
-
-                                <!-- Find Button -->
-                                <div class="">
-                                    <a class="page-header text-overflow graph-find" href="#"> Find </a>
-                                </div>
-
-                                <!-- Find widget -->
-                                <div class="find-widget" style="display: none;">
-                                    <div class="">
-                                        <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4">
-                                            <option>Archaeological Resource</option>
-                                            <option>Architectural Resource</option>
-                                            <option>Heritage District</option>
-                                            <option>Activity</option>
-                                            <option>Historic Event</option>
-                                            <option>Person/Organization</option>
-                                            <option>Information Resource</option>
-                                        </select>                                       
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Resource/Graph Toggle -->
-                            <div class="resource-tools relative" style="display: block;">
-                                <a id="lnk-resource-list" class="rr-grid-title active" href="">Related Resources</a>
-                                <a id="lnk-resource-records" class="rr-grid-title" href="">New Relations</a>
-                            </div>
-                        </div>
-
-
-                        <!-- Tools -->
-                        <div class="ep-form-toolbar-tools">
-                            <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Editor Content -->
-                <div class="content-panel">
-                    
-                    <!-- Editor Content -->
-                    <div class="content-panel">
-                        <div class="flex">
-
-                            <!-- Control Panel -->
-                            <div class="search-control-container">
-                                
-                                <!-- Panel Title-->
-                                <h3 class="search-title"> Select and Relate Resources </h3>
-
-                                <!-- Panel Tools -->
-                                <div class="search-toolbar">
-                                    Yo!
-
-                                </div>
-
-
-                            </div>
-
-                            <!-- Relation CRUD Panel -->
-                            <div class="data-entry-container hidden">
-
-                                Enter Data!
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            
 
 
 
@@ -1292,11 +1389,10 @@
 
     <!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
-    <!--
-    <script src="js/arches/forms/resource_forms.js"></script>
-    <script src="js/arches/resource_manager/arches_designer.js"></script>
-    -->
     <script src="js/arches/resource_manager/arches_new_resource.js"></script>
+    <script src="js/arches/resource_manager/arches_related_resources.js"></script>
+
+
         
 
 </body>

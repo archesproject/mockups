@@ -16,8 +16,7 @@
 		ev.preventDefault();
 		
 		//toggle panels
-		$("#new-relations-panel").removeClass('hidden');
-		$("#related-resources-panel").addClass('hidden');	
+		$("#resource-records").removeClass('hidden');
 		$("#resource-list").addClass('hidden');	
 	
 		//toggle link display

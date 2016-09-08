@@ -210,7 +210,7 @@
 
                         <!-- Menu Item -->
                         <li id="history-manager" class="edit-menu-item">
-                            <a href="" target="" class="">
+                            <a id="edit-history-btn" href="" target="" class="">
                                 <div class="media-body">
                                     <div class="menu-item-title"><i class="fa fa-step-backward"></i> Review Edit History</div>
                                     <span class="text-muted menu-item-subtitle">View changes to this resource record</span>
@@ -282,7 +282,7 @@
                 </div>
 
                 <!-- Editor Content -->
-                <div class="content-panel resource-editor">
+                <div id="related" class="content-panel resource-editor">
                     <div class="flex">
 
                         <!-- CRUD Menu -->
@@ -768,9 +768,9 @@
                             <!-- Panel Title-->
                             <h3 class="search-title"> Search 
                                 <span class="pull-right">
-                                    <a class="" href=""><i class="search-filter active fa fa-code-fork"></i></a>
-                                    <a class="" href=""><i class="search-filter fa fa-calendar"></i></a>
-                                    <a class="" href=""><i class="search-filter fa fa-map-marker"></i></a>
+                                    <a id="search-rr-btn" class="" href=""><i class="search-filter active fa fa-code-fork"></i></a>
+                                    <a id="search-time-btn" class="" href=""><i class="search-filter fa fa-calendar"></i></a>
+                                    <a id="search-map-btn" class="" href=""><i class="search-filter fa fa-map-marker"></i></a>
                                 </span>
                             </h3>
 
@@ -824,7 +824,7 @@
                         </div>
 
                         <!-- Related Resource Panel -->
-                        <div class="related-resources-container">
+                        <div id="related-resoureces-drag-panel" class="search-container related-resources-container">
               
                             <!-- Drag Panel -->
                             <div class="relative">
@@ -871,7 +871,7 @@
                         </div>
 
                         <!-- Relation CRUD Panel -->
-                        <div class="data-entry-container">
+                        <div id="related-resourced-crud" class="search-container data-entry-container">
 
                             <!-- Relationship Form Option 1 -->
                             <!-- Relationship Details CRUD -->
@@ -907,8 +907,10 @@
                                             <div class="row widget-container">
                                                 <div class="form-group">
                                                     <div class="relative" style="">
-                                                        <label class="col-xs-6 control-label widget-input-label" for=""> From Date  <i class="ion-ios-checkmark-outline"></i></label>
-                                                        <label class="col-xs-6 control-label widget-input-label" for=""> To Date  <i class="ion-ios-checkmark-outline"></i></label>
+                                                        <label class="col-xs-6 control-label widget-input-label" for="">    From Date  <i class="ion-ios-checkmark-outline"></i>
+                                                        </label>
+                                                        <label class="col-xs-6 control-label widget-input-label" for="">    To Date  <i class="ion-ios-checkmark-outline"></i>
+                                                        </label>
                                                     </div>
                                                     
                                                     <div class="relative">
@@ -1030,7 +1032,7 @@
 
 
                         <!-- Map Filter Panel -->
-                        <div class="map-search-container hidden">
+                        <div class="search-container map-search-container hidden">
 
                             <h3 class="search-title"> Map Panel</h3>
 
@@ -1038,7 +1040,7 @@
 
 
                         <!-- Time Filter Panel -->
-                        <div class="time-search-container hidden">
+                        <div class="search-container time-search-container hidden">
 
                             <h3 class="search-title"> Time Panel</h3>
 
@@ -1066,7 +1068,7 @@
                         
                         <!-- Tools -->
                         <div class="ep-form-toolbar-tools">
-                            <button class="btn btn-sm btn-mint btn-labeled fa fa-code-fork" data-bind="">Related Resources</button>
+                            <button class="btn btn-sm btn-mint btn-labeled fa fa-times-circle-o" data-bind="">close</button>
                         </div>
                     </div>
                 </div>
@@ -1075,11 +1077,8 @@
                 <div class="content-panel resource-editor">
                     <div class="flex">
 
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Timeline panel</h3>
-                            </div>
-                            <div class="panel-body">
+                        <div class="panel" style="width: 100%;">
+                            <div class="panel-body timeline-panel">
                                 <!-- Timeline -->
                                 <!--===================================================-->
                                 <div class="timeline">

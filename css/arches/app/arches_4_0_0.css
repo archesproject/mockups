@@ -2120,6 +2120,10 @@ div.dropdown-menu.open {
 	padding-top: 100px;
 }
 
+.timeline-panel {
+	padding-left: 35px;
+}
+
 .crud-card-container {
 	padding: 10px 15px 50px 10px;
 	overflow-y: scroll;
@@ -2249,8 +2253,9 @@ div.dropdown-menu.open {
 
 .search-filter {
 	transform: translate(0, -2px);
-    font-size: 15px;
+    font-size: 21px;
     padding: 6px;
+    margin-top: -10px;
     color: #888;
     border: 1px solid transparent;
 }

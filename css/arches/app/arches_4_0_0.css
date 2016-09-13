@@ -2227,6 +2227,7 @@ div.dropdown-menu.open {
 
 .time-search-container {
 	width: calc(100% - 400px);
+	padding: 20px;
 }
 
 .form-settings-container {
@@ -5384,6 +5385,55 @@ a.btn-link {
 	background: #fdfdfd;
 	border-right: 1px solid #e9e9e9;
 }
+
+
+/* Time Filter */
+#main {
+  float: left;
+  width: 750px;
+}
+
+#sidebar {
+  float: right;
+  width: 100px;
+}
+
+#sequence {
+  width: 600px;
+  height: 50px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #fff;
+}
+
+#chart {
+  position: relative;
+}
+
+#chart path {
+  stroke: #fff;
+}
+
+#explanation {
+  position: absolute;
+  top: 260px;
+  left: 305px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+  z-index: -1;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+
 
 
 

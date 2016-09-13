@@ -1042,7 +1042,21 @@
                         <!-- Time Filter Panel -->
                         <div class="search-container time-search-container hidden">
 
-                            <h3 class="search-title"> Time Panel</h3>
+                            <h3 class="search-title"> Time Filter</h3>
+
+                            <div id="main">
+                                <div id="sequence"></div>
+                                <div id="chart">
+                                    <div id="explanation" style="visibility: hidden;">
+                                        <span id="percentage"></span><br/>
+                                        objects fall within this period
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sidebar" class="hidden">
+                                <input type="checkbox" id="togglelegend"> Legend<br/>
+                                <div id="legend" style="visibility: hidden;"></div>
+                            </div>
 
                         </div>
                             
@@ -1365,7 +1379,7 @@
 
 
     <!-- D3 -->
-    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="js/d3/d3.v3.min.js"></script>
     <script src="js/d3/graph.js"></script>
 
 

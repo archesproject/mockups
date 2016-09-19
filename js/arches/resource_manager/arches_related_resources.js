@@ -167,6 +167,8 @@
 
 	  // Get total size of the tree = value of root node from partition.
 	  totalSize = path.node().__data__.value;
+
+
 	 };
 
 	// Fade all but the current sequence, and show it in the breadcrumb trail.
@@ -198,6 +200,7 @@
 	              })
 	      .style("opacity", 1);
 	}
+
 
 	// Restore everything to full opacity when moving off the visualization.
 	function mouseleave(d) {

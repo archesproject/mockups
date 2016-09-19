@@ -2197,6 +2197,8 @@ div.dropdown-menu.open {
 
 .selected-resource {
 	margin-top: -15px;
+	max-height: 100px;
+	overflow-y: scroll; 
 }
 
 .selected-cards-container {
@@ -2211,9 +2213,9 @@ div.dropdown-menu.open {
 }
 
 .related-resources-container {
-	-ms-flex: 0 0 410px;
-    -webkit-flex: 0 0 410px;
-    flex: 0 0 410px;
+	-ms-flex: 0 0 calc(100% - 400px);
+    -webkit-flex: 0 0 calc(100% - 400px);
+    flex: 0 0 calc(100% - 400px);
 	margin-bottom: 0px;
     margin-left: -1px;
     padding: 0px;
@@ -2241,6 +2243,13 @@ div.dropdown-menu.open {
     overflow-x: hidden;
 }
 
+.dropdown-crud {
+	right: 0px;
+	padding-left: 15px;
+	min-height: 500px;
+	overflow-y: scroll; 
+}
+
 .search-title {
 	font-size: 19px;
 	font-weight: 500;
@@ -2250,6 +2259,19 @@ div.dropdown-menu.open {
 .related-resources-title {
 	font-size: 19px;
 	font-weight: 500;
+}
+
+.related-resources-relationship {
+	margin-top: -25px;
+	margin-right: 10px;
+	float: right;
+}
+
+.related-reources-crud-link {
+	background: #ddd;
+	border: 1px solid #ccc;
+    padding: 4px 8px;
+    margin-top: -5px;
 }
 
 .search-filter {
@@ -2469,6 +2491,7 @@ div.dropdown-menu.open {
 	border: 0px solid #eee; 
 	margin: -2px 0px 18px 10px;
 	position: relative;
+	background: #fff;
 }
 
 .outline {
@@ -4686,7 +4709,7 @@ li.search-field {
 .rr-card-icon-placement {
 	position: absolute;
 	top: 210px;
-	left: 40%;
+	left: 45%;
 }
 
 .arches-menu-icon {
@@ -5391,6 +5414,27 @@ a.btn-link {
 #main {
   float: left;
   width: 750px;
+}
+
+#time-filter-tooltip {
+  height: 360px;
+  position: relative;
+  width: 360px;
+}
+
+.time-filter-tooltip {
+  background: #eee;
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  display: none;
+  font-size: 12px;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 95px;
+  width: 80px;
+  z-index: 10;
 }
 
 #sidebar {

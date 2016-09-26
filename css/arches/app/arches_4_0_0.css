@@ -1006,6 +1006,20 @@ div.rr-grid-item.selected {
     display: inline-block;
 }
 
+.rr-display-toggle {
+	position: absolute;
+	top: -30px;
+	right: 170px;
+}
+
+.rr-display-toggle.selected {
+	background: #f0f0f0;
+}
+
+.btn-display-toggle {
+	height: 30px;
+}
+
 .resource-tools a.resource-grid-title.active {
 	color: #333;
 }
@@ -2105,6 +2119,10 @@ div.dropdown-menu.open {
     flex: 1;
 }
 
+.scroll-y {
+	overflow-y: scroll;
+}
+
 .content-panel{
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -2377,6 +2395,107 @@ div.dropdown-menu.open {
 
 
 
+/* Edit History */
+.eh-timeline-panel {
+	background: #fafafa;
+}
+
+.eh-timeline-time {
+	max-width: 150px;
+}
+
+.eh-timeline-stat {
+	width: 140px;
+}
+
+.eh-timeline-label {
+	margin-left: 150px;
+}
+
+.eh-timeline-header {
+	padding-left: 20px;
+}
+
+.eh-timeline{
+	margin-left: 20px;
+	padding-right: 25px;
+	background: #fafafa;
+}
+
+.panel .timeline, .panel .timeline-time .eh-timeline-time {
+	background: #fafafa;
+}
+
+.panel .eh-timeline-time {
+	background: #fafafa;
+}
+
+.panel .eh-timeline-label {
+    box-shadow: none;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+}
+
+.eh-timeline:before {
+	margin-left: 20px;
+}
+
+.eh-timeline:after {
+	margin-left: 20px;
+}
+
+.eh-editor {
+	padding-top: 15px;
+	font-size: 12px;
+	color: #888;
+}
+
+.eh-footer {
+	padding: 10px;
+	margin: 20px -10px -10px -10px;
+    background: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.eh-edit-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: #666;
+}
+
+.eh-node-group {
+	padding-left: 10px;
+}
+
+.tile-data-list {
+	list-style: none;
+	padding-left: 20px;
+}
+
+.tile-data-item {
+	font-weight: 600;
+	color: #777;
+}
+
+.tile-data-item-value {
+	font-weight: 400;
+	padding-left: 10px;
+}
+
+.tile-node-name {
+	width: 120px;
+	display: table-cell;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.tile-node-value {
+	font-weight: 400;
+	padding-left: 10px;
+	display: table-cell;
+}
 
 
 /* Resource Containers  */

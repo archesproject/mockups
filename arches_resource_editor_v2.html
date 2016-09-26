@@ -832,9 +832,16 @@
                                 <!-- Target -->
                                 <div class="relative rr-drag-panel-target">
 
-                                    <h3 class="related-resources-title"> Related Resources</h3>
+                                    <h3 class="related-resources-title"> Resources/Relations </h3>
 
                                     <div class="relative">
+
+                                        <div class="btn-group rr-display-toggle">
+                                            <button class="btn btn-default btn-display-toggle selected add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="grid"><i class="ion-grid"></i></button>
+                                            <button class="btn btn-default btn-display-toggle add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="graph"><i class="ion-asterisk"></i></button>
+                                        </div>
+
+
                                         <!--Documentation dropdown-->
                                         <div class="related-resources-relationship">
                                             <ul class="" style="list-style: none;">
@@ -919,19 +926,31 @@
 
                                     <div class="rr-card-icon-placement">
                                         <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
-                                            <i class="add-card-icon fa fa-plus fa-4x"></i>
+                                            <i class="add-card-icon fa fa-code-fork fa-4x"></i>
                                         </span>
                                     </div> 
 
                                     <!-- Message -->
                                     <div class="rr-card-message-placement">
                                         <p class="text-center">
-                                            Relate resources by dragging them from the search panel and dropping them here.
+                                            Drag&Drop resources onto this area and describe how they interact 
                                         </p>
                                     </div> 
                                 </div>
 
                                 <div id="report-image-grid" class="report-image-grid rr-grid" style="top: 60px; left: 25px;">
+
+                                    <div class="box-vmiddle bg-primary pad-all text-center card-wz-add-record project-grid-item form-item new-card form-grid-item" style="height: 142px; width: 142px;">
+                                        <a id="open-search" href="" data-toggle="modal" class="" style="">
+                                            <h4 class="text-thin" style="margin-top: 0px; font-size: 17px;"> Add Resource</h4>
+
+                                            <span class="icon-wrap icon-wrap-md icon-circle bg-trans-light">
+                                                <i class="fa fa-plus" style="color: #fff; font-size: 17px;"></i>
+                                            </span>
+
+                                            <h5 class="" style="font-weight: 200; margin-top: 0px;"> Create relations between resources </h5>
+                                        </a>
+                                    </div>
 
                                     <!-- Resource -->
                                     <div class="rr-grid-item selected" data-bind="">
@@ -1002,11 +1021,6 @@
             </div>
 
 
-            
-
-
-
-
             <!-- Resources Edit History -->
             <div id="edit-history-panel" class="responsive-content hidden">
 
@@ -1026,62 +1040,157 @@
 
                 <!-- Editor Content -->
                 <div class="content-panel resource-editor">
-                    <div class="flex">
+                    <div class="flex scroll-y">
 
                         <div class="panel" style="width: 100%;">
-                            <div class="panel-body timeline-panel">
+                            <div class="panel-body timeline-panel eh-timeline-panel">
                                 <!-- Timeline -->
                                 <!--===================================================-->
-                                <div class="timeline">
+                                <div class="timeline eh-timeline">
                 
                                     <!-- Timeline header -->
-                                    <div class="timeline-header">
-                                        <div class="timeline-header-title bg-info">Now</div>
+                                    <div class="timeline-header eh-timeline-header">
+                                        <div class="timeline-header-title bg-info">
+                                            Now
+                                        </div>
+                                        <span class="pull-right">
+                                            <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4">
+                                                <option>Most recent</option>
+                                                <option>Oldest</option>
+                                                <option>By editor</option>
+                                                <option>By edit type</option>
+                                            </select>  
+                                        </span>
+                                    </div>
+
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat eh-timeline-stat">
+                                            <div class="timeline-icon bg-dark"><i class="fa fa-plus fa-lg"></i></div>
+                                            <div class="timeline-time eh-timeline-time">14:37 <br> 11 October, 2016</div>
+                                        </div>
+                                        <div class="timeline-label eh-timeline-label">
+                                            <h4 class="mar-no pad-btm">Name Added</h4>
+                                            
+                                            <div class="eh-node-group">
+                                                <div class="eh-edit-title">
+                                                    Data Tile
+                                                </div>
+
+                                                <div class="tile-data-container">
+                                                    <ul class="tile-data-list">
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Node Name</span><span class="tile-node-value"> Value of Node</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="eh-footer">
+                                                edited by: jmunowitch@fargeo.com
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-entry">
+                                        <div class="timeline-stat eh-timeline-stat">
+                                            <div class="timeline-icon bg-danger"><i class="fa fa-minus fa-lg"></i></div>
+                                            <div class="timeline-time eh-timeline-time">11:19 <br> 3 October, 2016</div>
+                                        </div>
+                                        <div class="timeline-label eh-timeline-label">
+                                            <h4 class="mar-no pad-btm">Name Deleted</h4>
+                                            
+                                            <div class="eh-node-group">
+                                                <div class="eh-edit-title">
+                                                    Data Tile
+                                                </div>
+
+                                                <div class="tile-data-container">
+                                                    <ul class="tile-data-list">
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Name</span><span class="tile-node-value"> King Arthur's Castle</span>
+                                                        </li>
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Name Type</span><span class="tile-node-value"> Primary</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="eh-footer">
+                                                edited by: randerson@fargeo.com
+                                            </div>
+                                        </div>
                                     </div>
                 
                                     <div class="timeline-entry">
-                                        <div class="timeline-stat">
-                                            <div class="timeline-icon bg-danger"><i class="fa fa-building fa-lg"></i>
+                                        <div class="timeline-stat eh-timeline-stat">
+                                            <div class="timeline-icon bg-purple"><i class="fa fa-repeat fa-lg"></i></div>
+                                            <div class="timeline-time eh-timeline-time">13:22 <br> 29 September, 2016</div>
+                                        </div>
+                                        <div class="timeline-label eh-timeline-label">
+                                            <h4 class="mar-no pad-btm">Condition Assessment Edit</h4>
+
+                                            <div class="eh-node-group">
+                                                <div class="eh-edit-title">
+                                                    New Data Tile
+                                                </div>
+
+                                                <div class="tile-data-container">
+                                                    <ul class="tile-data-list">
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Condition</span><span class="tile-node-value"> Poor</span>
+                                                        </li>
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Date Assessed</span><span class="tile-node-value"> 12 June, 2016</span>
+                                                        </li>
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Description</span><span class="tile-node-value">Etiam porta sem malesuada magna mollis euismod. Another Etiam porta sem malesuada magna mollis euismod.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="timeline-time">2 Hours ago</div>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h4 class="mar-no pad-btm"><a href="#" class="text-danger">Job Meeting</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry">
-                                        <div class="timeline-stat">
-                                            <div class="timeline-icon"><img src="img/av4.png" alt="Profile picture">
+
+                                            <hr>
+
+                                            <div class="eh-node-group">
+                                                <div class="eh-edit-title">
+                                                    Previous Data Tile
+                                                </div>
+
+                                                <div class="tile-data-container">
+                                                    <ul class="tile-data-list">
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Condition</span><span class="tile-node-value"> Fair</span>
+                                                        </li>
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Date Assessed</span><span class="tile-node-value"> 11 June, 2016</span>
+                                                        </li>
+                                                        <li class="tile-data-item">
+                                                            <span class="tile-node-name">Description</span><span class="tile-node-value"></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="timeline-time">3 Hours ago</div>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <p class="mar-no pad-btm"><a href="#" class="btn-link text-semibold">Lisa D.</a> commented on <a href="#">The Article</a>
-                                            </p>
-                                            <blockquote class="bq-sm bq-open">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</blockquote>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry">
-                                        <div class="timeline-stat">
-                                            <div class="timeline-icon bg-purple"><i class="fa fa-check fa-lg"></i>
+                                            
+                                            <div class="eh-footer">
+                                                edited by: apeters@fargeo.com
                                             </div>
-                                            <div class="timeline-time">December 25, 2029</div>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <img class="img-xs img-circle" src="img/av3.png" alt="Profile picture">
-                                            <a href="#" class="btn-link text-semibold">Bobby Marz</a> followed you.
                                         </div>
                                     </div>
+
                                     <div class="timeline-entry">
-                                        <div class="timeline-stat">
-                                            <div class="timeline-icon"></div>
-                                            <div class="timeline-time">11:27</div>
+                                        <div class="timeline-stat eh-timeline-stat">
+                                            <div class="timeline-icon bg-mint"><i class="fa fa-chevron-circle-right fa-lg"></i></div>
+                                            <div class="timeline-time eh-timeline-time">10:18 <br> 3 January, 2016</div>
                                         </div>
-                                        <div class="timeline-label">
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                        <div class="timeline-label eh-timeline-label">
+                                            <h4 class="mar-no pad-btm">Resource Record Created</h4>
+                                            <p>Resource record added to database.</p>
+                                            <div class="eh-footer">
+                                                edited by: apeters@fargeo.com
+                                            </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <!--===================================================-->
                                 <!-- End Timeline -->

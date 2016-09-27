@@ -2425,6 +2425,7 @@ div.dropdown-menu.open {
 
 .eh-timeline-time {
 	max-width: 150px;
+	margin-top: 7px;
 }
 
 .eh-timeline-stat {
@@ -2433,6 +2434,10 @@ div.dropdown-menu.open {
 
 .eh-timeline-label {
 	margin-left: 150px;
+}
+
+.panel .eh-timeline-label:after {
+    border-right-color: #fff;
 }
 
 .eh-timeline-header {
@@ -2459,6 +2464,10 @@ div.dropdown-menu.open {
     border: 1px solid #e3e3e3;
 }
 
+.panel .eh-timeline-stat .timeline-icon {
+    box-shadow: 0 0 0 7px #eee;
+}
+
 .eh-timeline:before {
 	margin-left: 20px;
 }
@@ -2477,7 +2486,7 @@ div.dropdown-menu.open {
 	padding: 10px;
 	margin: 20px -10px -10px -10px;
     background: #f8f8f8;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ddd;
 }
 
 .eh-edit-title {

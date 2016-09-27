@@ -7,6 +7,30 @@
 	
 
 //	Manage Search Panels
+	$('#open-search').on('click', function (ev) {
+		ev.preventDefault();
+
+		
+		//toggle display of attribute search panel
+		if ($("#related-resoureces-drag-panel").hasClass("related-resources-slide-out")) {
+		    //Related Resources Panel is fully visible.  Slide it over, slide search panel in
+		    $("#related-resoureces-drag-panel").removeClass("related-resources-slide-out");
+		    $(".search-control-container").removeClass("search-slide-out");
+
+		} else { 
+			//Hide search, slide related resources panel over
+			$("#related-resoureces-drag-panel").addClass("related-resources-slide-out");
+		    $(".search-control-container").addClass("search-slide-out");
+		    
+		}
+
+	});
+
+
+
+
+
+
 	$('#search-rr-btn').on('click', function (ev) {
 		ev.preventDefault();
 		

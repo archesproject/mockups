@@ -763,14 +763,16 @@
                     <div class="flex">
 
                         <!-- Control Panel -->
-                        <div class="search-control-container">
+                        <div class="search-control-container search-slide-out">
                             
                             <!-- Panel Title-->
                             <h3 class="search-title"> Search 
                                 <span class="pull-right">
-                                    <a id="search-rr-btn" class="" href=""><i class="search-filter active fa fa-code-fork"></i></a>
-                                    <a id="search-time-btn" class="" href=""><i class="search-filter fa fa-calendar"></i></a>
-                                    <a id="search-map-btn" class="" href=""><i class="search-filter fa fa-map-marker"></i></a>
+                                    <div class="btn-group" style="margin-top: -10px;">
+                                        <button id="search-rr-btn" class="btn btn-default btn-display-toggle selected add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Related resources"><i class="fa fa-code-fork"></i></button>
+                                        <button id="search-time-btn" class="btn btn-default btn-display-toggle add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="time filter"><i class="fa fa-calendar"></i></button>
+                                        <button id="search-map-btn" class="btn btn-default btn-display-toggle add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="map filter"><i class="fa fa-map-marker"></i></button>
+                                    </div>
                                 </span>
                             </h3>
 
@@ -786,9 +788,30 @@
                             </div>  
 
                             <!-- Search Metadata and sorting -->
-                            <div class="search-metadata" style="padding-top: 20px;">
+                            <div class="search-metadata relative" style="padding-top: 20px;">
                                 21337 results
-                                <span class="pull-right"> select all</span>
+                                <span class="pull-right" style="margin-top: -5px;"> 
+                                    <div class="btn-group btn-group-xs open">
+                                        <button class="btn btn-primary btn-active-primary dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="true">
+                                            Select... <i class="dropdown-caret fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="#">All resources</a>
+                                            </li>
+                                            <li><a href="#">Archaeologic resources</a>
+                                            </li>
+                                            <li><a href="#">Architectural resources</a>
+                                            </li>
+                                            <li><a href="#">Actors</a>
+                                            </li>
+                                            <li><a href="#">Activities</a>
+                                            </li>
+                                            <li><a href="#">Districts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </span>
                             </div>
 
                             <!-- Search Results -->
@@ -824,7 +847,7 @@
                         </div>
 
                         <!-- Related Resource Panel -->
-                        <div id="related-resoureces-drag-panel" class="search-container related-resources-container">
+                        <div id="related-resoureces-drag-panel" class="search-container related-resources-container related-resources-slide-out">
               
                             <!-- Drag Panel -->
                             <div class="relative">
@@ -948,7 +971,7 @@
                                                 <i class="fa fa-plus" style="color: #fff; font-size: 17px;"></i>
                                             </span>
 
-                                            <h5 class="" style="font-weight: 200; margin-top: 0px;"> Create relations between resources </h5>
+                                            <h5 class="" style="font-weight: 200; margin-top: 0px;"> Show/Hide resource search tools </h5>
                                         </a>
                                     </div>
 
@@ -974,6 +997,21 @@
 
                                             <div class="search-listing-body">
                                                 Annual beer drinking activity that takes place in Munich
+                                            </div>
+
+                                            <div class="search-listing-footer">
+                                                Yo, footer
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <!-- Resource -->
+                                    <div class="rr-grid-item" data-bind="">
+                                        <div class="rr-listing">
+                                            <h3 class="search-listing-title"><i class="search-listing-icon fa fa-university"></i> Hofbrau Tent</h3>
+
+                                            <div class="search-listing-body">
+                                                A place for Australians to congregate during Oktoberfest.
                                             </div>
 
                                             <div class="search-listing-footer">
@@ -1069,7 +1107,7 @@
                                             <div class="timeline-time eh-timeline-time">14:37 <br> 11 October, 2016</div>
                                         </div>
                                         <div class="timeline-label eh-timeline-label">
-                                            <h4 class="mar-no pad-btm">Name Added</h4>
+                                            <h4 class="mar-no pad-btm">Name of Node Group Added</h4>
                                             
                                             <div class="eh-node-group">
                                                 <div class="eh-edit-title">
@@ -1143,7 +1181,7 @@
                                                             <span class="tile-node-name">Date Assessed</span><span class="tile-node-value"> 12 June, 2016</span>
                                                         </li>
                                                         <li class="tile-data-item">
-                                                            <span class="tile-node-name">Description</span><span class="tile-node-value">Etiam porta sem malesuada magna mollis euismod. Another Etiam porta sem malesuada magna mollis euismod.</span>
+                                                            <span class="tile-node-name">Description</span><span class="tile-node-value">Etiam porta sem malesuada magna mollis euismod. Another Etiam porta sem malesuada magna mollis euismod. Porta sem Etiam porta sem malesuada magna</span>
                                                         </li>
                                                     </ul>
                                                 </div>

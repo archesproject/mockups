@@ -1012,6 +1012,12 @@ div.rr-grid-item.selected {
 	right: 170px;
 }
 
+.rr-display-toggle-right {
+	position: absolute;
+	top: -40px;
+	right: 10px;
+}
+
 .rr-display-toggle.selected {
 	background: #f0f0f0;
 }
@@ -2273,6 +2279,10 @@ div.dropdown-menu.open {
 	padding: 20px;
 }
 
+.advanced-search-container {
+	padding: 20px;
+}
+
 .form-settings-container {
 	-ms-flex: 0 0 calc(100% - 650px);
     -webkit-flex: 0 0 calc(100% - 650px);
@@ -2295,6 +2305,62 @@ div.dropdown-menu.open {
 	font-size: 19px;
 	font-weight: 500;
 	margin-top: 0px;
+}
+
+.calendar {
+	display: table-cell;
+	width: 180px;
+	padding-left: 5px;
+}
+
+.datepicker-inline {
+	background: #fff;
+	border-width: 0px; 
+}
+
+.search-label {
+	font-weight: 300;
+	font-size: 17px;
+	margin-bottom: 3px;
+}
+
+.search-date-picker { 
+   	display: inline-block;
+   	padding-left: 20px;
+   	padding-right: 20px;
+    font-size: 16px;
+    color: #123;
+    background: azure;
+    height: 40px;
+    width: 235px;
+}
+
+.date-selector {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+#calendar .chosen-container-single .chosen-single {
+    height: 40px;
+    padding-top: 10px;
+}
+
+#calendar .chosen-container-single .chosen-single div b:before {
+	vertical-align: -70%;
+}
+
+.calendar-title {
+	color: #fff;
+	font-weight: 600;
+}
+
+.time-search-calendar-panel {
+	padding: 10px;
+	background: #9DCCF7;
+	font-size: 13px;
+	font-weight: 500;
+	display: table-cell;
 }
 
 .related-resources-title {
@@ -2420,7 +2486,7 @@ div.dropdown-menu.open {
 
 /* Edit History */
 .eh-timeline-panel {
-	background: #fafafa;
+	background: #ebeef0;
 }
 
 .eh-timeline-time {
@@ -2451,11 +2517,11 @@ div.dropdown-menu.open {
 }
 
 .panel .timeline, .panel .timeline-time .eh-timeline-time {
-	background: #fafafa;
+	background: #ebeef0;
 }
 
 .panel .eh-timeline-time {
-	background: #fafafa;
+	background: #ebeef0;
 }
 
 .panel .eh-timeline-label {
@@ -2465,7 +2531,7 @@ div.dropdown-menu.open {
 }
 
 .panel .eh-timeline-stat .timeline-icon {
-    box-shadow: 0 0 0 7px #eee;
+    box-shadow: 0 0 0 7px #ddd;
 }
 
 .eh-timeline:before {
@@ -4832,7 +4898,7 @@ li.search-field {
 
 .rr-drag-panel-target {
 	height: 100vh;
-	background: #f4f4f4; 
+	background: #ebeef0; 
 	border: 1px solid #ddd; 
 	border-radius: 2px; 
 	padding: 0px 25px;

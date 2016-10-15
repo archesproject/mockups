@@ -3,8 +3,33 @@
 //
 
 
+//	Widgets	
 	$('#editor').summernote({height: 150});
 	
+	// INLINE BOOTSTRAP DATEPICKER
+	$('#search-from-a div').datepicker({
+		format: "MM dd, yyyy",
+		todayBtn: false,
+		autoclose: true,
+		todayHighlight: false,
+		defaultViewDate: (2016, 8, 7)
+	});
+
+	$('#search-from-b input').datepicker({
+		format: "MM dd, yyyy",
+		todayBtn: false,
+		autoclose: true,
+		todayHighlight: true
+	});
+
+	$('#search-from-c input').datepicker({
+		format: "MM dd, yyyy",
+		todayBtn: false,
+		autoclose: true,
+		todayHighlight: true,
+	});
+
+
 
 //	Manage Search Panels
 	$('#open-search').on('click', function (ev) {
@@ -30,7 +55,7 @@
 
 
 
-
+//	Manage Primary Search Panel Display (Related Resources, Time, Map, Advanced)
 	$('#search-rr-btn').on('click', function (ev) {
 		ev.preventDefault();
 		
@@ -44,11 +69,11 @@
 			
 	
 		//toggle link display
-		$( ".search-filter" ).each(function() {
-			$( this ).removeClass( "active" );
+		$( ".search" ).each(function() {
+			$( this ).removeClass( "selected" );
 		});
 
-		$("#search-rr-btn .search-filter").addClass('active');
+		$("#search-rr-btn").addClass('selected');
 
 	});
 	
@@ -63,11 +88,11 @@
 		$(".map-search-container").removeClass('hidden');
 	
 		//toggle link display
-		$( ".search-filter" ).each(function() {
-			$( this ).removeClass( "active" );
+		$( ".search" ).each(function() {
+			$( this ).removeClass( "selected" );
 		});
 
-		$("#search-map-btn .search-filter").addClass('active');
+		$("#search-map-btn").addClass('selected');
 	});
 
 
@@ -83,13 +108,77 @@
 			
 	
 		//toggle link display
-		$( ".search-filter" ).each(function() {
-			$( this ).removeClass( "active" );
+		$( ".search" ).each(function() {
+			$( this ).removeClass( "selected" );
 		});
 
-		$("#search-time-btn .search-filter").addClass('active');
+		$("#search-time-btn").addClass('selected');
 
 	});
+
+
+	$('#advanced-search-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Show Map Search Panel, Hide Related Resources Drag Panel, CRUD Panel
+		$( ".search-container" ).each(function() {
+			$( this ).addClass( "hidden" );
+		});
+
+		$(".advanced-search-container").removeClass('hidden');
+			
+	
+		//toggle link display
+		$( ".search" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+
+		$("#advanced-search-btn").addClass('selected');
+
+	});
+
+
+//	Manage Time Search sub panels
+	$('#time-wheel').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Show Map Search Panel, Hide Related Resources Drag Panel, CRUD Panel
+		$( ".time-search-subcontainer" ).each(function() {
+			$( this ).addClass( "hidden" );
+		});
+
+		$("#main").removeClass('hidden');
+			
+	
+		//toggle link display
+		$( ".time-search" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+
+		$("#time-wheel").addClass('selected');
+
+	});
+
+	$('#time-calendar').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Show Map Search Panel, Hide Related Resources Drag Panel, CRUD Panel
+		$( ".time-search-subcontainer" ).each(function() {
+			$( this ).addClass( "hidden" );
+		});
+
+		$("#calendar").removeClass('hidden');
+			
+	
+		//toggle link display
+		$( ".time-search" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+
+		$("#time-calendar").addClass('selected');
+
+	});
+
 
 
 
@@ -161,8 +250,7 @@
 
 	  // Basic setup of page elements.
 	  initializeBreadcrumbTrail();
-	  drawLegend();
-	  d3.select("#togglelegend").on("click", toggleLegend);
+	 
 
 	  // Bounding circle underneath the sunburst, to make it easier to detect
 	  // when the mouse leaves the parent g.
@@ -195,11 +283,20 @@
 
 	 };
 
+
+	 // Set default count value
+	 var percentage = "86425";
+	 var percentageString = percentage;
+
+	 d3.select("#percentage")
+	      .text(percentageString);
+
+
 	// Fade all but the current sequence, and show it in the breadcrumb trail.
 	function mouseover(d) {
 
-	  var percentage = (d.value);
-	  var percentageString = percentage;
+	  percentage = (d.value);
+	  percentageString = percentage;
 	  if (percentage < 1) {
 	    percentageString = "< 1";
 	  }
@@ -331,47 +428,7 @@
 
 	}
 
-	function drawLegend() {
-
-	  // Dimensions of legend item: width, height, spacing, radius of rounded rect.
-	  var li = {
-	    w: 75, h: 30, s: 3, r: 3
-	  };
-
-	  var legend = d3.select("#legend").append("svg:svg")
-	      .attr("width", li.w)
-	      .attr("height", d3.keys(colors).length * (li.h + li.s));
-
-	  var g = legend.selectAll("g")
-	      .data(d3.entries(colors))
-	      .enter().append("svg:g")
-	      .attr("transform", function(d, i) {
-	              return "translate(0," + i * (li.h + li.s) + ")";
-	           });
-
-	  g.append("svg:rect")
-	      .attr("rx", li.r)
-	      .attr("ry", li.r)
-	      .attr("width", li.w)
-	      .attr("height", li.h)
-	      .style("fill", function(d) { return d.value; });
-
-	  g.append("svg:text")
-	      .attr("x", li.w / 2)
-	      .attr("y", li.h / 2)
-	      .attr("dy", "0.35em")
-	      .attr("text-anchor", "middle")
-	      .text(function(d) { return d.key; });
-	}
-
-	function toggleLegend() {
-	  var legend = d3.select("#legend");
-	  if (legend.style("visibility") == "hidden") {
-	    legend.style("visibility", "");
-	  } else {
-	    legend.style("visibility", "hidden");
-	  }
-	}
+	
 
 
 	// Take a 2-column CSV and transform it into a hierarchical structure suitable

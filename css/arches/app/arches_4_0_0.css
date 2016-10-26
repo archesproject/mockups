@@ -2452,18 +2452,7 @@ div.dropdown-menu.open {
 }
 
 
-.left-column-container{
-    -ms-flex: 0 0 220px;
-    -webkit-flex: 0 0 220px;
-    flex: 0 0 220px;
-    margin-bottom: 0px;
-    background-color: white;
-    width: 200px;
-    padding: 7px;
-    border-right: solid 1px #dddddd;
-    overflow-y: scroll; 
-    overflow-x: hidden; 
-}
+
 .middle-column-container{
     -ms-flex: 0 0 250px;
     -webkit-flex: 0 0 250px;
@@ -4065,10 +4054,22 @@ span.icon-wrap.icon-circle.bg-gray-dark:hover {
 	width: 200px;
 }
 
+.left-column-container{
+    -ms-flex: 0 0 250px;
+    -webkit-flex: 0 0 250px;
+    flex: 0 0 250px;
+    margin-bottom: 0px;
+    background-color: #f0f0f0;
+    padding: 7px;
+    border-right: solid 1px #dddddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
 .ep-card-tools-panel {
 	height: 100vh;
 	padding: 7px;
-	background: #fdfdfd;
 	border-right: 1px solid #e9e9e9;
 }
 
@@ -4638,6 +4639,323 @@ div.crud-card.selected {
 .dismiss-template-library:hover {
 	cursor: pointer;
 }
+
+.model-tree-node {
+	padding: 5px 5px;
+}
+
+.model-tree-node .selected {
+	font-weight: 600;
+}
+
+
+.resource-model-tree {
+	margin-left: -7px;
+	margin-right: -7px;
+}
+
+.account-card-main {
+    width: 220px;
+    position: absolute;
+    left: 17px;
+    top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.account-card-subtitle {
+    width: 190px;
+    position: absolute;
+    left: 17px;
+    top: 25px;
+    padding: 2px 2px 3px 0px;
+    color: #8ba2b9;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.node-model-name {
+	padding: 15px 0px 5px 15px;
+	font-size: 14px;
+	color: #666;
+	height: 58px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.node-card-container {
+	padding: 15px 0px 5px 10px;
+	font-size: 13px;
+	height: 58px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.node-card-container:first-of-type {
+	border-top: 1px solid #ddd;
+}
+
+.node-card {
+	padding: 15px 0px 5px 20px;
+	font-size: 13px;
+	height: 58px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.node-card-node {
+	padding: 15px 0px 5px 30px;
+	font-size: 13px;
+	color: #999;
+	height: 58px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.node-model-name:hover {
+	background: #fff;
+	cursor: pointer;
+}
+
+.node-card-container:hover {
+	background: #fff;
+}
+
+.node-card:hover {
+	background: #fff;
+	cursor: pointer;
+}
+
+.node-card-node:hover {
+	background: #fff;
+	color: #666;
+}
+
+.node-entry.selected {
+	background: #fff;
+}
+
+.node-icon {
+    width: 30px;
+    position: absolute;
+    top: 10px;
+}
+
+.expand-cc-child-nodes {
+	color: #888;
+}
+
+.expand-cc-child-nodes:hover {
+	cursor: pointer;
+	color: #666;
+}
+
+.select-child-nodes {
+	color: #888;
+}
+
+.select-child-nodes:hover {
+	cursor: pointer;
+	color: #666;
+}
+
+.node-card-container div.node-entry-title {
+	width: 180px;
+    position: absolute;
+    left: 55px;
+    top: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+
+.node-card-container div.node-entry-subtitle {
+	width: 180px;
+    position: absolute;
+    left: 55px;
+    top: 25px;
+    padding: 2px 2px 3px 0px;
+    color: #8ba2b9;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.node-card div.node-entry-title {
+	width: 170px;
+    position: absolute;
+    left: 65px;
+    top: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+}
+
+.node-card div.node-entry-subtitle {
+	width: 170px;
+    position: absolute;
+    left: 65px;
+    top: 25px;
+    padding: 2px 2px 3px 0px;
+    color: #8ba2b9;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.node-card-node div.node-entry-title {
+	width: 160px;
+    position: absolute;
+    left: 75px;
+    top: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.node-card-node div.node-entry-subtitle {
+	width: 160px;
+    position: absolute;
+    left: 75px;
+    top: 25px;
+    padding: 2px 2px 3px 0px;
+    color: #8ba2b9;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.node-disabled {
+	background: #f8f8f8;
+}
+
+.node-disabled:hover {
+	cursor: default;
+	background: #f8f8f8;
+}
+
+.node-disabled div a {
+	color: #999;
+}
+
+.node-disabled .node-icon {
+	opacity: .7;
+}
+
+.node-selection-tools {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #666;
+	z-index: 10;
+}
+
+
+.title-block-title.title-disabled {
+	color: #999;
+}
+
+.card-container-children {
+	display: none;
+	margin-top: 42px;
+	margin-left: -10px;
+}
+
+.bg-node {
+	background: #46bbdc;
+	color: #fff;
+}
+
+.bg-card {
+	background: #46bbdc;
+	color: #fff;
+}
+
+.bg-card-container {
+	background: #46bbdc;
+	color: #fff;
+}
+
+.permissions {
+	background: rgb(240, 240, 240);
+}
+
+.permissions:hover {
+	background: #fff;
+}
+
+.permissions.selected {
+	background: #fff;
+}
+
+.permission-selector {
+	padding-top: 0px;
+	margin: -50px 0px 10px -20px;
+}
+
+.permissions-summary {
+	margin-top: -40px;
+	margin-left: -10px;
+	margin-right: -20px;
+}
+
+.index-selector {
+	padding-top: 0px;
+	margin: -20px 0px 10px -20px;
+}
+
+.permissions-list {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	background: #fbfbfb;
+}
+
+.permissions-list-divider {
+	border-right: 1px solid #ddd;
+}
+
+.permissions-selected {
+	list-style: none;
+	color: #888;
+	line-height: 1.2;
+	padding-left: 20px;
+	max-height: 100px;
+	min-height: 100px;
+	font-size: 12px;
+	overflow-y: scroll;
+}
+
+.permission-buttons {
+
+}
+
+.form-disabled {
+	background: #f9f9f9;
+	color: #999;
+	opacity: .8;
+}
+
+.cards-disabled {
+	opacity: .8;
+	z-index: -10
+}
+
+.form-buttons-disabled {
+	opacity: .8;
+	z-index: -10
+}
+
 
 .cc-link {
 	padding: 4px;
@@ -5624,6 +5942,19 @@ a.btn-link {
 	padding: 5px;
 	background: #fdfdfd;
 	border-right: 1px solid #e9e9e9;
+}
+
+.title-block-title {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #222;
+    padding: 5px 0 5px 5px;
+    width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 

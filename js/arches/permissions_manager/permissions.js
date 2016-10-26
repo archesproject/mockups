@@ -8,64 +8,18 @@
 	$('.permissions').on('click', function (ev) {
 		ev.preventDefault();
 
-		var numberSelectedGroups = 0;
-
 		//Toggle the group/account that the user clicked
 		if ($(this).hasClass("selected")) {
-		    
 			//User clicked on a previously selected group/account.  Toggle it off
 		    $(this).removeClass("selected");
-		    numberSelectedGroups = numberSelectedGroups - 1;
-
 		} else {
-
 			//User wants to selecte group/account.  Toggle it on 
 			$(this).addClass("selected");
-		    numberSelectedGroups = numberSelectedGroups + 1;   
 		}
 
-
-		//If user has at least one group/account selected, enable nodes
-		if (numberSelectedGroups > 0) {
-		    
-			//Enable Title/search
-			$(".title-block-title").removeClass("title-disabled");
-			$("#node-filter").prop('disabled', false);
-
-
-			//Enable Nodes
-			$( ".node-card-container" ).each(function() {
-				$( this ).removeClass( "node-disabled" );
-			});
-
-			$( ".node-card" ).each(function() {
-				$( this ).removeClass( "node-disabled" );
-			});
-
-			$( ".node-card-node" ).each(function() {
-				$( this ).removeClass( "node-disabled" );
-			});
-
-		} else {
-
-			//Disable Nodes and Form
-			$(".title-block-title").addClass("title-disabled");
-			$("#node-filter").prop('disabled', true);
-
-			//disable Nodes
-			$( ".node-card-container" ).each(function() {
-				$( this ).addClass( "node-disabled" );
-			});
-
-			$( ".node-card" ).each(function() {
-				$( this ).addClass( "node-disabled" );
-			});
-
-			$( ".node-card-node" ).each(function() {
-				$( this ).addClass( "node-disabled" );
-			});
-			  
-		}
+		//Update List on settings form
+		$("#account-list-empty").addClass("hidden");
+		$("#account-list").removeClass("hidden");
 
 	});
 
@@ -122,9 +76,8 @@
 			});
 
 		    //Disable Form
-		    $("#permissions-form").addClass("form-disabled");
-	 		$("#cards").addClass("cards-disabled");
-	 		$(".permission-buttons").addClass("form-buttons-disabled");
+	 		$("#cc-save-btn").prop('disabled', true);
+	 		$("#cc-delete-btn").prop('disabled', true);
 
 		} else { 
 		    //Select all children nodes
@@ -132,20 +85,20 @@
 				$( this ).addClass( "selected" );
 			});
 
-		    //Update toggle icon
-		    //$("#cc-select-1").removeClass("fa-toggle-off");
-		    //$("#cc-select-1").addClass("fa-toggle-on");
-
 		    $( ".fa-toggle-off" ).each(function() {
 				$( this ).addClass( "fa-toggle-on" );
 				$( this ).removeClass( "fa-toggle-off" );
 			});
 
 		    //Enable Form
-		    $("#permissions-form").removeClass("form-disabled");
-	 		$("#cards").removeClass("cards-disabled");
-	 		$(".permission-buttons").removeClass("form-buttons-disabled");
+	 		$("#cc-save-btn").prop('disabled', false);
+	 		$("#cc-delete-btn").prop('disabled', false);
 		}
+
+
+		//Update node list
+		$("#node-list-empty").addClass("hidden");
+		$("#node-list").removeClass("hidden");
 
 	});
 

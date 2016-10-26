@@ -393,7 +393,7 @@
 
                             <!-- Title -->
                             <div class="title-block-title">
-                                <h4 class="title-block-title title-disabled"> Resource Model Name</h4>
+                                <h4 class="title-block-title"> Resource Model Name</h4>
                                 <div class="list-filter relative">
                                     <input id="node-filter" type="text" class="form-control" style="" placeholder="Find a node..." disabled>
 
@@ -413,7 +413,7 @@
                                 <!-- Card Container -->
                                 <div class="">
                                     <!-- Card Container -->
-                                    <div id="cc-expand" class="node-entry node-card-container node-disabled">
+                                    <div id="cc-expand" class="node-entry node-card-container">
                                         <div class="node-icon" style="">
                                             <span class="icon-wrap icon-wrap-sm icon-circle bg-card-container"><i class="ion-ios-browsers"></i></span>
                                         </div>
@@ -434,7 +434,7 @@
                                         <div class="top-node card-container-children">
                                             <!-- Card in Container (Node Group) -->
                                             <div class="">
-                                                <div class="node-entry node-card node-disabled">
+                                                <div class="node-entry node-card">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-card"><i class="ion-ios-compose"></i></span>
                                                     </div>
@@ -454,7 +454,7 @@
                                                 <!-- Nodes in Card -->
                                                 <div class="">
                                                     <!-- Node in Group -->
-                                                    <div class="node-entry node-card-node node-disabled">
+                                                    <div class="node-entry node-card-node">
                                                         <div class="node-icon" style="">
                                                             <span class="icon-wrap icon-wrap-sm icon-circle bg-node"><i class="fa fa-list-ul"></i></span>
                                                         </div>
@@ -469,7 +469,7 @@
                                                     </div>
 
                                                     <!-- Node in Group -->
-                                                    <div class="node-entry node-card-node node-disabled">
+                                                    <div class="node-entry node-card-node">
                                                         <div class="node-icon" style="">
                                                             <span class="icon-wrap icon-wrap-sm icon-circle bg-node"><i class="ion-calendar"></i></span>
                                                         </div>
@@ -484,7 +484,7 @@
                                                     </div>
                                                     
                                                     <!-- Node in Group -->
-                                                    <div class="node-entry node-card-node node-disabled">
+                                                    <div class="node-entry node-card-node">
                                                         <div class="node-icon" style="">
                                                             <span class="icon-wrap icon-wrap-sm icon-circle bg-node"><i class="fa fa-file-code-o"></i></span>
                                                         </div>
@@ -502,7 +502,7 @@
 
                                             <!-- Card in Container (Node Group) -->
                                             <div class="">
-                                                <div class="node-entry node-card node-disabled">
+                                                <div class="node-entry node-card">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-card"><i class="ion-ios-compose"></i></span>
                                                     </div>
@@ -520,7 +520,7 @@
                                                 </div>
 
                                                 <!-- Nodes in Card -->
-                                                <div class="node-entry node-card-node node-disabled">
+                                                <div class="node-entry node-card-node">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-node"><i class="fa fa-list-ul"></i></span>
                                                     </div>
@@ -537,7 +537,7 @@
 
                                             <!-- Card in Container (Node Group) -->
                                             <div class="">
-                                                <div class="node-entry node-card node-disabled">
+                                                <div class="node-entry node-card">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-card"><i class="ion-ios-compose"></i></span>
                                                     </div>
@@ -555,7 +555,7 @@
                                                 </div>
 
                                                 <!-- Nodes in Card -->
-                                                <div class="node-entry node-card-node node-disabled">
+                                                <div class="node-entry node-card-node">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-node"><i class="fa fa-list-ul"></i></span>
                                                     </div>
@@ -572,7 +572,7 @@
 
                                             <!-- Card in Container (Node Group) -->
                                             <div class="">
-                                                <div class="node-entry node-card node-disabled">
+                                                <div class="node-entry node-card">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-card"><i class="ion-ios-compose"></i></span>
                                                     </div>
@@ -591,7 +591,7 @@
                                                 
 
                                                 <!-- Nodes in Card -->
-                                                <div class="node-entry node-card-node node-disabled">
+                                                <div class="node-entry node-card-node">
                                                     <div class="node-icon" style="">
                                                         <span class="icon-wrap icon-wrap-sm icon-circle bg-node"><i class="ion-folder"></i></span>
                                                     </div>
@@ -617,7 +617,7 @@
 
                             <div id="card-preview" class="pad-all" style="">
 
-                                <div id="permissions-form" class="panel form-disabled">
+                                <div id="permissions-form" class="panel">
                                     <div class="panel-heading">
                                         <div class="">
                                             <h3 id="cc-title" class="panel-title card-main-title">Permissions and Publishing</h3>
@@ -629,7 +629,7 @@
 
                                     <!-- Data Entry -->
                                     <div id="card-preview-crud" class="panel-body card-body fade in" style="padding-top: 0px;">
-                                        <div id="cards" class="tab-base card-content-container outline cards-disabled" style="margin-bottom: 20px; margin-top: -2px;">
+                                        <div id="cards" class="tab-base card-content-container outline" style="margin-bottom: 20px; margin-top: -2px;">
 
                                             <!--Nav Tabs-->
                                             <ul class="nav nav-tabs card-nav-container" style="">
@@ -651,7 +651,12 @@
                                                             <div class="col-sm-6 permissions-list permissions-list-divider">
                                                                 <div class="">
                                                                     Group/Account List
-                                                                    <ul class="permissions-selected">
+                                                                    <ul id="account-list-empty" class="permissions-selected">
+                                                                        <li class="">
+                                                                            No Groups/Accounts selected
+                                                                        </li>
+                                                                    </ul>
+                                                                    <ul id="account-list" class="permissions-selected hidden">
                                                                         <li class="">
                                                                             <i class="confirmation ion-ios-checkmark hidden"></i> Administrator
                                                                         </li>
@@ -669,9 +674,29 @@
                                                             <div class="col-sm-6 permissions-list">
                                                                 <div class="pad-lft">
                                                                     Node List
-                                                                    <ul class="permissions-selected">
+                                                                    <ul id="node-list-empty" class="permissions-selected">
+                                                                        <li class="">
+                                                                            No nodes selected
+                                                                        </li>
+                                                                    </ul>
+                                                                    <ul id="node-list" class="permissions-selected hidden">
                                                                         <li class="">
                                                                             <i class="confirmation ion-ios-checkmark  hidden"></i> Condition Type
+                                                                        </li>
+                                                                        <li class="">
+                                                                            <i class="confirmation ion-ios-checkmark  hidden"></i> Date Assessed
+                                                                        </li>
+                                                                        <li class="">
+                                                                            <i class="confirmation ion-ios-checkmark  hidden"></i> Description
+                                                                        </li>
+                                                                        <li class="">
+                                                                            <i class="confirmation ion-ios-checkmark  hidden"></i> Disturbance Type
+                                                                        </li>
+                                                                        <li class="">
+                                                                            <i class="confirmation ion-ios-checkmark  hidden"></i> Threat Type
+                                                                        </li>
+                                                                        <li class="">
+                                                                            <i class="confirmation ion-ios-checkmark  hidden"></i> Images
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -726,10 +751,10 @@
                                                         </div>
 
                                                         <!-- Buttons -->
-                                                        <div class="permission-buttons pull-right mar-btm form-buttons-disabled">
-                                                            <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt"> Revert Permissions
+                                                        <div class="permission-buttons pull-right mar-btm">
+                                                            <button id="cc-delete-btn" class="btn btn-shim btn-danger btn-labeled btn-lg fa fa-times mar-rgt" disabled="disabled"> Revert Permissions
                                                             </button>
-                                                            <button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check" style=""> Apply Permissions</button>
+                                                            <button id="cc-save-btn" class="btn btn-shim btn-primary btn-labeled btn-lg fa fa-check" disabled="disabled"> Apply Permissions</button>
                                                         </div>
                                                     </div>  
                                                 </div>    

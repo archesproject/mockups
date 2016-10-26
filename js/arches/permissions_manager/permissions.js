@@ -158,6 +158,31 @@
 	});	
 
 
+//	Update Select All button text
+	$('#select-groups').on('click', function (ev) {
+
+		//If text is "Select all", toggle to "Unselect All"
+		if ($('#select-groups').text() == 'Select All') {
+			$('#select-groups').text('Unselect All');
+		} else {
+			$('#select-groups').text('Select All');
+		}
+	});	
+
+
+	$('#expand-nodes').on('click', function (ev) {
+
+		//If text is "Select all", toggle to "Unselect All"
+		if ($('#expand-nodes').text() == 'Expand All') {
+			$('#expand-nodes').text('Collapse All');
+		} else {
+			$('#expand-nodes').text('Expand All');
+		}
+	});	
+
+
+
+
 
 // Toggle Node Children Display
 	// $('.node-card-container').on('click', function (ev) {

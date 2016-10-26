@@ -292,15 +292,22 @@
                         <!-- Left Panel: Groups/Accounts -->
                         <div class="left-column-container panel ep-card-tools-panel">
 
-                            <!-- Title -->
+                            <!-- Title Block -->
                             <div class="title-block-title">
                                 <h4 class="title-block-title"> Groups/Accounts</h4>
-                                <div class="list-filter">
+                                
+                                <!-- Group/Account Filter -->
+                                <div class="list-filter relative">
                                     <input type="text" class="form-control" style="" placeholder="Find a group...">
-
-                                    <!-- Clear Search -->
+                                    <!-- Clear Filter -->
                                     <span class="clear-node-search"><i class="fa fa-times-circle"></i></span>
                                 </div>
+
+                                <!-- Toolbar -->
+                                <div class="href-toolbar">
+                                    <a id="select-groups" class="href-button" href="#"> Select All</a>
+                                </div>
+
                             </div>
 
                             <!-- Group Listing -->
@@ -387,11 +394,16 @@
                             <!-- Title -->
                             <div class="title-block-title">
                                 <h4 class="title-block-title title-disabled"> Resource Model Name</h4>
-                                <div class="list-filter">
+                                <div class="list-filter relative">
                                     <input id="node-filter" type="text" class="form-control" style="" placeholder="Find a node..." disabled>
 
                                     <!-- Clear Search -->
                                     <span class="clear-node-search"><i class="fa fa-times-circle"></i></span>
+
+                                    <!-- Toolbar -->
+                                    <div class="href-toolbar">
+                                        <a id="expand-nodes" class="href-button" href="#"> Expand All</a>
+                                    </div>
                                 </div>
                             </div>
 

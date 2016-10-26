@@ -4940,6 +4940,31 @@ div.crud-card.selected {
 
 }
 
+.href-toolbar {
+	text-align: center;
+	padding-top: 5px;
+}
+
+.href-button {
+	color: #f4f4f4;
+	font-size: 11px;
+	padding: 5px 0px;
+	margin: 5px 0px 5px 0px;
+	background: #5393C8;
+	display: inline-block;
+	width: 100%;
+}
+
+.href-button:hover {
+	color: #fff;
+	background: #1266AB;
+}
+
+.href-button:focus {
+	color: #fff;
+	background: #1266AB;
+}
+
 .form-disabled {
 	background: #f9f9f9;
 	color: #999;

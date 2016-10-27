@@ -4673,7 +4673,7 @@ div.crud-card.selected {
     position: absolute;
     left: 17px;
     top: 25px;
-    padding: 2px 2px 3px 0px;
+    padding: 4px 2px 3px 0px;
     color: #8ba2b9;
     font-size: 12px;
     white-space: nowrap;

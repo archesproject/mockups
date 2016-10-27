@@ -5061,6 +5061,19 @@ div.crud-card.selected {
 }
 
 
+.grid-selector {
+	margin-top: -50px;
+}
+
+.grid-filter-container {
+	padding-left: 15px;
+}
+
+.grid-filter {
+	width: 450px
+}
+
+
 .cc-link {
 	padding: 4px;
 	margin-top: -6px;

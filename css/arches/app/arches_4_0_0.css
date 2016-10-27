@@ -4986,7 +4986,7 @@ div.crud-card.selected {
 }
 
 .library-header {
-	height: 40px; 
+	height: 50px; 
 	font-size: 15px;
 	background: #f4f4f4; 
 	border-bottom: 1px solid #e4e4e4;
@@ -5006,7 +5006,7 @@ div.crud-card.selected {
 .library-panel-search-bar {
 	position: absolute;
     left: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .library-tools {
@@ -5017,7 +5017,7 @@ div.crud-card.selected {
 
 .library-grid-title {
 	font-weight: normal;
-    padding: 10px 20px 0px 0px;
+    padding: 15px 20px 0px 0px;
     font-size: 15px;
     display: inline-block;
 }
@@ -5036,7 +5036,7 @@ div.crud-card.selected {
 	padding-left: 30px; 
 	padding-right: 30px; 
 	padding-top: 0px; 
-	margin-top: -1px;
+	margin-top: -5px;
 }
 
 .library-card-entry {

@@ -284,21 +284,23 @@
                             </div>
 
                             <div id="map-widget-toolbar" class="map-widget-toolbar relative" style="display: none;">
-                                <div class="map-widget-tool active text-center">
-                                    <a id="" href="" class=""><i class="ion-map add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Basemaps"></i></a>
-                                </div>
-                                <div id="btn-overlays" class="map-widget-tool text-center">
-                                    <a id="overlays" href="" class=""><i class="ion-navicon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Overlays"></i></a>
-                                </div>
-                                <div class="map-widget-tool text-center">
-                                    <a id="" href="" class=""><i class="ion-crop add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Map Tools"></i></a>
-                                </div>
-                                <div class="map-widget-tool text-center">
-                                    <a id="" href="" class=""><i class="ion-ios-list add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Legend"></i></a>
-                                </div>
-                                <div class="map-widget-tool text-center">
-                                    <a id="close-map-tools" href="#" class=""><i class="ion-ios-close add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Close"></i></a>
-                                </div>
+                                <ul class="map-widget-toolbar-list" style="">
+                                    <li class="map-widget-toolbar-item">
+                                        <a id="" href="" class="map-widget-icon"><i class="ion-map add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Basemaps"></i></a>
+                                    </li>
+                                    <li class="map-widget-toolbar-item">
+                                        <a id="" href="" class="map-widget-icon"><i class="ion-navicon add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="overlays"></i></a>
+                                    </li>
+                                    <li class="map-widget-toolbar-item">
+                                        <a id="" href="" class="map-widget-icon"><i class="ion-crop add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Map Tools"></i></a>
+                                    </li>
+                                    <li class="map-widget-toolbar-item">
+                                        <a id="" href="" class="map-widget-icon"><i class="ion-ios-list add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Legend"></i></a>
+                                    </li>
+                                    <li class="map-widget-toolbar-item">
+                                        <a id="" href="" class="map-widget-icon"><i class="ion-ios-close add-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="Close"></i></a>
+                                    </li>
+                                </ul>
                             </div>
 
                             <!-- Basemaps -->
@@ -412,16 +414,61 @@
 
                             </div>
 
+
+                            <!-- Overlay Selection Panel -->
+                            <div class="overlay-selection-container hidden">
+                                <!-- Title -->
+                                <div class="overlay-title">
+                                    Map Overlays
+                                    <span class="pull-right"><i class="overlay-close ion-ios-close"></i>
+                                </div>
+
+                                <!-- Filter -->
+                                <div class="overlay-filter-container">
+                                    <input type="text" placeholder="filter overlays..." class="form-control grid-filter input-lg">
+                                </div>
+
+                                <!-- Overlay List -->
+                                <div class="overlay-list-container">
+                                    
+                                    <div id="overlay-grid" class="grid" style="position: relative; height: 0px;">
+                                        <!-- Overlay Item -->                                   
+                                        <div class="overlay-card selected" style="">
+                                            <div class="overlay-card-item">
+                                                <div class="overlay-card-vis-toggle">
+                                                    <i class="ion-checkmark-circled"></i>
+                                                </div>
+                                                <div class="overlay-card-main" style="">
+                                                    <a id="" class="" style="" href="#">
+                                                        Overlay Name
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Overlay Item -->                                   
+                                        <div class="overlay-card" style="">
+                                            <div class="overlay-card-item">
+                                                <div class="overlay-card-vis-toggle">
+                                                    <i class="ion-checkmark-circled"></i>
+                                                </div>
+                                                <div class="overlay-card-main" style="">
+                                                   <a id="" class="" style="" href="#">
+                                                        Overlay Name
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Legend -->
                             <div id="legend-panel" class="panel map-widget-panel" style="display: none;">
                                 <!-- Panel Title -->
                                 <div class="map-widget-panel-title">
                                     <h4 class=""> Legend </h4>
                                 </div>
-                                
-                                
-
-
                             </div>
 
                         </div>

@@ -115,10 +115,10 @@
 	$('#select-groups').on('click', function (ev) {
 
 		//If text is "Select all", toggle to "Unselect All"
-		if ($('#select-groups').text() == 'Select All') {
-			$('#select-groups').text('Unselect All');
+		if ($('#select-groups').text() == 'Show Accounts') {
+			$('#select-groups').text('Show Groups');
 		} else {
-			$('#select-groups').text('Select All');
+			$('#select-groups').text('Show Accounts');
 		}
 	});	
 

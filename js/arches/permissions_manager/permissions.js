@@ -8,14 +8,13 @@
 	$('.permissions').on('click', function (ev) {
 		ev.preventDefault();
 
-		//Toggle the group/account that the user clicked
-		if ($(this).hasClass("selected")) {
-			//User clicked on a previously selected group/account.  Toggle it off
-		    $(this).removeClass("selected");
-		} else {
-			//User wants to selecte group/account.  Toggle it on 
-			$(this).addClass("selected");
-		}
+		
+		// Allow user to select one group
+		$( ".permissions" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+
+		$( this ).addClass( "selected" );
 
 		//Update List on settings form
 		$("#account-list-empty").addClass("hidden");

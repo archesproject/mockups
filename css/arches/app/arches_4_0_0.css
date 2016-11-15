@@ -5178,6 +5178,60 @@ a.cc-link-card-link.active {
 }
 
 
+
+/*Import Export   */
+.import-export-job-panel {
+	padding: 15px 0px;
+}
+
+.import-file-upload-panel {
+	padding: 15px 20px;
+}
+
+.content-stats {
+	padding-top: 25px;
+	font-size: 13px;
+}
+
+.job-list-container {
+	background: #f8f8f8;
+	margin: 0px -10px 10px -10px;
+	padding: 0px 15px 20px 15px;
+}
+
+.import-count-summary {
+	padding-left: 20px;
+}
+
+.import-resource-name {
+	font-size: 13px;
+	padding-top: 10px;
+}
+
+.import-count {
+	padding-left: 20px;
+	padding-right: 15px;
+    width: 110px;
+    text-align: right;
+}
+
+.imported-resource-name {
+	padding: 12px 0px 0px 0px;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-bottom: 3px;
+	color: #888;
+}
+
+.import-metadata {
+	color: #777;
+}
+
+.import-validation {
+	margin-top: 5px;
+}
+
+
 /*Summernote Overrides    */
 .note-editor .note-toolbar {
 	background: #fcfcfc;

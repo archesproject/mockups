@@ -1,0 +1,1493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arches | v4.0.0</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+    <!--Open Sans Font [ OPTIONAL ] -->
+     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
+
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Font Awesome [ OPTIONAL ]-->
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--Ion Icons [ OPTIONAL ]-->
+    <link href="plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="nifty-v2.4/css/nifty.min.css" rel="stylesheet">
+
+
+    <!--Themify Icons [ OPTIONAL ]-->
+    <link href="nifty-v2.4/plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
+
+
+    
+
+    <!--SCRIPT-->
+    <!--=================================================-->
+
+    <!--Page Load Progress Bar [ OPTIONAL ]-->
+    <link href="nifty-v2.4/plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="nifty-v2.4/plugins/pace/pace.min.js"></script>
+
+
+    
+    <!--
+
+    REQUIRED
+    You must include this in your project.
+
+    RECOMMENDED
+    This category must be included but you may modify which plugins or components which should be included in your project.
+
+    OPTIONAL
+    Optional plugins. You may choose whether to include it in your project or not.
+
+
+    Detailed information and more samples can be found in the document.
+
+    -->
+
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <link href="plugins/switchery/switchery.min.css" rel="stylesheet">
+
+
+    <!-- D3 Graph -->
+    <link href="css/arches/app/graph.css" rel="stylesheet">
+
+
+    <!-- OL3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.css" type="text/css">
+
+
+    <!--Summernote [ OPTIONAL ]-->
+    <link href="plugins/summernote/summernote.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css">
+
+
+    <!--Dropzone [ OPTIONAL ]-->
+    <link href="plugins/dropzone/dropzone.css" rel="stylesheet">
+
+
+    <!--Bootstrap Table [ OPTIONAL ]-->
+    <link href="plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+
+    <!-- Arches CSS -->
+    <link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
+    <link href="css/arches/app/app_configuration.css" rel="stylesheet">
+
+
+
+    <!-- 
+    <link href="css/arches/app/graph_manager_4_0_0.css" rel="stylesheet">
+    -->
+
+    <!--
+    <link href="css/arches/forms/cards_1_0_0.css" rel="stylesheet">
+    <link href="css/arches/forms/resource_forms.css" rel="stylesheet">
+    -->
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body>
+    <div id="container" class="effect mainnav-sm navbar-fixed">
+        
+        <!--NAVBAR-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/arches/arches_logo_light.png" alt="Arches" class="brand-icon arches-icon" style="height: 20px; width: 20px; margin-top: 10px; margin-left: 15px; margin-right: 15px;">
+                        <div class="brand-title">
+                            <span class="brand-text">Arches</span>
+                        </div>
+                    </a>
+                </div>
+                <!--End brand logo & name-->
+
+
+                <!--Navbar Dropdown-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <!--Navigation toogle button-->
+                        <li class="tgl-menu-btn hidden-sm hidden-md hidden-lg">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="ti-view-list icon-lg"></i>
+                            </a>
+                        </li>
+                        <!--End Navigation toogle button-->
+
+                        <!--Documentation dropdown-->
+                        <li class="mega-dropdown">
+                            <a href="#" class="mega-dropdown-toggle">
+                                <i class="ti-ticket icon-lg"></i>
+                            </a>
+                            <div class="dropdown-menu mega-dropdown-menu dropdown-shim">
+                                <div class="clearfix">
+                                    <div class="col-sm-12 col-md-3">
+
+                                        <!--Mega menu widget-->
+                                        <div class="text-center bg-purple pad-all">
+                                            <h3 class="text-thin mar-no">Arches Documentation</h3>
+                                            <div class="pad-ver box-inline">
+                                                <span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+                                                    <i class="ti-notepad icon-3x"></i>
+                                                </span>
+                                            </div>
+                                            <p class="pad-btm">
+                                                Use this quick reference get <span class="text-lg text-bold">help</span> on completing many common tasks.  
+                                            </p>
+                                            <a href="#" class="btn btn-purple">Visit ArchesProject.Org</a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <!--Mega menu list-->
+                                        <ul class="list-unstyled">
+									        <li class="dropdown-header">Adding Resources</li>
+									        <li><a href="#">Create New Resource</a></li>
+									        <li><a href="#">Editing a Resource</a></li>
+									        <li><a href="#">Linking Resources</a></li>
+									        <li><a href="#">Uploading Files</a></li>
+									        <li class="divider"></li>
+									        <li class="dropdown-header">Searches</li>
+									        <li><a href="#">Search by attribute</a></li>
+									        <li><a href="#">Map-based searches</a></li>
+                                            <li><a href="#">Time-based searches</a></li>
+                                            <li><a href="#">Period-based searches</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <!--Mega menu list-->
+                                        <ul class="list-unstyled">
+									        <li class="dropdown-header">Import/Export</li>
+									        <li><a href="#">Import a shapefile</a></li>
+									        <li><a href="#">Export files</a></li>
+                                            <li><a href="#">Configuring mapping files</a></li>
+                                            <li><a href="#">Reviewing imported data</a></li>
+									        <li class="divider"></li>
+									        <li class="dropdown-header">Map Services</li>
+									        <li><a href="#">Managing GIS layers</a></li>
+									        <li><a href="#">Creating a New Overlay</a></li>
+									        <li><a href="#">Adding and tiling aerials</a></li>
+									        <li><a href="#">Managing map permissions</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-sm-4 col-md-3">
+
+                                        <!--Mega menu list-->
+                                        <ul class="list-unstyled">
+									        <li class="dropdown-header">Reference Data</li>
+									        <li><a href="#">Defining Controlled Vocabularies</a></li>
+									        <li><a href="#">Managing dropdown lists</a></li>
+									        <li><a href="#">Managing Ontologies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--Documentation dropdown-->
+
+                        <!-- Recent Edits dropdown-->
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                <i class="ti-bell icon-lg"></i>
+                                <span class="badge badge-header badge-mint"></span>
+                            </a>
+
+                            <!--Notification dropdown menu-->
+                            <div class="dropdown-menu dropdown-menu-md dropdown-shim">
+                                <div class="pad-all bord-btm">
+                                    <p class="text-lg text-semibold mar-no">My recent edits</p>
+                                </div>
+                                <div class="nano scrollable">
+                                    <div class="nano-content">
+                                        <ul class="head-list">
+                                    
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-building-o icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Castle Anthrax</div>
+                                                        <small class="text-muted">15 minutes ago</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-calendar icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">1906 San Francisco Earthquake</div>
+                                                        <small class="text-muted">2 hours ago</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-building-o icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Castle Wolfenstein</div>
+                                                        <small class="text-muted">March 30, 2016</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-file-o icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Rush 2112</div>
+                                                        <small class="text-muted">March 22, 2016</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <!-- Dropdown list-->
+                                            <li>
+                                                <a href="#" class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-tasks icon-lg"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="text-nowrap">Leopold Archaeological Site Excavation</div>
+                                                        <small class="text-muted">March 19, 2016</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--Dropdown footer-->
+                                <div class="pad-all bord-top">
+                                    <a href="#" class="btn-link text-dark box-block">
+                                        <i class="ti-angle-right pull-right"></i>Show All Resources
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End recent edits dropdown-->
+
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        <!--Language selector-->
+                        <li class="dropdown">
+                            <a class="lang-selector dropdown-toggle" href="#" data-toggle="dropdown">
+                                <span class="lang-selected">
+                                    <img class="lang-flag" src="img/flags/united-kingdom.png" alt="English">
+                                    <span class="lang-id">EN</span>
+                                    <span class="lang-name">English</span>
+                                </span>
+                            </a>
+
+                            <!--Language selector menu-->
+                            <ul class="head-list dropdown-menu">
+						        <li>
+						            <!--English-->
+						            <a href="#" class="active">
+						                <img class="lang-flag" src="img/flags/united-kingdom.png" alt="English">
+						                <span class="lang-id">EN</span>
+						                <span class="lang-name">English</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--France-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/france.png" alt="France">
+						                <span class="lang-id">FR</span>
+						                <span class="lang-name">Fran&ccedil;ais</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--Germany-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/germany.png" alt="Germany">
+						                <span class="lang-id">DE</span>
+						                <span class="lang-name">Deutsch</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--Italy-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/italy.png" alt="Italy">
+						                <span class="lang-id">IT</span>
+						                <span class="lang-name">Italiano</span>
+						            </a>
+						        </li>
+						        <li>
+						            <!--Spain-->
+						            <a href="#">
+						                <img class="lang-flag" src="img/flags/spain.png" alt="Spain">
+						                <span class="lang-id">ES</span>
+						                <span class="lang-name">Espa&ntilde;ol</span>
+						            </a>
+						        </li>
+                            </ul>
+                        </li>
+                        <!--End language selector-->
+
+
+                        <!--User dropdown-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <img class="img-circle img-user media-object" src="img/av1.png" alt="Profile Picture">
+                                </span>
+                                <div class="username hidden-xs">John Doe</div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+                                <!-- Dropdown heading  -->
+                                <div class="pad-all bord-btm">
+                                    <p class="text-lg text-semibold mar-btm">750Gb of 1,000Gb Used</p>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar" style="width: 70%;">
+                                            <span class="sr-only">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-user icon-fw icon-lg"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">9</span>
+                                            <i class="ti-email icon-fw icon-lg"></i> Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-success pull-right">New</span>
+                                            <i class="ti-settings icon-fw icon-lg"></i> Settings
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="pages-login.html" class="btn btn-primary">
+                                        <i class="ti-unlock icon-fw"></i> Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End user dropdown-->
+
+                    </ul>
+                </div>
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--END NAVBAR-->
+
+        <div id="" class="boxed">
+
+            <!-- Default Page -->
+            <div id="content-container" class="">
+
+                <!-- Page Header -->
+                <div class="">
+                    <!-- Title -->
+                    <div class="" style="height: 80px; background: #f8f8f8; border-bottom: 1px solid #ddd;">
+                        <div class="center-div" style="padding-top: 0px; padding-left: 28px;">
+                            <h1 class="page-header text-overflow arches-panel-header"><i class="text-center fa fa-server icon-wrap bg-gray arches-panel-icon"></i> Map Server Manager</h1>
+                            <p class="arches-panel-subtitle">Manage maps and geospatial resources</p>
+                        </div>
+                    </div>
+
+                    <!-- Toolbar -->
+                    <div class="relative" style="height: 60px; background: #f4f4f4; border-bottom: 1px solid #e4e4e4;">
+
+                        <!-- Search -->
+                        <div class="edit-panel-search-bar">
+
+                            <!-- Find Button -->
+                            <div class="">
+                                <a class="page-header text-overflow graph-find" href="#"> Find </a>
+                            </div>
+
+                            <!-- Find widget -->
+                            <div class="find-widget" style="display: none;">
+                                <div class="">
+                                    <select id="" class="resources" style="" data-placeholder="Find a Resource/Graph..." tabindex="4">
+                                        <option>Archaeological Resource</option>
+                                        <option>Architectural Resource</option>
+                                        <option>Heritage District</option>
+                                        <option>Activity</option>
+                                        <option>Historic Event</option>
+                                        <option>Person/Organization</option>
+                                        <option>Information Resource</option>
+                                    </select>                                       
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resource/Graph Toggle -->
+                        <div class="resource-tools relative" style="display: block;">
+                            <a id="lnk-resource-list" class="resource-grid-title active" href="">Arches Resources</a>
+                            <a id="lnk-resource-records" class="resource-grid-title" href="">Map Services</a>
+                        </div>
+                    </div>  
+                </div>
+
+                <!-- Default Page content-->
+                <div id="page-content" style="padding-left: 50px; padding-right: 50px; padding-top: 0px; margin-top: -1px;">
+
+                	<!-- Resource Mapping Services -->
+                    <div id="import" class="report-image-grid" style="margin-top: 5px;">
+
+                    	<!-- Resource Mapping Service -->
+                    	<div class="resource-map-service-container">
+
+                    		<!-- Resource Map Service -->
+                    		<div id="" class="panel">
+	                    		<!-- Toolbar -->
+	                    		<div class="panel-heading">
+					                <div class="panel-control">
+					                    <button id="" data-toggle="panel-overlay" data-target="" class="btn"><i class="fa fa-rotate-right"></i></button>
+					                    <div class="btn-group">
+					                        <button class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gear"></i></button>
+					                        <ul class="dropdown-menu dropdown-menu-right">
+					                            <li><a href="#">Action</a></li>
+					                            <li><a href="#">Another action</a></li>
+					                            <li><a href="#">Something else here</a></li>
+					                            <li class="divider"></li>
+					                            <li><a href="#">Separated link</a></li>
+					                        </ul>
+					                    </div>
+					                </div>
+					                <h3 class="panel-title"><i class="fa fa-building"></i> Architectural Resource</h3>
+					            </div>
+					
+					            <!-- Service Information -->
+					            <div class="panel-body">
+
+					            	<!-- Job Status -->
+					            	<div class="row map-service-container">
+					            		
+                                        <!-- Service Preview -->
+                                        <div class="col-md-5 col-lg-4 map-service-preview">
+
+                                            map preview here
+
+                                        </div>
+
+                                        <!-- Service Summary -->
+                                        <div class="col-md-7 col-lg-8">
+                                            <div class="map-service-config">
+
+                                                <h3 class="config-title"><i class="ion-wrench"></i> Service Details</h3>
+                                                
+                                                <div class="col-xs-12">
+                                                    <div class="row service-widget-container">
+                                                        
+                                                        <!-- Service Node -->
+                                                        <dl class="dl-horizontal">
+                                                            <dt class="service-label dropdown-shim">Geometry Node:</dt>
+                                                            <dd class="service-name">
+                                                                <select id="" class="resources" style="" data-placeholder="Node name..." tabindex="4">
+                                                                    <option>Geometry</option>
+                                                                    <option>place</option>
+                                                                </select>  
+                                                            </dd>
+                                                        </dl>
+
+                                                        <!-- Generalize Function -->
+                                                        <dl class="dl-horizontal pad-top">
+                                                            <dt class="service-label dropdown-shim">Generalize Function:</dt>
+                                                            <dd class="service-name">
+                                                                <select id="" class="resources" style="" data-placeholder="Node name..." tabindex="4">
+                                                                    <option>None</option>
+                                                                </select>  
+                                                            </dd>
+                                                        </dl>
+
+                                                        <hr class="">
+
+                                                        <!-- Service Summary -->
+                                                        <dl class="dl-horizontal">
+                                                            <dt class="service-label">Service Name: </dt>
+                                                            <dd class="service-name">architectural_resource</dd>
+                                                            <dt class="service-label">Service URL: </dt>
+                                                            <dd class="service-name">http://www.mydomain.com/arches/mapservices/architectural_resource/{z}/{x}/{y}.pbf</dd>
+                                                        </dl> 
+                                                    </div>     
+                                                </div>
+                                            </div>
+                                        </div>
+					            	</div>
+
+                                    <hr>
+
+                                    <!-- Service Styling Rules -->
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="">
+
+                                                <!-- Title -->
+                                                <h3 class="config-title"><i class="ion-image"></i> Service Styling
+                                                    <button class="hidden btn btn-mint btn-labeled btn-active-dark fa fa-magic pull-right mar-top">Restore defaults</button>
+                                                    <button class="btn btn-mint btn-labeled btn-active-dark fa fa-cloud-upload pull-right mar-top">Import Style</button>
+                                                </h3>
+                                                
+                                                <!-- Resource Style -->
+                                                <div class="col-xs-12">
+                                                    <div class="tab-base" style="background: #f9f9f9; margin-bottom: 0px;">
+                    
+                                                        <!-- Resource Styling Tabs -->
+                                                        <ul class="nav nav-tabs">
+                                                            <li class="active">
+                                                                <a data-toggle="tab" href="#style-panel">Resource Style</a>
+                                                            </li>
+                                                            <li>
+                                                                <a data-toggle="tab" href="#json-view-panel">View Style JSON</a>
+                                                            </li>
+                                                        </ul>
+                                            
+                                                        <!-- Resource Styling Panels -->
+                                                        <div class="tab-content">
+                                                            
+                                                            <!-- Default Styling Form -->
+                                                            <div id="style-panel" class="tab-pane fade active in">
+                                                                <div class="panel-body" style="padding-top: 0px;">
+                                                                    <div class="row">
+                                                                        
+                                                                        <!-- Points -->
+                                                                        <div class="col-sm-4 col-divider">
+                                                                            <span class="style-title">Point Style</span>
+
+                                                                            <form class="form-horizontal">
+                                                                                <div class="panel-body">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Color</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="#3acaa1" class="form-control" value="#3acaa1">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Opacity</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="1.0" class="form-control" value="1.0">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Weight</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="2" class="form-control" value="2">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                        <!-- Lines -->
+                                                                        <div class="col-sm-4 col-divider">
+                                                                            <span class="style-title">Line Style</span>
+
+                                                                            <form class="form-horizontal">
+                                                                                <div class="panel-body">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Color</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="#3acaa1" class="form-control" value="#3acaa1">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Opacity</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="1.0" class="form-control" value="1.0">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Weight</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="2" class="form-control" value="2">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+
+                                                                        <!-- Polygons -->
+                                                                        <div class="col-sm-4">
+                                                                            <span class="style-title">Polygon Style</span>
+
+                                                                            <form class="form-horizontal">
+                                                                                <div class="panel-body">
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Color</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="#3acaa1" class="form-control" value="#3acaa1">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label class="col-sm-3 control-label">Opacity</label>
+                                                                                        <div class="col-sm-9">
+                                                                                            <input type="" placeholder="1.0" class="form-control" value="1.0">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                                
+                                                            </div>
+
+                                                            <!-- JSON View -->
+                                                            <div id="json-view-panel" class="tab-pane fade">
+                                                                <div id="map-config-editor"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+									<!-- Service Notes  -->
+			                        <div class="pad-rgt">
+			                        	<hr>
+			                            <!-- Title -->
+                                        <h3 class="config-title" style="margin-bottom: 0px;"><i class="ion-ios-compose-outline"></i> Service Notes</h3>
+			                            
+			                            <!-- Options List -->
+			                            <div class="col-md-6 col-lg-9">
+											<p class="service-notes">Last refresh: 16:18:49 on December 14, 2016</p>
+                                            <p class="service-notes">By: rgaston@fargeo.com</p>
+										</div>
+
+										<!-- Service Controls -->
+										<div class="col-md-6 col-lg-3">
+											<button class="btn btn-danger btn-labeled btn-active-dark fa fa-circle-o-notch pull-right">Stop Service</button>
+										</div>
+			                        </div>
+					            </div>
+					        </div>
+
+					        
+
+
+                    	</div>
+                    </div>
+
+                    
+
+
+
+
+                    <!-- Mapping Services -->
+                    <div id="resource-list" class="report-image-grid hidden" style="margin-top: 5px;">
+
+
+                        <!-- Resource Mapping Services -->
+                        <div id="import" class="report-image-grid" style="margin-top: 5px;">
+
+                        
+                            <!-- New Import Job -->
+                            <div class="import-export-job-panel">
+                                <div id="" class="panel">
+                                    <!-- Import Job Header -->
+                                    <div class="panel-heading">
+                                        <div class="panel-control">
+                                            <button id="" data-toggle="panel-overlay" data-target="#demo-panel-network" class="btn"><i class="fa fa-rotate-right"></i></button>
+                                            <div class="btn-group">
+                                                <button class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gear"></i></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h3 class="panel-title">Import Data</h3>
+                                    </div>
+
+
+                                    <!-- Import File Upload -->
+                                    <div id="import-file-upload-panel" class="import-file-upload-panel">
+     
+                                        <!--Dropzonejs-->
+                                        <form id="upload-dropzone" action="#" class="dropzone" style="min-height: 200px;, height: 200px; padding: 10px;">
+                                            <div class="dz-default dz-message">
+                                                <div class="dz-icon icon-wrap icon-circle icon-wrap">
+                                                    <i class="fa fa-cloud-upload fa-3x"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="dz-text">Drop file to upload and import</p>
+                                                    <p class="text-muted">or click to pick manually</p>
+                                                </div>
+                                            </div>
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple />
+                                            </div>
+                                        </form>
+                                    </div>
+                                
+
+                                    <!--File and Validation Information-->
+                                    <div class="panel-body" style="padding-top: 0px;">
+
+                                        <!-- Job Status -->
+                                        <div id="import-job-status-panel" class="row hidden">
+                                            <p class="text-semibold text-uppercase"><i class="fa fa-info-circle fa-fw text-primary"></i> Job Status: <span class="text-primary">Validating...</span></p>
+                                            <ul class="list-unstyled pad-btm">
+                                                <li class="pad-btm">
+                                                    <div class="clearfix">
+                                                        <p class="pull-left mar-no">Resources Validated</p>
+                                                        <p class="pull-right mar-no text-semibold text-primary">1819 of 4370</p>
+                                                    </div>
+                                                    <div class="progress progress-sm">
+                                                        <div class="progress-bar" style="width: 38%;">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div id="import-metadata-panel" class="row hidden">
+                                            <!-- Resource Counts -->
+                                            <div class="col-md-6 col-lg-9">
+                                                <p class="text-semibold text-uppercase"><i class="fa fa-plus-circle fa-fw text-primary"></i> Resource Count</p>
+                                                <div class="row">
+                                                    <ul class="list-unstyled">
+                                                        <li>
+                                                            <div class="clearfix">
+                                                                <p class="pull-left mar-no import-count text-2x text-thin">17588</p>
+                                                                <p class="imported-resource-name">Archaeological Resources</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-3">
+                                                <p class="text-uppercase text-semibold">Validation Statistics</p>
+                                                <ul class="list-unstyled">
+                                                    <li class="pad-btm">
+                                                        <div class="clearfix">
+                                                            <p class="pull-left mar-no">Valid Resources</p>
+                                                            <p class="pull-right mar-no">3219</p>
+                                                        </div>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar" style="width: 70%;">
+                                                                <span class="sr-only">70% Valid</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="clearfix">
+                                                            <p class="pull-left mar-no">Invalid Resources</p>
+                                                            <p class="pull-right mar-no">1135</p>
+                                                        </div>
+                                                        <div class="progress progress-xs">
+                                                            <div class="progress-bar progress-bar-info" style="width: 30%;">
+                                                                <span class="sr-only">30% Invalid</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="clearfix">
+                                                            <a class="pull-left pad-top text-primary" href="">Download invalid resource list</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <!-- Import Options  -->
+                                        <div id="import-options-panel" class="pad-rgt hidden">
+                                            <hr>
+                                            <p class="text-semibold text-uppercase"><i class="fa fa-cloud-upload fa-fw text-primary"></i> Import Options </p>
+                                            
+                                            <!-- Options List -->
+                                            <div class="col-md-6 col-lg-9">
+                                                <div class="checkbox import-validation">
+                                                    <label class="form-checkbox form-normal form-primary active form-text"><input type="checkbox" checked=""> Validate before import</label>
+                                                    <label class="form-checkbox form-normal form-primary form-text active"><input type="checkbox"> Append to existing resources</label>
+                                                    <label class="form-checkbox form-normal form-primary form-text active"><input type="checkbox"> Delete uploaded file after import</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Import/Cancel Job -->
+                                            <div class="col-md-6 col-lg-3">
+                                                <button id="btn-start-import" class="btn btn-primary btn-labeled btn-active-dark fa fa-cloud-upload pull-right">Import</button>
+                                                <button class="btn btn-danger btn-labeled btn-active-dark fa fa-trash pull-right">Cancel Job</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-university"></i> Archaeological Resource</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-building-o"></i> Architectural Resource</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-th"></i> Historic District</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-tasks"></i> Activity</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-group"></i> Person/Organization</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-calendar"></i> Historic Event</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <!-- Resource -->
+                            <div class="card-grid-item" data-bind="click: function () { $parent.openCard(cardid) }">
+                                <div class="panel mar-no">
+                                    <!-- card Name -->
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title library-card-panel-title" data-bind="text:name"><i class="text-center fa fa-file-text-o"></i> Information Resource</h3>
+                                    </div>
+
+                                    <!-- Abstract -->
+                                    <div class="panel-body library-card-body">
+                                        <p class="">Resource Abstract goes here.  Should be concise, informative.</p>
+                                    </div>
+
+                                    <!-- Selectable -->
+                                    <div class="selectable" style="display: none;">
+                                        <i class="ion-ios-checkmark"></i>
+                                    </div>
+
+                                    <!-- card Tools -->
+                                    <div class="panel-footer" style="height: 53px;">
+                                        <div class="pull-right">
+                                        	<div class="btn-group">
+    				                            <button class="btn btn-mint btn-labeled ion-ios-cloud-upload dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+    				                                Import <i class="dropdown-caret fa fa-caret-down"></i>
+    				                            </button>
+    				                            <ul class="dropdown-menu dropdown-menu-right">
+    				                                <li><a href="#">.arches file</a>
+    				                                </li>
+    				                                <li><a href="#">.shp file (.zip)</a>
+    				                                </li>
+    				                                <li><a href="#">.csv (.zip)</a>
+    				                                </li>
+    				                            </ul>
+    				                        </div>
+                                            <button id="" class="btn btn-primary btn-labeled ion-ios-cloud-download">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                        
+                        </div>
+                    </div> 
+
+                    
+                        
+                </div>
+                <!--End Default page content-->
+            </div>
+            <!--END  Default Page-->
+
+
+        
+            <!--MAIN NAVIGATION-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--Shortcut buttons-->
+                    <div id="mainnav-shortcut" class="hidden">
+                        <ul class="list-unstyled">
+                            <li class="col-xs-4" data-content="Home">
+                                <a class="shortcut-grid" href="#">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li class="col-xs-4" data-content="Dashboard">
+                                <a class="shortcut-grid" href="#">
+                                    <i class="fa fa-tachometer"></i>
+                                </a>
+                            </li>
+                            <li class="col-xs-4" data-content="Add New Resource">
+                                <a class="shortcut-grid" href="#">
+                                    <i class="fa fa-building-o"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--End shortcut buttons-->
+
+
+                    <!--Menu-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+                                <ul id="mainnav-menu" class="list-group">
+                        
+                                    <!-- Tools -->
+						            <li class="list-header">Tools</li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-tachometer"></i>
+                                            <span class="menu-title">
+                                                <strong>Dashboard</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li class="active-link">
+                                        <a href="#">
+                                            <i class="fa fa-building-o"></i>
+                                            <span class="menu-title">
+                                                <strong>Resource Manager</strong>
+                                            </span>
+                                        </a>
+                                        <!-- Submenu -->
+                                        <ul class="collapse in" aria-expanded="true">
+                                            <li class="link-submenu-item"><a class="link-submenu" href="forms-general.html"><i class="fa fa-university arches-menu-icon"></i> New Archaeological Resource</a></li>
+                                            <li class="link-submenu-item"><a class="link-submenu" href="forms-components.html"><i class="fa fa-building-o arches-menu-icon"></i> New Architectural Resource</a></li>
+                                            <li class="link-submenu-item"><a class="link-submenu" href="forms-validation.html"><i class="fa fa-tasks arches-menu-icon"></i> New Activity</a></li>
+                                            <li class="link-submenu-item"><a class="link-submenu" href="forms-wizard.html"><i class="fa fa-calendar arches-menu-icon"></i> New Historic Event</a></li>
+                                            <li class="link-submenu-item"><a class="link-submenu" href="forms-wizard.html"><i class="fa fa-group arches-menu-icon"></i> New Agent</a></li> 
+                                            <li class="link-submenu-item"><a class="link-submenu" href="forms-wizard.html"><i class="fa fa-file-o arches-menu-icon"></i> New Information Resource</a></li>  
+                                        </ul>
+                                    </li>
+					
+						
+						            <!--Menu list item-->
+						            <li>
+						                <a href="#">
+						                    <i class="ti-alarm-clock"></i>
+						                    <span class="menu-title">
+												<strong>System Settings</strong>
+											</span>
+						                </a>
+						            </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-bookmark"></i>
+                                            <span class="menu-title">
+                                                <strong>Resource Designer</strong>
+                                            </span>
+                                        </a>
+
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-server"></i>
+                                            <span class="menu-title">
+                                                <strong>Map Server Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-globe"></i>
+                                            <span class="menu-title">
+                                                <strong>Field Project Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-cloud-upload"></i>
+                                            <span class="menu-title">
+                                                <strong>Import/Export Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <!--Menu list item-->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user-md"></i>
+                                            <span class="menu-title">
+                                                <strong>Profile Manager</strong>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="list-divider-dark"></li>
+                        
+                                    <!-- Tools -->
+                                    <li class="list-header">Modules</li>
+						
+						            <!--Menu list item-->
+						            <li>
+						                <a href="#">
+						                    <i class="fa fa-align-left"></i>
+						                    <span class="menu-title">
+												RDM
+												
+											</span>
+						                </a>
+						            </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--End menu-->
+
+                </div>
+            </nav>
+            <!--END MAIN NAVIGATION-->
+            
+            <!--ASIDE-->
+            
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        <footer id="footer" style="background: #fff;">
+
+            <!-- Visible when footer positions are fixed -->
+            <div class="show-fixed pull-right">
+                <ul class="footer-list list-inline">
+                    <li>
+                        <p class="text-sm">SEO Proggres</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <p class="text-sm">Online Tutorial</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-primary"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="btn btn-sm btn-dark btn-active-success">Checkout</button>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="hide-fixed pull-right pad-rgt">Arches v4.0.0</div>
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; GCI, WMF, Farallon Geographics</p>
+
+
+
+        </footer>
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL TOP BUTTON -->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+
+
+    </div>
+    <!-- END OF CONTAINER -->
+
+
+    
+    
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+
+    <!--jQuery [ REQUIRED ]-->
+    <script src="nifty-v2.4/js/jquery-2.2.1.min.js"></script>
+
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!--Fast Click [ OPTIONAL ]-->
+    <script src="nifty-v2.4/plugins/fast-click/fastclick.min.js"></script>
+
+    
+    <!--Nifty Admin [ RECOMMENDED ]-->
+    <script src="nifty-v2.4/js/nifty.min.js"></script>
+
+    
+    <!--
+
+    REQUIRED
+    You must include this in your project.
+
+    RECOMMENDED
+    This category must be included but you may modify which plugins or components which should be included in your project.
+
+    OPTIONAL
+    Optional plugins. You may choose whether to include it in your project or not.
+
+
+    Detailed information and more samples can be found in the document.
+
+    -->
+
+    <!--Summernote [ OPTIONAL ]-->
+    <script src="plugins/summernote/summernote.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js"></script>
+
+    <!-- Grid Libraries -->
+    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="plugins/isotope/packery-mode.pkgd.min.js"></script>
+    <script src="plugins/packery/packery.pkgd.min.js"></script>
+
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <script src="plugins/chosen/chosen.jquery.min.js"></script>
+
+
+    <!-- D3 -->
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="js/d3/graph.js"></script>
+
+
+    <!-- OL3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.js" type="text/javascript"></script>
+
+
+
+    <!--Dropzone [ OPTIONAL ]-->
+    <script src="plugins/dropzone/dropzone.min.js"></script>
+
+
+
+    <!--Gmaps -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBCUB9l8yOny87iJeuaaF8lok_9DFj--0A"></script>
+    <script src="plugins/gmaps/gmaps.js"></script>
+
+
+    <!--DataTables [ OPTIONAL ]-->
+    <script src="plugins/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+    <script src="plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+
+
+    <!--Arches Forms -->
+    <script src="js/arches/grid/grid.js"></script>
+    <!--
+    <script src="js/arches/forms/resource_forms.js"></script>
+    <script src="js/arches/resource_manager/arches_designer.js"></script>
+-->
+    <script src="js/arches/resource_manager/arches_new_resource.js"></script>
+    <script src="js/arches/map_server/map_server_manager.js"></script>
+        
+
+</body>
+</html>

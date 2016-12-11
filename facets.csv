@@ -1,32 +1,32 @@
-HISTORIC-21st Cent,75,2001
-HISTORIC-20th Cent-late 20th,230,1965
-HISTORIC-20th Cent-Mid 20th,190,1950
-HISTORIC-20th Cent-WWII,207,1939
-HISTORIC-20th Cent-Early-WWI,377,1914
-HISTORIC-20th Cent-Early-Post WWI,632,1918
-HISTORIC-Enlight-1900s,1003,1900
-HISTORIC-Enlight-1800s,2108,1800
-HISTORIC-Enlight-1700s,1533,1700
-HISTORIC-Enlight-1600s,2312,1600
-HISTORIC-Post Midieval-Victor,3861,1400
-HISTORIC-Post Midieval-Hanno-GeorgI,2877,1380
-HISTORIC-Post Midieval-Hanno-GeorgIb,1187,1380
-HISTORIC-Post Midieval-Stuart-Jaco,961,1340
-HISTORIC-Post Midieval-Tudor-Eliz,1900,1300
-HISTORIC-Midieval-Late,4134,1100
-HISTORIC-Midieval-Early,7399,900
-HISTORIC-Roman,18012,43
-PREHISTORIC-Late Pre-Iron-Late Fe,2977,0
-PREHISTORIC-Late Pre-Iron-Mid Fe,3866,-400
-PREHISTORIC-Late Pre-Iron-Early Fe,5219,-800
-PREHISTORIC-Late Pre-Bronze-Late Br,1883,-1000
-PREHISTORIC-Late Pre-Bronze-Mid Br,2016,-1200
-PREHISTORIC-Late Pre-Bronze-Early Br,300,-1800
-PREHISTORIC-Late Pre-NeoLith-Late,2196,-2000
-PREHISTORIC-Late Pre-NeoLith-Mid,2445,-3000
-PREHISTORIC-Late Pre-NeoLith-Early,988,-4500
-PREHISTORIC-Early Pre-MesoLith-Late Mes,875,-6000
-PREHISTORIC-Early Pre-MesoLith-Early Mes,775,-8000
-PREHISTORIC-Early Pre-PaleoLith-Upper Paleo,3997,-10000
-PREHISTORIC-Early Pre-PaleoLith-Mid Paleo,1008,-13000
-PREHISTORIC-Early Pre-PaleoLith-Low Paleo,8877,-15000
+Historic-21st Century,75,2001
+Historic-20th Century-Late 20th Century,230,1965
+Historic-20th Century-Middle 20th Century,190,1950
+Historic-20th Century-WWII,207,1939
+Historic-20th Century-Early 20th Century-WWI,377,1914
+Historic-20th Century-Early 20th Century-Post WWI,632,1918
+Historic-Enlightenment-1900s,1003,1900
+Historic-Enlightenment-1800s,2108,1800
+Historic-Enlightenment-1700s,1533,1700
+Historic-Enlightenment-1600s,2312,1600
+Historic-Post Midieval-Victorian,3861,1400
+Historic-Post Midieval-Hannoverian-George I,2877,1380
+Historic-Post Midieval-Hannoverian-George Ib,1187,1380
+Historic-Post Midieval-Stuart-Jacobean,961,1340
+Historic-Post Midieval-Tudor-Elizabethian,1900,1300
+Historic-Midieval-Late Midieval,4134,1100
+Historic-Midieval-Early Midieval,7399,900
+Historic-Roman,18012,43
+Prehistoric-Late Prehistoric-Iron-Late Iron,2977,0
+Prehistoric-Late Prehistoric-Iron-Middle Iron,3866,-400
+Prehistoric-Late Prehistoric-Iron-Early Iron,5219,-800
+Prehistoric-Late Prehistoric-Bronze-Late Bronze,1883,-1000
+Prehistoric-Late Prehistoric-Bronze-Middle Bronze,2016,-1200
+Prehistoric-Late Prehistoric-Bronze-Early Bronze,300,-1800
+Prehistoric-Late Prehistoric-Neolithic-Late Neolithic,2196,-2000
+Prehistoric-Late Prehistoric-Neolithic-Middle Neolithic,2445,-3000
+Prehistoric-Late Prehistoric-Neolithic-Early Neolithic,988,-4500
+Prehistoric-Early Prehistoric-Mesolithic-Late Mesolithic,875,-6000
+Prehistoric-Early Prehistoric-Mesolithic-Early Mesolithic,775,-8000
+Prehistoric-Early Prehistoric-Paleolithic-Upper Paleolithic,3997,-10000
+Prehistoric-Early Prehistoric-Paleolithic-Middle Paleolithic,1008,-13000
+Prehistoric-Early Prehistoric-Paleolithic-Lower Paleolithic,8877,-15000

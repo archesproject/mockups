@@ -18,10 +18,19 @@
 	        $("div.note-editor button[data-event='codeview']").click();
 	        $('#map-config-editor').summernote('editor.insertText', 'hello world');
 
+
+	        $('#map-config-editor').summernote('insertText', 'Hello, world');
+
+
+
 	    }
 
 
 	});
+
+
+
+
 
 	//$('#map-config-editor').summernote('insertText', 'Hello, world');
 

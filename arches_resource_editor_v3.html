@@ -758,11 +758,12 @@
                                         <option>Alison Dalgity (Agent)</option>
                                     </select> 
 
-                                    <div class="" style="position: absolute; top: 10px; left: 400px; width: 161px;">
+                                    <div class="" style="position: absolute; top: 10px; left: 400px; width: 201px;">
                                         <div class="btn-group" style="margin-top: -10px;">
                                             <button id="search-rr-btn" class="btn btn-default btn-display-toggle selected add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="Related resources"><i class="fa fa-code-fork"></i></button>
-                                            <button id="search-time-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="time filter"><i class="fa fa-calendar"></i></button>
                                             <button id="search-map-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="map filter"><i class="fa fa-map-marker"></i></button>
+                                            <button id="search-time-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="time filter"><i class="fa fa-calendar"></i></button>
+                                            <button id="saved-search-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="saved searches"><i class="ion-ios-heart"></i></button>
                                             <button id="advanced-search-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="advanced"><i class="ion-plus-round"></i></button>
                                         </div>
                                     </div> 
@@ -772,8 +773,8 @@
 
                         <!-- Tools -->
                         <div class="ep-form-toolbar-tools" style="margin-top: 5px;">
-                            <button id="form-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="">Discard Edits</button>
-                            <button id="form-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="">Save Edits</button>
+                            <button id="form-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash hidden" style="">Discard Edits</button>
+                            <button id="form-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check hidden" style="">Save Edits</button>
                             <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
                         </div> 
                     </div>
@@ -1034,9 +1035,8 @@
 
                         <!-- Map Filter Panel -->
                         <div class="search-container map-search-container hidden">
-
-                            <h3 class="search-title"> Map Panel</h3>
-
+                            <!-- Map Header -->
+                            <div id="search-map-test" class=""></div>
                         </div>
 
 
@@ -1287,7 +1287,147 @@
                                 </div>
                             </div>
                         </div>
-                            
+
+
+                        <!-- Saved Search Filter Panel -->
+                        <div class="search-container saved-search-container relative hidden" style="width: calc(100% - 400px); overflow-y: scroll;">
+
+                            <!-- Heading -->
+                            <div class="search-panel-heading hidden">
+                                <h3 class="search-title"> Popular Searches</h3>
+                            </div>
+
+                            <!-- Saved Search Grid -->
+                            <div id="" class="saved-search-grid">
+                                <div class="ss-grid-sizer"></div>
+                                
+                                <!-- Saved Search Query -->
+                                <div class="ss-grid-item relative">
+                                    <div class="">
+                                        <div class="search-caption-activeWrap">
+                                            <div class="search-caption-alignCenter">
+                                                <div class="search-caption-body">
+                                                    <div class="search-query">
+                                                        <!-- saved query href -->
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Canal District</a>
+                                                        <!-- sub-title -->
+                                                        <div class="search-query-desc">
+                                                            Designated buildings and structures in Venice
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q1.jpg" alt="Image">
+                                </div>
+
+                                <!-- Saved Search Query -->
+                                <div class="ss-grid-item relative">
+                                    <div class="">
+                                        <div class="search-caption-activeWrap">
+                                            <div class="search-caption-alignCenter">
+                                                <div class="search-caption-body">
+                                                    <div class="search-query">
+                                                        <!-- saved query href -->
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> In the Shadow of the Volcano </a>
+                                                        <!-- sub-title -->
+                                                        <div class="search-query-desc">
+                                                            Resources at risk of volcanic eruptions
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q8.jpg" alt="Image">
+                                </div>
+
+                                <!-- Saved Search Query -->
+                                <div class="ss-grid-item relative">
+                                    <div class="">
+                                        <div class="search-caption-activeWrap">
+                                            <div class="search-caption-alignCenter">
+                                                <div class="search-caption-body">
+                                                    <div class="search-query">
+                                                        <!-- saved query href -->
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
+                                                        <!-- sub-title -->
+                                                        <div class="search-query-desc">
+                                                            Saved query sub-title goes here
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q9.jpg" alt="Image">
+                                </div>
+
+                                <!-- Saved Search Query -->
+                                <div class="ss-grid-item relative">
+                                    <div class="">
+                                        <div class="search-caption-activeWrap">
+                                            <div class="search-caption-alignCenter">
+                                                <div class="search-caption-body">
+                                                    <div class="search-query">
+                                                        <!-- saved query href -->
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
+                                                        <!-- sub-title -->
+                                                        <div class="search-query-desc">
+                                                            Saved query sub-title goes here
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q4.jpg" alt="Image">
+                                </div>
+
+                                <!-- Saved Search Query -->
+                                <div class="ss-grid-item relative">
+                                    <div class="">
+                                        <div class="search-caption-activeWrap">
+                                            <div class="search-caption-alignCenter">
+                                                <div class="search-caption-body">
+                                                    <div class="search-query">
+                                                        <!-- saved query href -->
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
+                                                        <!-- sub-title -->
+                                                        <div class="search-query-desc">
+                                                            Saved query sub-title goes here
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q5.jpg" alt="Image">
+                                </div>
+
+                                <!-- Saved Search Query -->
+                                <div class="ss-grid-item relative">
+                                    <div class="">
+                                        <div class="search-caption-activeWrap">
+                                            <div class="search-caption-alignCenter">
+                                                <div class="search-caption-body">
+                                                    <div class="search-query">
+                                                        <!-- saved query href -->
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
+                                                        <!-- sub-title -->
+                                                        <div class="search-query-desc">
+                                                            Saved query sub-title goes here
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q6.jpg" alt="Image">
+                                </div>
+                            </div>
+                        </div>      
                     </div>
                 </div>
             </div>
@@ -1681,6 +1821,7 @@
     <script src="plugins/isotope/isotope.pkgd.min.js"></script>
     <script src="plugins/isotope/packery-mode.pkgd.min.js"></script>
     <script src="plugins/packery/packery.pkgd.min.js"></script>
+    <script src="plugins/masonry/masonry.pkgd.js"></script>
 
 
     <!-- MorphingSearch 
@@ -1709,10 +1850,9 @@
     <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 
     
-    <!--Gmaps 
+    <!-- Gmaps --> 
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyBCUB9l8yOny87iJeuaaF8lok_9DFj--0A"></script>
     <script src="plugins/gmaps/gmaps.js"></script>
-    -->
 
 
     <!--DataTables [ OPTIONAL ]-->

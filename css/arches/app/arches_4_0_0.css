@@ -6320,6 +6320,86 @@ a.search-facet-item.disabled {
     color: #fff;
 }
 
+.search-panel-heading {
+	padding: 15px 0px 5px 20px;
+	background: #f8f8f8;
+}
+
+/* fluid 5 columns */
+.saved-search-grid {
+	width: 100%;
+	min-height: 400px;
+	overflow-y: scroll; 
+}
+.ss-grid-sizer,
+.ss-grid-item { 
+	width: 33%; 
+	border: 1px solid #ddd;
+}
+/* 2 columns */
+.ss-grid-item--width2 { width: 66%; }
+
+.search-caption-activeWrap {
+	position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.search-caption-alignCenter {
+	display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.search-caption-body {
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center
+}
+
+.search-query-link-captions {
+	padding-left: 0;
+	color: #fff;
+	font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.search-query {
+	padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+a.search-query-link-captions:hover {
+	font-weight: 600;
+	color: #fff;
+}
+
+a.search-query-link-captions:active {
+	font-weight: 600;
+	color: #fff;
+}
+
+a.search-query-link-captions:focus {
+	font-weight: 600;
+	color: #fff;
+}
+
+.search-query-desc {
+	color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+
 .search-results-container {
 	padding: 15px 0px;
 }
@@ -6430,6 +6510,11 @@ a.search-facet-item.disabled {
 	margin-left: 400px;
 }
 
+.breadcrumb-label {
+	color: #123;
+}
+
+
 .panel-control {
     height: 100%;
     position: relative;
@@ -6517,7 +6602,7 @@ a.btn-link {
 
 #sequence text, #legend text {
   font-weight: 600;
-  fill: #fff;
+  fill: #123;
 }
 
 #chart {
@@ -6526,6 +6611,10 @@ a.btn-link {
 
 #chart path {
   stroke: #fff;
+}
+
+#trail {
+	height: 30px;
 }
 
 #explanation {

@@ -55,7 +55,7 @@
 
 
 
-//	Manage Primary Search Panel Display (Related Resources, Time, Map, Advanced)
+//	Manage Primary Search Panel Display (Related Resources, Time, Map, Advanced, Saved)
 	$('#search-rr-btn').on('click', function (ev) {
 		ev.preventDefault();
 		
@@ -75,8 +75,12 @@
 
 		$("#search-rr-btn").addClass('selected');
 
+		//make sure searh results are showing
+		$(".search-control-container").removeClass("hidden");
+
 	});
 	
+
 
 	$('#search-map-btn').on('click', function (ev) {
 		ev.preventDefault();
@@ -93,7 +97,16 @@
 		});
 
 		$("#search-map-btn").addClass('selected');
+
+		//force map to show after div is no longer hidden
+		$("#search-map-test").css("position", "inherit");
+		window.dispatchEvent(new Event('resize'));
+
+		//make sure searh results are showing
+		$(".search-control-container").removeClass("hidden");
+	
 	});
+
 
 
 	$('#search-time-btn').on('click', function (ev) {
@@ -113,6 +126,9 @@
 		});
 
 		$("#search-time-btn").addClass('selected');
+
+		//make sure searh results are showing
+		$(".search-control-container").removeClass("hidden");
 
 	});
 
@@ -135,7 +151,73 @@
 
 		$("#advanced-search-btn").addClass('selected');
 
+		//make sure searh results are showing
+		$(".search-control-container").removeClass("hidden");
+
 	});
+
+
+	$('#saved-search-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//Show Map Search Panel, Hide Related Resources Drag Panel, CRUD Panel
+		$( ".search-container" ).each(function() {
+			$( this ).addClass( "hidden" );
+		});
+
+		$(".saved-search-container").removeClass('hidden');
+			
+	
+		//toggle link display
+		$( ".search" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+
+		$("#saved-search-btn").addClass('selected');
+
+		//hide results panel
+		$(".search-control-container").addClass("hidden");
+		$(".saved-search-container").css("width", "100%");
+
+
+		//Force image grid to load
+		$grid.isotope('layout');
+
+	});
+
+	$('.saved-search-container').resize();
+
+
+//	Manage saved search hrefs
+	$('.search-query-link-captions').on('click', function (ev) {
+		ev.preventDefault();
+
+		//close saved search panel
+		$(".saved-search-container").addClass("hidden");
+
+		//make sure searh results, map is showing
+		$(".search-control-container").removeClass("hidden");
+		$(".map-search-container").removeClass("hidden");
+		
+		//manage map button
+		$( ".search" ).each(function() {
+			$( this ).removeClass( "selected" );
+		});
+
+		$("#search-map-btn").addClass('selected');
+
+
+		//force map to show after div is no longer hidden
+		$("#search-map-test").css("position", "inherit");
+		window.dispatchEvent(new Event('resize'));
+
+		//make sure searh results are showing
+		$(".search-control-container").removeClass("hidden");
+
+		
+
+	});
+
 
 
 //	Manage Time Search sub panels
@@ -177,6 +259,26 @@
 
 		$("#time-calendar").addClass('selected');
 
+	});
+
+
+// 	Saved Search Grid
+	var $grid = $('.saved-search-grid').isotope({
+	  	// set itemSelector so .grid-sizer is not used in layout
+	  	itemSelector: '.ss-grid-item',
+	  	percentPosition: true,
+		layoutMode: 'fitRows'
+	});
+
+
+// 	Map Panel
+	var markerMap = new GMaps({
+		el: '#search-map-test',
+		zoom: 11,
+		scrollwheel: false,
+		lat: 37.886095,
+		lng: -122.59888,
+		styles: [{"featureType":"all","elementType":"geometry","stylers":[{"gamma":"0.82"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"gamma":"1.21"}]},{"featureType":"all","elementType":"labels","stylers":[{"lightness":"-60"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"gamma":"5.37"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#419d8c"},{"lightness":"-39"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"saturation":"0"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#42738d"},{"gamma":"5.37"}]}]
 	});
 
 
@@ -395,32 +497,40 @@
 	  // Add breadcrumb and label for entering nodes.
 	  var entering = g.enter().append("svg:g");
 
-	  entering.append("svg:polygon")
-	      .attr("points", breadcrumbPoints)
-	      .style("fill", function(d) { return colors[d.name]; });
+	  // entering.append("svg:polygon")
+	  //     .attr("points", breadcrumbPoints)
+	  //     .style("fill", function(d) { return colors[d.name]; });
 
 	  entering.append("svg:text")
 	      .attr("x", (b.w + b.t) / 2)
 	      .attr("y", b.h / 2)
 	      .attr("dy", "0.35em")
 	      .attr("text-anchor", "middle")
+	      .attr("fill", "#123")
 	      .text(function(d) { return d.name; });
 
-	  // Set position for entering and updating nodes.
+	  //Set position for entering and updating nodes.
 	  g.attr("transform", function(d, i) {
 	    return "translate(" + i * (b.w + b.s) + ", 0)";
 	  });
+
+	 //  var start = 0;
+	 //  g.attr("transform", function(d, i) {
+		// start += d.name.length;
+		// //console.log(start);
+	 //    return "translate(" + d.name.length + ", 0)";
+	 //  });
 
 	  // Remove exiting nodes.
 	  g.exit().remove();
 
 	  // Now move and update the percentage at the end.
-	  d3.select("#trail").select("#endlabel")
-	      .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
-	      .attr("y", b.h / 2)
-	      .attr("dy", "0.35em")
-	      .attr("text-anchor", "middle")
-	      .text(percentageString);
+	  // d3.select("#trail").select("#endlabel")
+	  //     .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
+	  //     .attr("y", b.h / 2)
+	  //     .attr("dy", "0.35em")
+	  //     .attr("text-anchor", "middle")
+	  //     .text(percentageString);
 
 	  // Make the breadcrumb trail visible, if it's hidden.
 	  d3.select("#trail")
@@ -470,7 +580,7 @@
 			  // Reached the end of the sequence; create a leaf node.
 			  childNode = {"name": nodeName, "size": size, "hits": hits};
 			  children.push(childNode);
-			  console.log(childNode);
+			  // console.log(childNode);
 	      }
 	    }
 	  }

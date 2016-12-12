@@ -5956,22 +5956,40 @@ a.map-widget-icon:hover {
 }
 
 .facets-container {
-	display: inline-block; 
+	position: absolute; 
 	width: 250px; 
 	margin-top: -20px; 
 	margin-left: -20px; 
 	margin-bottom: -20px;
+	right: 0px;
+	border-left: 1px solid #ddd;
 }
 
 .facets-search-container {
 	position: absolute;
 	top: 15px;
-	left: 270px;
+	left: 20px;
 	width: calc(100% - 300px);
 }
 
 .search {
 	height: 34px;
+}
+
+.search-candidate-title {
+	color: steelblue;
+}
+
+.search-candidate-title:hover {
+	color: steelblue;
+}
+
+.search-candidate-link {
+	color: steelblue;
+}
+
+.search-candidate-link:hover {
+	color: steelblue;
 }
 
 .search-facets {
@@ -6001,6 +6019,13 @@ a.search-facet-item:not(.active):hover {
 
 a.search-facet-item:hover, a.search-facet-item:focus {
     background-color: #f8f8f8;
+}
+
+div.search-facet-item.disabled {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .search-facet-item-heading {
@@ -6373,6 +6398,7 @@ a.search-facet-item.disabled {
 .search-query {
 	padding-top: 10px;
     padding-bottom: 10px;
+    margin-top: -20px;
     margin-left: 20px;
     margin-right: 20px;
     background: rgba(255, 255, 255, 0.2);

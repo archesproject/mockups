@@ -43,6 +43,10 @@
 		//toggle panels
 		$("#current-resource-panel").addClass('hidden');	
 		$("#related-resources-panel").removeClass('hidden');	
+
+		//force map to show after div is no longer hidden
+		$("#search-map-test").css("position", "inherit");
+		window.dispatchEvent(new Event('resize'));
 	
 
 	});

@@ -760,11 +760,11 @@
 
                                     <div class="" style="position: absolute; top: 10px; left: 400px; width: 201px;">
                                         <div class="btn-group" style="margin-top: -10px;">
-                                            <button id="search-rr-btn" class="btn btn-default btn-display-toggle selected add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="Related resources"><i class="fa fa-code-fork"></i></button>
-                                            <button id="search-map-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="map filter"><i class="fa fa-map-marker"></i></button>
+                                            <button id="search-map-btn" class="btn btn-default btn-display-toggle add-tooltip search selected" data-toggle="tooltip" data-placement="bottom" data-original-title="map filter"><i class="fa fa-map-marker"></i></button>
                                             <button id="search-time-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="time filter"><i class="fa fa-calendar"></i></button>
                                             <button id="saved-search-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="saved searches"><i class="ion-ios-heart"></i></button>
                                             <button id="advanced-search-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="advanced"><i class="ion-plus-round"></i></button>
+                                            <button id="search-rr-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="Related resources"><i class="fa fa-code-fork"></i></button>
                                         </div>
                                     </div> 
                                 </div> 
@@ -823,27 +823,29 @@
                                 
                                 <!-- Search Candidate -->
                                 <div class="search-listing">
-                                    <h3 class="search-listing-title"><i class="search-listing-icon fa fa-th"></i> Phelan Building</h3>
+                                    <h3 class="search-listing-title"><a class="search-candidate-title" href=""><i class="search-listing-icon fa fa-th"></i> Phelan Building</a></h3>
 
                                     <div class="search-listing-body">
                                         A very long description of a very interesting resource, just to see how its rendered in the default search listing widget.  Not sure if it will fit, but you never know
                                     </div>
 
                                     <div class="search-listing-footer">
-                                        Yo, footer
+                                        <a class="search-candidate-link" href=""><i class="ion-ios-refresh-empty"></i> Edit</a>
+                                        <a class="search-candidate-link pull-right" href=""><i class="fa fa-code-fork"></i> Related Resources</a>
                                     </div>
                                 </div>
 
                                 <!-- Search Candidate -->
                                 <div class="search-listing">
-                                    <h3 class="search-listing-title"><i class="search-listing-icon fa fa-university"></i> Petra</h3>
+                                    <h3 class="search-listing-title"><a class="search-candidate-title" href=""><i class="search-listing-icon fa fa-university"></i> Petra</a></h3>
 
                                     <div class="search-listing-body">
                                         Nabbetean city remains
                                     </div>
 
                                     <div class="search-listing-footer">
-                                        Yo, footer
+                                        <a class="search-candidate-link" href=""><i class="ion-ios-refresh-empty"></i> Edit</a>
+                                        <a class="search-candidate-link pull-right" href=""><i class="fa fa-code-fork"></i> Related Resources</a>
                                     </div>
                                 </div>
                             </div>
@@ -867,7 +869,7 @@
                         </div>
 
                         <!-- Related Resource Panel -->
-                        <div id="related-resoureces-drag-panel" class="search-container related-resources-container">
+                        <div id="related-resoureces-drag-panel" class="search-container related-resources-container hidden">
               
                             <!-- Drag Panel -->
                             <div class="relative">
@@ -1008,7 +1010,7 @@
                                             </div>
 
                                             <div class="search-listing-footer">
-                                                Yo, footer
+                                                
                                             </div>
                                         </div>
                                     </div> 
@@ -1034,7 +1036,7 @@
 
 
                         <!-- Map Filter Panel -->
-                        <div class="search-container map-search-container hidden">
+                        <div class="search-container map-search-container">
                             <!-- Map Header -->
                             <div id="search-map-test" class=""></div>
                         </div>
@@ -1119,16 +1121,20 @@
                             <!-- Advanced Search Panel -->
                             <div class="facets-container" style="">
                                 <div class="list-group search-facets">
-                                    <a href="#" class="search-facet-item disabled">
+                                    <div class="search-facet-item disabled">
                                         <h4 class="search-facet-item-heading">Search Facets</h4>
-                                        <p class="list-group-item-text">Yo!</p>
-                                    </a>
+                                        <div class="list-filter relative">
+                                            <input type="text" class="form-control" style="" placeholder="Find ...">
+                                            <!-- Clear Filter -->
+                                            <span class="clear-node-search"><i class="fa fa-times-circle"></i></span>
+                                        </div>
+                                    </div>
                                     <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Condition</h4>
+                                        <h4 class="search-facet-item-heading">Address</h4>
                                         <p class="list-group-item-text"></p>
                                     </a>
                                     <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Recommendations</h4>
+                                        <h4 class="search-facet-item-heading">Component</h4>
                                         <p class="list-group-item-text"></p>
                                     </a>
                                     <a href="#" class="search-facet-item">
@@ -1185,7 +1191,7 @@
                                 <div class="faceted-search-container">
                                     <!-- Search Name -->
                                     <div class="facet-name">
-                                        Facet Name (e.g.: "Address")
+                                        Address
                                     </div>
                                     <!-- Search criteria -->
                                     <div class="row facet-search-criteria">
@@ -1199,7 +1205,7 @@
                                         </div>
                                         <!-- Value -->
                                         <div class="col-sm-10">
-                                            <input type="text" placeholder="Name" class="form-control input-lg" style="height: 36px;">
+                                            <input type="text" placeholder="Name" class="form-control input-lg" style="height: 36px;" value="Dalgity Street">
                                         </div>
                                         <!-- Action -->
                                         <div class="facet-search-button pull-right">
@@ -1220,7 +1226,7 @@
                                 <div class="faceted-search-container">
                                     <!-- Search Name -->
                                     <div class="facet-name">
-                                        Component
+                                        Threats
                                     </div>
                                     <!-- Search criteria -->
                                     <div class="row facet-search-criteria">
@@ -1235,11 +1241,11 @@
                                         <!-- Value -->
                                         <div class="col-sm-10">
                                             <select id="" class="resources" data-placeholder="" tabindex="4">
-                                                <option>Chimney</option>
-                                                <option>Door</option>
-                                                <option>Porch</option>
-                                                <option>Wall</option>
-                                                <option>Window</option>
+                                                <option>Tsunami</option>
+                                                <option>Earthquake</option>
+                                                <option>Fire</option>
+                                                <option>Looting</option>
+                                                <option>Urban encroachment</option>
                                             </select> 
                                         </div>
                                         <!-- Action -->
@@ -1277,7 +1283,7 @@
                                         </div>
                                         <!-- Value -->
                                         <div class="col-sm-10">
-                                            <input type="text" placeholder="Number" class="form-control input-lg" style="height: 36px;">
+                                            <input type="text" placeholder="Number" class="form-control input-lg" style="height: 36px;" value="40">
                                         </div>
                                         <!-- Action -->
                                         <div class="facet-search-button pull-right">
@@ -1309,17 +1315,17 @@
                                                 <div class="search-caption-body">
                                                     <div class="search-query">
                                                         <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Canal District</a>
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Prehistoric Archaeological Sites</a>
                                                         <!-- sub-title -->
                                                         <div class="search-query-desc">
-                                                            Designated buildings and structures in Venice
+                                                            Paleolithic remains and finds
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q1.jpg" alt="Image">
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q9.jpg" alt="Image">
                                 </div>
 
                                 <!-- Saved Search Query -->
@@ -1351,17 +1357,17 @@
                                                 <div class="search-caption-body">
                                                     <div class="search-query">
                                                         <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Canal District </a>
                                                         <!-- sub-title -->
                                                         <div class="search-query-desc">
-                                                            Saved query sub-title goes here
+                                                            Designated buildings and structures in Venice
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q9.jpg" alt="Image">
+                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q1.jpg" alt="Image">
                                 </div>
 
                                 <!-- Saved Search Query -->
@@ -1372,10 +1378,10 @@
                                                 <div class="search-caption-body">
                                                     <div class="search-query">
                                                         <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
+                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> San Francisco Heritage Resources </a>
                                                         <!-- sub-title -->
                                                         <div class="search-query-desc">
-                                                            Saved query sub-title goes here
+                                                            Important Heritage in the heart of California
                                                         </div>
                                                     </div>
                                                 </div>

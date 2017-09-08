@@ -40,6 +40,16 @@ ul .collapse li:last-of-type {
 }
 
 
+/* Profile Manager CLASSESS =============================== */
+
+.profile-summary-page {
+	padding-top: 100px;
+	width: 100%;
+	background: #fff;
+}
+
+
+
 /* ASIDE CLASSESS =============================== */
 #aside-container #aside .tab-content {
 	padding-top: 0px;

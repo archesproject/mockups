@@ -276,15 +276,66 @@
 
                     <!-- Title Block -->
                     <div class="report-toolbar">
-                        <h4 class="report-toolbar-title">Resource Editor </h4>
+                        <h4 class="report-toolbar-title">My Profile </h4>
                         
                         <!-- Tools -->
                         <div class="ep-form-toolbar-tools">
-                            <button id="related-resources-open-btn" class="btn btn-sm btn-mint btn-labeled fa fa-code-fork" data-bind="">Related Resources</button>
+                            <button id="related-resources-open-btn" class="btn btn-sm btn-mint btn-labeled fa fa-refresh" data-bind="">Update My Profile</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Profile Summary -->
+                <div class="profile-summary-page content-panel">
+
+                    <!-- Profile Summary Report -->
+                    <div id="" class="content-panel">
+                        <div class="flex">
+
+                            <div class="profile-report">
+
+
+                                Yo!
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Editor Content -->
+                
+            </div>
+            <!--END  Main Editor -->
+
+
+            <!-- Profile Editor -->
+            <div id="related-resources-panel" class="responsive-content hidden">
+
+                <!-- Title Bar -->
+                <div id="" class="relative fade in" style="display: block;">
+
+                    <!-- Page Header -->
+                    <div class="">
+
+                        <!-- Title Block -->
+                        <div class="report-toolbar">
+                            <h4 class="report-toolbar-title">My Profile </h4>
+                            
+                            <!-- Tools -->
+                            <div class="ep-form-toolbar-tools">
+                                <button id="form-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="">Discard Edits</button>
+                                <button id="form-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="">Save Edits</button>
+                                <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
                 <!-- Editor Content -->
                 <div id="related" class="content-panel resource-editor">
                     <div class="flex">
@@ -731,712 +782,11 @@
                     </div>
                 </div>
             </div>
-            <!--END  Main Editor -->
 
 
-            <!-- Related Resources Editor -->
-            <div id="related-resources-panel" class="responsive-content hidden">
 
-                <!-- Title Bar -->
-                <div id="" class="relative fade in" style="display: block;">
 
-                    <!-- Page Header -->
-                    <div class="">
-                        
-                        <!-- Toolbar -->
-                        <div class="" style="background: #f4f4f4; border-bottom: 1px solid #e4e4e4; margin-top: 50px;">
 
-                            <!-- Resource/Graph Toggle -->
-                            <div class="" style="display: inline-block; padding-left: 15px; padding-top: 10px; margin-bottom: 15px;">
-                                <div class="search-bar relative" style="margin-top: 0px; width: 375px;">
-                                    <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4" multiple>
-                                        <option>Brauerei (Resource Type)</option>
-                                        <option>Beer (Asset)</option>
-                                        <option>Paulaner (Appelation)</option>
-                                        <option>Brewing (Activity)</option>
-                                        <option>Racer 5 (Appellation)</option>
-                                        <option>Alison Dalgity (Agent)</option>
-                                    </select> 
-
-                                    <div class="" style="position: absolute; top: 10px; left: 400px; width: 201px;">
-                                        <div class="btn-group" style="margin-top: -10px;">
-                                            <button id="search-map-btn" class="btn btn-default btn-display-toggle add-tooltip search selected" data-toggle="tooltip" data-placement="bottom" data-original-title="map filter"><i class="fa fa-map-marker"></i></button>
-                                            <button id="search-time-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="time filter"><i class="fa fa-calendar"></i></button>
-                                            <button id="saved-search-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="saved searches"><i class="ion-ios-heart"></i></button>
-                                            <button id="advanced-search-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="advanced"><i class="ion-plus-round"></i></button>
-                                            <button id="search-rr-btn" class="btn btn-default btn-display-toggle add-tooltip search" data-toggle="tooltip" data-placement="bottom" data-original-title="Related resources"><i class="fa fa-code-fork"></i></button>
-                                        </div>
-                                    </div> 
-                                </div> 
-                            </div>
-                        </div> 
-
-                        <!-- Tools -->
-                        <div class="ep-form-toolbar-tools" style="margin-top: 5px;">
-                            <button id="form-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash hidden" style="">Discard Edits</button>
-                            <button id="form-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check hidden" style="">Save Edits</button>
-                            <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
-                        </div> 
-                    </div>
-                </div>
-
-                
-                <!-- Editor Content -->
-                <div class="content-panel">
-                    <div class="flex">
-
-                        <!-- Control Panel -->
-                        <div class="search-control-container">
-                            
-                            <!-- Panel Title-->
-                            <h3 class="search-title"> 21337 Results</h3>
-
-                            <!-- Search Metadata and sorting -->
-                            <div class="search-metadata relative" style="padding-top: 0px;">
-                                
-                                <span class="pull-right" style="margin-top: -35px;"> 
-                                    <div class="btn-group btn-group-xs open">
-                                        <button class="btn btn-primary btn-active-primary dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="true">
-                                            Select... <i class="dropdown-caret fa fa-caret-down"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="#">All resources</a>
-                                            </li>
-                                            <li><a href="#">Archaeologic resources</a>
-                                            </li>
-                                            <li><a href="#">Architectural resources</a>
-                                            </li>
-                                            <li><a href="#">Actors</a>
-                                            </li>
-                                            <li><a href="#">Activities</a>
-                                            </li>
-                                            <li><a href="#">Districts</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </span>
-                            </div>
-
-                            <!-- Search Results -->
-                            <div class="relative" style="padding-top: 5px;">
-                                
-                                <!-- Search Candidate -->
-                                <div class="search-listing">
-                                    <h3 class="search-listing-title"><a class="search-candidate-title" href=""><i class="search-listing-icon fa fa-th"></i> Phelan Building</a></h3>
-
-                                    <div class="search-listing-body">
-                                        A very long description of a very interesting resource, just to see how its rendered in the default search listing widget.  Not sure if it will fit, but you never know
-                                    </div>
-
-                                    <div class="search-listing-footer">
-                                        <a class="search-candidate-link" href=""><i class="ion-ios-refresh-empty"></i> Edit</a>
-                                        <a class="search-candidate-link pull-right" href=""><i class="fa fa-code-fork"></i> Related Resources</a>
-                                    </div>
-                                </div>
-
-                                <!-- Search Candidate -->
-                                <div class="search-listing">
-                                    <h3 class="search-listing-title"><a class="search-candidate-title" href=""><i class="search-listing-icon fa fa-university"></i> Petra</a></h3>
-
-                                    <div class="search-listing-body">
-                                        Nabbetean city remains
-                                    </div>
-
-                                    <div class="search-listing-footer">
-                                        <a class="search-candidate-link" href=""><i class="ion-ios-refresh-empty"></i> Edit</a>
-                                        <a class="search-candidate-link pull-right" href=""><i class="fa fa-code-fork"></i> Related Resources</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Pagination -->
-                            <div class="pagination-bottom">
-                                <div class="panel-body text-center">
-                                    <ul class="pagination">
-                                        <li><a href="#" class="fa fa-angle-double-left"></a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><span>...</span></li>
-                                        <li><a href="#">20</a></li>
-                                        <li><a href="#" class="fa fa-angle-double-right"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Related Resource Panel -->
-                        <div id="related-resoureces-drag-panel" class="search-container related-resources-container hidden">
-              
-                            <!-- Drag Panel -->
-                            <div class="relative">
-                                
-                                <!-- Target -->
-                                <div class="relative rr-drag-panel-target">
-
-                                    <h3 class="related-resources-title"> Related Resources </h3>
-
-                                    <div class="relative">
-
-                                        <div class="btn-group rr-display-toggle">
-                                            <button class="btn btn-default btn-display-toggle selected add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="grid"><i class="ion-grid"></i></button>
-                                            <button class="btn btn-default btn-display-toggle add-tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="graph"><i class="ion-asterisk"></i></button>
-                                        </div>
-
-
-                                        <!--Documentation dropdown-->
-                                        <div class="related-resources-relationship">
-                                            <ul class="" style="list-style: none;">
-                                                <li class="mega-dropdown related-reources-crud-link">
-                                                    <a href="#" class="mega-dropdown-toggle">
-                                                        <i class="ion-wrench icon-lg"></i> relation properties
-                                                    </a>
-                                                    <div class="dropdown-menu mega-dropdown-menu dropdown-shim dropdown-crud" style="padding-left: 15px;">
-                                                        <div class="clearfix">
-                                                            <div class="settings-config-panel">
-
-                                                                <h3 class="search-title">Relationship details</h3>
-
-                                                                <!-- Relationship participants -->
-                                                                <div class="resource-relation-description">
-                                                                    <div class="target-resource">
-                                                                        <i class="fa fa-university"></i> New Archaeological Resource <span class="resource-conjunction"> relationship with</span>
-                                                                    </div>
-                                                                    <div class="selected-resource">
-                                                                        <br><i class="fa fa-university"></i> Brauerei Paulaner
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="settings-crud-panel">
-                                                                    <div class="col-xs-12 no-instructions-shim">
-                                                                        <form class="widgets">
-                                                                            <div class="row widget-container">
-                                                                                <div class="form-group">
-                                                                                    <div class="relative">
-                                                                                        <label class="col-xs-12 control-label widget-input-label" for=""> Relationship <i class="ion-ios-checkmark-outline"></i></label>
-                                                                                    </div>
-                                                                                    
-                                                                                    <div class="col-xs-12">
-                                                                                        <input type="" placeholder="Name" id="" class="form-control input-lg widget-input">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="row widget-container">
-                                                                                <div class="form-group">
-                                                                                    <div class="relative" style="">
-                                                                                        <label class="col-xs-6 control-label widget-input-label" for="">    From Date  <i class="ion-ios-checkmark-outline"></i>
-                                                                                        </label>
-                                                                                        <label class="col-xs-6 control-label widget-input-label" for="">    To Date  <i class="ion-ios-checkmark-outline"></i>
-                                                                                        </label>
-                                                                                    </div>
-                                                                                    
-                                                                                    <div class="relative">
-                                                                                        <div class="col-xs-6">
-                                                                                            <input type="" placeholder="" id="" class="form-control input-lg widget-input">
-                                                                                        </div>
-                                                                                        <div class="col-xs-6">
-                                                                                            <input type="" placeholder="" id="" class="form-control input-lg widget-input">
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="row widget-container">
-                                                                                <div class="form-group">
-                                                                                    <div class="relative">
-                                                                                        <label class="col-xs-12 control-label widget-input-label" for=""> Description <i class="ion-ios-checkmark-outline"></i></label>
-                                                                                    </div>
-                                                                                    
-                                                                                    <div class="col-xs-12">
-                                                                                        <div id="editor1" class=""></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!--Documentation dropdown-->
-                                    </div>
-
-
-                                    <div class="rr-card-icon-placement">
-                                        <span class="icon-wrap icon-wrap-lg icon-circle bg-gray">
-                                            <i class="add-card-icon fa fa-code-fork fa-4x"></i>
-                                        </span>
-                                    </div> 
-
-                                    <!-- Message -->
-                                    <div class="rr-card-message-placement">
-                                        <p class="text-center">
-                                            Drag&Drop resources onto this area and describe how they relate to one another 
-                                        </p>
-                                    </div> 
-                                </div>
-
-                                <div id="report-image-grid" class="report-image-grid rr-grid" style="top: 60px; left: 25px;">
-
-                                    <!-- Resource -->
-                                    <div class="rr-grid-item selected" data-bind="">
-                                        <div class="rr-listing">
-                                            <h3 class="search-listing-title"><i class="search-listing-icon fa fa-university"></i> Brauerei Paulaner</h3>
-
-                                            <div class="search-listing-body">
-                                                Brewery where the first Doppel Bock was created in the year 1396
-                                            </div>
-
-                                            <div class="search-listing-footer">
-                                                Yo, footer
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Resource -->
-                                    <div class="rr-grid-item" data-bind="">
-                                        <div class="rr-listing">
-                                            <h3 class="search-listing-title"><i class="search-listing-icon fa fa-calendar"></i> Oktoberfest</h3>
-
-                                            <div class="search-listing-body">
-                                                Annual beer drinking activity that takes place in Munich
-                                            </div>
-
-                                            <div class="search-listing-footer">
-                                                
-                                            </div>
-                                        </div>
-                                    </div> 
-
-                                    <!-- Resource -->
-                                    <div class="rr-grid-item" data-bind="">
-                                        <div class="rr-listing">
-                                            <h3 class="search-listing-title"><i class="search-listing-icon fa fa-university"></i> Hofbrau Tent</h3>
-
-                                            <div class="search-listing-body">
-                                                A place for Australians to congregate during Oktoberfest.
-                                            </div>
-
-                                            <div class="search-listing-footer">
-                                                Yo, footer
-                                            </div>
-                                        </div>
-                                    </div>  
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Map Filter Panel -->
-                        <div class="search-container map-search-container hidden">
-                            <!-- Map Header -->
-                            <div id="search-map-test" class=""></div>
-                        </div>
-
-
-                        <!-- Time Filter Panel -->
-                        <div class="search-container time-search-container hidden">
-
-                            <h3 class="search-title"> Time Filter <span class="text-xs text-muted text-thin">(Click on a block to set a filter, double-click to zoom in, click center to zoom out)</span></h3>
-
-                            <div class="relative">
-                                <div class="btn-group rr-display-toggle-right">
-                                    <button id="time-wheel" class="btn btn-default btn-display-toggle selected add-tooltip time-search" data-toggle="tooltip" data-placement="bottom" data-original-title="time wheel"><i class="ion-ios-timer-outline"></i></button>
-                                    <button id="time-calendar" class="btn btn-default btn-display-toggle add-tooltip time-search" data-toggle="tooltip" data-placement="bottom" data-original-title="date search"><i class="ion-ios-calendar-outline"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- Time Wheel -->
-                            <div id="main" class="time-search-subcontainer">
-                                <div id="sequence"></div>
-                                <div id="chart" class="">
-                                    <div id="explanation" style="">
-                                        <span id="percentage"></span><br/>
-                                        resources fall within this period
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Calendar Search -->
-                            <div id="calendar" class="time-search-subcontainer hidden">
-                                
-                                <!-- Date Type -->
-                                <div class="calendar" style="width: 181px;">
-                                    <h3 class="search-label">Type</h3>
-                                    <select id="" class="resources" data-placeholder="Date type" tabindex="4">
-                                        <option>Search all dates</option>
-                                        <option>Birth dates</option>
-                                        <option>Death dates</option>
-                                        <option>Building dates</option>
-                                        <option>Publish dates</option>
-                                    </select>  
-                                </div>
-
-                                <!-- Date Selector -->
-                                <div class="calendar" style="width: 181px;">
-                                    <h3 class="search-label">Within</h3>
-                                    <select id="" class="resources" placeholder="Select" tabindex="4">
-                                        <option>Custom date range</option>
-                                        <option>Today</option>
-                                        <option>Last 7 days</option>
-                                        <option>Last 30 days</option>
-                                        <option>This week</option>
-                                        <option>This month</option>
-                                        <option>This quarter</option>
-                                        <option>This year</option>
-                                    </select>  
-                                </div>
-
-                                <!-- From Date -->
-                                <div class="calendar">
-                                    <h3 class="search-label">From</h3>
-                                    <div id="search-from-c">
-                                        <input type="text" class="form-control input-lg">
-                                    </div>
-                                </div>
-
-                                <!-- To Date -->
-                                <div class="calendar">
-                                    <h3 class="search-label">To</h3>
-                                    <div id="search-from-b">
-                                        <input type="text" class="form-control input-lg">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-
-                        <!-- Advanced Search Filter Panel -->
-                        <div class="search-container advanced-search-container relative hidden" style="width: calc(100% - 400px);">
-
-                            <!-- Advanced Search Panel -->
-                            <div class="facets-container" style="">
-                                <div class="list-group search-facets">
-                                    <div class="search-facet-item disabled">
-                                        <h4 class="search-facet-item-heading">Search Facets</h4>
-                                        <div class="list-filter relative">
-                                            <input type="text" class="form-control" style="" placeholder="Find ...">
-                                            <!-- Clear Filter -->
-                                            <span class="clear-node-search"><i class="fa fa-times-circle"></i></span>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Address</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Component</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Name</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Name Type</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Measurement Type</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Measurement Unit</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Measurement Value</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Threats</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Keywords</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading ">Description</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Material</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Administrative Area</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                    <a href="#" class="search-facet-item">
-                                        <h4 class="search-facet-item-heading">Administrative Area Type</h4>
-                                        <p class="list-group-item-text"></p>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="facets-search-container" style="">
-                                <h3 class="advanced-search-title" > Advanced Search</h3>
-
-                                <!-- Faceted search term -->
-                                <div class="faceted-search-container">
-                                    <!-- Search Name -->
-                                    <div class="facet-name">
-                                        Address
-                                    </div>
-                                    <!-- Search criteria -->
-                                    <div class="row facet-search-criteria">
-                                        <!-- Operator -->
-                                        <div class="col-sm-2">
-                                            <select id="" class="resources" data-placeholder="" tabindex="4">
-                                                <option>Like</option>
-                                                <option>Equals</option>
-                                                <option>Not</option>
-                                            </select> 
-                                        </div>
-                                        <!-- Value -->
-                                        <div class="col-sm-10">
-                                            <input type="text" placeholder="Name" class="form-control input-lg" style="height: 36px;" value="Dalgity Street">
-                                        </div>
-                                        <!-- Action -->
-                                        <div class="facet-search-button pull-right">
-                                            <button class="btn btn-sm btn-primary">Add to search</button>
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <!-- Logical Operators -->
-                                <div class="btn-group btn-group-sm facet-btn-group">
-                                    <button class="btn btn-warning btn-active-dark facet-btn selected">Or</button>
-                                    <button class="btn btn-warning btn-active-dark facet-btn">And</button>
-                                    <button class="btn btn-warning btn-active-dark facet-btn">Or NOT</button>
-                                    <button class="btn btn-warning btn-active-dark facet-btn">And NOT</button>
-                                </div>
-
-                                <!-- Faceted search term -->
-                                <div class="faceted-search-container">
-                                    <!-- Search Name -->
-                                    <div class="facet-name">
-                                        Threats
-                                    </div>
-                                    <!-- Search criteria -->
-                                    <div class="row facet-search-criteria">
-                                        <!-- Operator -->
-                                        <div class="col-sm-2">
-                                            <select id="" class="resources" data-placeholder="" tabindex="4">
-                                                <option>Like</option>
-                                                <option>Equals</option>
-                                                <option>Not</option>
-                                            </select> 
-                                        </div>
-                                        <!-- Value -->
-                                        <div class="col-sm-10">
-                                            <select id="" class="resources" data-placeholder="" tabindex="4">
-                                                <option>Tsunami</option>
-                                                <option>Earthquake</option>
-                                                <option>Fire</option>
-                                                <option>Looting</option>
-                                                <option>Urban encroachment</option>
-                                            </select> 
-                                        </div>
-                                        <!-- Action -->
-                                        <div class="facet-search-button pull-right">
-                                            <button class="btn btn-sm btn-primary">Add to search</button>
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <!-- Logical Operators -->
-                                <div class="btn-group btn-group-sm facet-btn-group">
-                                    <button class="btn btn-warning btn-active-dark facet-btn selected">Or</button>
-                                    <button class="btn btn-warning btn-active-dark facet-btn">And</button>
-                                    <button class="btn btn-warning btn-active-dark facet-btn">Or NOT</button>
-                                    <button class="btn btn-warning btn-active-dark facet-btn">And NOT</button>
-                                </div>
-
-                                <!-- Faceted search term -->
-                                <div class="faceted-search-container">
-                                    <!-- Search Name -->
-                                    <div class="facet-name">
-                                        Measurement Value
-                                    </div>
-                                    <!-- Search criteria -->
-                                    <div class="row facet-search-criteria">
-                                        <!-- Operator -->
-                                        <div class="col-sm-2">
-                                            <select id="" class="resources" data-placeholder="" tabindex="4">
-                                                <option>=</option>
-                                                <option>></option>
-                                                <option><</option>
-                                                <option>>=</option>
-                                                <option><=</option>
-                                            </select> 
-                                        </div>
-                                        <!-- Value -->
-                                        <div class="col-sm-10">
-                                            <input type="text" placeholder="Number" class="form-control input-lg" style="height: 36px;" value="40">
-                                        </div>
-                                        <!-- Action -->
-                                        <div class="facet-search-button pull-right">
-                                            <button class="btn btn-sm btn-primary">Add to search</button>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Saved Search Filter Panel -->
-                        <div class="search-container saved-search-container relative" style="width: calc(100% - 400px); overflow-y: scroll;">
-
-                            <!-- Heading -->
-                            <div class="search-panel-heading hidden">
-                                <h3 class="search-title"> Popular Searches</h3>
-                            </div>
-
-                            <!-- Saved Search Grid -->
-                            <div id="" class="saved-search-grid">
-                                <div class="ss-grid-sizer"></div>
-                                
-                                <!-- Saved Search Query -->
-                                <div class="ss-grid-item relative">
-                                    <div class="">
-                                        <div class="search-caption-activeWrap">
-                                            <div class="search-caption-alignCenter">
-                                                <div class="search-caption-body">
-                                                    <div class="search-query">
-                                                        <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Prehistoric Archaeological Sites</a>
-                                                        <!-- sub-title -->
-                                                        <div class="search-query-desc">
-                                                            Paleolithic remains and finds
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q9.jpg" alt="Image">
-                                </div>
-
-                                <!-- Saved Search Query -->
-                                <div class="ss-grid-item relative">
-                                    <div class="">
-                                        <div class="search-caption-activeWrap">
-                                            <div class="search-caption-alignCenter">
-                                                <div class="search-caption-body">
-                                                    <div class="search-query">
-                                                        <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> In the Shadow of the Volcano </a>
-                                                        <!-- sub-title -->
-                                                        <div class="search-query-desc">
-                                                            Resources at risk of volcanic eruptions
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q8.jpg" alt="Image">
-                                </div>
-
-                                <!-- Saved Search Query -->
-                                <div class="ss-grid-item relative">
-                                    <div class="">
-                                        <div class="search-caption-activeWrap">
-                                            <div class="search-caption-alignCenter">
-                                                <div class="search-caption-body">
-                                                    <div class="search-query">
-                                                        <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Canal District </a>
-                                                        <!-- sub-title -->
-                                                        <div class="search-query-desc">
-                                                            Designated buildings and structures in Venice
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q1.jpg" alt="Image">
-                                </div>
-
-                                <!-- Saved Search Query -->
-                                <div class="ss-grid-item relative">
-                                    <div class="">
-                                        <div class="search-caption-activeWrap">
-                                            <div class="search-caption-alignCenter">
-                                                <div class="search-caption-body">
-                                                    <div class="search-query">
-                                                        <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> San Francisco Heritage Resources </a>
-                                                        <!-- sub-title -->
-                                                        <div class="search-query-desc">
-                                                            Important Heritage in the heart of California
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q4.jpg" alt="Image">
-                                </div>
-
-                                <!-- Saved Search Query -->
-                                <div class="ss-grid-item relative">
-                                    <div class="">
-                                        <div class="search-caption-activeWrap">
-                                            <div class="search-caption-alignCenter">
-                                                <div class="search-caption-body">
-                                                    <div class="search-query">
-                                                        <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
-                                                        <!-- sub-title -->
-                                                        <div class="search-query-desc">
-                                                            Saved query sub-title goes here
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q5.jpg" alt="Image">
-                                </div>
-
-                                <!-- Saved Search Query -->
-                                <div class="ss-grid-item relative">
-                                    <div class="">
-                                        <div class="search-caption-activeWrap">
-                                            <div class="search-caption-alignCenter">
-                                                <div class="search-caption-body">
-                                                    <div class="search-query">
-                                                        <!-- saved query href -->
-                                                        <a class="search-query-link-captions" href="#"><i class="rounded-x fa fa-search"></i> Query Name </a>
-                                                        <!-- sub-title -->
-                                                        <div class="search-query-desc">
-                                                            Saved query sub-title goes here
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img class="img-responsive" src="img/arches/arches_saved_queries/q6.jpg" alt="Image">
-                                </div>
-                            </div>
-                        </div>      
-                    </div>
-                </div>
-            </div>
 
 
             <!-- Resources Edit History -->
@@ -1869,8 +1219,10 @@
 
     <!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
+    <!--
     <script src="js/arches/resource_manager/arches_new_resource.js"></script>
-    <script src="js/arches/resource_manager/arches_related_resources.js"></script>
+    -->
+    <script src="js/arches/profile_manager/profile_manager.js"></script>
 
 
         

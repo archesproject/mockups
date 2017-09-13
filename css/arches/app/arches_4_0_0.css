@@ -41,6 +41,13 @@ ul .collapse li:last-of-type {
 
 
 /* Profile Manager CLASSESS =============================== */
+#container #profile-table td {
+	border-top: 1px solid rgba(0,0,0,0.0);
+}
+
+.profile-table-body {
+	float: left;
+}
 
 .profile-summary-page {
 	padding-top: 100px;
@@ -48,6 +55,98 @@ ul .collapse li:last-of-type {
 	background: #fff;
 }
 
+.profile-report {
+	height: 230px;
+	background: #f2f2f2;
+	width: 100%;
+	padding: 40px 150px 0px 150px;
+	border-bottom: 1px solid #ccc;
+}
+
+.profile-report-table {
+	position: absolute;
+	height: 130px;
+	width: 100%;
+	left: 110px;
+	padding-bottom: 10px;
+}
+
+
+.profile-table-divider {
+	position: absolute;
+    display: table-cell;
+    height: 70px;
+    margin-top: 35px;
+    width: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: 1px solid #ccc;
+}
+
+.mar-lft.profile-table-divider {
+	border-left-width: 0px;
+}
+
+.profile-project-list {
+	position: absolute;
+	top: 230px;
+	width: 100%;
+	min-height: 150px;
+	border-bottom: 1px solid #ccc;
+}
+
+.profile-image {
+	height: 120px;
+	width: 120px;
+}
+
+.profile-table-cell {
+	padding: 20px;
+	width: 350px;
+	position: relative;
+	top: 25px;
+}
+
+.profile-full-name {
+	font-size: 2.0em;
+	margin-top: 0px;
+	margin-left: 10px;
+	text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.profile-e-mail {
+	font-size: 14px;
+	margin-left: 10px;
+	color: #888;
+	font-weight: 500;
+}
+
+.profile-table-cell-title {
+	font-size: 1.5em;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.profile-table-time {
+	font-size: 15px;
+}
+
+.profile-table-cell-label {
+	font-size: 14px;
+	color: #888;
+	font-weight: 500;
+	margin-left: 10px;
+}
+
+.profile-update {
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	color: steelblue;
+	font-weight: 600;
+	font-size: 13px;
+}
 
 
 /* ASIDE CLASSESS =============================== */

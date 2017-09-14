@@ -87,17 +87,20 @@ ul .collapse li:last-of-type {
 	border-left-width: 0px;
 }
 
-.profile-project-list {
-	position: absolute;
-	top: 230px;
+.profile-list {
 	width: 100%;
-	min-height: 150px;
+	padding: 40px 100px 50px 100px;
+	min-height: 170px;
 	border-bottom: 1px solid #ccc;
 }
 
 .profile-image {
 	height: 120px;
 	width: 120px;
+}
+
+.profile-projects {
+	height: 100vh;
 }
 
 .profile-table-cell {
@@ -146,6 +149,27 @@ ul .collapse li:last-of-type {
 	color: steelblue;
 	font-weight: 600;
 	font-size: 13px;
+}
+
+.profile-header {
+	font-size: 21px;
+}
+
+.profile-default-message-panel {
+	text-align: center;
+	padding-bottom: : 20px;
+	font-size: 19px;
+	color: #888;
+}
+
+.apple_app_store_icon {
+	height: 50px;
+	padding-top: 10px;
+}
+
+.android_app_store_icon {
+	height: 58px;
+	margin-top: 11px;
 }
 
 

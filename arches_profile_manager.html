@@ -93,6 +93,11 @@
     <link href="plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet">
 
 
+    <!--Cropper [ OPTIONAL ]-->
+    <link rel="stylesheet" href="plugins/cropper/dist/cropper.css">
+
+
+
     <!-- Arches CSS -->
     <link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
     <link href="css/arches/app/app_configuration.css" rel="stylesheet">
@@ -327,7 +332,7 @@
                                                     <span class="profile-table-time">17:53:42</span>
                                                 </div>
                                                 <div class="profile-table-cell-label">
-                                                    My last login
+                                                    Last login
                                                 </div>
                                             </td>
 
@@ -432,20 +437,20 @@
                                                 <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-tag"></i></span>
                                             </div>
                                             <div class="crud-card-main" style="">
-                                                Resource Summary
+                                                Account Information
                                             </div>
                                             <div class="crud-card-subtitle text-muted" style="">
-                                                Name, Type, and Keywords
+                                                Name, User Name, Avatar
                                             </div>
                                         </div>
 
                                         <!-- Form Card -->                                   
                                         <div class="crud-card" style="">
                                             <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-bar-chart"></i></span>
+                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-key"></i></span>
                                             </div>
                                             <div class="crud-card-main" style="">
-                                                Condition Assessment
+                                                Password
                                             </div>
                                             <div class="crud-card-subtitle text-muted" style="">
                                                 Form subtitle goes here
@@ -453,106 +458,15 @@
                                         </div>
 
                                         <!-- Form Card -->                                   
-                                        <div class="crud-card selected">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-map-marker"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Locations
-                                            </div>
-                                            <div class="crud-card-subtitle" style="">
-                                                Map, addresses, administrative areas
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-picture-o"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Descriptions
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Resource abstract
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-adjust"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Classifications
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Resource categories
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
                                         <div class="crud-card" style="">
                                             <div class="crud-card-icon" style="">
                                                 <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-bar-chart"></i></span>
                                             </div>
                                             <div class="crud-card-main" style="">
-                                                Components
+                                                Settings
                                             </div>
                                             <div class="crud-card-subtitle text-muted" style="">
-                                                Resource elements
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-th-large"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Measurements
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Spatial, physical dimensions
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-bar-chart"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                External System References
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Links to resource in other systems
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-shield"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Designations
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Legal protection of resource
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-star-half-o"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Evaluation Criteria
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Rationale for significance 
+                                                Form subtitle goes here
                                             </div>
                                         </div>
                                     </div>
@@ -561,297 +475,73 @@
                         </div>
 
 
+
                         <!-- Card Container -->
-                        <div class="crud-card-container" style="">
-                            
-                            <!-- Widget -->
+                        <div class="crud-card-container" style="width: 100%;">
+
+                            <!-- Profile Form -->
                             <div class="panel">
+
+                                <!-- Form Title -->
                                 <div class="panel-heading">
-                                    <h3 class="panel-title card-main-title">String/Numeric/Date Widgets</h3>
+                                    <h3 class="panel-title">Account Information</h3>
                                 </div>
 
-                                <!-- Data Entry -->
-                                <div class="panel-body card-body fade in" style="padding-top: 0px;">
-                                    <div id="" class="tab-base card-content-container outline" style="margin-bottom: 20px; margin-top: -2px;">
+                                <!-- Form -->
+                                <div class="panel-body profile-form-body">
+                                    
+                                    <!-- Image -->
+                                    <div class="profile-image-region">
+                                        <img id="image" class="profile-image-size" src="./img/av5.png" alt="Picture">
+                                    
+                                        <!-- Upload and crop button -->
+                                        <button class="btn btn-block btn-lg btn-primary mar-top">Upload Image</button>
+                                    </div>
 
-                                        <!--Nav Tabs-->
-                                        <ul class="nav nav-tabs card-nav-container" style="">
-                                            <li class="active">
-                                                <a data-toggle="tab" href="#ds-1" class="card-tab-title" aria-expanded="true"> Data Entry</a>
-                                            </li>
-                                            <li id="" class="">
-                                                <a data-toggle="tab" href="#r-1" class="card-tab-title" aria-expanded="true"> Report</a>
-                                            </li>
-                                        </ul>
-
-                                        <!--Tabs Content-->
-                                        <div class="tab-content card-content-tab" style="margin-left: 0px;">
-
-                                            <!-- Data Entry Widget -->
-                                            <div id="ds-1" class="tab-pane fade active in"> 
-                                                <div class="panel-body card-panel-body" style="">
-                                                    <div id="" class="card-content" style="">
-
-                                                        <!-- Card Instruction -->
-                                                        <p class="content-instructions">
-                                                            Card level instructions 
-                                                            
-                                                            <!-- Help link -->
-                                                            <span>  
-                                                                <a id="card-help-link" href="" class="pull-right card-help help editable-help" style=""> Help <i class="fa fa-question-circle"></i></a>
-                                                            </span>
-                                                        </p>
-                                                        
-                                                        <!-- Form -->
-                                                        <div class="col-lg-9" style="padding-bottom: 10px;">
-
-                                                            <form class="widgets" style="margin-bottom: 20px;">
-                                                                <div class="row widget-container" style="">
-                                                                    <div class="form-group">
-                                                                        <div class="relative" style="">
-                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> String Node Label &nbsp;<i class="ion-ios-checkmark-outline"></i> <span style="font-weight: 100;"> (indicates value is required) </span></label>
-                                                                        </div>
-                                                                        
-                                                                        <div class="col-xs-12">
-                                                                            <input type="" placeholder="Node placeholder" id="" class="form-control input-lg widget-input">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="row widget-container" style="">
-                                                                    <div class="form-group">
-                                                                        <div class="relative" style="">
-                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Numeric Node Label &nbsp;<i class="ion-ios-checkmark-outline"></i> <span style="font-weight: 100;"> (indicates value is required) </span></label>
-                                                                        </div>
-                                                                        
-                                                                        <div class="col-xs-12">
-                                                                            <input type="" placeholder="Node placeholder" id="" class="form-control input-lg widget-input">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="row widget-container" style="">
-                                                                    <div class="form-group">
-                                                                        <div class="relative" style="">
-                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Date Node Label</label>
-                                                                        </div>
-                                                                        
-                                                                        <div class="col-xs-12">
-                                                                            <div id="default-date-picker">
-                                                                                <div class="input-group date">
-                                                                                    <input type="text" class="form-control input-lg" placeholder="mm/dd/yyyy">
-                                                                                    <span class="input-group-addon"><i class="fa fa-calendar fa-lg"></i></span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="row widget-container" style="">
-                                                                    <div class="form-group">
-                                                                        <div class="relative" style="">
-                                                                            <label class="col-xs-12 control-label widget-input-label" for=""> Time Node Label</label>
-                                                                        </div>
-                                                                        
-                                                                        <div class="col-xs-12">
-                                                                            <div class="input-group date">
-                                                                                <input id="default-time-picker" type="text" class="form-control input-lg">
-                                                                                <span class="input-group-addon"><i class="fa fa-clock-o fa-lg"></i></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                    <!-- Profile Info Form -->
+                                    <div class="profile-form-region">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">First Name</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Last Name</label>
+                                                    <input type="text" class="form-control">
                                                 </div>
                                             </div>
 
-                                            <!-- Data Display (Reporting) Widget -->
-                                            <div id="r-1" class="tab-pane fade"> 
-                                                <div class="panel-body card-panel-body" style="">
-                                                    <div class="card-content" style="">
-
-                                                        <div class="rp-report-section relative">
-                                                            <!-- Section Title -->
-                                                            <div class="rp-report-section-title">
-                                                                <h4 class="rp-section-title">Form Name</h4>
-                                                            </div>
-                                                            
-                                                            <!-- Card Wizard Tile -->
-                                                            <div class="rp-card-section">
-                                                                <!-- Section Tile -->
-                                                                <h4 class="rp-tile-title"><span class="rp-tile-title-float">Card Name</span></h4>
-                                                                <div class="row rp-report-tile">
-                                                                    <!-- Node/Node Type Template -->
-                                                                    <dl class="dl-horizontal">
-                                                                        <dt>String Node Label</dt>
-                                                                        <dd>Node Value</dd>
-                                                                    </dl>
-                                                                </div>
-
-                                                                <div class="row rp-report-tile">
-                                                                    <!-- Node/Node Type Template -->
-                                                                    <dl class="dl-horizontal">
-                                                                        <dt>Numerica Node Label</dt>
-                                                                        <dd>Node Value</dd>
-                                                                    </dl>
-                                                                </div>
-
-                                                                <div class="row rp-report-tile">
-                                                                    <!-- Node/Node Type Template -->
-                                                                    <dl class="dl-horizontal">
-                                                                        <dt>Date Label</dt>
-                                                                        <dd>Date Value</dd>
-                                                                    </dl>
-                                                                </div>
-
-                                                                <div class="row rp-report-tile">
-                                                                    <!-- Node/Node Type Template -->
-                                                                    <dl class="dl-horizontal">
-                                                                        <dt>Time Label</dt>
-                                                                        <dd>Time Value</dd>
-                                                                    </dl>
-                                                                </div>
-                                                            </div>  
-                                                        </div>
-                                                    </div>
+                                            <div class="col-sm-12 mar-top">
+                                                <div class="form-group">
+                                                    <label class="control-label">User Name</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="control-label">Email Address</label>
+                                                    <input type="text" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <!-- Form Footer -->
+                                <div class="panel-footer profile-form-footer">
+                                    <div class="profile-form-message">
+                                        Please enter a value for each field.  Adding an avatar image is optional
                                     </div>
                                 </div>
                             </div>
 
 
-                            <!-- Widget -->
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title card-main-title">File Upload Widget</h3>
-                                </div>
 
-                                <!-- Data Entry -->
-                                <div class="panel-body card-body fade in" style="padding-top: 0px;">
-                                    <div id="" class="tab-base card-content-container outline" style="margin-bottom: 20px; margin-top: -2px;">
 
-                                        <!--Nav Tabs-->
-                                        <ul class="nav nav-tabs card-nav-container" style="">
-                                            <li class="active">
-                                                <a data-toggle="tab" href="#ds-4" class="card-tab-title" aria-expanded="true"> Data Entry</a>
-                                            </li>
-                                            <li id="" class="">
-                                                <a data-toggle="tab" href="#r-4" class="card-tab-title" aria-expanded="true"> Report</a>
-                                            </li>
-                                        </ul>
 
-                                        <!--Tabs Content-->
-                                        <div class="tab-content card-content-tab" style="margin-left: 0px;">
-
-                                            <!-- Data Entry Widget -->
-                                            <div id="ds-4" class="tab-pane fade active in"> 
-                                                <div class="panel-body card-panel-body" style="">
-                                                    <div id="" class="card-content" style="">
-
-                                                        <!-- Card Instruction -->
-                                                        <p class="content-instructions">
-                                                            Card level instructions 
-                                                            
-                                                            <!-- Help link -->
-                                                            <span>  
-                                                                <a id="card-help-link" href="" class="pull-right card-help help editable-help" style=""> Help <i class="fa fa-question-circle"></i></a>
-                                                            </span>
-                                                        </p>
-                                                        
-                                                        <!-- Form -->
-                                                        <div class="col-lg-12" style="padding-bottom: 10px;">
-                                                            <form class="widgets" style="margin-bottom: 20px;">
-                                                                <div class="row widget-container">
-                                                                    <div class="col-xs-12">
-                                                                        <div class="form-group">
-                                                                            <div class="relative">
-                                                                                <label class="col-xs-12 control-label widget-input-label" for=""> File Upload
-                                                                            </label></div>
-                                                                            
-                                                                            <div class="col-xs-12">
-                                                                                 <div class="bord-top pad-ver">
-                                                                                    <!-- The fileinput-button span is used to style the file input field as button -->
-                                                                                    <span class="btn btn-success fileinput-button dz-clickable">
-                                                                                        <i class="fa fa-plus"></i>
-                                                                                        <span>Add files...</span>
-                                                                                    </span>
-                                                                        
-                                                                                    <div class="btn-group pull-right">
-                                                                                        <button id="dz-upload-btn" class="btn btn-primary" type="submit" disabled="">
-                                                                                            <i class="fa fa-upload-cloud"></i> Upload
-                                                                                        </button>
-                                                                                        <button id="dz-remove-btn" class="btn btn-danger cancel" type="reset" disabled="">
-                                                                                            <i class="ion ion-close"></i>
-                                                                                        </button>
-                                                                                    </div>
-                                                                                </div>
-                                                                        
-                                                                                <div id="dz-previews">
-                                                                                    
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Data Display (Reporting) Widget -->
-                                            <div id="r-4" class="tab-pane fade"> 
-                                                <div class="panel-body card-panel-body" style="">
-                                                    <div class="card-content" style="">
-
-                                                        <div class="rp-report-section relative">
-                                                            <!-- Section Title -->
-                                                            <div class="rp-report-section-title">
-                                                                <h4 class="rp-section-title">Form Name</h4>
-                                                            </div>
-                                                            
-                                                            <!-- Card Wizard Tile -->
-                                                            <div class="rp-card-section">
-                                                                <!-- Section Tile -->
-                                                                <h4 class="rp-tile-title"><span class="rp-tile-title-float">Card Name</span></h4>
-                                                                <div class="row rp-report-tile">
-                                                                    <!-- Node/Node Type Template -->
-                                                                    <dl class="dl-horizontal">
-                                                                        <dt>Node Label (Images)</dt>
-                                                                        <dd>
-                                                                            <!-- Images -->
-                                                                            <div id="report-image-grid" class="report-image-grid">
-                                                                                <div class="rp-image-grid-item">
-                                                                                    <a id="" class="" href="#"> <img class="img-responsive" src="img/thumbs/img1.jpg" alt="Image"></a>
-                                                                                </div>
-                                                                                <div class="rp-image-grid-item">
-                                                                                    <a id="" class="" href="#"> <img class="img-responsive" src="img/thumbs/img2.jpg" alt="Image"></a>
-                                                                                </div>
-                                                                                <div class="rp-image-grid-item">
-                                                                                    <a id="" class="" href="#"> <img class="img-responsive" src="img/thumbs/img3.jpg" alt="Image"></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </dd>
-
-                                                                        <dt>Node Label (Files)</dt>
-                                                                        <dd><i class="ion ion-forward"></i><a class="" href=""> File Name 1</a></dd>
-                                                                        <dd><i class="ion ion-forward"></i><a class="" href=""> File Name 2</a></dd>
-                                                                        <dd><i class="ion ion-forward"></i><a class="" href=""> File Name 3</a></dd>
-                                                                    </dl>
-                                                                </div>
-                                                            </div>  
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
                         </div>
                     </div>
                 </div>
@@ -1298,6 +988,23 @@
     -->
     <script src="js/arches/profile_manager/profile_manager.js"></script>
 
+
+<!--     <script src="plugins/cropper/dist/cropper.js"></script>
+      <script>
+        window.addEventListener('DOMContentLoaded', function () {
+          var image = document.querySelector('#image');
+          var cropper = new Cropper(image, {
+            movable: false,
+            zoomable: false,
+            rotatable: false,
+            scalable: false
+          });
+
+          document.getElementById('replace').onclick = function () {
+            cropper.replace('../docs/images/picture-2.jpg');
+          };
+        });
+    </script> -->
 
         
 

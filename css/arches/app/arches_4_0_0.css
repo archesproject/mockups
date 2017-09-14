@@ -155,10 +155,58 @@ ul .collapse li:last-of-type {
 	font-size: 21px;
 }
 
+.profile-image-region {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+}
+
+.profile-form-region {
+	position: absolute;
+	top: 20px;
+	left: 300px;
+	width: calc(100% - 350px);
+}
+
+.profile-form-body {
+	position: relative;
+	padding: 20px;
+	min-height: 400px;
+}
+
+.profile-form-footer {
+	height: 50px;
+}
+
+.profile-form-message {
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 3px;
+	margin-left: 20px;
+}
+
+.profile-image-size {
+	height: 200px;
+	width: 200px;
+}
+
+/*.profile-image-region {
+	border: 1px solid #ddd;
+	background: #fafafa;
+	height: 200px;
+	display: block;
+}
+
+.profile-image-valign {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}*/
+
 .profile-default-message-panel {
 	text-align: center;
 	padding-bottom: : 20px;
-	font-size: 19px;
+	font-size: 17px;
 	color: #888;
 }
 
@@ -171,6 +219,8 @@ ul .collapse li:last-of-type {
 	height: 58px;
 	margin-top: 11px;
 }
+
+
 
 
 /* ASIDE CLASSESS =============================== */

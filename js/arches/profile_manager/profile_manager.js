@@ -12,13 +12,24 @@
 		ev.preventDefault();
 		
 		//toggle panels
-		$("#account-report").addClass('hidden');	
-		$("#account-crud").removeClass('hidden');	
+		$("#account-report").toggle();	
+		$("#account-crud").toggle();	
 
-		//Update Button Text
+		//Update Buttons
+		$("#account-edit-btn").toggle();
+	    $("#account-edit-done-btn").toggle();
+	});
+
+	$('#account-edit-done-btn').on('click', function (ev) {
+		ev.preventDefault();
 		
-	
+		//toggle panels
+		$("#account-report").toggle();	
+		$("#account-crud").toggle();	
 
+		//Update Buttons
+		$("#account-edit-btn").toggle();
+	    $("#account-edit-done-btn").toggle();
 	});
 
 

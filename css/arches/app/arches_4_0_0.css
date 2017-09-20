@@ -220,7 +220,7 @@ ul .collapse li:last-of-type {
 	color: #579ddb;
 }
 
-#account-edit-btn {
+.account-edit-btn {
 	position: absolute;
 	top: 0px;
 	right: 60px;

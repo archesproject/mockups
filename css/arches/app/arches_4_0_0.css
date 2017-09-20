@@ -216,24 +216,39 @@ ul .collapse li:last-of-type {
 	border-width: 0px;
 	margin-top: -20px;
 	margin-left: -12px;
+	color: #579ddb;
 }
 
 .btn-profile-password:hover {
 	background: #fff;
+	color: #579ddb;
 }
 
 .btn-profile-password:focus {
 	background: #fff;
+	color: #579ddb;
 }
 
 .btn-profile-password.btn-default:active {
 	background-color: #fff;
     border-width: 0px;
-    color: #515151;
+    color: #579ddb;
 }
 
 .btn-profile-password.btn:not(.disabled):not(:disabled):active, .btn:not(.disabled):not(:disabled).active {
 	box-shadow: none;
+}
+
+.password-rules {
+	font-size: 14px;
+	color: #555;
+}
+
+.password-rule {
+	color: #888;
+	font-size: 13px;
+	padding-left: 5px;
+	padding-bottom: 3px;
 }
 
 /*.profile-image-region {

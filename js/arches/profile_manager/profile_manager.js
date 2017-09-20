@@ -4,7 +4,7 @@
 
 
 //	Widgets	
-
+	$('.btn-profile-password').popover({ html : true});
 
 
 // Toggle Resource/Records

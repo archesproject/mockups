@@ -207,6 +207,34 @@ ul .collapse li:last-of-type {
 	background: #a1f1f1;
 }
 
+.profile-label-shim {
+	margin-top: -5px;
+}
+
+.btn-profile-password {
+	background: #fff;
+	border-width: 0px;
+	margin-top: -20px;
+	margin-left: -12px;
+}
+
+.btn-profile-password:hover {
+	background: #fff;
+}
+
+.btn-profile-password:focus {
+	background: #fff;
+}
+
+.btn-profile-password.btn-default:active {
+	background-color: #fff;
+    border-width: 0px;
+    color: #515151;
+}
+
+.btn-profile-password.btn:not(.disabled):not(:disabled):active, .btn:not(.disabled):not(:disabled).active {
+	box-shadow: none;
+}
 
 /*.profile-image-region {
 	border: 1px solid #ddd;

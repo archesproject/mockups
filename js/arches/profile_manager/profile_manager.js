@@ -8,6 +8,22 @@
 
 
 // Toggle Resource/Records
+	$('#account-edit-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//toggle panels
+		$("#account-report").addClass('hidden');	
+		$("#account-crud").removeClass('hidden');	
+
+		//Update Button Text
+		
+	
+
+	});
+
+
+
+
 	$('#related-resources-open-btn').on('click', function (ev) {
 		ev.preventDefault();
 		

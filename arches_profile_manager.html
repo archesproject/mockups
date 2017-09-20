@@ -323,75 +323,81 @@
                                     <!-- Section Content -->
                                     <div class="col-sm-9">
                                         
-                                        <!-- User Name, Password -->
-                                        <div class="row">
-                                            <!-- Names -->
-                                            <div class="col-sm-5">
-                                                <div class="relative">
-                                                    <h4 class="text-main">adalgity@getty.edu</h4>
-                                                    <p class="profile-label-shim">User name</p>
-                                                </div>
-                                            </div>
-
-                                            <!-- Password -->
-                                            <div class="col-sm-5">
-                                                <h4 class="text-main">********</h4>
-
-                                                <button class="btn btn-default btn-active-success btn-profile-password add-popover" 
-                                                data-toggle="popover" data-container="body" 
-                                                data-placement="bottom" 
-                                                data-original-title="Change Password" 
-                                                data-content='
-                                                    <div class="form-group">
-                                                        <input type="password" placeholder="new password" id="" class="form-control">
-                                                        <input type="password" placeholder="confirm password" id="" class="form-control mar-top">
+                                        <!-- Account Information Report Panel -->
+                                        <div id="account-report" class="">
+                                            <!-- User Name, Password -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="relative">
+                                                        <h4 class="text-main">adalgity@getty.edu</h4>
+                                                        <p class="profile-label-shim">User name</p>
                                                     </div>
-                                                    <div class="password-rules">
-                                                        Your password must have:
-                                                        <ul class="list-unstyled">
-                                                            <li class="password-rule"><i class="ion-checkmark-circled"></i> 8 or more characters</li>
-                                                            <li class="password-rule"><i class="ion-checkmark-circled"></i> At least 1 number</li>
-                                                            <li class="password-rule"><i class="ion-checkmark-circled"></i> At least 1 capital letter</li>
-                                                        </ul>
+                                                </div>
+
+                                                <!-- Password -->
+                                                <div class="col-sm-5">
+                                                    <h4 class="text-main">********</h4>
+
+                                                    <button class="btn btn-default btn-active-success btn-profile-password add-popover" 
+                                                    data-toggle="popover" data-container="body" 
+                                                    data-placement="bottom" 
+                                                    data-original-title="Change Password" 
+                                                    data-content='
+                                                        <div class="form-group">
+                                                            <input type="password" placeholder="new password" id="" class="form-control">
+                                                            <input type="password" placeholder="confirm password" id="" class="form-control mar-top">
+                                                        </div>
+                                                        <div class="password-rules">
+                                                            Your password must have:
+                                                            <ul class="list-unstyled">
+                                                                <li class="password-rule"><i class="ion-checkmark-circled"></i> 8 or more characters</li>
+                                                                <li class="password-rule"><i class="ion-checkmark-circled"></i> At least 1 number</li>
+                                                                <li class="password-rule"><i class="ion-checkmark-circled"></i> At least 1 capital letter</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="mar-top mar-btm pull-right">
+                                                            <button class="btn btn-danger">Cancel</button>
+                                                            <button class="btn btn-primary">Change Password</button>
+                                                        </div>'>Change password</button>
+                                                </div>
+
+                                                
+                                            </div>
+
+                                            <!-- Recovery email -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="relative">
+                                                        <h4 class="text-main">adalgity@getty.edu</h4>
+                                                        <p class="profile-label-shim">Rescue email</p>
                                                     </div>
-                                                    <div class="mar-top mar-btm pull-right">
-                                                        <button class="btn btn-danger">Cancel</button>
-                                                        <button class="btn btn-primary">Change Password</button>
-                                                    </div>'>Change password</button>
+                                                </div>
                                             </div>
 
-                                            
-                                        </div>
-
-                                        <!-- Recovery email -->
-                                        <div class="row">
-                                            <!-- Names -->
-                                            <div class="col-sm-5">
-                                                <div class="relative">
-                                                    <h4 class="text-main">adalgity@getty.edu</h4>
-                                                    <p class="profile-label-shim">Rescue email</p>
+                                            <!-- Recovery phone -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="relative">
+                                                        <h4 class="text-main">No phone number provided</h4>
+                                                        <p class="profile-label-shim">Phone</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Recovery phone -->
-                                        <div class="row">
-                                            <!-- Names -->
-                                            <div class="col-sm-5">
-                                                <div class="relative">
-                                                    <h4 class="text-main">No phone number provided</h4>
-                                                    <p class="profile-label-shim">Phone</p>
-                                                </div>
-                                            </div>
+                                        <!-- Account CRUD Panel -->
+                                        <div id="account-crud" class="hidden">
+                                            Account CRUD
                                         </div>
-
-
 
                                     </div>
 
                                     <!-- Btn -->
                                     <div id="account-edit-btn" class="">
-                                        <button class="btn btn-primary btn-profile">Edit</button>
+                                        <button class="btn btn-primary btn-active-purple btn-profile">Edit</button>
                                     </div>
                                     
 

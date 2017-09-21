@@ -371,7 +371,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="relative">
                                                         <h4 class="text-main">adalgity@getty.edu</h4>
-                                                        <p class="profile-label-shim">Rescue email</p>
+                                                        <p class="profile-label-shim">Contact email</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -390,7 +390,124 @@
 
                                         <!-- Account CRUD Panel -->
                                         <div id="account-crud" class="" style="display: none;">
-                                            Account CRUD
+                                            <!-- User Name, Password -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="relative">
+                                                        <h4 class="text-main mar-btm">adalgity@getty.edu</h4>
+                                                        
+                                                        <button class="btn btn-default btn-active-success btn-profile-password add-popover" 
+                                                        data-toggle="popover" data-container="body" 
+                                                        data-placement="bottom" 
+                                                        data-original-title="Change Username" 
+                                                        data-content='
+                                                            <div class="form-group">
+                                                                <input type="text" placeholder="new username" id="" class="form-control">
+                                                            </div>
+                                                            <div class="password-rules">
+                                                                Your username must be:
+                                                                <ul class="list-unstyled">
+                                                                    <li class="password-rule"><i class="ion-checkmark-circled"></i> An email or unique name</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="mar-top mar-btm pull-right">
+                                                                <button class="btn btn-danger">Cancel</button>
+                                                                <button class="btn btn-primary">Change Username</button>
+                                                            </div>'>Change username</button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Password -->
+                                                <div class="col-sm-5">
+                                                    <p class="account-tips">
+                                                        This is the email or unique name that you use to log on to Arches.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <hr style="border-color: #eee;">
+
+                                            <!-- Account First Name -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label class="control-label">First name</label>
+                                                        <input type="text" class="form-control account-input" placeholder="Fist name" value="Alison">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <p class="account-tips">
+                                                        Arches uses your name and phone number to make it easier for other users to find you. 
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Account Last Name -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Last name</label>
+                                                        <input type="text" class="form-control account-input" placeholder="Last name" value="Dalgity">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Phone -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Phone Number (optional)</label>
+                                                        <input type="text" class="form-control account-input" placeholder="e.g. +1 415 555-1234">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr style="border-color: #eee;">
+
+                                            <!-- Contact Email -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Contact Email</label>
+                                                        <input type="email" class="form-control account-input" placeholder="jsmith@company.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <p class="account-tips">
+                                                        Arches uses your e-maill to alert you to projects and tasks assigned to you. 
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <hr style="border-color: #eee;">
+
+                                            <!-- Password, again -->
+                                            <div class="row">
+                                                <!-- Names -->
+                                                <div class="col-sm-5">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Password</label>
+                                                        <input type="password" class="form-control account-input" placeholder="" value="123456">
+                                                        <label class="control-label mar-top">Repeat Password</label>
+                                                        <input type="password" class="form-control account-input" placeholder="" value="123456">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="account-tips">
+                                                        Your password must have:
+                                                        <ul class="list-unstyled">
+                                                            <li class="password-rule"><i class="ion-checkmark-circled"></i> 8 or more characters</li>
+                                                            <li class="password-rule"><i class="ion-checkmark-circled"></i> At least 1 number</li>
+                                                            <li class="password-rule"><i class="ion-checkmark-circled"></i> At least 1 capital letter</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -401,7 +518,7 @@
                                     </div>
 
                                     <div id="account-edit-done-btn" class="account-edit-btn" style="display: none;">
-                                        <button class="btn btn-mint btn-active-purple btn-profile">Done</button>
+                                        <button class="btn btn-mint btn-active-success btn-profile">Done</button>
                                     </div>
                                     
 
@@ -409,42 +526,6 @@
                             </div>
                         </section>
 
-
-
-
-
-                        <!-- My Account Info -->
-                        <div class="profile-list" style="display: none;">
-                            <div class="profile-header">
-                                Account
-                                <span class="pull-right">
-                                    <button class="btn btn-primary btn-profile">Edit</button>
-                                </span>
-                            </div>
-
-                            <!-- Account Summary -->
-                            <div id="account-summary" class="profile-default-message-panel account-summary">
-                                <div class="row profile-names-row">
-                                    <!-- Names -->
-                                    <div class="col-sm-6">
-                                        <h4 class="text-main">Heading 4 <small>Secondary text</small></h4>
-
-                                    </div>
-
-                                    <!-- Password -->
-                                    <div class="col-sm-6">
-                                        <h4 class="text-main">Heading 4 <small><a href="" class="">Change password...</a></small></h4>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Account Edit Form -->
-                            <div id="account-form" class="account-form" style="height: 200px; background: #f1f1f1; display: none;">
-
-                            </div>
-
-                        </div>
 
 
                         <!-- My Devices -->
@@ -485,357 +566,11 @@
                     </div>
 
                 </div>
-
                 <!-- Editor Content -->
                 
             </div>
             <!--END  Main Editor -->
 
-
-            <!-- Profile Editor -->
-            <div id="related-resources-panel" class="responsive-content hidden">
-
-                <!-- Title Bar -->
-                <div id="" class="relative fade in" style="display: block;">
-
-                    <!-- Page Header -->
-                    <div class="">
-
-                        <!-- Title Block -->
-                        <div class="report-toolbar">
-                            <h4 class="report-toolbar-title">My Profile </h4>
-                            
-                            <!-- Tools -->
-                            <div class="ep-form-toolbar-tools">
-                                <button id="form-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="">Discard Edits</button>
-                                <button id="form-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="">Save Edits</button>
-                                <button id="related-resources-close-btn" class="btn btn-sm btn-mint btn-labeled fa fa-reply" data-bind="">Back</button>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-
-
-
-                
-                <!-- Editor Content -->
-                <div id="related" class="content-panel resource-editor">
-                    <div class="flex">
-
-                        <!-- CRUD Menu -->
-                        <div class="crud-menu-container panel">
-                            
-                            <!-- Resource Forms Menu -->
-                            <div id="" class="relative" style="">
-
-                                <!-- Card Container Settings -->
-                                <div id="" class="resource-forms-grid" style="">
-
-                                    <!-- CRUD Form Grid -->
-                                    <div id="" class="grid" style="position: relative; height: 0px;">
-                                    
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-tag"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Account Information
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Name, User Name, Avatar
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-key"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Password
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Form subtitle goes here
-                                            </div>
-                                        </div>
-
-                                        <!-- Form Card -->                                   
-                                        <div class="crud-card" style="">
-                                            <div class="crud-card-icon" style="">
-                                                <span class="icon-wrap icon-wrap-sm icon-circle bg-primary"><i class="fa fa-bar-chart"></i></span>
-                                            </div>
-                                            <div class="crud-card-main" style="">
-                                                Settings
-                                            </div>
-                                            <div class="crud-card-subtitle text-muted" style="">
-                                                Form subtitle goes here
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- Card Container -->
-                        <div class="crud-card-container" style="width: 100%;">
-
-                            <!-- Profile Form -->
-                            <div class="panel">
-
-                                <!-- Form Title -->
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Account Information</h3>
-                                </div>
-
-                                <!-- Form -->
-                                <div class="panel-body profile-form-body">
-                                    
-                                    <!-- Image -->
-                                    <div class="profile-image-region">
-                                        <img id="image" class="profile-image-size" src="./img/av5.png" alt="Picture">
-                                    
-                                        <!-- Upload and crop button -->
-                                        <button class="btn btn-block btn-lg btn-primary mar-top">Upload Image</button>
-                                    </div>
-
-                                    <!-- Profile Info Form -->
-                                    <div class="profile-form-region">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">First Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">Last Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 mar-top">
-                                                <div class="form-group">
-                                                    <label class="control-label">User Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">Email Address</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Form Footer -->
-                                <div class="panel-footer profile-form-footer">
-                                    <div class="profile-form-message">
-                                        Please enter a value for each field.  Adding an avatar image is optional
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-            <!-- Resources Edit History -->
-            <div id="edit-history-panel" class="responsive-content hidden">
-
-                <!-- Title Bar -->
-                <div id="" class="relative fade in" style="display: block;">
-
-                    <!-- Title Block -->
-                    <div class="report-toolbar">
-                        <h4 class="report-toolbar-title">Edit History </h4>
-                        
-                        <!-- Tools -->
-                        <div class="ep-form-toolbar-tools">
-                            <button class="btn btn-sm btn-mint btn-labeled fa fa-times-circle-o" data-bind="">close</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Editor Content -->
-                <div class="content-panel resource-editor">
-                    <div class="flex scroll-y">
-
-                        <div class="panel" style="width: 100%;">
-                            <div class="panel-body timeline-panel eh-timeline-panel">
-                                <!-- Timeline -->
-                                <!--===================================================-->
-                                <div class="timeline eh-timeline">
-                
-                                    <!-- Timeline header -->
-                                    <div class="timeline-header eh-timeline-header">
-                                        <div class="timeline-header-title bg-info">
-                                            Now
-                                        </div>
-                                        <span class="pull-right">
-                                            <select id="" class="resources" style="" data-placeholder="Find a Resource..." tabindex="4">
-                                                <option>Most recent</option>
-                                                <option>Oldest</option>
-                                                <option>By editor</option>
-                                                <option>By edit type</option>
-                                            </select>  
-                                        </span>
-                                    </div>
-
-                                    <div class="timeline-entry">
-                                        <div class="timeline-stat eh-timeline-stat">
-                                            <div class="timeline-icon bg-dark"><i class="fa fa-plus fa-lg"></i></div>
-                                            <div class="timeline-time eh-timeline-time">14:37 <br> 11 October, 2016</div>
-                                        </div>
-                                        <div class="timeline-label eh-timeline-label">
-                                            <h4 class="mar-no pad-btm">Name of Node Group Added</h4>
-                                            
-                                            <div class="eh-node-group">
-                                                <div class="eh-edit-title">
-                                                    Data Tile
-                                                </div>
-
-                                                <div class="tile-data-container">
-                                                    <ul class="tile-data-list">
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Node Name</span><span class="tile-node-value"> Value of Node</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="eh-footer">
-                                                edited by: jmunowitch@fargeo.com
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-entry">
-                                        <div class="timeline-stat eh-timeline-stat">
-                                            <div class="timeline-icon bg-danger"><i class="fa fa-minus fa-lg"></i></div>
-                                            <div class="timeline-time eh-timeline-time">11:19 <br> 3 October, 2016</div>
-                                        </div>
-                                        <div class="timeline-label eh-timeline-label">
-                                            <h4 class="mar-no pad-btm">Name Deleted</h4>
-                                            
-                                            <div class="eh-node-group">
-                                                <div class="eh-edit-title">
-                                                    Data Tile
-                                                </div>
-
-                                                <div class="tile-data-container">
-                                                    <ul class="tile-data-list">
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Name</span><span class="tile-node-value"> King Arthur's Castle</span>
-                                                        </li>
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Name Type</span><span class="tile-node-value"> Primary</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="eh-footer">
-                                                edited by: randerson@fargeo.com
-                                            </div>
-                                        </div>
-                                    </div>
-                
-                                    <div class="timeline-entry">
-                                        <div class="timeline-stat eh-timeline-stat">
-                                            <div class="timeline-icon bg-purple"><i class="fa fa-repeat fa-lg"></i></div>
-                                            <div class="timeline-time eh-timeline-time">13:22 <br> 29 September, 2016</div>
-                                        </div>
-                                        <div class="timeline-label eh-timeline-label">
-                                            <h4 class="mar-no pad-btm">Condition Assessment Edit</h4>
-
-                                            <div class="eh-node-group">
-                                                <div class="eh-edit-title">
-                                                    New Data Tile
-                                                </div>
-
-                                                <div class="tile-data-container">
-                                                    <ul class="tile-data-list">
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Condition</span><span class="tile-node-value"> Poor</span>
-                                                        </li>
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Date Assessed</span><span class="tile-node-value"> 12 June, 2016</span>
-                                                        </li>
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Description</span><span class="tile-node-value">Etiam porta sem malesuada magna mollis euismod. Another Etiam porta sem malesuada magna mollis euismod. Porta sem Etiam porta sem malesuada magna</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <hr>
-
-                                            <div class="eh-node-group">
-                                                <div class="eh-edit-title">
-                                                    Previous Data Tile
-                                                </div>
-
-                                                <div class="tile-data-container">
-                                                    <ul class="tile-data-list">
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Condition</span><span class="tile-node-value"> Fair</span>
-                                                        </li>
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Date Assessed</span><span class="tile-node-value"> 11 June, 2016</span>
-                                                        </li>
-                                                        <li class="tile-data-item">
-                                                            <span class="tile-node-name">Description</span><span class="tile-node-value"></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="eh-footer">
-                                                edited by: apeters@fargeo.com
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="timeline-entry">
-                                        <div class="timeline-stat eh-timeline-stat">
-                                            <div class="timeline-icon bg-mint"><i class="fa fa-chevron-circle-right fa-lg"></i></div>
-                                            <div class="timeline-time eh-timeline-time">10:18 <br> 3 January, 2016</div>
-                                        </div>
-                                        <div class="timeline-label eh-timeline-label">
-                                            <h4 class="mar-no pad-btm">Resource Record Created</h4>
-                                            <p>Record created by Arches with unique identifer <span class="text-bold">c619613f-1273-4d59-b6f0-48c17bf5fb74</span></p>
-                                            <div class="eh-footer">
-                                                edited by: apeters@fargeo.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <!--===================================================-->
-                                <!-- End Timeline -->
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
 
 
             <!--MAIN NAVIGATION-->

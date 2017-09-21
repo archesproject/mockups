@@ -226,6 +226,16 @@ ul .collapse li:last-of-type {
 	right: 60px;
 }
 
+.account-tips {
+	margin-top: 10px;
+	font-size: 13px;
+	color: #777;
+}
+
+.account-input {
+	max-width: 300px;
+}
+
 .btn-profile-password:hover {
 	background: #fff;
 	color: #579ddb;

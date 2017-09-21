@@ -360,9 +360,14 @@
                                                             <button class="btn btn-danger">Cancel</button>
                                                             <button class="btn btn-primary">Change Password</button>
                                                         </div>'>Change password</button>
-                                                </div>
+                                                </div> 
 
-                                                
+                                                <!-- Btn -->
+                                                <div class="col-sm-2">
+                                                    <div id="account-edit-btn" class="">
+                                                        <button class="btn btn-primary btn-active-purple btn-profile">Edit</button>
+                                                    </div> 
+                                                </div>
                                             </div>
 
                                             <!-- Recovery email -->
@@ -392,37 +397,29 @@
                                         <div id="account-crud" class="" style="display: none;">
                                             <!-- User Name, Password -->
                                             <div class="row">
-                                                <!-- Names -->
+                                                <!-- User Name -->
                                                 <div class="col-sm-5">
-                                                    <div class="relative">
-                                                        <h4 class="text-main mar-btm">adalgity@getty.edu</h4>
-                                                        
-                                                        <button class="btn btn-default btn-active-success btn-profile-password add-popover" 
-                                                        data-toggle="popover" data-container="body" 
-                                                        data-placement="bottom" 
-                                                        data-original-title="Change Username" 
-                                                        data-content='
-                                                            <div class="form-group">
-                                                                <input type="text" placeholder="new username" id="" class="form-control">
-                                                            </div>
-                                                            <div class="password-rules">
-                                                                Your username must be:
-                                                                <ul class="list-unstyled">
-                                                                    <li class="password-rule"><i class="ion-checkmark-circled"></i> An email or unique name</li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="mar-top mar-btm pull-right">
-                                                                <button class="btn btn-danger">Cancel</button>
-                                                                <button class="btn btn-primary">Change Username</button>
-                                                            </div>'>Change username</button>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Arches user name</label>
+                                                        <input type="text" class="form-control account-input" placeholder="Fist name" value="adalgity@getty.edu">
                                                     </div>
                                                 </div>
 
                                                 <!-- Password -->
                                                 <div class="col-sm-5">
                                                     <p class="account-tips">
-                                                        This is the email or unique name that you use to log on to Arches.
+                                                        This is the unique email or name that you use to log on to Arches.
                                                     </p>
+                                                </div>
+
+                                                <!-- Btn -->
+                                                <div class="col-sm-2">
+                                                    <div id="account-edit-btn" class="">
+                                                        <div id="account-edit-done-btn" class="" style="display: none;">
+                                                            <button class="btn btn-mint btn-active-success btn-profile mar-btm">Save</button>
+                                                            <button class="btn btn-danger btn-active-dark btn-profile mar-btm">Canel</button>
+                                                        </div>
+                                                    </div> 
                                                 </div>
                                             </div>
 
@@ -439,7 +436,7 @@
                                                 </div>
                                                 <div class="col-sm-5">
                                                     <p class="account-tips">
-                                                        Arches uses your name and phone number to make it easier for other users to find you. 
+                                                        Arches uses your name and phone number to make it easier for other users to find and work with you. 
                                                     </p>
                                                 </div>
                                             </div>
@@ -474,7 +471,7 @@
                                                 <div class="col-sm-5">
                                                     <div class="form-group">
                                                         <label class="control-label">Contact Email</label>
-                                                        <input type="email" class="form-control account-input" placeholder="jsmith@company.com">
+                                                        <input type="email" class="form-control account-input" placeholder="jsmith@company.com" value="adalgity@getty.edu">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-5">
@@ -512,14 +509,9 @@
 
                                     </div>
 
-                                    <!-- Btn -->
-                                    <div id="account-edit-btn" class="account-edit-btn">
-                                        <button class="btn btn-primary btn-active-purple btn-profile">Edit</button>
-                                    </div>
+                                    
 
-                                    <div id="account-edit-done-btn" class="account-edit-btn" style="display: none;">
-                                        <button class="btn btn-mint btn-active-success btn-profile">Done</button>
-                                    </div>
+                                    
                                     
 
                                 </div>

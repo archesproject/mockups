@@ -33,3 +33,16 @@
 	});
 
 
+	$('.download-app').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//toggle panels
+		$("#download-buttons-panel").toggle();	
+		$("#devices-panel").toggle();	
+
+		// Toggle projects listing panels
+		$("#default-mobile-projects").toggle();	
+		$("#mobile-projects-list").toggle();	
+		
+
+	});

@@ -416,7 +416,7 @@
                                                 <div class="col-sm-2">
                                                     <div id="account-edit-btn" class="">
                                                         <div id="account-edit-done-btn" class="" style="display: none;">
-                                                            <button class="btn btn-mint btn-active-success btn-profile mar-btm">Save</button>
+                                                            <button class="btn btn-primary btn-active-purple btn-profile mar-btm">Save</button>
                                                             <button class="btn btn-danger btn-active-dark btn-profile mar-btm">Canel</button>
                                                         </div>
                                                     </div> 
@@ -508,12 +508,6 @@
                                         </div>
 
                                     </div>
-
-                                    
-
-                                    
-                                    
-
                                 </div>
                             </div>
                         </section>
@@ -528,18 +522,38 @@
 
                             <!-- No Device Registered Yet -->
                             <div class="profile-default-message-panel">
-                                <span class="hidden-xs">You haven't registered a device yet.</span>  Download the App:
-                                <div class="">
-                                    <a class="" href=""><img class="apple_app_store_icon" src="./img/app_stores/apple.png" alt="ios"></a>
-                                    <a class="" href=""><img class="android_app_store_icon" src="./img/app_stores/google.png" alt="android"></a>
+
+                                <!-- Download panel -->
+                                <div id="download-buttons-panel" class="">
+                                    <span class="hidden-xs">You haven't registered a device yet.</span>  Download the App:
+                                    <div class="">
+                                        <a class="download-app" href=""><img class="apple_app_store_icon" src="./img/app_stores/apple.png" alt="ios"></a>
+                                        <a class="download-app" href=""><img class="android_app_store_icon" src="./img/app_stores/google.png" alt="android"></a>
+                                    </div>
+                                </div>
+
+                                <!-- Devices Panel -->
+                                <div id="devices-panel" class="" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-sm-9 col-sm-offset-3">
+                                            <!-- Device Listing -->
+                                            <ul class="device-listing">
+                                                <li class="device-list-item">
+
+                                                    Device 1
+                                                </li>
+
+                                                <li class="device-list-item">
+
+                                                    Device 2
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Device List -->
-                            <div class="">
-
-                            </div>
-
+                            
                         </div>
 
 
@@ -550,8 +564,13 @@
                             </div>
 
                             <!-- No Project Invitations Yet -->
-                            <div class="profile-default-message-panel">
+                            <div id="default-mobile-projects" class="profile-default-message-panel">
                                 Sorry, but you haven't been invited to a project yet...
+                            </div>
+
+                            <!-- Project Invitations List -->
+                            <div id="mobile-projects-list" class="profile-default-message-panel" style="display: none;">
+                                MY PROJECTS!
                             </div>
 
                         </div>

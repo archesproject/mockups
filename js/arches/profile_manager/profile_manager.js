@@ -46,3 +46,28 @@
 		
 
 	});
+
+
+	$('#view-project-details-btn').on('click', function (ev) {
+		ev.preventDefault();
+		
+		//toggle panels, scroll opened panel to top of page
+		$("#project-details").toggle();	
+		$('html,body').animate({scrollTop: $(this).offset().top}, 800);
+
+		//Manage link text
+		var txt = $('#view-project-details-btn').text();
+		
+		if (txt == "View Details") {
+		    $('#view-project-details-btn').text("Hide Details");
+		} else {
+		    $('#view-project-details-btn').text("View Details");
+		}
+		
+
+		// Toggle pro
+
+	});
+
+
+	

@@ -236,6 +236,11 @@ ul .collapse li:last-of-type {
 	max-width: 300px;
 }
 
+.account-label {
+	font-size: 14px;
+	font-weight: 600;
+}
+
 .btn-profile-password:hover {
 	background: #fff;
 	color: #579ddb;
@@ -268,16 +273,30 @@ ul .collapse li:last-of-type {
 	padding-bottom: 3px;
 }
 
+.device-summary {
+	font-size: 13px;
+	margin-bottom: -5px;
+}
+
 .device-listing {
 	float: left;
+	margin-top: -20px;
 	padding-left: 0px;
+}
+
+.device-listing li:not(:first-child) {
+	margin-left: 20px;
 }
 
 .device-list-item {
 	display: inline-block;
-	width: 100px;
 	padding: 10px;
-	background: #f4f4f4;
+}
+
+.project-search-widget {
+	position: absolute;
+	top: -45px;
+	width: 350px;
 }
 
 /*.profile-image-region {
@@ -312,6 +331,88 @@ ul .collapse li:last-of-type {
 }
 
 
+.project-panel {
+	width: 100%;
+	border: 1px solid #3b8dd5;
+	margin-bottom: 10px;
+}
+
+.project-panel.expired {
+	background: #fcfcfc;
+	border: 1px solid #ddd;
+}
+
+.project-panel-header {
+	position: relative;
+    height: 76px;
+    padding-left: 10px;
+    color: #2b425b;
+    border-bottom: 1px solid #eee;
+}
+
+.project-panel.expired > .project-panel-header {
+	color: #888;
+}
+
+.project-panel-title {
+	font-size: 19px;
+	float: left;
+	font-weight: 500;
+	padding-left: 10px;
+	margin-top: 12px;
+	width: 500px;
+	height: 22px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.project-status {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 70px;
+	font-size: 13px;
+	color: #777;
+	padding: 3px;
+	font-style: italic;
+	background: #ddd;
+}
+
+.project-status.active {
+	background: #8bc34a;
+	color: #fff;
+}
+
+.project-metadata {
+	position: absolute;
+    top: 35px;
+    right: 5px;
+    list-style: none;
+    font-size: 14px;
+}
+
+.project-metadata-item {
+	display: inline-block;
+    padding: 6px 10px 10px 10px;
+    color: #758697;
+}
+
+.project-details {
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	font-size: 14px;
+}
+
+.card-panel-body {
+	height: 500px;
+}
+
+.project-map {
+	height: 500px;
+}
 
 
 /* ASIDE CLASSESS =============================== */

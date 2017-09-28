@@ -153,7 +153,7 @@
 
                                 <!-- Title Bar -->
                                 <div class="ep-tools-title">
-                                  <h1 class="page-header text-overflow ep-graph-title"><i class="text-center fa fa-university icon-wrap bg-gray ep-graph-title-icon"></i> New Archaeological Resource</h1>
+                                  <h1 class="page-header text-overflow ep-graph-title"><i class="text-center fa fa-mobile-phone icon-wrap bg-gray ep-graph-title-icon"></i> Mobile Project Manager</h1>
                                 </div>
 
                                 <!-- Home -->
@@ -265,37 +265,30 @@
         </div>
 
 
+        
         <div id="" class="boxed">
-
             <!-- Main Editor -->
             <div id="current-resource-panel" class="responsive-content" style="">
-
-                <!-- Title Bar -->
-                <div id="" class="relative fade in" style="display: block;">
-
-                    <!-- Title Block -->
-                    <div class="report-toolbar">
-                        <h4 class="report-toolbar-title">Functions Manager </h4>
-                        
-                        <!-- Tools -->
-                        <div class="ep-form-toolbar-tools">
-                            <button id="card-grid-controls-btn-discard" class="btn btn-sm btn-danger btn-labeled fa fa-trash" style="">Discard Edits</button>
-                            <button id="card-grid-controls-btn-save" class="btn btn-sm btn-primary btn-labeled fa fa-check" style="">Save Edits</button>
-                            <button id="related-resources-open-btn" class="btn btn-sm btn-mint btn-labeled fa fa-mail-reply" data-bind="">Back </button>
-                        </div>
-                    </div>
-                </div>
-
+             
                 <!-- Editor Content -->
-                <div id="related" class="content-panel resource-editor">
+                <div id="related" class="content-panel mobile-project-manager-editor">
                     <div class="flex">
 
                         <!-- Left Panel: Groups/Accounts -->
-                        <div class="left-column-container panel ep-card-tools-panel">
+                        <div class="left-column-container panel ep-card-tools-panel" style="flex: 0 0 270px;">
 
                             <!-- Title Block -->
-                            <div class="title-block-title">
-                                <h4 class="title-block-title"> Functions</h4>
+                            <div class="title-block-title" style="width: 255px;">
+                                <div class="layer-list">
+                                    <!-- Layer Filter -->
+                                    <div class="list-filter" data-bind="" style="margin-right: 10px;">
+                                        <input type="text" class="form-control" style="width: 250px;" placeholder="Find a project..." data-bind="">
+
+                                        <!-- Clear Search -->
+                                        <span class="clear-node-search" data-bind=""><i class="fa fa-times-circle"></i></span>
+                                    </div>
+
+                                </div>
                                 
                                 <!-- Group/Account Filter -->
                                 <div class="list-filter relative hidden">
@@ -306,19 +299,21 @@
 
                                 <!-- Toolbar -->
                                 <div class="href-toolbar">
-                                    <a id="show-functions" class="href-button" href="#">Close Function Library</a>
+                                    <a id="show-functions" class="href-button" href="#">Sort by name</a>
                                 </div>
-
                             </div>
+
+
 
                             <!-- Function Listing -->
                             <div id="user-grid" class="grid" style="position: relative; height: 0px; margin-left: -7px;">
                             
                                 <!-- Default Message -->                                   
                                 <div class="left-column-message" style="">
-                                    You haven't added any functions yet.  
-                                    <br><br>
-                                    Select functions from the library to add new capabilities to your resource.
+                                    You haven't saved any projects.  
+                                    <p class="default-message">
+                                        Use the form to set up a project, then save your edits, and you're done!  
+                                    </p>
                                 </div>
 
                                 <!-- Function -->                                   
@@ -349,251 +344,135 @@
                         </div>   
 
 
-                        <!-- Function Library -->
-                        <div id="function-library" class="card-form-preview-container library-container">
+                        <!-- Project Header -->
+                        <div id="" class="card-form-preview-container library-container">
                             <div class="">
                                 
                                 <!-- Header -->
-                                <div class="relative library-header" style="">
+                                <div class="relative library-header" style="height: 55px;">
                                     
-                                    <!-- Search -->
-                                    <div class="library-panel-search-bar">
-
-                                        <!-- Find Button -->
-                                        <div class="">
-                                            <a class="page-header text-overflow library-find" href="#"> Find </a>
-                                        </div>
-
-                                        <!-- Find widget -->
-                                        <div class="find-widget" style="display: none;">
-                                            <div class="">
-                                                
-                                                Library filter goes here
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Resource/Graph Toggle -->
-                                    <div class="library-tools relative" style="display: block;">
-                                        <a id="" class="library-grid-title active" href="">Function Library</a>
+                                    <!-- Add Project -->
+                                    <div class="library-panel-search-bar" style="padding-top: 10px;">
+                                        <button id="" class="btn btn-lg btn-mint btn-labeled ion-plus-round" data-bind="">New Project</button>
+                                       
                                     </div>
                                 </div>
 
                                 <!-- Function Grid Container -->
                                 <div id="page-content" class="library-grid" style="">
 
-                                    <!-- Function Grid -->
-                                    <div id="function-list" class="report-image-grid" style="margin-top: 5px;">
+                                    <!-- Project -->
+                                    <div id="sample-project" class="project-panel">
+            
+                                        <!--Project heading-->
+                                        <div class="project-panel-header edit-mode">
+                                            <div class="">
+                                                <div class="project-status active">Active</div>
+                                            </div>
+                                            <h3 class="project-panel-title">Project Name</h3>
 
-                                        <!-- Function -->
-                                        <div class="card-grid-item">
-                                            <div class="panel mar-no">
-                                                <!-- Function Name -->
-                                                <div class="panel-heading">
-                                                    <h3 id="f1-name" class="panel-title library-card-panel-title"><i class="text-center fa fa-university"></i> Resource Identifier</h3>
+                                            <div class="">
+                                                <ul class="project-metadata">
+                                                    <li class="project-metadata-item">
+                                                        September 19, 2017 to September 30, 2017
+                                                    </li>
+                                                </ul>
+                                                <div class="project-details">
+                                                    <button class="btn btn-primary btn-labeled btn-active-dark fa fa-check" data-bind="">Save Edits</button>
+                                                    <button class="btn btn-mint btn-labeled btn-active-dark fa fa-undo" data-bind="">Discard Edits</button>
                                                 </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!--Project Details-->
+                                        <div id="project-details" class="project-panel-body" style="">
 
-                                                <!-- Abstract -->
-                                                <div class="panel-body library-card-body">
-                                                    <p class="">A function that configures how Arches labels your resource for search and map display</p>
-                                                </div>
+                                            <div id="card-preview-crud" class="panel-body card-body fade in" style="padding: 0px; margin: 0px;">
+                                                <div id="cards" class="tab-base card-content-container outline" style="margin: 0px; margin-top: 0px;">
 
-                                                <!-- Selectable -->
-                                                <div class="selectable" style="display: none;">
-                                                    <i class="ion-ios-checkmark"></i>
-                                                </div>
+                                                    <!--Nav Tabs-->
+                                                    <ul class="nav nav-tabs card-nav-container" style="">
+                                                        <li id="summary-group" class="active">
+                                                            <a id="summary-tab" data-toggle="tab" href="#summary-card" class="card-tab-title" aria-expanded="true">
+                                                                Summary
+                                                            </a>
+                                                        </li>
+                                                        <li id="card-group" class="">
+                                                            <a id="map-tab" data-toggle="tab" href="#location-card" class="card-tab-title" aria-expanded="false">
+                                                                Location
+                                                            </a>
+                                                        </li>
+                                                        <li id="icon-group" class="">
+                                                            <a id="map-tab" data-toggle="tab" href="#models-card" class="card-tab-title" aria-expanded="false">
+                                                                Models
+                                                            </a>
+                                                        </li>
+                                                        <li id="status-group" class="">
+                                                            <a id="map-tab" data-toggle="tab" href="#group-card" class="card-tab-title" aria-expanded="false">
+                                                                People
+                                                            </a>
+                                                        </li>
+                                                    </ul>
 
-                                                <!-- card Tools -->
-                                                <div class="panel-footer" style="height: 53px;">
-                                                    <div class="pull-right">
-                                                        <button id="f1" class="add-function-button btn btn-primary btn-labeled fa fa-plus ">Select Function</button>
+                                                    <!--Tabs Content-->
+                                                    <div class="tab-content card-content-tab" style="margin-left: 0px;">
+
+                                                        <!-- Summary Card -->
+                                                        <div id="summary-card" class="tab-pane fade active in" style=""> 
+                                                            <div class="panel-body card-panel-body project-card-body">
+                                                                <div id="" class="card-content">
+
+                                                                    Summary
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Map Card -->
+                                                        <div id="location-card" class="tab-pane fade"> 
+                                                            <div class="panel-body card-panel-body" style="">
+                                                                <div id="" class="card-content">
+                                                                    <div class="project-map">
+                                                                        <img class="img-responsive" style="    position: absolute; top: 42px; left: 0; height: 539px;px;" src=img/arches/project_map.png alt="Image">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Models Card -->
+                                                        <div id="models-card" class="tab-pane fade"> 
+                                                            <div class="panel-body card-panel-body">
+                                                                <div id="" class="card-content">
+
+                                                                    Models/cards in project
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Groups Card -->
+                                                        <div id="group-card" class="tab-pane fade"> 
+                                                            <div class="panel-body card-panel-body" style="">
+                                                                <div id="" class="card-content" style="">
+
+                                                                    Groups, People in project
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Function -->
-                                        <div class="card-grid-item">
-                                            <div class="panel mar-no">
-                                                <!-- Function Name -->
-                                                <div class="panel-heading">
-                                                    <h3 id="" class="panel-title library-card-panel-title"><i class="text-center ion-code-working"></i> Function Name</h3>
-                                                </div>
+                                        <div id="project-footer" class="project-footer" style="">
+                                            Footer
 
-                                                <!-- Abstract -->
-                                                <div class="panel-body library-card-body">
-                                                    <p class="">Function Abstract goes here.  Should be concise, informative.</p>
-                                                </div>
-
-                                                <!-- Selectable -->
-                                                <div class="selectable" style="display: none;">
-                                                    <i class="ion-ios-checkmark"></i>
-                                                </div>
-
-                                                <!-- card Tools -->
-                                                <div class="panel-footer" style="height: 53px;">
-                                                    <div class="pull-right">
-                                                        <button id="" class="add-function-button btn btn-primary btn-labeled fa fa-plus ">Select Function</button>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
+                                    </div>
 
-                                        <!-- Function -->
-                                        <div class="card-grid-item">
-                                            <div class="panel mar-no">
-                                                <!-- Function Name -->
-                                                <div class="panel-heading">
-                                                    <h3 id="" class="panel-title library-card-panel-title"><i class="text-center ion-code-working"></i> Function Name</h3>
-                                                </div>
 
-                                                <!-- Abstract -->
-                                                <div class="panel-body library-card-body">
-                                                    <p class="">Function Abstract goes here.  Should be concise, informative.</p>
-                                                </div>
-
-                                                <!-- Selectable -->
-                                                <div class="selectable" style="display: none;">
-                                                    <i class="ion-ios-checkmark"></i>
-                                                </div>
-
-                                                <!-- card Tools -->
-                                                <div class="panel-footer" style="height: 53px;">
-                                                    <div class="pull-right">
-                                                        <button id="" class="add-function-button btn btn-primary btn-labeled fa fa-plus ">Select Function</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Function -->
-                                        <div class="card-grid-item">
-                                            <div class="panel mar-no">
-                                                <!-- Function Name -->
-                                                <div class="panel-heading">
-                                                    <h3 id="" class="panel-title library-card-panel-title"><i class="text-center ion-code-working"></i> Function Name</h3>
-                                                </div>
-
-                                                <!-- Abstract -->
-                                                <div class="panel-body library-card-body">
-                                                    <p class="">Function Abstract goes here.  Should be concise, informative.</p>
-                                                </div>
-
-                                                <!-- Selectable -->
-                                                <div class="selectable" style="display: none;">
-                                                    <i class="ion-ios-checkmark"></i>
-                                                </div>
-
-                                                <!-- card Tools -->
-                                                <div class="panel-footer" style="height: 53px;">
-                                                    <div class="pull-right">
-                                                        <button id="" class="add-function-button btn btn-primary btn-labeled fa fa-plus ">Select Function</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Function -->
-                                        <div class="card-grid-item">
-                                            <div class="panel mar-no">
-                                                <!-- Function Name -->
-                                                <div class="panel-heading">
-                                                    <h3 id="" class="panel-title library-card-panel-title"><i class="text-center ion-code-working"></i> Function Name</h3>
-                                                </div>
-
-                                                <!-- Abstract -->
-                                                <div class="panel-body library-card-body">
-                                                    <p class="">Function Abstract goes here.  Should be concise, informative.</p>
-                                                </div>
-
-                                                <!-- Selectable -->
-                                                <div class="selectable" style="display: none;">
-                                                    <i class="ion-ios-checkmark"></i>
-                                                </div>
-
-                                                <!-- card Tools -->
-                                                <div class="panel-footer" style="height: 53px;">
-                                                    <div class="pull-right">
-                                                        <button id="" class="add-function-button btn btn-primary btn-labeled fa fa-plus ">Select Function</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Function -->
-                                        <div class="card-grid-item">
-                                            <div class="panel mar-no">
-                                                <!-- Function Name -->
-                                                <div class="panel-heading">
-                                                    <h3 id="" class="panel-title library-card-panel-title"><i class="text-center ion-code-working"></i> Function Name</h3>
-                                                </div>
-
-                                                <!-- Abstract -->
-                                                <div class="panel-body library-card-body">
-                                                    <p class="">Function Abstract goes here.  Should be concise, informative.</p>
-                                                </div>
-
-                                                <!-- Selectable -->
-                                                <div class="selectable" style="display: none;">
-                                                    <i class="ion-ios-checkmark"></i>
-                                                </div>
-
-                                                <!-- card Tools -->
-                                                <div class="panel-footer" style="height: 53px;">
-                                                    <div class="pull-right">
-                                                        <button id="" class="add-function-button btn btn-primary btn-labeled fa fa-plus ">Select Function</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                    </div>   
                                 </div>   
-                            </div>
-                        </div>
-
-
-                        <!-- Right Panel: COnfig Form -->
-                        <div id="function-configuration" class="card-form-preview-container hidden">
-
-                            <div id="card-preview" class="pad-all" style="">
-
-                                <div id="permissions-form" class="panel">
-                                    <div class="panel-heading">
-                                        <div class="">
-                                            <h3 id="cc-title" class="panel-title card-main-title">Function Name Configuration</h3>
-                                        </div>
-                                    </div>
-
-                                    <!-- Alert Panel -->
-                                    <div id="basemap-delete-alert" class="panel wizard-data-card-alert" style=""></div>
-
-                                    <!-- Data Entry -->
-                                    <div id="card-preview-crud" class="panel-body card-body fade in" style="padding-top: 0px;">
-                                        <div id="cards" class="tab-base card-content-container outline" style="margin-bottom: 20px; margin-top: -2px;">
-
-                                            <!--Nav Tabs-->
-                                            <ul class="nav nav-tabs card-nav-container" style="">
-                                                <li id="summary-group" class="active">
-                                                    <a id="summary-tab" data-toggle="tab" href="#summary-card" class="card-tab-title" aria-expanded="true">Settings</a>
-                                                </li>
-                                            </ul>
-
-                                            <!--Tabs Content-->
-                                            <div class="tab-content card-content-tab" style="margin-left: 0px;">
-
-                                                <!-- Card -->
-                                                <div id="summary-card" class="tab-pane fade active in" style=""> 
-                                                    <div class="panel-body card-panel-body" style="">
-
-                                                        Function Configuration Bits Go Here
-
-                                                    </div>  
-                                                </div>    
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -851,7 +730,7 @@
 
     <!--Arches Forms -->
     <script src="js/arches/grid/grid.js"></script>
-    <script src="js/arches/functions_manager/functions_manager.js"></script>
+    <script src="js/arches/mobile_project_manager/mobile_project_manager.js"></script>
 
 
 

@@ -40,6 +40,28 @@ ul .collapse li:last-of-type {
 }
 
 
+
+
+/* Mobile Project Manager CLASSESS =============================== */
+
+.mobile-project-manager-editor {
+	padding-top: 50px;
+}
+
+.default-message {
+	font-size: 13px;
+	padding-top: 5px;
+	color: #777;
+}
+
+.project-panel-header.edit-mode {
+	height: 80px;
+}
+
+
+
+
+
 /* Profile Manager CLASSESS =============================== */
 #container #profile-table td {
 	border-top: 1px solid rgba(0,0,0,0.0);
@@ -347,6 +369,7 @@ ul .collapse li:last-of-type {
     height: 76px;
     padding-left: 10px;
     color: #2b425b;
+    background: #fff;
     border-bottom: 1px solid #eee;
 }
 
@@ -412,6 +435,13 @@ ul .collapse li:last-of-type {
 
 .project-map {
 	height: 500px;
+}
+
+.project-footer {
+	height: 60px;
+	padding: 20px;
+	background: #f4f4f4;
+	font-size: 14px;
 }
 
 
@@ -5345,7 +5375,7 @@ div.crud-card.selected {
 
 .left-column-message {
 	padding: 10px 15px;
-	color: #777;
+	color: #123;
 	font-size: 15px;
 }
 

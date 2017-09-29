@@ -4,27 +4,12 @@
 
 
 //	Add Functions
-	$('#show-functions').on('click', function (ev) {
+	$('#btn-save-edits').on('click', function (ev) {
 
-		//Manage Display of Function Library/Configuration Panel
-		if ($('#show-functions').text() == 'Close Function Library') {
-			
-			//User Wants to close library panel
-			$("#function-library").addClass("hidden");
-			$("#function-configuration").removeClass("hidden");
+		//Manage Display of Project listing
+		$("#default-message-panel").addClass("hidden");
+		$("#project-listing-panel").removeClass("hidden");
 
-			//Update button text
-			$('#show-functions').text('Show Function Library');
-
-		} else {
-
-			//User Wants to open library panel
-			$("#function-library").removeClass("hidden");
-			$("#function-configuration").addClass("hidden");
-			
-			//Update button text
-			$('#show-functions').text('Close Function Library');
-		}
 
 	});	
 

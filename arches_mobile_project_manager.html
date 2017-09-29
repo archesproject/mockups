@@ -305,41 +305,47 @@
 
 
 
-                            <!-- Function Listing -->
+                            <!-- Project Listing Panel-->
                             <div id="user-grid" class="grid" style="position: relative; height: 0px; margin-left: -7px;">
                             
                                 <!-- Default Message -->                                   
-                                <div class="left-column-message" style="">
+                                <div id="default-message-panel" class="left-column-message" style="">
                                     You haven't saved any projects.  
                                     <p class="default-message">
                                         Use the form to set up a project, then save your edits, and you're done!  
                                     </p>
                                 </div>
 
-                                <!-- Function -->                                   
-                                <div class="library-card library-card-entry library-card-wide selected hidden" style="">
-                                    <div class="account-card-main" style="">
-                                        <i class="fa fa-university"></i> <a id="" class="" style="" href="#">
-                                            Resource Identifier
-                                        </a>
+                                <!-- Project List -->                                   
+                                <div id="project-listing-panel" class="library-card library-card-entry library-card-wide selected hidden" style="width: 270px;">
+                                    
+                                    <!-- Project -->  
+                                    <div class="library-card selected selected-card" data-bind="" style="width: 270px; margin-top: -5px;">
+                                        <div class="library-icon" style="" data-bind="">
+                                            <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-success">
+                                                <i class="ion-checkmark-round" data-bind=""></i>
+                                            </span>
+                                        </div>
+                                        <div class="crud-card-main">
+                                            <a class="listitem_name" data-bind="">Project Name</a>
+                                        </div>
+                                        <div class="crud-card-subtitle" data-bind="">adaligty@getty.edu</div>
                                     </div>
-                                    <div class="account-card-subtitle text-muted" style="">
-                                        Arches configuration function
-                                    </div>
-                                </div>
 
-                                <!-- Function -->                                   
-                                <div class="library-card library-card-entry library-card-wide hidden" style="">
-                                    <div class="account-card-main" style="">
-                                        <i class="ion-code-working"></i> <a id="" class="" style="" href="#">
-                                            Function Name
-                                        </a>
+                                    <!-- Project -->  
+                                    <div class="library-card" data-bind="" style="width: 270px;">
+                                        <div class="library-icon" style="" data-bind="">
+                                            <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-trans-dark">
+                                                <i class="ion-close" data-bind=""></i>
+                                            </span>
+                                        </div>
+                                        <div class="crud-card-main">
+                                            <a class="listitem_name" data-bind="">Project Name</a>
+                                        </div>
+                                        <div class="crud-card-subtitle" data-bind="">randerson@fargeo.com</div>
                                     </div>
-                                    <div class="account-card-subtitle text-muted" style="">
-                                        Arches server function
-                                    </div>
-                                </div>
- 
+
+                                </div> 
                             </div>
                         </div>   
 
@@ -353,7 +359,7 @@
                                     
                                     <!-- Add Project -->
                                     <div class="library-panel-search-bar" style="padding-top: 10px;">
-                                        <button id="" class="btn btn-lg btn-mint btn-labeled ion-plus-round" data-bind="">New Project</button>
+                                        <button id="" class="btn btn-lg btn-mint btn-active-dark btn-labeled ion-plus-round" data-bind="">New Project</button>
                                        
                                     </div>
                                 </div>
@@ -378,8 +384,8 @@
                                                     </li>
                                                 </ul>
                                                 <div class="project-details">
-                                                    <button class="btn btn-primary btn-labeled btn-active-dark fa fa-check" data-bind="">Save Edits</button>
-                                                    <button class="btn btn-mint btn-labeled btn-active-dark fa fa-undo" data-bind="">Discard Edits</button>
+                                                    <button id="btn-save-edits"class="btn btn-primary btn-labeled btn-active-dark fa fa-check" data-bind="">Save Edits</button>
+                                                    <button class="btn btn-danger btn-labeled btn-active-dark fa fa-undo" data-bind="">Discard Edits</button>
                                                 </div>
                                             </div>
                                         </div>

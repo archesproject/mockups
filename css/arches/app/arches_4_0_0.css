@@ -58,6 +58,79 @@ ul .collapse li:last-of-type {
 	height: 80px;
 }
 
+.mpm-card-content {
+	margin-top: -54px;
+	margin-left: -35px;
+}
+
+.mpm-left-panel {
+	-ms-flex: 0 0 250px;
+    -webkit-flex: 0 0 250px;
+    flex: 0 0 250px;
+    height: 540px;
+	background: #fcfcfc;
+	border-right: 1px solid #ddd;
+}
+
+.mpm-right-panel {
+	position: absolute;
+	top: 15px;
+	left: 270px;
+	width: calc(100% - 250px);
+	height: 550px;
+	padding: 10px;
+}
+
+.mpm-account-detail-panel {
+	margin: 20px 0px;
+}
+
+.mpm-group-name {
+	width: 400px;
+    position: absolute;
+    left: 55px;
+    top: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+}
+
+.mpm-group-subtitle {
+	width: 400px;
+    position: absolute;
+    left: 55px;
+    top: 18px;
+    padding: 2px 2px 3px 0px;
+    color: #8ba2b9;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mpm-user-name {
+	font-size: 15px;
+	font-weight: 500;
+	color: #454545;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.mpm-user-subtitle {
+	color: #777;
+	font-size: 13px;
+}
+
+.mdm-user-status {
+	color: #fff;
+	background: #8bc34a;
+	border: 1px solid #4F8511;
+	padding: 4px 10px;
+	margin-top: -4px;
+	font-size: 13px;
+}
+
 
 
 
@@ -114,6 +187,12 @@ ul .collapse li:last-of-type {
 	padding: 40px 100px 50px 100px;
 	min-height: 170px;
 	border-bottom: 1px solid #ccc;
+}
+
+.profile-list.edit-mode {
+	padding: 0px 50px;
+	margin-top: -10px;
+	border-bottom: none;
 }
 
 .profile-image {

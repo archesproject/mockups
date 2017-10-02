@@ -59,10 +59,6 @@
 
     -->
 
-    <!-- MorphingSearch -->
-    <link href="plugins/MorphingSearch/css/component.css" rel="stylesheet" />
-
-
     <!--Chosen [ OPTIONAL ]-->
     <link href="plugins/chosen/chosen.min.css" rel="stylesheet">
 
@@ -73,10 +69,6 @@
 
     <!-- D3 Graph -->
     <link href="css/arches/app/graph.css" rel="stylesheet">
-
-
-    <!-- OL3 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.9.0/ol.min.css" type="text/css">
 
 
     <!--Summernote [ OPTIONAL ]-->
@@ -94,7 +86,7 @@
 
     <!-- Arches CSS -->
     <link href="css/arches/app/arches_4_0_0.css" rel="stylesheet">
-    <link href="css/arches/app/app_configuration.css" rel="stylesheet">
+
 
     <!-- 
     <link href="css/arches/app/graph_manager_4_0_0.css" rel="stylesheet">
@@ -282,6 +274,7 @@
                                 <div class="layer-list">
                                     <!-- Layer Filter -->
                                     <div class="list-filter" data-bind="" style="margin-right: 10px;">
+                                        <h4 class="title-block-title">Projects</h4>
                                         <input type="text" class="form-control" style="width: 250px;" placeholder="Find a project..." data-bind="">
 
                                         <!-- Clear Search -->
@@ -299,7 +292,7 @@
 
                                 <!-- Toolbar -->
                                 <div class="href-toolbar">
-                                    <a id="show-functions" class="href-button" href="#">Sort by name</a>
+                                    <a id="show-functions" class="href-button" href="#" style="background: #579ddb;">Sort by name</a>
                                 </div>
                             </div>
 
@@ -400,7 +393,7 @@
                                                     <ul class="nav nav-tabs card-nav-container" style="">
                                                         <li id="summary-group" class="active">
                                                             <a id="summary-tab" data-toggle="tab" href="#summary-card" class="card-tab-title" aria-expanded="true">
-                                                                Summary
+                                                                Basic Settings
                                                             </a>
                                                         </li>
                                                         <li id="card-group" class="">
@@ -410,12 +403,17 @@
                                                         </li>
                                                         <li id="icon-group" class="">
                                                             <a id="map-tab" data-toggle="tab" href="#models-card" class="card-tab-title" aria-expanded="false">
-                                                                Models
+                                                                Resources
                                                             </a>
                                                         </li>
                                                         <li id="status-group" class="">
                                                             <a id="map-tab" data-toggle="tab" href="#group-card" class="card-tab-title" aria-expanded="false">
                                                                 People
+                                                            </a>
+                                                        </li>
+                                                        <li id="activation-group" class="">
+                                                            <a id="map-tab" data-toggle="tab" href="#activation-card" class="card-tab-title" aria-expanded="false">
+                                                                Manage Project
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -426,9 +424,87 @@
                                                         <!-- Summary Card -->
                                                         <div id="summary-card" class="tab-pane fade active in" style=""> 
                                                             <div class="panel-body card-panel-body project-card-body">
-                                                                <div id="" class="card-content">
+                                                                <div id="" class="card-content">                                                             
 
-                                                                    Summary
+                                                                    <!-- Project Info -->
+                                                                    <section id="" class="profile-list edit-mode">
+                                                                        <div class="account-wrapper">
+                                                                            <div class="row relative">
+
+                                                                                
+                                                                                <!-- Section Content -->
+                                                                                <div class="col-sm-12">
+                                                                                    
+                                                                                    <!-- Account CRUD Panel -->
+                                                                                    <div id="account-crud" class="" style="">
+                                                                                        <!-- User Name, Password -->
+                                                                                        <div class="row">
+                                                                                            <!-- User Name -->
+                                                                                            <div class="col-sm-5">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="control-label account-label">Project name</label>
+                                                                                                    <input type="text" class="form-control input-lg account-input" placeholder="" value="">
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <!-- Password -->
+                                                                                            <div class="col-sm-6">
+                                                                                                <p class="account-tips">
+                                                                                                    Pick a concise name that makes it easy for people to find your project
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <hr style="border-color: #eee;">
+
+                                                                                        <!-- Account First Name -->
+                                                                                        <div class="row">
+                                                                                            <!-- Names -->
+                                                                                            <div class="col-sm-5">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="control-label account-label">Project start</label>
+                                                                                                    <input type="text" class="form-control input-lg account-input" placeholder="" value="">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <p class="account-tips">
+                                                                                                    The project start and end dates are used to limit when people can add or edit Arches data.  
+                                                                                                </p>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <!-- Account Last Name -->
+                                                                                        <div class="row">
+                                                                                            <!-- Names -->
+                                                                                            <div class="col-sm-5">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="control-label account-label">Project end</label>
+                                                                                                    <input type="text" class="form-control input-lg account-input" placeholder="" value="">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <hr style="border-color: #eee;">
+
+                                                                                        <!-- Contact Email -->
+                                                                                        <div class="row">
+                                                                                            <!-- Names -->
+                                                                                            <div class="col-sm-5">
+                                                                                                <div class="form-group">
+                                                                                                    <label class="control-label account-label">Description</label>
+                                                                                                    <div>
+                                                                                                        Full width text editor goes here
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </section>
 
                                                                 </div>
                                                             </div>
@@ -448,9 +524,139 @@
                                                         <!-- Models Card -->
                                                         <div id="models-card" class="tab-pane fade"> 
                                                             <div class="panel-body card-panel-body">
+
+                                                                <div id="" class="mpm-card-content" style="">
+                                                                    <div class="flex relative">
+
+                                                                        <!-- Group/Account List -->
+                                                                        <div class="mpm-left-panel" style="">
+
+                                                                            <!-- Title -->
+                                                                            <div class="title-block-fixed" style="padding-bottom: 10px;">
+                                                                                <h4 class="title-block-title">Resources</h4>
+                                                                                
+                                                                                <div class="list-filter" style="margin: 0px 5px;" data-bind="">
+                                                                                    <input type="text" class="form-control" style="" placeholder="Find a model" data-bind="">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- Group/Account Panel -->                         
+                                                                            <div id="" class="library-card library-card-entry library-card-wide selected" style="width: 250px;">
+                                                                                
+                                                                                <!-- Resource -->  
+                                                                                <div class="library-card selected selected-card" data-bind="" style="margin-top: -4px; margin-left: -5px; width: 250px;">
+                                                                                    <div class="library-icon" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                            <i class="fa fa-university" data-bind=""></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="crud-card-main">
+                                                                                        <a class="listitem_name" data-bind="">Assets</a>
+                                                                                    </div>
+                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
+                                                                                </div>
+
+                                                                                <!-- Resource -->  
+                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
+                                                                                    <div class="library-icon" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                            <i class="fa fa-calendar" data-bind=""></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="crud-card-main">
+                                                                                        <a class="listitem_name" data-bind="">Activities</a>
+                                                                                    </div>
+                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
+                                                                                </div>
+
+                                                                                <!-- Resource -->  
+                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
+                                                                                    <div class="library-icon" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                            <i class="fa fa-refresh" data-bind=""></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="crud-card-main">
+                                                                                        <a class="listitem_name" data-bind="">Events</a>
+                                                                                    </div>
+                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
+                                                                                </div>
+
+                                                                                <!-- Resource -->  
+                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
+                                                                                    <div class="library-icon" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                            <i class="fa fa-university" data-bind=""></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="crud-card-main">
+                                                                                        <a class="listitem_name" data-bind="">Information Objects</a>
+                                                                                    </div>
+                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
+                                                                                </div>
+
+                                                                                
+                                                                            </div> 
+
+                                                                        </div>
+
+                                                                        <div class="mpm-right-panel">
+
+                                                                            <div class="relative">
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-12 col-sm-5 col-md-3" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                            <i class="fa fa-university" data-bind=""></i>
+                                                                                        </span>
+                                                                                        <div class="mpm-group-name">
+                                                                                            <a class="listitem_name" data-bind="">Assets</a>
+                                                                                        </div>
+                                                                                        <div class="mpm-group-subtitle" data-bind="">Model subtitle goes here</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+
+                                                                                <div class="mpm-account-detail-panel">
+                                                                                Data Entry Forms
+                                                                                    
+                                                                                    <div class="list-group">
+                                                                                        <!-- Card -->
+                                                                                        <a href="#" class="list-group-item">
+                                                                                            <h4 class="mpm-user-name">Modification Event<span class="mdm-user-status pull-right">Include</span></h4>
+                                                                                            <p class="mpm-user-subtitle">Fields: Modification Type, Modification Date, Modification Description</p>
+                                                                                        </a>
+
+                                                                                        <!-- Card -->
+                                                                                        <a href="#" class="list-group-item">
+                                                                                            <h4 class="mpm-user-name">Location<span class="mdm-user-status add pull-right">Include</span></h4>
+                                                                                            <p class="mpm-user-subtitle">Fields: Mapped Coordinates, Address, Address Type, Administrative Area, Parcel Identifier</p>
+                                                                                        </a>
+
+                                                                                    
+
+
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+
+
+
+
+
+
                                                                 <div id="" class="card-content">
 
                                                                     Models/cards in project
+                                                                    <br>
+                                                                    Need to consider widget to allow for off-line caching of instances.  Should this be driven by a query?  Limit number of instances to download (or just provide warning of file size)
+                                                                    <br>
+                                                                    Off line caching of instances should only include tiles for models/cards in the project
                                                                     
                                                                 </div>
                                                             </div>
@@ -459,9 +665,129 @@
                                                         <!-- Groups Card -->
                                                         <div id="group-card" class="tab-pane fade"> 
                                                             <div class="panel-body card-panel-body" style="">
+                                                                <div id="" class="mpm-card-content" style="">
+                                                                    <div class="flex relative">
+
+                                                                        <!-- Group/Account List -->
+                                                                        <div class="mpm-left-panel" style="">
+
+                                                                            <!-- Title -->
+                                                                            <div class="title-block-fixed" style="padding-bottom: 10px;">
+                                                                                <h4 class="title-block-title">Groups/Accounts</h4>
+                                                                                
+                                                                                <div class="list-filter" style="margin: 0px 5px;" data-bind="">
+                                                                                    <input type="text" class="form-control" style="" placeholder="Find user or group" data-bind="">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!-- Group/Account Panel -->                         
+                                                                            <div id="" class="library-card library-card-entry library-card-wide selected" style="width: 250px;">
+                                                                                
+                                                                                <!-- Project -->  
+                                                                                <div class="library-card selected selected-card" data-bind="" style="margin-top: -4px; margin-left: -5px; width: 250px;">
+                                                                                    <div class="library-icon" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-purple">
+                                                                                            <i class="fa fa-group" data-bind=""></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="crud-card-main">
+                                                                                        <a class="listitem_name" data-bind="">Crowdsourcer</a>
+                                                                                    </div>
+                                                                                    <div class="crud-card-subtitle" data-bind="">Project Member</div>
+                                                                                </div>
+
+                                                                                <!-- Project -->  
+                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
+                                                                                    <div class="library-icon" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-success">
+                                                                                            <i class="fa fa-user" data-bind=""></i>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="crud-card-main">
+                                                                                        <a class="listitem_name" data-bind="">adalgity@getty.edu</a>
+                                                                                    </div>
+                                                                                    <div class="crud-card-subtitle" data-bind="">Not Invited</div>
+                                                                                </div>
+                                                                            </div> 
+
+                                                                        </div>
+
+                                                                        <div class="mpm-right-panel">
+
+                                                                            <div class="relative">
+
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-12 col-sm-5 col-md-3" style="" data-bind="">
+                                                                                        <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-purple">
+                                                                                            <i class="fa fa-group" data-bind=""></i>
+                                                                                        </span>
+                                                                                        <div class="mpm-group-name">
+                                                                                            <a class="listitem_name" data-bind="">Crowdsourcer</a>
+                                                                                        </div>
+                                                                                        <div class="mpm-group-subtitle" data-bind="">Arches Group</div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6" style="" data-bind="">
+                                                                                        <div class="box-inline">
+                                                                                            <p class="" style="margin-bottom: 0px;">Add this group to project</p>
+                                                            
+                                                                                            <!--Switchery : Unchecked-->
+                                                                                            <!--===================================================-->
+                                                                                            <input id="demo-sw-unchecked" class="js-switch-smal" type="checkbox" style="margin-top: -5px;">
+                                                                                            <!--===================================================-->
+                                                            
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                                <div class="mpm-account-detail-panel">
+                                                                                    Group Members
+                                                                                    <div class="list-group">
+                                                                                        <a href="#" class="list-group-item">
+                                                                                            <h4 class="mpm-user-name">adalgity@getty.edu<span class="mdm-user-status pull-right">Approved</span></h4>
+                                                                                            <p class="mpm-user-subtitle">Activity: 13 edits<span class="pull-right">Last login: November 25, 2017</span></p>
+                                                                                        </a>
+                                                                                        <a href="#" class="list-group-item">
+                                                                                            <h4 class="mpm-user-name">List group item heading</h4>
+                                                                                            <p class="mpm-user-subtitle">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                                                        </a>
+                                                                                        <a href="#" class="list-group-item">
+                                                                                            <h4 class="mpm-user-name">List group item heading</h4>
+                                                                                            <p class="mpm-user-subtitle">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                                                        </a>
+                                                                                        <a href="#" class="list-group-item">
+                                                                                            <h4 class="mpm-user-name">List group item heading</h4>
+                                                                                            <p class="mpm-user-subtitle">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                                                                        </a>
+                                                                                    </div>
+
+
+                                                                                    Groups, People in project
+                                                                                    <br>
+                                                                                    Show accounts that have logged on to project
+                                                                                    <br>
+                                                                                    Dis-allow accounts/groups after project initiated.  Wipe remote data from a device
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Activation Card -->
+                                                        <div id="activation-card" class="tab-pane fade"> 
+                                                            <div class="panel-body card-panel-body" style="">
                                                                 <div id="" class="card-content" style="">
 
-                                                                    Groups, People in project
+                                                                    Activate/Deactivate Project
+                                                                    <br>
+                                                                    Allows project author to configure project over several sessions before enabling project
+                                                                    <br>
+                                                                    Allow author to terminate project
+                                                                    <br>
+                                                                    Show metadata (e.g.: number of instances collected/edited?)
                                                                     
                                                                 </div>
                                                             </div>
@@ -720,6 +1046,10 @@
 
     <!--Bootstrap Datepicker [ OPTIONAL ]-->
     <script src="plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+
+    <!--Switchery [ OPTIONAL ]-->
+    <script src="plugins/switchery/switchery.min.js"></script>
 
     
     <!--Gmaps 

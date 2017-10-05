@@ -314,28 +314,24 @@
                                     
                                     <!-- Project -->  
                                     <div class="library-card selected selected-card" data-bind="" style="width: 270px; margin-top: -5px;">
-                                        <div class="library-icon" style="" data-bind="">
-                                            <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-success">
-                                                <i class="ion-checkmark-round" data-bind=""></i>
-                                            </span>
+                                        <div class="mpm-project-card">
+                                            <a class="mpm-project-name" data-bind="">Project Name</a>
                                         </div>
-                                        <div class="crud-card-main">
-                                            <a class="listitem_name" data-bind="">Project Name</a>
+                                        <div class="mpm-project-status">
+                                            Active
                                         </div>
-                                        <div class="crud-card-subtitle" data-bind="">adaligty@getty.edu</div>
+                                        <div class="mpm-project-subtitle" data-bind="">adaligty@getty.edu</div>
                                     </div>
 
                                     <!-- Project -->  
-                                    <div class="library-card" data-bind="" style="width: 270px;">
-                                        <div class="library-icon" style="" data-bind="">
-                                            <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-trans-dark">
-                                                <i class="ion-close" data-bind=""></i>
-                                            </span>
+                                    <div class="library-card inactive" data-bind="" style="width: 270px;">
+                                        <div class="mpm-project-card ">
+                                            <a class="mpm-project-name" data-bind="">A Really, Really, Really Long Project Name</a>
                                         </div>
-                                        <div class="crud-card-main">
-                                            <a class="listitem_name" data-bind="">Project Name</a>
+                                        <div class="mpm-project-status">
+                                            Inactive
                                         </div>
-                                        <div class="crud-card-subtitle" data-bind="">randerson@fargeo.com</div>
+                                        <div class="mpm-project-subtitle" data-bind="">randerson@fargeo.com</div>
                                     </div>
 
                                 </div> 
@@ -540,7 +536,7 @@
                                                                                 </div>
                                                                             </div>
 
-                                                                            <!-- Group/Account Panel -->                         
+                                                                            <!-- Model Panel -->                     
                                                                             <div id="" class="library-card library-card-entry library-card-wide selected" style="width: 250px;">
                                                                                 
                                                                                 <!-- Resource -->  
@@ -594,16 +590,14 @@
                                                                                     </div>
                                                                                     <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
                                                                                 </div>
-
-                                                                                
                                                                             </div> 
-
                                                                         </div>
 
+                                                                        <!-- Resource Summary Panel -->
                                                                         <div class="mpm-right-panel">
-
                                                                             <div class="relative">
 
+                                                                                <!-- Selected Model Header -->
                                                                                 <div class="row">
                                                                                     <div class="col-xs-12 col-sm-5 col-md-3" style="" data-bind="">
                                                                                         <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
@@ -617,28 +611,103 @@
                                                                                 </div>
                                                                                 
 
+                                                                                <!-- Cards for selected resource -->
                                                                                 <div class="mpm-account-detail-panel">
-                                                                                Data Entry Forms
                                                                                     
-                                                                                    <div class="list-group">
+                                                                                    <!-- Resource Cards -->
+                                                                                    <div id="resource-cards" class="list-group">
+                                                                                        <!-- Title/Filter/Pagination -->
+                                                                                        <div class="relative mpm-item-listing-header-panel">
+                                                                                            <h4 class="mpm-item-listing-header">Data Entry Forms</h4>
+                                                                                            <div class="project-search-widget mpm-item-listing">
+                                                                                                <input type="text" class="form-control input-lg" placeholder="find a form...">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+
                                                                                         <!-- Card -->
-                                                                                        <a href="#" class="list-group-item">
-                                                                                            <h4 class="mpm-user-name">Modification Event<span class="mdm-user-status pull-right">Include</span></h4>
+                                                                                        <a href="#" class="list-group-item get-project-detail">
+                                                                                            <h4 class="mpm-user-name">Modification Event<span class="mdm-user-status pull-right">Remove</span></h4>
                                                                                             <p class="mpm-user-subtitle">Fields: Modification Type, Modification Date, Modification Description</p>
                                                                                         </a>
 
                                                                                         <!-- Card -->
-                                                                                        <a href="#" class="list-group-item">
-                                                                                            <h4 class="mpm-user-name">Location<span class="mdm-user-status add pull-right">Include</span></h4>
+                                                                                        <a href="#" class="list-group-item get-project-detail">
+                                                                                            <h4 class="mpm-user-name">Location<span class="mdm-user-status pull-right">Add</span></h4>
                                                                                             <p class="mpm-user-subtitle">Fields: Mapped Coordinates, Address, Address Type, Administrative Area, Parcel Identifier</p>
                                                                                         </a>
+                                                                                    </div>
 
-                                                                                    
+                                                                                    <!-- Card Detail -->
+                                                                                    <div id="card-detail" class="panel hidden" style="box-shadow: none;">
+                                                                                        <div class="panel-heading">
+                                                                                            <h3 class="panel-title"><i class="fa fa-arrow-circle-o-left"></i> <a href="" class="">Modification Event</a><span class="mdm-user-status pull-right" style="font-size: 13px;">Remove</span></h3>
+                                                                                        </div>
+                                                                                        <div class="panel-body">
+                                                                                            
+                                                                                            <!-- Node Detail -->
+                                                                                            <div class="mpm-model-detail-panel">
+                                                                                                <div class="mpm-node-name">
+                                                                                                    Modification Type
+                                                                                                </div>
+                                                                                                <ul class="mpm-node-detail-metadata">
+                                                                                                    <li class="">
+                                                                                                        Node type: Concept
+                                                                                                    </li>
+                                                                                                    <li class="">
+                                                                                                        Collection: Modification_Type
+                                                                                                    </li>
+                                                                                                    <li class="">
+                                                                                                        Required: yes
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+
+                                                                                            <!-- Node Detail -->
+                                                                                            <div class="mpm-model-detail-panel">
+                                                                                                <div class="mpm-node-name">
+                                                                                                    Modification Date
+                                                                                                </div>
+                                                                                                <ul class="mpm-node-detail-metadata">
+                                                                                                    <li class="">
+                                                                                                        Node type: Date
+                                                                                                    </li>
+                                                                                                    <li class="">
+                                                                                                        Required: yes
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+
+                                                                                            <!-- Node Detail -->
+                                                                                            <div class="mpm-model-detail-panel">
+                                                                                                <div class="mpm-node-name">
+                                                                                                    Modification Description
+                                                                                                </div>
+                                                                                                <ul class="mpm-node-detail-metadata">
+                                                                                                    <li class="">
+                                                                                                        Node type: String
+                                                                                                    </li>
+                                                                                                    <li class="">
+                                                                                                        Required: no
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+
+                                                                                            <div class="mpm-model-detail-panel">
+                                                                                                <div class="mpm-node-name">
+                                                                                                    Edit Privileges
+                                                                                                </div>
+                                                                                                <ul class="mpm-node-detail-metadata">
+                                                                                                    <li class="">
+                                                                                                        Resource Editors, Crowdsourcers, Guests
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
 
 
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
-
                                                                             </div>
                                                                         </div>
                                                                     
@@ -650,15 +719,7 @@
 
 
 
-                                                                <div id="" class="card-content">
-
-                                                                    Models/cards in project
-                                                                    <br>
-                                                                    Need to consider widget to allow for off-line caching of instances.  Should this be driven by a query?  Limit number of instances to download (or just provide warning of file size)
-                                                                    <br>
-                                                                    Off line caching of instances should only include tiles for models/cards in the project
-                                                                    
-                                                                </div>
+                                                                
                                                             </div>
                                                         </div>
 
@@ -680,7 +741,7 @@
                                                                                 </div>
                                                                             </div>
 
-                                                                            <!-- Group/Account Panel -->                         
+                                                                            <!-- Group/Account Panel -->                      
                                                                             <div id="" class="library-card library-card-entry library-card-wide selected" style="width: 250px;">
                                                                                 
                                                                                 <!-- Project -->  
@@ -740,25 +801,35 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 
+                                                                                <!-- Users in this Account -->
                                                                                 <div class="mpm-account-detail-panel">
-                                                                                    Group Members
-                                                                                    <div class="list-group">
-                                                                                        <a href="#" class="list-group-item">
+                                                                                
+                                                                                    <!-- User Listing -->
+                                                                                    <div id="user-cards" class="list-group">
+                                                                                        <!-- Title/Filter/Pagination -->
+                                                                                        <div class="relative mpm-item-listing-header-panel">
+                                                                                            <h4 class="mpm-item-listing-header">Accounts in this group</h4>
+                                                                                            <div class="project-search-widget mpm-item-listing">
+                                                                                                <input type="text" class="form-control input-lg" placeholder="find a user...">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                            
+                                                                                        <!-- User Account -->
+                                                                                        <a href="#" class="list-group-item get-user-detail">
                                                                                             <h4 class="mpm-user-name">adalgity@getty.edu<span class="mdm-user-status pull-right">Approved</span></h4>
                                                                                             <p class="mpm-user-subtitle">Activity: 13 edits<span class="pull-right">Last login: November 25, 2017</span></p>
                                                                                         </a>
-                                                                                        <a href="#" class="list-group-item">
-                                                                                            <h4 class="mpm-user-name">List group item heading</h4>
-                                                                                            <p class="mpm-user-subtitle">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                                                        </a>
-                                                                                        <a href="#" class="list-group-item">
-                                                                                            <h4 class="mpm-user-name">List group item heading</h4>
-                                                                                            <p class="mpm-user-subtitle">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                                                        </a>
-                                                                                        <a href="#" class="list-group-item">
-                                                                                            <h4 class="mpm-user-name">List group item heading</h4>
-                                                                                            <p class="mpm-user-subtitle">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                                                                                        </a>
+                                                                                         
+                                                                                    </div>
+
+                                                                                    <!-- User Detail -->
+                                                                                    <div id="user-detail" class="panel hidden" style="box-shadow: none;">
+                                                                                        <div class="panel-heading">
+                                                                                            <h3 class="panel-title"><i class="fa fa-arrow-circle-o-left"></i> <a href="" class="">adalgity@getty.edu</a></h3>
+                                                                                        </div>
+                                                                                        <div class="panel-body">
+                                                                                            <p class="mpm-detail-panel">User details:</p>
+                                                                                        </div>
                                                                                     </div>
 
 
@@ -781,6 +852,10 @@
                                                             <div class="panel-body card-panel-body" style="">
                                                                 <div id="" class="card-content" style="">
 
+                                                                    Summary of models/cards
+                                                                    <br>
+                                                                    Summary of groups/users
+                                                                    <br>
                                                                     Activate/Deactivate Project
                                                                     <br>
                                                                     Allows project author to configure project over several sessions before enabling project

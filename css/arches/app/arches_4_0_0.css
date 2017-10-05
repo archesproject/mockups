@@ -58,6 +58,38 @@ ul .collapse li:last-of-type {
 	height: 80px;
 }
 
+.mpm-project-card {
+    width: 200px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.mpm-project-name {
+	width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+}
+
+.mpm-project-subtitle {
+	width: 220px;
+    position: absolute;
+    left: 10px;
+    top: 28px;
+    padding: 2px 2px 3px 0px;
+    color: #8ba2b9;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .mpm-card-content {
 	margin-top: -54px;
 	margin-left: -35px;
@@ -94,6 +126,7 @@ ul .collapse li:last-of-type {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 15px;
+    font-weight: 600;
 }
 
 .mpm-group-subtitle {
@@ -112,7 +145,7 @@ ul .collapse li:last-of-type {
 .mpm-user-name {
 	font-size: 15px;
 	font-weight: 500;
-	color: #454545;
+	color: #156AB7;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
@@ -122,13 +155,64 @@ ul .collapse li:last-of-type {
 	font-size: 13px;
 }
 
-.mdm-user-status {
+.mpm-project-status {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	font-size: 12px;
+}
+
+.mpm-user-status {
 	color: #fff;
-	background: #8bc34a;
-	border: 1px solid #4F8511;
+	background: #3acaa1;
+	border: 1px solid #42cca5;
 	padding: 4px 10px;
 	margin-top: -4px;
 	font-size: 13px;
+	width: 75px;
+	text-align: center;
+}
+
+.mpm-user-status.add {
+	background: #f4f4f4;
+	color: #454545;
+	border: 1px solid #ddd;
+}
+
+
+
+.library-card.inactive {
+	background: #f7f7f7;
+}
+
+.mpm-item-listing-header-panel {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.mpm-item-listing-header {
+	color: #454545;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.project-search-widget.mpm-item-listing {
+	top: 0px;
+    right: 0px;
+}
+
+.mpm-model-detail-panel {
+	padding-left: 10px;
+}
+
+.mpm-node-name {
+	font-size: 14px;
+	font-weight: 600;
+	color: #454545;
+}
+
+.mpm-node-detail-metadata {
+	list-style: none;
 }
 
 
@@ -339,7 +423,7 @@ ul .collapse li:last-of-type {
 
 .account-label {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .btn-profile-password:hover {

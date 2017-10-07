@@ -57,8 +57,8 @@
 
 // http://abpetkov.github.io/switchery/
 	new Switchery(document.getElementById('demo-sw-unchecked'), { size: 'small' });
-
-
+	new Switchery(document.getElementById('activate-project'), { size: 'small' });
+	new Switchery(document.getElementById('wipe-project'), { size: 'small' });
 
 
 

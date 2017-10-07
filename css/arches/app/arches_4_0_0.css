@@ -201,6 +201,10 @@ ul .collapse li:last-of-type {
     right: 0px;
 }
 
+.mpm-user-summary {
+	padding: 10px;
+}
+
 .mpm-model-detail-panel {
 	padding-left: 10px;
 }
@@ -215,6 +219,18 @@ ul .collapse li:last-of-type {
 	list-style: none;
 }
 
+.mpm-activation-panel {
+	margin-top: -30px;
+	padding: 20px 40px;
+}
+
+.mpm-summary-panel {
+	margin-top: 10px;
+	margin-left: -10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid #eee;
+}
 
 
 

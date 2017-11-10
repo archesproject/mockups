@@ -59,6 +59,13 @@
 
 	});
 
+	var changeCheckbox = document.querySelector('#activate-data');
+
+	changeCheckbox.onchange = function() {
+	  	//Manage Display of Data query panel
+		$("#data-definition").removeClass("hidden");
+	};
+
 	
 
 // http://abpetkov.github.io/switchery/

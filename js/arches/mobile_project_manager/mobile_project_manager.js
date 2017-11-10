@@ -51,7 +51,13 @@
 	});
 
 
+	$('#activate-data').on('click', function (ev) {
+		ev.preventDefault();
 
+		//Manage Display of Data query panel
+		$("#data-definition").removeClass("hidden");
+
+	});
 
 	
 
@@ -59,6 +65,7 @@
 	new Switchery(document.getElementById('demo-sw-unchecked'), { size: 'small' });
 	new Switchery(document.getElementById('activate-project'), { size: 'small' });
 	new Switchery(document.getElementById('wipe-project'), { size: 'small' });
+	new Switchery(document.getElementById('activate-data'), { size: 'small' });
 
 
 

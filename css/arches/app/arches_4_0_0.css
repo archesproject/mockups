@@ -232,7 +232,9 @@ ul .collapse li:last-of-type {
 	border-top: 1px solid #eee;
 }
 
-
+.mpm-summary-panel ul {
+	color: #999;
+}
 
 
 /* Profile Manager CLASSESS =============================== */

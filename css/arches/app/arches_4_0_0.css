@@ -179,7 +179,30 @@ ul .collapse li:last-of-type {
 	border: 1px solid #ddd;
 }
 
+.mpm-data-selection {
+	padding-left: 20px;
+	margin-top: -10px;
+}
 
+.mpm-download-panel {
+	padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.category-title.active {
+    color: #123;
+    background: #ddd;
+    cursor: default;
+}
+
+.category-title {
+    font-weight: normal;
+    font-size: 15px;
+    padding: 9px 15px;
+    color: #999;
+    display: inline-block;
+}
 
 .library-card.inactive {
 	background: #f7f7f7;

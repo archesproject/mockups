@@ -748,24 +748,47 @@
                                                                             </div>
                                                                         </div>
 
+                                                                        
                                                                         <!-- Project Settings -->
                                                                         <div id="data-definition" class="mpm-summary-panel hidden">
-                                                                            <p class="mpm-item-listing-header" style="margin-bottom: 0px;">
-                                                                                Project Summary
-                                                                            </p>
-                                                                            <ul class="mpm-node-detail-metadata">
-                                                                                <li class="">
-                                                                                    Number of edits: 0
-                                                                                </li>
-                                                                                <li class="">
-                                                                                    Contributors: 0
-                                                                                </li>
-                                                                                <li class="">
-                                                                                    Offline Basemap: Streets-Grey
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
+                                                                            
+                                                                            <!-- Download Selector -->
+                                                                            <div class="mpm-download-selector" style="display: block;">
+                                                                                <a id="standard-download" class="category-title active" href="">Download Records</a>
+                                                                                <a id="custom-download" class="category-title" href="">Custom Download</a>
+                                                                            </div>
 
+
+                                                                            <!-- Standard Download -->
+                                                                            <div id="standard-download-panel" class="mpm-download-panel">
+                                                                                <p class="text-muted">
+                                                                                    Allow users to download the <strong>first 1000 records in the project extent </strong> for the resource models you've associated with this project.  
+                                                                                </p>
+                                                                                
+                                                                                <div class="form-group pad-ver mpm-data-selection">
+                                                                                    
+                                                                                    <!-- Inline Checkboxes -->
+                                                                                    <div class="checkbox">
+                                                                                        <label class="form-checkbox form-normal form-primary active"><input type="checkbox" checked=""> Assets</label>
+                                                                                        <label class="form-checkbox form-normal form-primary"><input type="checkbox"> Activities</label>
+                                                                                        <label class="form-checkbox form-normal form-primary disabled"><input type="checkbox" disabled> Events</label>
+                                                                                        <label class="form-checkbox form-normal form-primary disabled"><input type="checkbox" disabled> Information Objects</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        
+                                                                            <!-- Custom Query -->
+                                                                            <div id="custom-download-panel" class="mpm-download-panel hidden">
+                                                                                <p class="text-muted">
+                                                                                    To define records for download <strong> copy and paste the URL from Arches search page</strong>
+                                                                                </p>
+                                                                                
+                                                                                <div class="form-group">
+                                                                                    <input type="text" id="" class="form-control" placeholder="Arches query URL">
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
 
                                                                 </div>

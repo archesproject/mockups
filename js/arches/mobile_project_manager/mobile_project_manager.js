@@ -51,20 +51,40 @@
 	});
 
 
-	$('#activate-data').on('click', function (ev) {
-		ev.preventDefault();
-
-		//Manage Display of Data query panel
-		$("#data-definition").removeClass("hidden");
-
-	});
-
 	var changeCheckbox = document.querySelector('#activate-data');
 
 	changeCheckbox.onchange = function() {
 	  	//Manage Display of Data query panel
 		$("#data-definition").removeClass("hidden");
 	};
+
+
+	//Manage Download definition type
+	$('#custom-download').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Manage Button Display
+		$("#standard-download").removeClass("active");
+		$("#custom-download").addClass("active");
+
+		//Manage Panel Display
+		$("#custom-download-panel").removeClass("hidden");
+		$("#standard-download-panel").addClass("hidden");
+
+	});
+
+	$('#standard-download').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Manage Button Display
+		$("#custom-download").removeClass("active");
+		$("#standard-download").addClass("active");
+
+		//Manage Panel Display
+		$("#standard-download-panel").removeClass("hidden");
+		$("#custom-download-panel").addClass("hidden");
+
+	});
 
 	
 

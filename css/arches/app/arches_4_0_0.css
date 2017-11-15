@@ -300,6 +300,13 @@ ul .collapse li:last-of-type {
     cursor: default;
 }
 
+.library-header-buttons {
+	padding-top: 7px;
+	padding-left: 10px;
+}
+
+
+
 .category-title {
     font-weight: normal;
     font-size: 15px;

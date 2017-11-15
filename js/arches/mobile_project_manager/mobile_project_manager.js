@@ -91,15 +91,24 @@
 	$('#example_resource_container').on('click', function (ev) {
 		ev.preventDefault();
 
-		//Expand container, show card selector
+		//Expand container, show card selector, re-position form counter, highlight title
 		//If the container is already expanded, minimize it
 		if ($("#example_resource_container").hasClass("expanded")) {
 			$("#example_resource_card_list").addClass("hidden");
 			$("#example_resource_container").removeClass("expanded");
+
+			//Update counter position
+			$("#number-selected-cards").removeClass("expanded");
+			$("#mpm-resource-item").removeClass("expanded");
+
+
 		} else { 
 		    $("#example_resource_container").addClass("expanded");
 		    $("#example_resource_card_list").removeClass("hidden");
-			
+
+		    //Update counter position
+			$("#number-selected-cards").addClass("expanded");
+			$("#mpm-resource-item").addClass("expanded");
 		} 
 
 
@@ -112,6 +121,9 @@
 	new Switchery(document.getElementById('activate-project'), { size: 'small' });
 	new Switchery(document.getElementById('wipe-project'), { size: 'small' });
 	new Switchery(document.getElementById('activate-data'), { size: 'small' });
+
+	new Switchery(document.getElementById('select-all-forms'), { size: 'small' });
+	new Switchery(document.getElementById('remove-all-forms'), { size: 'small' });
 
 
 

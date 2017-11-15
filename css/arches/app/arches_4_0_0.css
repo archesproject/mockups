@@ -115,7 +115,7 @@ ul .collapse li:last-of-type {
 
 .card-panel-body.mpm-card {
 	margin-top: -20px;
-	height: 500px;
+	height: 600px;
     overflow-y: scroll;
 }
 
@@ -123,6 +123,24 @@ ul .collapse li:last-of-type {
 	height: 550px;
 	width: 100%;
 	padding: 0px 0px 20px 0px;
+	margin-bottom: 20px;
+}
+
+.mpm-resource-item {
+	margin: -10px -10px -5px -10px;
+	padding: 10px 10px 0px; 
+}
+
+.mpm-resource-item.expanded {
+	background: #fbfbfb;
+	height: 60px;
+	border-bottom: 1px solid #eee;
+}
+
+.mpm-form-finder {
+	width: 300px;
+	margin-bottom: 10px;
+	margin-left: 8px;
 }
 
 .mpm-resource-container {
@@ -141,13 +159,32 @@ ul .collapse li:last-of-type {
 
 .mpm-resource-container.expanded {
 	border: 1px solid #ddd;
-	height: 500px;
+	height: 555px;
+}
+
+.arches-filter-widget-btn-container {
+	position: absolute;
+	top: -10px;
+    right: -10px;
+}
+
+.project-edit-buttons {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 14px;
 }
 
 
+.mpm-select-switch-label {
+	color: #999;
+	float: right;
+	padding-right: 5px;
+}
+
 .mpm-resource-card-list-container {
 	position: absolute;
-    top: 65px;
+    top: 75px;
     left: 15px;
     height: 400px;
     width: 100%;
@@ -199,7 +236,13 @@ ul .collapse li:last-of-type {
 
 .number-selected-cards {
 	float: right;
-	padding-right: 60px;
+	padding-right: 65px;
+}
+
+.number-selected-cards.expanded {
+	margin-top: 55px;
+	font-weight: 500;
+	color: #454545;
 }
 
 .mpm-user-name {
@@ -214,6 +257,7 @@ ul .collapse li:last-of-type {
 	color: #777;
 	font-size: 13px;
 }
+
 
 .mpm-project-status {
 	position: absolute;
@@ -655,14 +699,16 @@ ul .collapse li:last-of-type {
 	text-overflow: ellipsis;
 }
 
+
 .project-status {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 40px;
+	left: 20px;
 	width: 70px;
 	font-size: 13px;
 	color: #777;
 	padding: 3px;
+	text-align: center;
 	font-style: italic;
 	background: #ddd;
 }
@@ -675,7 +721,7 @@ ul .collapse li:last-of-type {
 .project-metadata {
 	position: absolute;
     top: 35px;
-    right: 5px;
+    left: 50px;
     list-style: none;
     font-size: 14px;
 }

@@ -86,6 +86,25 @@
 
 	});
 
+
+	//Manage Resource Containers
+	$('#example_resource_container').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Expand container, show card selector
+		//If the container is already expanded, minimize it
+		if ($("#example_resource_container").hasClass("expanded")) {
+			$("#example_resource_card_list").addClass("hidden");
+			$("#example_resource_container").removeClass("expanded");
+		} else { 
+		    $("#example_resource_container").addClass("expanded");
+		    $("#example_resource_card_list").removeClass("hidden");
+			
+		} 
+
+
+	});
+
 	
 
 // http://abpetkov.github.io/switchery/

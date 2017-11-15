@@ -113,15 +113,70 @@ ul .collapse li:last-of-type {
 	padding: 10px;
 }
 
+.card-panel-body.mpm-card {
+	margin-top: -20px;
+	height: 500px;
+    overflow-y: scroll;
+}
+
+.mpm-resource-panel {
+	height: 550px;
+	width: 100%;
+	padding: 0px 0px 20px 0px;
+}
+
+.mpm-resource-container {
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.mpm-resource-container:first-child {
+	border-top: 1px solid #eee;
+}
+
+.mpm-resource-container:not(.expanded):hover {
+	cursor: pointer;
+	background: #fbfbfb;
+}
+
+.mpm-resource-container.expanded {
+	border: 1px solid #ddd;
+	height: 500px;
+}
+
+
+.mpm-resource-card-list-container {
+	position: absolute;
+    top: 65px;
+    left: 15px;
+    height: 400px;
+    width: 100%;
+    padding-right: 30px;
+}
+
 .mpm-account-detail-panel {
 	margin: 20px 0px;
 }
 
+.mpm-card-list-header {
+    padding: 10px;
+    border-style: solid;
+    border-width: 0.25px;
+    border-color: #eee;
+    background-color: #f8f8f8;
+}
+
+.mpm-card-list-items {
+    overflow-y: auto;
+    height: 385px;
+    background: #fcfcfc;
+}
+
 .mpm-group-name {
-	width: 400px;
+	width: 100%;
     position: absolute;
     left: 55px;
-    top: 1px;
+    top: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -130,16 +185,21 @@ ul .collapse li:last-of-type {
 }
 
 .mpm-group-subtitle {
-	width: 400px;
+	width: 100%;
     position: absolute;
     left: 55px;
-    top: 18px;
+    top: 28px;
     padding: 2px 2px 3px 0px;
     color: #8ba2b9;
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.number-selected-cards {
+	float: right;
+	padding-right: 60px;
 }
 
 .mpm-user-name {

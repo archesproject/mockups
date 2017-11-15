@@ -524,195 +524,128 @@
 
                                                         <!-- Models Card -->
                                                         <div id="models-card" class="tab-pane fade"> 
-                                                            <div class="panel-body card-panel-body">
+                                                            <div class="panel-body card-panel-body mpm-card">
 
-                                                                <div id="" class="mpm-card-content" style="">
-                                                                    <div class="flex relative">
+                                                                <div class="relative mpm-item-listing-header-panel">
+                                                                    <h4 class="mpm-item-listing-header">Click on the Resources you want to add to your project</h4>
+                                                                    <div class="project-search-widget mpm-item-listing">
+                                                                        <input type="text" class="form-control input-lg" placeholder="find a Resource Model...">
+                                                                    </div>
+                                                                </div>
 
-                                                                        <!-- Group/Account List -->
-                                                                        <div class="mpm-left-panel" style="">
+                                                                <!-- Resource Summary Panel -->
+                                                                <div class="mpm-resource-panel">
+                                                                    <div class="relative">
 
-                                                                            <!-- Title -->
-                                                                            <div class="title-block-fixed" style="padding-bottom: 10px;">
-                                                                                <h4 class="title-block-title">Resources</h4>
-                                                                                
-                                                                                <div class="list-filter" style="margin: 0px 5px;" data-bind="">
-                                                                                    <input type="text" class="form-control" style="" placeholder="Find a model" data-bind="">
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <!-- Model Panel -->                     
-                                                                            <div id="" class="library-card library-card-entry library-card-wide selected" style="width: 250px;">
-                                                                                
-                                                                                <!-- Resource -->  
-                                                                                <div class="library-card selected selected-card" data-bind="" style="margin-top: -4px; margin-left: -5px; width: 250px;">
-                                                                                    <div class="library-icon" style="" data-bind="">
-                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
-                                                                                            <i class="fa fa-university" data-bind=""></i>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="crud-card-main">
+                                                                        <!-- Resource Model -->
+                                                                        <div class="">
+                                                                            <div id="example_resource_container" class="mpm-resource-container relative">
+                                                                                <div class="" style="" data-bind="">
+                                                                                    <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                        <i class="fa fa-university" data-bind=""></i>
+                                                                                    </span>
+                                                                                    <div class="mpm-group-name">
                                                                                         <a class="listitem_name" data-bind="">Assets</a>
                                                                                     </div>
-                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
-                                                                                </div>
-
-                                                                                <!-- Resource -->  
-                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
-                                                                                    <div class="library-icon" style="" data-bind="">
-                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
-                                                                                            <i class="fa fa-calendar" data-bind=""></i>
+                                                                                    <div class="mpm-group-subtitle" data-bind="">
+                                                                                    Model subtitle goes here
+                                                                                        <span class="number-selected-cards">
+                                                                                            0 Forms Selected
                                                                                         </span>
                                                                                     </div>
-                                                                                    <div class="crud-card-main">
-                                                                                        <a class="listitem_name" data-bind="">Activities</a>
-                                                                                    </div>
-                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
                                                                                 </div>
 
-                                                                                <!-- Resource -->  
-                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
-                                                                                    <div class="library-icon" style="" data-bind="">
-                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
-                                                                                            <i class="fa fa-refresh" data-bind=""></i>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="crud-card-main">
-                                                                                        <a class="listitem_name" data-bind="">Events</a>
-                                                                                    </div>
-                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
-                                                                                </div>
-
-                                                                                <!-- Resource -->  
-                                                                                <div class="library-card" data-bind="" style="margin-left: -5px; width: 250px;">
-                                                                                    <div class="library-icon" style="" data-bind="">
-                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
-                                                                                            <i class="fa fa-university" data-bind=""></i>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="crud-card-main">
-                                                                                        <a class="listitem_name" data-bind="">Information Objects</a>
-                                                                                    </div>
-                                                                                    <div class="crud-card-subtitle" data-bind="">Model subtitle goes here</div>
-                                                                                </div>
-                                                                            </div> 
-                                                                        </div>
-
-                                                                        <!-- Resource Summary Panel -->
-                                                                        <div class="mpm-right-panel">
-                                                                            <div class="relative">
-
-                                                                                <!-- Selected Model Header -->
-                                                                                <div class="row">
-                                                                                    <div class="col-xs-12 col-sm-5 col-md-3" style="" data-bind="">
-                                                                                        <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
-                                                                                            <i class="fa fa-university" data-bind=""></i>
-                                                                                        </span>
-                                                                                        <div class="mpm-group-name">
-                                                                                            <a class="listitem_name" data-bind="">Assets</a>
-                                                                                        </div>
-                                                                                        <div class="mpm-group-subtitle" data-bind="">Model subtitle goes here</div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                
-
-                                                                                <!-- Cards for selected resource -->
-                                                                                <div class="mpm-account-detail-panel">
+                                                                                <div id="example_resource_card_list" class="mpm-resource-card-list-container hidden">
                                                                                     
-                                                                                    <!-- Resource Cards -->
-                                                                                    <div id="resource-cards" class="list-group">
-                                                                                        <!-- Title/Filter/Pagination -->
-                                                                                        <div class="relative mpm-item-listing-header-panel">
-                                                                                            <h4 class="mpm-item-listing-header">Data Entry Forms</h4>
-                                                                                            <div class="project-search-widget mpm-item-listing">
-                                                                                                <input type="text" class="form-control input-lg" placeholder="find a form...">
+                                                                                    <!-- Card Selector -->
+                                                                                    <div class="row">
+
+                                                                                        <!-- Available Cards -->
+                                                                                        <div class="col-xs-6">
+                                                                                            <div class="mpm-card-list-header">Available Forms</div>
+
+                                                                                            <!-- Card List -->
+                                                                                            <div class="mpm-card-list-items">
+
+
+
                                                                                             </div>
+
                                                                                         </div>
-                                                                                        
 
-                                                                                        <!-- Card -->
-                                                                                        <a href="#" class="list-group-item get-project-detail">
-                                                                                            <h4 class="mpm-user-name">Modification Event<span class="mdm-user-status pull-right">Remove</span></h4>
-                                                                                            <p class="mpm-user-subtitle">Fields: Modification Type, Modification Date, Modification Description</p>
-                                                                                        </a>
+                                                                                        <!-- Available Cards -->
+                                                                                        <div class="col-xs-6">
+                                                                                            <div class="mpm-card-list-header">Seleted Forms</div>
 
-                                                                                        <!-- Card -->
-                                                                                        <a href="#" class="list-group-item get-project-detail">
-                                                                                            <h4 class="mpm-user-name">Location<span class="mdm-user-status pull-right">Add</span></h4>
-                                                                                            <p class="mpm-user-subtitle">Fields: Mapped Coordinates, Address, Address Type, Administrative Area, Parcel Identifier</p>
-                                                                                        </a>
-                                                                                    </div>
+                                                                                            <!-- Card List -->
+                                                                                            <div class="mpm-card-list-items">
 
-                                                                                    <!-- Card Detail -->
-                                                                                    <div id="card-detail" class="panel hidden" style="box-shadow: none;">
-                                                                                        <div class="panel-heading">
-                                                                                            <h3 class="panel-title"><i class="fa fa-arrow-circle-o-left"></i> <a href="" class="">Modification Event</a><span class="mdm-user-status pull-right" style="font-size: 13px;">Remove</span></h3>
-                                                                                        </div>
-                                                                                        
-                                                                                        <!-- Details -->
-                                                                                        <div class="mpm-user-summary">
-                                                                                            <div class="mpm-model-detail-panel">
-                                                                                                <div class="mpm-node-name">
-                                                                                                    Modification Type
-                                                                                                </div>
-                                                                                                <ul class="mpm-node-detail-metadata">
-                                                                                                    <li class="">
-                                                                                                        Node type: Concept
-                                                                                                    </li>
-                                                                                                    <li class="">
-                                                                                                        Collection: Modification_Type
-                                                                                                    </li>
-                                                                                                    <li class="">
-                                                                                                        Required: yes
-                                                                                                    </li>
-                                                                                                </ul>
+
+
                                                                                             </div>
 
-                                                                                            <div class="mpm-model-detail-panel">
-                                                                                                <div class="mpm-node-name">
-                                                                                                    Modification Date
-                                                                                                </div>
-                                                                                                <ul class="mpm-node-detail-metadata">
-                                                                                                    <li class="">
-                                                                                                        Node type: Date
-                                                                                                    </li>
-                                                                                                    <li class="">
-                                                                                                        Required: yes
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="mpm-model-detail-panel">
-                                                                                                <div class="mpm-node-name">
-                                                                                                    Modification Description
-                                                                                                </div>
-                                                                                                <ul class="mpm-node-detail-metadata">
-                                                                                                    <li class="">
-                                                                                                        Node type: String
-                                                                                                    </li>
-                                                                                                    <li class="">
-                                                                                                        Required: no
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="mpm-model-detail-panel">
-                                                                                                <div class="mpm-node-name">
-                                                                                                    Edit Privileges
-                                                                                                </div>
-                                                                                                <ul class="mpm-node-detail-metadata">
-                                                                                                    <li class="">
-                                                                                                        Resource Editors, Crowdsourcers, Guests
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+
+                                                                        <!-- Resource Model -->
+                                                                        <div class="">
+                                                                            <div id="example_resource_container" class="mpm-resource-container relative">
+                                                                                <div class="" style="" data-bind="">
+                                                                                    <span class="icon-wrap icon-wrap-sm ep-graph-title-icon">
+                                                                                        <i class="fa fa-calendar" data-bind=""></i>
+                                                                                    </span>
+                                                                                    <div class="mpm-group-name">
+                                                                                        <a class="listitem_name" data-bind="">Activities</a>
+                                                                                    </div>
+                                                                                    <div class="mpm-group-subtitle" data-bind="">
+                                                                                    Model subtitle goes here
+                                                                                        <span class="number-selected-cards">
+                                                                                            0 Forms Selected
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div id="example_resource_card_list" class="mpm-resource-card-list-container hidden">
+                                                                                    
+                                                                                    <!-- Card Selector -->
+                                                                                    <div class="row">
+
+                                                                                        <!-- Available Cards -->
+                                                                                        <div class="col-xs-6">
+                                                                                            <div class="mpm-card-list-header">Available Forms</div>
+
+                                                                                            <!-- Card List -->
+                                                                                            <div class="mpm-card-list-items">
+
+
+
+                                                                                            </div>
+
+                                                                                        </div>
+
+                                                                                        <!-- Available Cards -->
+                                                                                        <div class="col-xs-6">
+                                                                                            <div class="mpm-card-list-header">Seleted Forms</div>
+
+                                                                                            <!-- Card List -->
+                                                                                            <div class="mpm-card-list-items">
+
+
+
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
                                                                     </div>
-                                                                </div>   
+                                                                </div>
+  
                                                             </div>
                                                         </div>
 

@@ -113,15 +113,107 @@ ul .collapse li:last-of-type {
 	padding: 10px;
 }
 
+.card-panel-body.mpm-card {
+	margin-top: -20px;
+	height: 600px;
+    overflow-y: scroll;
+}
+
+.mpm-resource-panel {
+	height: 550px;
+	width: 100%;
+	padding: 0px 0px 20px 0px;
+	margin-bottom: 20px;
+}
+
+.mpm-resource-item {
+	margin: -10px -10px -5px -10px;
+	padding: 10px 10px 0px; 
+}
+
+.mpm-resource-item.expanded {
+	background: #fbfbfb;
+	height: 60px;
+	border-bottom: 1px solid #eee;
+}
+
+.mpm-form-finder {
+	width: 300px;
+	margin-bottom: 10px;
+	margin-left: 8px;
+}
+
+.mpm-resource-container {
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.mpm-resource-container:first-child {
+	border-top: 1px solid #eee;
+}
+
+.mpm-resource-container:not(.expanded):hover {
+	cursor: pointer;
+	background: #fbfbfb;
+}
+
+.mpm-resource-container.expanded {
+	border: 1px solid #ddd;
+	height: 555px;
+}
+
+.arches-filter-widget-btn-container {
+	position: absolute;
+	top: -10px;
+    right: -10px;
+}
+
+.project-edit-buttons {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 14px;
+}
+
+
+.mpm-select-switch-label {
+	color: #999;
+	float: right;
+	padding-right: 5px;
+}
+
+.mpm-resource-card-list-container {
+	position: absolute;
+    top: 75px;
+    left: 15px;
+    height: 400px;
+    width: 100%;
+    padding-right: 30px;
+}
+
 .mpm-account-detail-panel {
 	margin: 20px 0px;
 }
 
+.mpm-card-list-header {
+    padding: 10px;
+    border-style: solid;
+    border-width: 0.25px;
+    border-color: #eee;
+    background-color: #f8f8f8;
+}
+
+.mpm-card-list-items {
+    overflow-y: auto;
+    height: 385px;
+    background: #fcfcfc;
+}
+
 .mpm-group-name {
-	width: 400px;
+	width: 100%;
     position: absolute;
     left: 55px;
-    top: 1px;
+    top: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -130,16 +222,27 @@ ul .collapse li:last-of-type {
 }
 
 .mpm-group-subtitle {
-	width: 400px;
+	width: 100%;
     position: absolute;
     left: 55px;
-    top: 18px;
+    top: 28px;
     padding: 2px 2px 3px 0px;
     color: #8ba2b9;
     font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.number-selected-cards {
+	float: right;
+	padding-right: 65px;
+}
+
+.number-selected-cards.expanded {
+	margin-top: 55px;
+	font-weight: 500;
+	color: #454545;
 }
 
 .mpm-user-name {
@@ -154,6 +257,7 @@ ul .collapse li:last-of-type {
 	color: #777;
 	font-size: 13px;
 }
+
 
 .mpm-project-status {
 	position: absolute;
@@ -195,6 +299,13 @@ ul .collapse li:last-of-type {
     background: #ddd;
     cursor: default;
 }
+
+.library-header-buttons {
+	padding-top: 7px;
+	padding-left: 10px;
+}
+
+
 
 .category-title {
     font-weight: normal;
@@ -595,14 +706,16 @@ ul .collapse li:last-of-type {
 	text-overflow: ellipsis;
 }
 
+
 .project-status {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 40px;
+	left: 20px;
 	width: 70px;
 	font-size: 13px;
 	color: #777;
 	padding: 3px;
+	text-align: center;
 	font-style: italic;
 	background: #ddd;
 }
@@ -615,7 +728,7 @@ ul .collapse li:last-of-type {
 .project-metadata {
 	position: absolute;
     top: 35px;
-    right: 5px;
+    left: 50px;
     list-style: none;
     font-size: 14px;
 }

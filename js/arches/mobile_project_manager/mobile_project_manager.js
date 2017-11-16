@@ -114,6 +114,35 @@
 
 	});
 
+
+
+	//Manage Group Containers
+	$('#example_group_container').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Expand container, show card selector, re-position form counter, highlight title
+		//If the container is already expanded, minimize it
+		if ($("#example_group_container").hasClass("expanded")) {
+			$("#example_group_card_list").addClass("hidden");
+			$("#example_group_container").removeClass("expanded");
+
+			//Update counter position
+			$("#selected-group").removeClass("expanded");
+			$("#mpm-group-item").removeClass("expanded");
+
+
+		} else { 
+		    $("#example_group_container").addClass("expanded");
+		    $("#example_group_card_list").removeClass("hidden");
+
+		    //Update counter position
+			$("#selected-group").addClass("expanded");
+			$("#mpm-group-item").addClass("expanded");
+		} 
+
+
+	});
+
 	
 
 // http://abpetkov.github.io/switchery/
@@ -124,6 +153,9 @@
 
 	new Switchery(document.getElementById('select-all-forms'), { size: 'small' });
 	new Switchery(document.getElementById('remove-all-forms'), { size: 'small' });
+
+	new Switchery(document.getElementById('select-all-accounts'), { size: 'small' });
+	new Switchery(document.getElementById('remove-all-accounts'), { size: 'small' });
 
 
 

@@ -115,7 +115,7 @@ ul .collapse li:last-of-type {
 
 .card-panel-body.mpm-card {
 	margin-top: -20px;
-	height: 600px;
+	height: 640px;
     overflow-y: scroll;
 }
 
@@ -159,7 +159,7 @@ ul .collapse li:last-of-type {
 
 .mpm-resource-container.expanded {
 	border: 1px solid #ddd;
-	height: 555px;
+	height: 615px;
 }
 
 .arches-filter-widget-btn-container {
@@ -292,6 +292,14 @@ ul .collapse li:last-of-type {
 	padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
+}
+
+.mpm-instruction {
+	color: #555;
+	font-size: 13px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
 
 .category-title.active {

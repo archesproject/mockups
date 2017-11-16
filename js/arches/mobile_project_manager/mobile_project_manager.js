@@ -98,7 +98,7 @@
 			$("#example_resource_container").removeClass("expanded");
 
 			//Update counter position
-			$("#number-selected-cards").removeClass("expanded");
+			//$("#number-selected-cards").removeClass("expanded");
 			$("#mpm-resource-item").removeClass("expanded");
 
 
@@ -107,7 +107,7 @@
 		    $("#example_resource_card_list").removeClass("hidden");
 
 		    //Update counter position
-			$("#number-selected-cards").addClass("expanded");
+			//$("#number-selected-cards").addClass("expanded");
 			$("#mpm-resource-item").addClass("expanded");
 		} 
 
@@ -127,7 +127,7 @@
 			$("#example_group_container").removeClass("expanded");
 
 			//Update counter position
-			$("#selected-group").removeClass("expanded");
+			//$("#selected-group").removeClass("expanded");
 			$("#mpm-group-item").removeClass("expanded");
 
 
@@ -136,8 +136,36 @@
 		    $("#example_group_card_list").removeClass("hidden");
 
 		    //Update counter position
-			$("#selected-group").addClass("expanded");
+			//$("#selected-group").addClass("expanded");
 			$("#mpm-group-item").addClass("expanded");
+		} 
+
+
+	});
+
+
+	//Manage Account Containers
+	$('#example_account_container').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Expand container, show card selector, re-position form counter, highlight title
+		//If the container is already expanded, minimize it
+		if ($("#example_account_container").hasClass("expanded")) {
+			$("#example_account_summary").addClass("hidden");
+			$("#example_account_container").removeClass("expanded");
+
+			//Update counter position
+			//$("#account-selected-card").removeClass("expanded");
+			$("#mpm-account-item").removeClass("expanded");
+
+
+		} else { 
+		    $("#example_account_container").addClass("expanded");
+		    $("#example_account_summary").removeClass("hidden");
+
+		    //Update counter position
+			//$("#account-selected-card").addClass("expanded");
+			$("#mpm-account-item").addClass("expanded");
 		} 
 
 

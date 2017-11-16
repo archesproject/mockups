@@ -572,11 +572,12 @@
 
                                                                                     <!-- Form finder -->
                                                                                     <div class="row">
-                                                                                        <input type="text" class="form-control input mpm-form-finder" placeholder="find a form...">
 
                                                                                         <p class="mpm-instruction">
-                                                                                            Drag & drop the forms that you want users to access in the field.  Or click the "Select all forms" switch to include all the data entry forms for this resource  <strong> Note that the order of the forms in the "Selected forms" column determines the order of display in the mobile app.</strong>
+                                                                                            Drag & drop the forms you want in your project from the "Available forms" column to the "Selected forms" column.  <strong> Note that the order of the forms in the "Selected forms" column determines the order of display in the mobile app.</strong>
                                                                                         </p>
+
+                                                                                        <input type="text" class="form-control input mpm-form-finder" placeholder="find a form...">
                                                                                     </div>
 
                                                                                     <!-- Form Selector -->
@@ -798,22 +799,26 @@
 
                                 <!-- Form Counter -->
                                 <span id="selected-group" class="number-selected-cards">
-                                    Not Selected
+                                    Group not selected
                                 </span>
 
                             </div>
                         </div>
 
-                        <!-- Card Selector (hidden until user clicks -->
+                        <!-- Group/Account Selector (hidden until user clicks -->
                         <div id="example_group_card_list" class="mpm-resource-card-list-container hidden">
 
-                            <!-- Form finder -->
+                            <!-- Instuctions/Filter Widget -->
                             <div class="row">
+
+                                <!-- Instructions -->
+                                <p class="mpm-instruction">
+                                    Drag & drop an account to the "Selected accounts" column to allow a person to participate in your project.  Or click the "Select all accounts" switch to add everyone in this group.  <strong> Some accounts may already be selected if they are members of groups that you have already added to this project.</strong>
+                                </p>
+
+                                <!-- Account Filter Widget -->
                                 <input type="text" class="form-control input mpm-form-finder" placeholder="find an account...">
 
-                                <p class="mpm-instruction">
-                                    Drag & drop an account to the "Selected accounts" column to allow a person to participate in your project.  Or click the "Select all accounts" switch to everyone in this group.  <strong> Some accounts may already be selected if they are members of groups that you have already added to this project.</strong>
-                                </p>
                             </div>
 
                             <!-- Form Selector -->
@@ -865,9 +870,11 @@
 
                 <!-- Group/Account -->
                 <div class="">
-                    <div id="example_account_container" class="mpm-resource-container relative">
-                        <div class="" style="" data-bind="">
-                            <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-success">
+                    <div id="example_account_container" class="mpm-resource-container mpm-account-container relative">
+
+
+                        <div id="mpm-account-item" class="mpm-resource-item" style="" data-bind="">
+                            <span class="icon-wrap icon-wrap-sm icon-circle branch-icon bg-mint">
                                 <i class="fa fa-user" data-bind=""></i>
                             </span>
                             <div class="mpm-group-name">
@@ -877,43 +884,78 @@
                                 Arches User
 
                                 <!-- Form Counter -->
-                                <span id="number-selected-cards" class="number-selected-cards">
+                                <span id="account-selected-card" class="number-selected-cards">
                                     Not Selected
                                 </span>
 
                             </div>
                         </div>
 
-                        <div id="example_resource_card_list" class="mpm-resource-card-list-container hidden">
+                        <div id="example_account_summary" class="mpm-resource-card-list-container hidden">
                             
                             <!-- Card Selector -->
                             <div class="row">
 
-                                <!-- Available Cards -->
-                                <div class="col-xs-6">
-                                    <div class="mpm-card-list-header">Available Forms</div>
-
-                                    <!-- Card List -->
-                                    <div class="mpm-card-list-items">
-
-
-
+                                <!-- User Detail -->
+                                <div class="mpm-user-summary">
+                                    <div class="mpm-model-detail-panel">
+                                        <div class="mpm-node-name">
+                                            User Information
+                                        </div>
+                                        <ul class="mpm-node-detail-metadata">
+                                            <li class="">
+                                                Name: Alison Dalgity
+                                            </li>
+                                            <li class="">
+                                                Email: <a hre="">adalgity@getty.edu</a>
+                                            </li>
+                                            <li class="">
+                                                Group Membership: Admins, Editors, RDM Administrators, Mobile Project Manager
+                                            </li>
+                                        </ul>
                                     </div>
 
-                                </div>
-
-                                <!-- Available Cards -->
-                                <div class="col-xs-6">
-                                    <div class="mpm-card-list-header">Seleted Forms</div>
-
-                                    <!-- Card List -->
-                                    <div class="mpm-card-list-items">
-
-
-
+                                    <div class="mpm-model-detail-panel">
+                                        <div class="mpm-node-name">
+                                            Contributions
+                                        </div>
+                                        <ul class="mpm-node-detail-metadata">
+                                            <li class="">
+                                                Edits: 0
+                                            </li>
+                                            <li>
+                                                Devices (2)
+                                                <ul class="mpm-node-detail-metadata">
+                                                    <li class="">
+                                                        Name: Alison's iPhone (last login: September 17, 2017) 
+                                                    </li>
+                                                    <li class="">
+                                                        Name: Getty iPad #12345 (last login: September 2, 2017)   
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
 
+                                    <div class="mpm-model-detail-panel">
+                                        <div class="mpm-node-name">
+                                            Security
+                                        </div>
+                                        <ul class="mpm-node-detail-metadata">
+                                            <li class="">
+                                                Remove project data from from user's device on next login?
+                                            </li>
+                                            <li class="">
+                                                <!--Switchery : Unchecked-->
+                                                <!--===================================================-->
+                                                <input id="wipe-project" class="js-switch-small" type="checkbox" style="margin-top: 0px;">
+                                                <!--===================================================-->
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
+
+                                
                             </div>
                         </div>
                     </div>

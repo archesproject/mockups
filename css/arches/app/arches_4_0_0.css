@@ -162,6 +162,11 @@ ul .collapse li:last-of-type {
 	height: 615px;
 }
 
+.mpm-resource-container.mpm-account-container.expanded {
+	border: 1px solid #ddd;
+	height: 415px;
+}
+
 .arches-filter-widget-btn-container {
 	position: absolute;
 	top: -10px;

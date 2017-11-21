@@ -313,6 +313,14 @@ ul .collapse li:last-of-type {
     cursor: default;
 }
 
+.mpm-contribution-panel {
+	background: #fff;
+	padding: 20px;
+}
+
+
+
+
 .library-header-buttons {
 	padding-top: 7px;
 	padding-left: 10px;

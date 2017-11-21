@@ -171,6 +171,22 @@
 
 	});
 
+
+
+	//Manage Primary Panels
+	$('#contribution-panel-btn').on('click', function (ev) {
+		ev.preventDefault();
+
+		//Show contribution panel, hide project configuration panel
+		$("#project-details").addClass("hidden");
+		$("#contribution-details").removeClass("hidden");
+
+		//update button state
+		$("#detail-panel-btn").removeClass("active");
+		$("#contribution-panel-btn").addClass("active");
+
+	});
+
 	
 
 // http://abpetkov.github.io/switchery/

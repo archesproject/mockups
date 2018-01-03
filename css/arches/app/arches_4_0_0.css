@@ -214,6 +214,11 @@ ul .collapse li:last-of-type {
     background: #fcfcfc;
 }
 
+.mpm-card-list-items div.list-group-item.selected {
+	background: #fbfbfb;
+	border-color: #ddd;
+}
+
 .mpm-group-name {
 	width: 100%;
     position: absolute;
@@ -318,7 +323,14 @@ ul .collapse li:last-of-type {
 	padding: 20px;
 }
 
-
+.mpm-activity-summary-panel {
+	padding: 20px;
+	height: 200px;
+	width: 400px;
+	margin: 10px 0px 20px 0px;
+	background: #fcfcfc;
+	border: 1px solid #ddd;
+}
 
 
 .library-header-buttons {
@@ -390,6 +402,31 @@ ul .collapse li:last-of-type {
 .mpm-summary-panel ul {
 	color: #999;
 }
+
+.mpm-selector-btns {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+.mpm-selector-header {
+	height: 55px;
+	padding: 10px 5px;
+	border-style: solid;
+    border-width: 0.25px;
+    border-color: #eee;
+    background-color: #f8f8f8;
+}
+
+.mpm-selector-header-txt {
+	padding: 10px;
+	font-size: 13px;
+}
+
+.icon-spacer {
+	padding-left: 3px;
+}
+
 
 
 /* Profile Manager CLASSESS =============================== */
